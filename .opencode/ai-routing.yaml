@@ -41,6 +41,7 @@ rules:
   - ai-output-is-proposal-not-project-truth
   - deterministic-engine-remains-authoritative-baseline
   - ai-output-must-be-written-under-intelligence/ai
-  - promotion-to-derived-or-solution-requires-validation
+  - no-automatic-promotion-ai-output-is-advisory-only
+  - promotion-to-derived-or-solution-requires-human-review-and-validation
   - material-business-or-production-decisions-require-human-review
   - record-provider-role-inputs-and-decision-status

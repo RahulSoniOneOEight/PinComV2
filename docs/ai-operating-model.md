@@ -19,7 +19,13 @@ AI output is never project truth by itself.
 
 AI output follows:
 
-OpenCode → specialist model → AI proposal artifact → schema validation → reviewer/human decision → deterministic promotion → governed project artifact.
+OpenCode → specialist model → AI proposal artifact → schema validation → reviewer/human decision → governed project artifact.
+
+Promotion is a human/deterministic step, not an automatic one. Today `tooling.ai.proposals`
+implements `validate` and `review` only; it records a human decision on the proposal. There is
+**no** automatic path that writes AI output into `derived/*` or `solution/*`. To influence the
+deterministic blueprint, a human updates `input/client-input.yaml` and re-runs the onboarding
+engine (which is drift-checked). See `docs/governance-status.md`.
 
 ## Proposal location
 
@@ -47,5 +53,5 @@ The provider is selected by role, not hard-coded into business logic. This keeps
 5. Strategy/Architecture agents compare AI proposals with registry-derived outputs.
 6. DeepSeek may generate structured expansions or tests.
 7. Reviewer Agent checks conflicts and risk.
-8. Accepted proposals are promoted through deterministic tooling.
-9. CI validates final repository state.
+8. A human records the decision via `tooling.ai.proposals review`; approved proposals inform a human edit of `input/client-input.yaml`.
+9. The deterministic onboarding engine regenerates governed artifacts; CI validates final repository state.

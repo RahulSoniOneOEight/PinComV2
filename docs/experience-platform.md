@@ -7,8 +7,8 @@ Part 3A converts governed solution artifacts into reviewable multi-surface exper
 - capability-map.yaml
 - journey-map.yaml
 - surface-map.yaml
-- Design Contract
-- approved AI/strategy proposals where relevant
+- Design Contract (partial: presence-checked, not yet schema-validated)
+- approved AI/strategy proposals where relevant (advisory; see `docs/governance-status.md`)
 
 ## Generated outputs
 
@@ -42,7 +42,7 @@ Regenerate intentionally:
 
 ## Review pipeline
 
-Direction → Prototype Build → Visual QA → Review Artifact → Client/Internal Review → Selection/Mix-and-Match → Change Contract where needed.
+Direction → Prototype Build → Visual QA → Review Session → Client/Internal Review → Selection/Mix-and-Match → Change Contract where needed.
 
 ## Tooling
 

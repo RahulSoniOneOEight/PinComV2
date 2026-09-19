@@ -1,16 +1,28 @@
 direction_id: DIR-REFERENCE-RETAIL-B
 client_id: reference-retail
 strategy: search-first
-surfaces: [customer-app, web-store, commerce-admin, analytics, erp]
-journey_emphasis: [browse-to-buy, search-to-buy, order-tracking, return-refund, quote-to-order]
+surfaces:
+- customer-app
+- web-store
+- commerce-admin
+- analytics
+- erp
+journey_emphasis:
+- browse-to-buy
+- search-to-buy
+- order-tracking
+- return-refund
+- quote-to-order
+- repeat-order
+- credit-order
 design_intent:
   density: compact
   navigation: search-led
   discovery: intent-driven
   interaction: fast
 differentiators:
-  - search and intent dominate entry
-  - faster route to product/action
-  - compact information density
+- search and intent dominate entry
+- faster route to product/action
+- compact information density
 fixture_set: commerce-baseline
 status: draft

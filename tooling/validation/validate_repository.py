@@ -5,7 +5,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 
 REQUIRED = [
-    "README.md","AGENTS.md",".opencode/ai-routing.yaml",
+    "README.md","AGENTS.md",".opencode/ai-routing.yaml",".gitignore",
+    "tooling/validation/__init__.py","tooling/validation/identifiers.py",
+    "tooling/validation/drift.py","tooling/validation/lifecycle.py",
     ".opencode/agents/architecture.md",".opencode/agents/implementation.md",
     ".opencode/agents/experience.md",".opencode/agents/visual-review.md",
     ".opencode/agents/commerce.md",".opencode/agents/erp.md",".opencode/agents/integration.md",
@@ -16,7 +18,7 @@ REQUIRED = [
     "docs/prototype-runtimes.md","docs/review-visual-validation.md","docs/domain-platform.md",
     "docs/integration-infrastructure.md","docs/production-connectors.md",
     "docs/production-hardening-release.md","docs/branch-protection-policy.md",
-    "docs/agency-control-plane.md",
+    "docs/agency-control-plane.md","docs/governance-status.md",
     "requirements-production.txt",
     "workflows/lifecycle.yaml",
     "contracts/schemas/client-input.schema.json",
@@ -116,6 +118,8 @@ REQUIRED = [
     "tests/test_provider_adapters.py","tests/test_integration_infrastructure.py",
     "tests/test_production_connectors.py","tests/test_release_gates.py",
     "tests/test_control_plane.py","tests/test_security_performance.py",
+    "tests/test_secrets_scan.py","tests/test_identifiers.py","tests/test_replay.py",
+    "tests/test_drift.py","tests/test_lifecycle.py","tests/test_governance_docs.py",
     "client-projects/reference-retail/input/client-input.yaml",
     "client-projects/reference-retail/derived/client-profile.yaml",
     "client-projects/reference-retail/derived/benchmark-report.yaml",

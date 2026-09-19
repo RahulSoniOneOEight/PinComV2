@@ -1,4 +1,9 @@
-# Review Artifact Contract
+# Review Artifact Contract (Legacy)
+
+> **Legacy / superseded.** The canonical review model is the **Review Session**
+> (`contracts/schemas/review-session.schema.json`), which is what CI validates. This document
+> and `contracts/schemas/review-artifact.schema.json` are retained for history and are not
+> validated. See `docs/governance-status.md`.
 
 Every reviewable surface should carry:
 - client ID

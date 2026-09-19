@@ -8,5 +8,5 @@ entities:
     owner_capability: payment-integration
   shipment:
     owner_capability: logistics-integration
-  invoice:
-    owner_capability: erp-accounting
+  business-account:
+    owner_capability: commerce-account-management

@@ -1,12 +1,13 @@
 client_id: reference-retail
 industry: retail
 archetypes:
-  - d2c-commerce
-  - b2b-commerce
+- d2c-commerce
+- b2b-commerce
 business_models:
-  - d2c
-  - b2b
+- d2c
+- b2b
 risk_profile: standard
 benchmark_sources:
-  - intelligence/industries/retail/profile.yaml
-  - intelligence/archetypes/d2c-commerce.yaml
+- intelligence/industries/retail/profile.yaml
+- intelligence/archetypes/d2c-commerce.yaml
+- intelligence/archetypes/b2b-commerce.yaml

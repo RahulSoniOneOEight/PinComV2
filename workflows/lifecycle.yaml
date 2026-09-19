@@ -32,6 +32,8 @@ stages:
     output: experience/visual-qa
   - id: client-review
     output: feedback
+  - id: change-control
+    output: changes
   - id: approval-freeze
     output: approved
     human_gate: true
@@ -45,7 +47,9 @@ stages:
     output: uat
     human_gate: true
   - id: production-authorization
-    output: release/authorization.yaml
+    output: release/production-authorization.yaml
     human_gate: true
   - id: release
-    output: release/release-record.yaml
+    output: release/releases
+  - id: operations
+    output: production/ops

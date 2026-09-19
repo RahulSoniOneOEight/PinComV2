@@ -1,16 +1,28 @@
 direction_id: DIR-REFERENCE-RETAIL-C
 client_id: reference-retail
 strategy: task-first
-surfaces: [customer-app, web-store, commerce-admin, analytics, erp]
-journey_emphasis: [browse-to-buy, search-to-buy, order-tracking, return-refund, quote-to-order]
+surfaces:
+- customer-app
+- web-store
+- commerce-admin
+- analytics
+- erp
+journey_emphasis:
+- browse-to-buy
+- search-to-buy
+- order-tracking
+- return-refund
+- quote-to-order
+- repeat-order
+- credit-order
 design_intent:
   density: efficient
   navigation: task-led
   discovery: contextual
   interaction: operational
 differentiators:
-  - high-frequency tasks prioritized
-  - contextual discovery
-  - business/operational efficiency emphasis
+- high-frequency tasks prioritized
+- contextual discovery
+- business/operational efficiency emphasis
 fixture_set: commerce-baseline
 status: draft

@@ -1,12 +1,16 @@
 client_id: reference-retail
 journeys:
-  - id: browse-to-buy
-    status: required
-  - id: search-to-buy
-    status: required
-  - id: order-tracking
-    status: required
-  - id: return-refund
-    status: required
-  - id: quote-to-order
-    status: b2b-required
+- id: browse-to-buy
+  status: required
+- id: search-to-buy
+  status: required
+- id: order-tracking
+  status: required
+- id: return-refund
+  status: required
+- id: quote-to-order
+  status: required
+- id: repeat-order
+  status: required
+- id: credit-order
+  status: required

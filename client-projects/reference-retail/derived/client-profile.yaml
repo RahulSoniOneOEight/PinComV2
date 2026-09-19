@@ -1,5 +1,22 @@
 client_id: reference-retail
 industry: retail
-archetypes: [d2c-commerce, b2b-commerce]
+business_models:
+- d2c
+- b2b
+archetypes:
+- d2c-commerce
+- b2b-commerce
+geographies: []
 risk_profile: standard
+goals:
+- mobile-and-web-commerce
+- integrated-inventory
+- governed-returns
+existing_systems: []
+constraints:
+- provider-neutral-contracts
+required_integrations:
+- payment
+- logistics
+- whatsapp
 status: normalized

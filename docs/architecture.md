@@ -1,7 +1,9 @@
 # Agency Platform V2 Architecture
 
 ## Operating model
-Client Truth → Industry/Archetype Benchmark → Capability Gap → Capability/Journey/Entity/Surface/Dependency maps → Solution Contract → Experience Directions → Multi-Surface Prototype → Review/Change Contract → Production Contracts → Domain Implementation → Integration/Automation/Data → Cross-Domain QA → UAT → Production Authorization → Release → Operations.
+Client Truth → Industry/Archetype Benchmark → Capability Gap → Capability/Journey/Entity/Surface/Dependency maps → Solution Contract → Experience Directions → Multi-Surface Prototype → Review → Change Control → Approval Freeze → Production Contracts → Domain Implementation → Integration/Automation/Data → Cross-Domain QA → UAT → Production Authorization → Release → Operations.
+
+The canonical machine-readable stage list, including each stage's output path and human gates, is `workflows/lifecycle.yaml`.
 
 ## Intelligence
 - Design Intelligence
@@ -17,6 +19,10 @@ Client Truth → Industry/Archetype Benchmark → Capability Gap → Capability/
 - Integration Contract
 - Data Contract
 - Solution Contract
+
+Which of these are enforced today, partially enforced, or roadmap is tracked in
+`docs/governance-status.md`. Solution Contract is enforced now; Business and Data Contracts are
+roadmap.
 
 ## Engineering domains
 - Experience

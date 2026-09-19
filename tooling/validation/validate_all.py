@@ -57,6 +57,10 @@ def main() -> int:
         "reference-retail", "--print-only")
     run(sys.executable, "-m", "tooling.experience.generator", "--client",
         "reference-retail", "--print-only")
+    run(sys.executable, "-m", "tooling.validation.drift", "--client",
+        "reference-retail")
+    run(sys.executable, "-m", "tooling.validation.lifecycle", "--client",
+        "reference-retail")
     run(sys.executable, "-m", "tooling.workflow.runtime", "status",
         "--client", "reference-retail")
     run(sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v")

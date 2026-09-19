@@ -1,0 +1,16 @@
+id: default
+version: 1
+semantic_roles:
+  surface.page: "#FFFFFF"
+  surface.raised: "#F7F7F8"
+  surface.interactive: "#F0F1F3"
+  content.primary: "#17181A"
+  content.secondary: "#666A73"
+  content.inverse: "#FFFFFF"
+  action.primary: "#17181A"
+  action.secondary: "#ECEEF1"
+  action.destructive: "#B42318"
+  feedback.success: "#067647"
+  feedback.warning: "#B54708"
+  feedback.error: "#B42318"
+  feedback.info: "#175CD3"

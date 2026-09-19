@@ -52,8 +52,6 @@ def initialize_client(
     input_path = project / "input" / "client-input.yaml"
     write_yaml(input_path, client_input)
 
-    # The shared validator resolves schemas from the repository root. For alternate
-    # roots used in tests, validate the shape locally before writing state.
     if root == ROOT:
         errors = validate(input_path, "client-input")
         if errors:
@@ -70,6 +68,7 @@ def initialize_client(
     write_yaml(project / "workflow" / "workflow-state.yaml", workflow_state)
 
     for folder in (
+        "intelligence/ai/decisions",
         "derived",
         "solution",
         "experience/directions",
@@ -116,7 +115,7 @@ def main() -> int:
         )
         print(f"Initialized client project: {project.relative_to(ROOT)}")
         print(
-            "Next: validate/complete input, then run "
+            "Next: complete intake, optionally add AI proposals through OpenCode, then run "
             f"'python -m tooling.onboarding.engine --client {args.client}'."
         )
         return 0

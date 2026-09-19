@@ -17,6 +17,10 @@ CONTRACTS = {
     "change": ROOT / "contracts" / "schemas" / "change-contract.schema.json",
     "review-artifact": ROOT / "contracts" / "schemas" / "review-artifact.schema.json",
     "ai-proposal": ROOT / "contracts" / "schemas" / "ai-proposal.schema.json",
+    "experience-direction": ROOT / "contracts" / "schemas" / "experience-direction.schema.json",
+    "prototype-manifest": ROOT / "contracts" / "schemas" / "prototype-manifest.schema.json",
+    "fixture-set": ROOT / "contracts" / "schemas" / "fixture-set.schema.json",
+    "visual-qa": ROOT / "contracts" / "schemas" / "visual-qa.schema.json",
 }
 
 

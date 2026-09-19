@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Dead Letter",
+  "type":"object",
+  "required":["dead_letter_id","kind","payload","reason","attempts","created_at","status"],
+  "properties":{
+    "dead_letter_id":{"type":"string"},
+    "kind":{"enum":["command","event","webhook"]},
+    "payload":{"type":"object"},
+    "reason":{"type":"string"},
+    "attempts":{"type":"integer","minimum":1},
+    "created_at":{"type":"string","format":"date-time"},
+    "status":{"enum":["open","replayed","discarded"]}
+  },
+  "additionalProperties":true
+}

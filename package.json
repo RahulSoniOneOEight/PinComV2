@@ -1,0 +1,12 @@
+{
+  "name": "pincommerce",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:build": "npm --workspace apps/storefront run build",
+    "web:test": "npm --workspace packages/agency_web_ui run test"
+  }
+}

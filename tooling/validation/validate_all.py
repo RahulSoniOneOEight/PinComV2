@@ -15,6 +15,13 @@ def main() -> int:
         sys.executable,
         "-m",
         "tooling.contracts.validator",
+        "client-input",
+        "client-projects/reference-retail/input/client-input.yaml",
+    )
+    run(
+        sys.executable,
+        "-m",
+        "tooling.contracts.validator",
         "solution",
         "client-projects/reference-retail/solution/solution-contract.yaml",
     )
@@ -24,6 +31,14 @@ def main() -> int:
         "tooling.contracts.validator",
         "workflow-state",
         "client-projects/reference-retail/workflow/workflow-state.yaml",
+    )
+    run(
+        sys.executable,
+        "-m",
+        "tooling.onboarding.engine",
+        "--client",
+        "reference-retail",
+        "--print-only",
     )
     run(
         sys.executable,

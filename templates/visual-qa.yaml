@@ -1,0 +1,23 @@
+qa_id: VQA-EXAMPLE-001
+client_id: ""
+direction_id: DIR-EXAMPLE-A
+surface: customer-app
+build_identity: ""
+checks:
+  - id: design-contract
+    status: not-run
+    evidence: ""
+    notes: []
+  - id: responsive
+    status: not-run
+    evidence: ""
+    notes: []
+  - id: accessibility
+    status: not-run
+    evidence: ""
+    notes: []
+  - id: critical-states
+    status: not-run
+    evidence: ""
+    notes: []
+status: draft

@@ -1,0 +1,33 @@
+version: 1
+client: ""
+providers:
+  mobile:
+    type: experience
+    provider: flutter
+    version: null
+    extensions: []
+  web:
+    type: experience
+    provider: nextjs
+    version: null
+    extensions: []
+  commerce:
+    type: commerce
+    provider: medusa
+    version: null
+    extensions: []
+  erp:
+    type: erp
+    provider: tryton
+    version: null
+    extensions: []
+  automation:
+    type: automation
+    provider: activepieces
+    version: null
+    extensions: []
+  data:
+    type: database
+    provider: postgresql
+    version: null
+    extensions: []

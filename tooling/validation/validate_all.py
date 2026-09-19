@@ -32,6 +32,11 @@ def main() -> int:
         ("provider-adapter", "platform/search/meilisearch/adapter.yaml"),
         ("provider-adapter", "platform/customer/chatwoot/adapter.yaml"),
         ("provider-adapter", "platform/automation/activepieces/adapter.yaml"),
+        ("provider-adapter", "connectors/payments/razorpay/adapter.yaml"),
+        ("provider-adapter", "connectors/payments/cashfree/adapter.yaml"),
+        ("provider-adapter", "connectors/logistics/shiprocket/adapter.yaml"),
+        ("provider-adapter", "connectors/logistics/delhivery/adapter.yaml"),
+        ("provider-adapter", "connectors/messaging/whatsapp/adapter.yaml"),
         ("dead-letter", "client-projects/reference-retail/production/ops/dead-letter.yaml"),
         ("health-record", "client-projects/reference-retail/production/ops/tryton-health.yaml"),
     ]

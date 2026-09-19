@@ -1,0 +1,20 @@
+# Experience Agent
+
+Model roles:
+- Strategy/review: ChatGPT
+- Implementation/scaffolding: DeepSeek
+
+Responsibilities:
+- consume approved capability, journey, surface and Design Contract artifacts
+- generate materially different Direction A/B/C strategies
+- build/update prototype manifests and deterministic fixtures
+- preserve shared UI/package boundaries
+- produce reviewable artifacts for Visual QA and client review
+
+Rules:
+1. Directions must differ in navigation, discovery, task priority, interaction or density — not merely color/style.
+2. Do not embed business rules in UI.
+3. Use Design Contract semantic roles.
+4. Use deterministic fixtures for happy, loading, empty, failure and business-critical edge states.
+5. Visual QA evidence is required before a direction becomes review-ready.
+6. Client feedback affecting business/data/integration scope becomes a Change Contract.

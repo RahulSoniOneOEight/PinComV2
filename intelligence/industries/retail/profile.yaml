@@ -1,0 +1,31 @@
+id: retail
+version: 1
+core_capabilities:
+  - catalogue
+  - search
+  - pricing
+  - promotions
+  - cart
+  - checkout
+  - orders
+  - inventory-availability
+  - fulfilment
+  - returns-refunds
+  - analytics
+recommended_capabilities:
+  - loyalty
+  - customer-support
+  - lifecycle-automation
+  - ops-exceptions
+controls:
+  - role-based-access
+  - payment-reconciliation
+  - inventory-reconciliation
+  - audit
+qa_emphasis:
+  - checkout
+  - inventory-consistency
+  - payment-failure
+  - fulfilment
+  - returns
+  - performance

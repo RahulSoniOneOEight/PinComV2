@@ -79,7 +79,7 @@ REQUIRED = [
     "infrastructure/environments/integration.example.yaml",
     "infrastructure/environments/observability.example.yaml",
     "infrastructure/observability/README.md",
-    "security/performance-budgets.yaml",
+    "security/performance-budgets.yaml","security/dependency-advisories.md",
     ".github/workflows/security.yml",
     ".github/workflows/staging-candidate.yml",
     ".github/workflows/production-promotion.yml",

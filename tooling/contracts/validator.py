@@ -11,6 +11,7 @@ from jsonschema import Draft202012Validator
 ROOT = Path(__file__).resolve().parents[2]
 
 CONTRACTS = {
+    "client-input": ROOT / "contracts" / "schemas" / "client-input.schema.json",
     "solution": ROOT / "contracts" / "schemas" / "solution-contract.schema.json",
     "workflow-state": ROOT / "contracts" / "schemas" / "workflow-state.schema.json",
     "change": ROOT / "contracts" / "schemas" / "change-contract.schema.json",

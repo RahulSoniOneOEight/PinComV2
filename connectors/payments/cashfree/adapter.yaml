@@ -1,0 +1,18 @@
+adapter_id: payments-cashfree
+domain: payments
+provider: cashfree
+capabilities:
+  - payment-create
+  - payment-capture
+  - refund
+commands:
+  - payments.create_order
+  - payments.capture
+  - payments.refund
+events:
+  - payment.captured
+  - payment.failed
+  - refund.completed
+healthcheck: /pg/orders
+reconciliation_flows:
+  - payment-order-to-commerce

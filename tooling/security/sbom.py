@@ -9,10 +9,10 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def file_record(path: Path) -> dict[str, Any]:
+def file_record(path: Path, root: Path) -> dict[str, Any]:
     data = path.read_bytes()
     return {
-        "path": str(path.relative_to(ROOT)),
+        "path": str(path.relative_to(root)),
         "sha256": hashlib.sha256(data).hexdigest(),
         "size": len(data),
     }
@@ -29,7 +29,7 @@ def build_sbom(root: Path = ROOT) -> dict[str, Any]:
         root / "apps/prototype_app/pubspec.yaml",
         root / "packages/agency_flutter_ui/pubspec.yaml",
     ]
-    components = [file_record(path) for path in candidates if path.exists()]
+    components = [file_record(path, root) for path in candidates if path.exists()]
     return {
         "bomFormat": "CycloneDX-like",
         "specVersion": "0.1-reference",

@@ -7,6 +7,8 @@ from typing import Any
 
 import yaml
 
+from tooling.validation.identifiers import IdentifierError, validate_identifier
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -28,6 +30,12 @@ def create_candidate(
     created_by: str,
     root: Path = ROOT,
 ) -> dict[str, Any]:
+    try:
+        validate_identifier(client_id, kind="client_id")
+        validate_identifier(source_revision, kind="source_revision")
+    except IdentifierError as exc:
+        raise CandidateError(str(exc)) from exc
+
     digest = hashlib.sha256()
     components = []
     for path in sorted(artifact_paths, key=lambda p: str(p)):

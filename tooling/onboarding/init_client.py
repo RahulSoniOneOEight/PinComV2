@@ -7,6 +7,7 @@ from typing import Any
 import yaml
 
 from tooling.contracts.validator import validate
+from tooling.validation.identifiers import IdentifierError, validate_identifier
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -32,6 +33,11 @@ def initialize_client(
     risk_profile: str = "standard",
     root: Path = ROOT,
 ) -> Path:
+    try:
+        validate_identifier(client_id, kind="client_id")
+    except IdentifierError as exc:
+        raise ClientInitError(str(exc)) from exc
+
     project = root / "client-projects" / client_id
     if project.exists():
         raise ClientInitError(f"Client project already exists: {project}")

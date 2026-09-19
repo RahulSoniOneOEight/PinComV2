@@ -19,9 +19,14 @@ def validate_measurements(
 ) -> list[str]:
     errors: list[str] = []
     for app, limits in budgets.get("budgets", {}).items():
-        actual = measurements.get(app, {})
+        if app not in measurements:
+            errors.append(f"{app}: missing measurements")
+            continue
+        actual = measurements[app]
         for key, limit in limits.items():
-            if key in actual and actual[key] > limit:
+            if key not in actual:
+                errors.append(f"{app}.{key}: missing measurement")
+            elif actual[key] > limit:
                 errors.append(f"{app}.{key}: {actual[key]} > {limit}")
     return errors
 

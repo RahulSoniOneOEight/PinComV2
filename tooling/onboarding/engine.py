@@ -7,6 +7,8 @@ from typing import Any
 
 import yaml
 
+from tooling.validation.identifiers import IdentifierError, validate_identifier
+
 ROOT = Path(__file__).resolve().parents[2]
 
 BUSINESS_MODEL_TO_ARCHETYPE = {
@@ -85,6 +87,11 @@ def resolve_benchmark(
         surfaces.extend(archetype.get("expected_surfaces", []))
         optional_surfaces.extend(archetype.get("optional_surfaces", []))
 
+    expected_surfaces = unique(surfaces)
+    expected_optional = [
+        s for s in unique(optional_surfaces) if s not in set(expected_surfaces)
+    ]
+
     return {
         "client_id": client_input["client_id"],
         "industry": client_input["industry"],
@@ -93,8 +100,8 @@ def resolve_benchmark(
             "core_capabilities": unique(industry_core + archetype_core),
             "recommended_capabilities": unique(industry_recommended + archetype_recommended),
             "journeys": unique(journeys),
-            "surfaces": unique(surfaces),
-            "optional_surfaces": unique(optional_surfaces),
+            "surfaces": expected_surfaces,
+            "optional_surfaces": expected_optional,
             "controls": unique(list(industry_profile.get("controls", []))),
             "qa_emphasis": unique(list(industry_profile.get("qa_emphasis", []))),
         },
@@ -277,6 +284,11 @@ class GeneratedBlueprint:
 
 
 def build_blueprint(client_id: str, root: Path = ROOT) -> GeneratedBlueprint:
+    try:
+        validate_identifier(client_id, kind="client_id")
+    except IdentifierError as exc:
+        raise OnboardingError(str(exc)) from exc
+
     project = root / "client-projects" / client_id
     client_input = load_yaml(project / "input" / "client-input.yaml")
 

@@ -9,6 +9,7 @@ from typing import Any
 import yaml
 
 from tooling.contracts.validator import validate
+from tooling.validation.identifiers import IdentifierError, validate_identifier
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -33,10 +34,19 @@ def save_yaml(path: Path, data: dict[str, Any]) -> None:
 
 
 def proposal_path(client_id: str, filename: str, root: Path = ROOT) -> Path:
+    try:
+        validate_identifier(client_id, kind="client_id")
+        validate_identifier(filename, kind="proposal filename")
+    except IdentifierError as exc:
+        raise ProposalError(str(exc)) from exc
     return root / "client-projects" / client_id / "intelligence" / "ai" / filename
 
 
 def audit_path(client_id: str, root: Path = ROOT) -> Path:
+    try:
+        validate_identifier(client_id, kind="client_id")
+    except IdentifierError as exc:
+        raise ProposalError(str(exc)) from exc
     return root / "client-projects" / client_id / "intelligence" / "ai" / "model-runs.jsonl"
 
 

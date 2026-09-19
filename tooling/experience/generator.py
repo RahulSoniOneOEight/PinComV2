@@ -6,6 +6,8 @@ from typing import Any
 
 import yaml
 
+from tooling.validation.identifiers import IdentifierError, validate_identifier
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -101,6 +103,11 @@ DIRECTIONS = [
 
 
 def build_experience(client_id: str, root: Path = ROOT) -> dict[str, dict[str, Any]]:
+    try:
+        validate_identifier(client_id, kind="client_id")
+    except IdentifierError as exc:
+        raise ExperienceError(str(exc)) from exc
+
     project = root / "client-projects" / client_id
     surfaces = load_yaml(project / "derived" / "surface-map.yaml")
     journeys = load_yaml(project / "derived" / "journey-map.yaml")

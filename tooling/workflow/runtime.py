@@ -9,6 +9,8 @@ from typing import Any
 
 import yaml
 
+from tooling.validation.identifiers import IdentifierError, validate_identifier
+
 ROOT = Path(__file__).resolve().parents[2]
 LIFECYCLE_PATH = ROOT / "workflows" / "lifecycle.yaml"
 
@@ -56,6 +58,10 @@ def lifecycle(path: Path = LIFECYCLE_PATH) -> list[Stage]:
 
 
 def project_root(client_id: str, root: Path = ROOT) -> Path:
+    try:
+        validate_identifier(client_id, kind="client_id")
+    except IdentifierError as exc:
+        raise WorkflowError(str(exc)) from exc
     return root / "client-projects" / client_id
 
 

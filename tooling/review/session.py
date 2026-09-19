@@ -6,6 +6,8 @@ from typing import Any
 
 import yaml
 
+from tooling.validation.identifiers import IdentifierError, validate_identifier
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -37,6 +39,13 @@ def create_build_identity(
     environment: str = "prototype",
     root: Path = ROOT,
 ) -> dict[str, Any]:
+    try:
+        validate_identifier(client_id, kind="client_id")
+        validate_identifier(direction_file, kind="direction filename")
+        validate_identifier(source_revision, kind="source_revision")
+    except IdentifierError as exc:
+        raise ReviewError(str(exc)) from exc
+
     project = root / "client-projects" / client_id
     direction = load_yaml(project / "experience" / "directions" / direction_file)
     direction_id = direction["direction_id"]

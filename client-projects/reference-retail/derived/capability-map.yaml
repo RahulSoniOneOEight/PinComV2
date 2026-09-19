@@ -1,0 +1,14 @@
+client_id: reference-retail
+mandatory: [authentication, audit]
+core:
+  - catalogue
+  - search
+  - pricing
+  - cart
+  - checkout
+  - orders
+  - inventory-availability
+  - fulfilment
+  - return-refund
+recommended: [customer-support, lifecycle-automation, ops-exceptions]
+optional: [loyalty]

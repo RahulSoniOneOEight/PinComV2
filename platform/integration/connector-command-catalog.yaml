@@ -1,0 +1,16 @@
+version: 1
+commands:
+  payments.create_order:
+    target_domain: payments
+  payments.capture:
+    target_domain: payments
+  payments.refund:
+    target_domain: payments
+  logistics.create_shipment:
+    target_domain: logistics
+  logistics.cancel_shipment:
+    target_domain: logistics
+  logistics.track_shipment:
+    target_domain: logistics
+  messaging.send_whatsapp:
+    target_domain: messaging

@@ -1,0 +1,9 @@
+observability:
+  otlp:
+    endpoint_env: OTEL_EXPORTER_OTLP_ENDPOINT
+    token_env: OTEL_EXPORTER_OTLP_TOKEN
+  sentry:
+    endpoint_env: SENTRY_ENVELOPE_ENDPOINT
+  grafana:
+    annotation_endpoint_env: GRAFANA_ANNOTATION_ENDPOINT
+    token_env: GRAFANA_TOKEN

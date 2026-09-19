@@ -1,0 +1,22 @@
+version: 1
+roles:
+  surface:
+    page: surface.page
+    raised: surface.raised
+    interactive: surface.interactive
+  content:
+    primary: content.primary
+    secondary: content.secondary
+    inverse: content.inverse
+  action:
+    primary: action.primary
+    secondary: action.secondary
+    destructive: action.destructive
+  feedback:
+    success: feedback.success
+    warning: feedback.warning
+    error: feedback.error
+    info: feedback.info
+rules:
+  - applications-consume-semantic-roles-not-brand-values
+  - framework-bindings-map-semantic-roles-to-runtime-values

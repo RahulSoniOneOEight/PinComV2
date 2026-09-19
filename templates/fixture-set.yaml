@@ -1,0 +1,15 @@
+fixture_set_id: default-commerce
+client_id: ""
+states:
+  - id: default
+    purpose: primary happy path
+    data: {}
+  - id: loading
+    purpose: loading behavior
+    data: {}
+  - id: empty
+    purpose: empty-state behavior
+    data: {}
+  - id: failure
+    purpose: recoverable error behavior
+    data: {}

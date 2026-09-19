@@ -1,0 +1,13 @@
+client_id: ""
+direction_id: DIR-EXAMPLE-A
+build_identity: local
+surfaces:
+  - id: customer-app
+    runtime: flutter
+    entry: apps/prototype_app
+  - id: web-store
+    runtime: web
+    entry: apps/storefront
+fixtures:
+  - default-commerce
+status: draft

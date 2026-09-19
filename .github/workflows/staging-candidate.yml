@@ -1,0 +1,34 @@
+name: Staging Candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      client_id:
+        description: Client project ID
+        required: true
+      candidate_id:
+        description: Immutable release candidate ID
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validation dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Validate full platform
+        run: python tooling/validation/validate_all.py
+      - name: Verify candidate exists
+        shell: bash
+        run: test -f "client-projects/${{ inputs.client_id }}/release/candidates/${{ inputs.candidate_id }}.yaml"
+      - name: Record staging deployment intent
+        run: |
+          echo "Candidate ${{ inputs.candidate_id }} is the only artifact identity eligible for this staging run."
+          echo "Environment-specific deployment occurs through authorized deployment bindings."

@@ -39,6 +39,14 @@ def main() -> int:
         ("provider-adapter", "connectors/messaging/whatsapp/adapter.yaml"),
         ("dead-letter", "client-projects/reference-retail/production/ops/dead-letter.yaml"),
         ("health-record", "client-projects/reference-retail/production/ops/tryton-health.yaml"),
+        ("release-candidate", "client-projects/reference-retail/release/candidates/RC-reference-retail-ref001.yaml"),
+        ("hardening-evidence", "client-projects/reference-retail/release/hardening/RC-reference-retail-ref001.yaml"),
+        ("staging-validation", "client-projects/reference-retail/release/staging/RC-reference-retail-ref001.yaml"),
+        ("observability-evidence", "client-projects/reference-retail/release/observability/RC-reference-retail-ref001.yaml"),
+        ("uat-record", "client-projects/reference-retail/uat/RC-reference-retail-ref001.yaml"),
+        ("production-authorization", "client-projects/reference-retail/release/production-authorization.yaml"),
+        ("release-record", "client-projects/reference-retail/release/releases/REL-reference-retail-001.yaml"),
+        ("recovery-record", "client-projects/reference-retail/release/recovery/REC-reference-retail-001.yaml"),
     ]
     for contract_type, path in checks:
         run(sys.executable, "-m", "tooling.contracts.validator", contract_type, path)

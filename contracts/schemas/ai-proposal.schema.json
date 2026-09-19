@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Proposal",
+  "type": "object",
+  "required": ["proposal_id","client_id","task","model_role","provider","inputs","proposal","confidence","status"],
+  "properties": {
+    "proposal_id": {"type":"string","pattern":"^AI-[A-Z0-9-]+$"},
+    "client_id": {"type":"string","minLength":1},
+    "task": {"type":"string","minLength":1},
+    "model_role": {"enum":["strategy","architecture","implementation","reviewer"]},
+    "provider": {"type":"string","minLength":1},
+    "model": {"type":["string","null"]},
+    "inputs": {"type":"array","items":{"type":"string"},"minItems":1},
+    "proposal": {"type":"object"},
+    "rationale": {"type":"array","items":{"type":"string"}},
+    "uncertainties": {"type":"array","items":{"type":"string"}},
+    "confidence": {"enum":["high","medium","low"]},
+    "registry_validation": {"type":"object","required":["status"],"properties":{"status":{"enum":["pending","passed","failed","partial"]},"notes":{"type":"array","items":{"type":"string"}}},"additionalProperties":true},
+    "human_review": {"type":"object","required":["status"],"properties":{"status":{"enum":["pending","approved","rejected","modified"]},"reviewer":{"type":["string","null"]},"notes":{"type":"array","items":{"type":"string"}}},"additionalProperties":true},
+    "status": {"enum":["proposed","validated","approved","rejected","promoted"]}
+  },
+  "additionalProperties": true
+}

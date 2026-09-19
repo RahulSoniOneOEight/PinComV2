@@ -1,0 +1,16 @@
+name: prototype_app
+description: Agency Platform V2 Flutter prototype runtime
+publish_to: "none"
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  agency_flutter_ui:
+    path: ../../packages/agency_flutter_ui
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+flutter:
+  uses-material-design: true

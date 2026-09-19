@@ -1,0 +1,15 @@
+direction_id: DIR-EXAMPLE-A
+client_id: ""
+strategy: discovery-first
+surfaces:
+  - customer-app
+  - web-store
+journey_emphasis:
+  - browse-to-buy
+design_intent:
+  density: medium
+  navigation: category-led
+  discovery: editorial
+differentiators: []
+fixture_set: default-commerce
+status: draft

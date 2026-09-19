@@ -1,0 +1,46 @@
+:root {
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --surface-page: #ffffff;
+  --surface-raised: #f7f7f8;
+  --content-primary: #17181a;
+  --content-secondary: #666a73;
+  --action-primary: #17181a;
+  --radius-md: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--content-primary);
+  font-family: Arial, sans-serif;
+}
+
+.agency-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.agency-card {
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-md);
+}
+
+.agency-body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.agency-title {
+  margin-top: var(--space-sm);
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 600;
+}

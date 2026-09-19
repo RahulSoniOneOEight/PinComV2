@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "web:build": "npm --workspace apps/storefront run build",
+    "review:build": "npm --workspace apps/review_mode run build",
     "web:test": "npm --workspace packages/agency_web_ui run test"
   }
 }

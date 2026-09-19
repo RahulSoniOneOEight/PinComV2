@@ -50,3 +50,5 @@ jobs:
         run: npm run review:build
       - name: Build Ops Console
         run: npm run ops:build
+      - name: Build Agency Control Plane
+        run: npm run control:build

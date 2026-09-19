@@ -1,0 +1,15 @@
+client_id: reference-retail
+mandatory:
+  - authentication
+  - audit
+core_gaps:
+  - search
+  - return-refund
+  - analytics
+recommended_gaps:
+  - customer-support
+  - lifecycle-automation
+  - ops-exceptions
+deferred:
+  - loyalty
+not_applicable: []

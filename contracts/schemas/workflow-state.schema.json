@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workflow State",
+  "type": "object",
+  "required": ["client_id", "workflow_version", "current_stage", "completed", "blocked", "human_approvals"],
+  "properties": {
+    "client_id": {"type": "string", "minLength": 1},
+    "workflow_version": {"type": "integer", "minimum": 1},
+    "current_stage": {"type": "string", "minLength": 1},
+    "completed": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "blocked": {"type": "boolean"},
+    "human_approvals": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "additionalProperties": true
+}

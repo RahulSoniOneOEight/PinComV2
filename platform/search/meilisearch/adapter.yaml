@@ -1,0 +1,12 @@
+adapter_id: search-meilisearch
+domain: search
+provider: meilisearch
+capabilities:
+  - product-search
+  - typo-tolerance
+  - filtering
+commands:
+  - search.index_product
+events: []
+healthcheck: /health
+reconciliation_flows: []

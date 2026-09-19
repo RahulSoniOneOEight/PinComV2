@@ -10,7 +10,7 @@ core_capabilities:
   - orders
   - inventory-availability
   - fulfilment
-  - returns-refunds
+  - return-refund
   - analytics
 recommended_capabilities:
   - loyalty

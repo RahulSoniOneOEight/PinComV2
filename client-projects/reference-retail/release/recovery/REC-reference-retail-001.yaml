@@ -1,0 +1,8 @@
+recovery_id: REC-reference-retail-001
+release_id: REL-reference-retail-001
+reason: reference rollback plan
+action: rollback
+target_candidate_id: null
+status: planned
+notes:
+  - restore previous authorized candidate if smoke or telemetry fails

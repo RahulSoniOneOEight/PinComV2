@@ -1,0 +1,18 @@
+adapter_id: payments-razorpay
+domain: payments
+provider: razorpay
+capabilities:
+  - payment-create
+  - payment-capture
+  - refund
+commands:
+  - payments.create_order
+  - payments.capture
+  - payments.refund
+events:
+  - payment.captured
+  - payment.failed
+  - refund.completed
+healthcheck: /v1/orders
+reconciliation_flows:
+  - payment-order-to-commerce

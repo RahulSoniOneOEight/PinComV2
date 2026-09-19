@@ -1,6 +1,6 @@
 event_id: evt-ref-order-001
 event_type: order.confirmed
-occurred_at: 2026-09-19T15:40:00Z
+occurred_at: "2026-09-19T15:40:00Z"
 producer: commerce
 aggregate:
   type: order

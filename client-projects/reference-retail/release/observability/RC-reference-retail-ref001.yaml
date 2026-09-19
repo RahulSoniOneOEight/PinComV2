@@ -1,0 +1,8 @@
+evidence_id: OBS-RC-reference-retail-ref001
+candidate_id: RC-reference-retail-ref001
+signals:
+  - {kind: metric, name: http.request.latency, status: pass, evidence: "staging telemetry"}
+  - {kind: trace, name: order.confirmed.to.erp, status: pass, evidence: "correlation trace"}
+  - {kind: error, name: integration.delivery.failure, status: pass, evidence: "Ops Console exception visibility"}
+  - {kind: alert, name: provider.unreachable, status: pass, evidence: "health-check alert path"}
+status: passed

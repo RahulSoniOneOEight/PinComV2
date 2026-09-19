@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Domain Event",
+  "type": "object",
+  "required": ["event_id","event_type","occurred_at","producer","aggregate","payload","idempotency_key"],
+  "properties": {
+    "event_id": {"type":"string","minLength":1},
+    "event_type": {"type":"string","pattern":"^[a-z0-9._-]+$"},
+    "occurred_at": {"type":"string","format":"date-time"},
+    "producer": {"type":"string","minLength":1},
+    "aggregate": {
+      "type":"object",
+      "required":["type","id"],
+      "properties":{
+        "type":{"type":"string"},
+        "id":{"type":"string"}
+      }
+    },
+    "payload": {"type":"object"},
+    "correlation_id": {"type":["string","null"]},
+    "causation_id": {"type":["string","null"]},
+    "idempotency_key": {"type":"string","minLength":1},
+    "schema_version": {"type":"integer","minimum":1}
+  },
+  "additionalProperties": true
+}

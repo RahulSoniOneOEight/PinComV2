@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Change Contract",
+  "type": "object",
+  "required": ["change_id", "request", "type", "affected_capabilities", "affected_domains", "affected_surfaces", "affected_entities", "affected_events", "required_tests", "approval_required", "status"],
+  "properties": {
+    "change_id": {"type": "string", "pattern": "^CHG-[0-9]{3,}$"},
+    "request": {"type": "string"},
+    "type": {"enum": ["visual", "ux", "business-rule", "integration", "data", "security", "infrastructure"]},
+    "affected_capabilities": {"type": "array", "items": {"type": "string"}},
+    "affected_domains": {"type": "array", "items": {"type": "string"}},
+    "affected_surfaces": {"type": "array", "items": {"type": "string"}},
+    "affected_entities": {"type": "array", "items": {"type": "string"}},
+    "affected_events": {"type": "array", "items": {"type": "string"}},
+    "required_tests": {"type": "array", "items": {"type": "string"}},
+    "approval_required": {"type": "boolean"},
+    "status": {"enum": ["proposed", "approved", "in-progress", "validated", "released", "rejected"]}
+  },
+  "additionalProperties": true
+}

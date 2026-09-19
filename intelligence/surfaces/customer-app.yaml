@@ -1,0 +1,13 @@
+id: customer-app
+class: customer
+default_technology: flutter
+capability_types:
+  - discovery
+  - commerce
+  - account
+  - fulfilment-visibility
+review_requirements:
+  - responsive
+  - accessibility
+  - visual-regression
+  - journey-validation

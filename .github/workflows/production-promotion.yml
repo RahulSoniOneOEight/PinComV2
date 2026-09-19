@@ -1,0 +1,49 @@
+name: Production Promotion
+
+on:
+  workflow_dispatch:
+    inputs:
+      client_id:
+        description: Client project ID
+        required: true
+      candidate_id:
+        description: Authorized immutable candidate ID
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  authorize:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validation dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Verify exact candidate evidence
+        shell: bash
+        run: |
+          CLIENT="${{ inputs.client_id }}" CANDIDATE="${{ inputs.candidate_id }}" python - <<'PY'
+          import os
+          from pathlib import Path
+          from tooling.release.gates import verify_release_readiness
+          client = os.environ["CLIENT"]
+          candidate = os.environ["CANDIDATE"]
+          base = Path("client-projects") / client
+          result = verify_release_readiness(
+              candidate_path=base / "release/candidates" / f"{candidate}.yaml",
+              hardening_path=base / "release/hardening" / f"{candidate}.yaml",
+              uat_path=base / "uat" / f"{candidate}.yaml",
+              authorization_path=base / "release/production-authorization.yaml",
+          )
+          assert result["candidate_id"] == candidate
+          print(result)
+          PY
+      - name: Promotion intent
+        run: |
+          echo "Production environment approval + exact-candidate gate passed."
+          echo "Deployment binding must promote only ${{ inputs.candidate_id }}."

@@ -24,19 +24,35 @@ jobs:
           python-version: "3.12"
       - name: Install validation dependencies
         run: pip install -r requirements-dev.txt
+      - name: Validate identifiers
+        env:
+          CLIENT_ID: ${{ inputs.client_id }}
+          CANDIDATE_ID: ${{ inputs.candidate_id }}
+        run: |
+          python - <<'PY'
+          import os
+          from tooling.validation.identifiers import validate_identifier
+          validate_identifier(os.environ["CLIENT_ID"], kind="client_id")
+          validate_identifier(os.environ["CANDIDATE_ID"], kind="candidate_id")
+          PY
       - name: Verify exact candidate evidence
+        env:
+          CLIENT_ID: ${{ inputs.client_id }}
+          CANDIDATE_ID: ${{ inputs.candidate_id }}
         shell: bash
         run: |
-          CLIENT="${{ inputs.client_id }}" CANDIDATE="${{ inputs.candidate_id }}" python - <<'PY'
+          python - <<'PY'
           import os
           from pathlib import Path
           from tooling.release.gates import verify_release_readiness
-          client = os.environ["CLIENT"]
-          candidate = os.environ["CANDIDATE"]
+          client = os.environ["CLIENT_ID"]
+          candidate = os.environ["CANDIDATE_ID"]
           base = Path("client-projects") / client
           result = verify_release_readiness(
               candidate_path=base / "release/candidates" / f"{candidate}.yaml",
               hardening_path=base / "release/hardening" / f"{candidate}.yaml",
+              staging_path=base / "release/staging" / f"{candidate}.yaml",
+              observability_path=base / "release/observability" / f"{candidate}.yaml",
               uat_path=base / "uat" / f"{candidate}.yaml",
               authorization_path=base / "release/production-authorization.yaml",
           )
@@ -44,6 +60,8 @@ jobs:
           print(result)
           PY
       - name: Promotion intent
+        env:
+          CANDIDATE_ID: ${{ inputs.candidate_id }}
         run: |
           echo "Production environment approval + exact-candidate gate passed."
-          echo "Deployment binding must promote only ${{ inputs.candidate_id }}."
+          echo "Deployment binding must promote only $CANDIDATE_ID."

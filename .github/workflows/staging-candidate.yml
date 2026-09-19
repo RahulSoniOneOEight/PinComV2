@@ -23,12 +23,28 @@ jobs:
           python-version: "3.12"
       - name: Install validation dependencies
         run: pip install -r requirements-dev.txt
+      - name: Validate identifiers
+        env:
+          CLIENT_ID: ${{ inputs.client_id }}
+          CANDIDATE_ID: ${{ inputs.candidate_id }}
+        run: |
+          python - <<'PY'
+          import os
+          from tooling.validation.identifiers import validate_identifier
+          validate_identifier(os.environ["CLIENT_ID"], kind="client_id")
+          validate_identifier(os.environ["CANDIDATE_ID"], kind="candidate_id")
+          PY
       - name: Validate full platform
         run: python tooling/validation/validate_all.py
       - name: Verify candidate exists
+        env:
+          CLIENT_ID: ${{ inputs.client_id }}
+          CANDIDATE_ID: ${{ inputs.candidate_id }}
         shell: bash
-        run: test -f "client-projects/${{ inputs.client_id }}/release/candidates/${{ inputs.candidate_id }}.yaml"
+        run: test -f "client-projects/$CLIENT_ID/release/candidates/$CANDIDATE_ID.yaml"
       - name: Record staging deployment intent
+        env:
+          CANDIDATE_ID: ${{ inputs.candidate_id }}
         run: |
-          echo "Candidate ${{ inputs.candidate_id }} is the only artifact identity eligible for this staging run."
+          echo "Candidate $CANDIDATE_ID is the only artifact identity eligible for this staging run."
           echo "Environment-specific deployment occurs through authorized deployment bindings."

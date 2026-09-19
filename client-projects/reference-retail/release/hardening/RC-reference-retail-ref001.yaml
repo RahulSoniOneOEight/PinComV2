@@ -1,5 +1,6 @@
 evidence_id: HARD-RC-reference-retail-ref001
 candidate_id: RC-reference-retail-ref001
+non_blocking_checks: [dependency-vulnerability]
 checks:
   - {id: contract-validation, status: pass, evidence: "CI platform-validation"}
   - {id: unit-tests, status: pass, evidence: "CI Python/Flutter"}

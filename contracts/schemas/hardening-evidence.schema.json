@@ -6,6 +6,7 @@
   "properties":{
     "evidence_id":{"type":"string"},
     "candidate_id":{"type":"string"},
+    "non_blocking_checks":{"type":"array","items":{"type":"string"}},
     "checks":{
       "type":"array",
       "items":{

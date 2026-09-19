@@ -1,0 +1,15 @@
+adapter_id: marketplace-mercur
+domain: marketplace
+provider: mercur
+capabilities:
+  - seller-onboarding
+  - offers
+  - commissions
+  - settlements
+commands:
+  - marketplace.sync_seller
+events:
+  - seller.created
+  - seller.updated
+healthcheck: /health
+reconciliation_flows: []

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reconciliation Record",
+  "type": "object",
+  "required": ["record_id","flow","source","target","entity_type","entity_id","status","observed_at"],
+  "properties": {
+    "record_id": {"type":"string"},
+    "flow": {"type":"string"},
+    "source": {"type":"string"},
+    "target": {"type":"string"},
+    "entity_type": {"type":"string"},
+    "entity_id": {"type":"string"},
+    "source_state": {"type":"object"},
+    "target_state": {"type":"object"},
+    "status": {"enum":["matched","mismatch","missing-source","missing-target","pending"]},
+    "observed_at": {"type":"string","format":"date-time"},
+    "difference": {"type":"object"}
+  },
+  "additionalProperties": true
+}

@@ -11,43 +11,20 @@ def run(*args: str) -> None:
 
 def main() -> int:
     run(sys.executable, "tooling/validation/validate_repository.py")
-    run(
-        sys.executable,
-        "-m",
-        "tooling.contracts.validator",
-        "client-input",
-        "client-projects/reference-retail/input/client-input.yaml",
-    )
-    run(
-        sys.executable,
-        "-m",
-        "tooling.contracts.validator",
-        "solution",
-        "client-projects/reference-retail/solution/solution-contract.yaml",
-    )
-    run(
-        sys.executable,
-        "-m",
-        "tooling.contracts.validator",
-        "workflow-state",
-        "client-projects/reference-retail/workflow/workflow-state.yaml",
-    )
-    run(
-        sys.executable,
-        "-m",
-        "tooling.onboarding.engine",
-        "--client",
-        "reference-retail",
-        "--print-only",
-    )
-    run(
-        sys.executable,
-        "-m",
-        "tooling.workflow.runtime",
-        "status",
-        "--client",
-        "reference-retail",
-    )
+    run(sys.executable, "-m", "tooling.contracts.validator", "client-input",
+        "client-projects/reference-retail/input/client-input.yaml")
+    run(sys.executable, "-m", "tooling.contracts.validator", "solution",
+        "client-projects/reference-retail/solution/solution-contract.yaml")
+    run(sys.executable, "-m", "tooling.contracts.validator", "workflow-state",
+        "client-projects/reference-retail/workflow/workflow-state.yaml")
+    run(sys.executable, "-m", "tooling.contracts.validator", "ai-proposal",
+        "client-projects/reference-retail/intelligence/ai/interpretation.yaml")
+    run(sys.executable, "-m", "tooling.ai.router", "--role", "strategy")
+    run(sys.executable, "-m", "tooling.ai.router", "--role", "implementation")
+    run(sys.executable, "-m", "tooling.onboarding.engine", "--client",
+        "reference-retail", "--print-only")
+    run(sys.executable, "-m", "tooling.workflow.runtime", "status",
+        "--client", "reference-retail")
     run(sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v")
     print("All Agency Platform V2 validation gates passed.")
     return 0

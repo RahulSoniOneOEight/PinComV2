@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual QA Record",
+  "type": "object",
+  "required": ["qa_id","client_id","direction_id","surface","build_identity","checks","status"],
+  "properties": {
+    "qa_id": {"type":"string"},
+    "client_id": {"type":"string"},
+    "direction_id": {"type":"string"},
+    "surface": {"type":"string"},
+    "build_identity": {"type":"string"},
+    "checks": {
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","status"],
+        "properties":{
+          "id":{"type":"string"},
+          "status":{"enum":["pass","fail","warning","not-run"]},
+          "evidence":{"type":"string"},
+          "notes":{"type":"array","items":{"type":"string"}}
+        }
+      }
+    },
+    "status": {"enum":["draft","failed","passed","review-ready"]}
+  },
+  "additionalProperties": true
+}

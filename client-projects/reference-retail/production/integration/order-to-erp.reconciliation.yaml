@@ -1,0 +1,17 @@
+record_id: rec-ref-order-001
+flow: commerce-order-to-erp
+source: commerce
+target: erp
+entity_type: order
+entity_id: ORD-REF-001
+source_state:
+  external_id: ORD-REF-001
+  status: confirmed
+  total: 1999
+target_state:
+  external_id: ORD-REF-001
+  status: confirmed
+  total: 1999
+status: matched
+observed_at: 2026-09-19T15:41:00Z
+difference: {}

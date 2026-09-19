@@ -29,6 +29,8 @@ CONTRACTS = {
     "domain-command": ROOT / "contracts" / "schemas" / "domain-command.schema.json",
     "reconciliation-record": ROOT / "contracts" / "schemas" / "reconciliation-record.schema.json",
     "provider-adapter": ROOT / "contracts" / "schemas" / "provider-adapter.schema.json",
+    "dead-letter": ROOT / "contracts" / "schemas" / "dead-letter.schema.json",
+    "health-record": ROOT / "contracts" / "schemas" / "health-record.schema.json",
 }
 
 

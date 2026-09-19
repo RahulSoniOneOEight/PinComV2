@@ -9,12 +9,14 @@ permissions:
   contents: read
 
 jobs:
-  structural-validation:
+  platform-validation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate governed repository structure
-        run: python tooling/validation/validate_repository.py
+      - name: Install validation dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Run governed repository, contract and workflow validation
+        run: python tooling/validation/validate_all.py

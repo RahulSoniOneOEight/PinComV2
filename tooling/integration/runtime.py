@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import threading
+import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Protocol
@@ -42,6 +44,21 @@ class DeliveryResult:
     attempt: int
     external_id: str | None = None
     error: str | None = None
+    pending: bool = False
+
+
+@dataclass
+class Claim:
+    """Outcome of trying to acquire an idempotency key.
+
+    ``state`` is one of ``acquired``, ``completed``, ``in_progress`` or
+    ``retryable``. Only ``acquired`` grants the caller permission to execute the
+    external side effect.
+    """
+
+    acquired: bool
+    state: str
+    result: DeliveryResult | None = None
 
 
 class Adapter(Protocol):
@@ -52,37 +69,94 @@ class Adapter(Protocol):
 
 
 class IdempotencyStore:
+    """In-memory idempotency store for deterministic (non-production) runtimes."""
+
     def __init__(self) -> None:
+        self._states: dict[str, str] = {}
         self._results: dict[str, DeliveryResult] = {}
+        self._lock = threading.Lock()
 
     def get(self, key: str) -> DeliveryResult | None:
         return self._results.get(key)
 
     def put(self, key: str, result: DeliveryResult) -> None:
-        self._results[key] = result
+        with self._lock:
+            self._states[key] = "completed"
+            self._results[key] = result
+
+    def claim(self, key: str) -> Claim:
+        with self._lock:
+            state = self._states.get(key)
+            if state == "completed":
+                return Claim(False, "completed", self._results.get(key))
+            if state == "processing":
+                return Claim(False, "in_progress")
+            self._states[key] = "processing"
+            return Claim(True, "acquired")
+
+    def complete(self, key: str, result: DeliveryResult) -> None:
+        with self._lock:
+            self._states[key] = "completed"
+            self._results[key] = result
+
+    def fail(self, key: str, result: DeliveryResult) -> None:
+        with self._lock:
+            self._states[key] = "failed"
+            self._results[key] = result
+
+    def release(self, key: str) -> None:
+        with self._lock:
+            if self._states.get(key) == "processing":
+                self._states.pop(key, None)
+
+
+def pending_result(command: DomainCommand, provider: str) -> DeliveryResult:
+    """A non-executed result returned when another worker owns the key."""
+    return DeliveryResult(
+        success=False,
+        provider=provider,
+        command_id=command.command_id,
+        attempt=0,
+        error="idempotency-key-in-progress",
+        pending=True,
+    )
 
 
 class IntegrationRuntime:
-    def __init__(self) -> None:
+    def __init__(self, sleep: Any | None = None) -> None:
         self.adapters: dict[str, Adapter] = {}
         self.idempotency = IdempotencyStore()
         self.audit: list[dict[str, Any]] = []
+        self.sleep = time.sleep if sleep is None else sleep
 
     def register(self, target: str, adapter: Adapter) -> None:
         self.adapters[target] = adapter
 
+    def _wait(self, command: DomainCommand) -> None:
+        seconds = getattr(command, "backoff_seconds", 0) or 0
+        if seconds > 0:
+            self.sleep(seconds)
+
     def dispatch(self, command: DomainCommand) -> DeliveryResult:
-        existing = self.idempotency.get(command.idempotency_key)
-        if existing is not None:
-            self.audit.append({
-                "event": "integration.idempotent_replay",
-                "command_id": command.command_id,
-                "target": command.target,
-                "provider": existing.provider,
-            })
-            return existing
+        claim = self.idempotency.claim(command.idempotency_key)
+        if not claim.acquired:
+            if claim.state == "completed" and claim.result is not None:
+                self.audit.append({
+                    "event": "integration.idempotent_replay",
+                    "command_id": command.command_id,
+                    "target": command.target,
+                    "provider": claim.result.provider,
+                })
+                return claim.result
+            provider = (
+                self.adapters[command.target].provider
+                if command.target in self.adapters
+                else command.target
+            )
+            return pending_result(command, provider)
 
         if command.target not in self.adapters:
+            self.idempotency.release(command.idempotency_key)
             raise KeyError(f"No adapter registered for target: {command.target}")
 
         adapter = self.adapters[command.target]
@@ -101,10 +175,13 @@ class IntegrationRuntime:
             })
             last = result
             if result.success:
-                self.idempotency.put(command.idempotency_key, result)
+                self.idempotency.complete(command.idempotency_key, result)
                 return result
+            if attempt < command.max_attempts:
+                self._wait(command)
 
         assert last is not None
+        self.idempotency.fail(command.idempotency_key, last)
         return last
 
 

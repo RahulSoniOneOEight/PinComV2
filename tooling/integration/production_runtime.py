@@ -1,32 +1,52 @@
 from __future__ import annotations
 
+import time
 from typing import Any
 
 from tooling.integration.dead_letter import make_dead_letter
 from tooling.integration.durable import SQLiteRuntimeStore
-from tooling.integration.runtime import Adapter, DeliveryResult, DomainCommand
+from tooling.integration.runtime import (
+    Adapter,
+    DeliveryResult,
+    DomainCommand,
+    pending_result,
+)
 
 
 class ProductionIntegrationRuntime:
-    def __init__(self, store: SQLiteRuntimeStore):
+    def __init__(self, store: SQLiteRuntimeStore, sleep: Any | None = None):
         self.store = store
         self.adapters: dict[str, Adapter] = {}
+        self.sleep = time.sleep if sleep is None else sleep
 
     def register(self, target: str, adapter: Adapter) -> None:
         self.adapters[target] = adapter
 
+    def _wait(self, command: DomainCommand) -> None:
+        seconds = getattr(command, "backoff_seconds", 0) or 0
+        if seconds > 0:
+            self.sleep(seconds)
+
     def dispatch(self, command: DomainCommand) -> DeliveryResult:
-        existing = self.store.get_result(command.idempotency_key)
-        if existing is not None:
-            self.store.append_audit({
-                "event": "integration.idempotent_replay",
-                "command_id": command.command_id,
-                "target": command.target,
-                "provider": existing.provider,
-            })
-            return existing
+        claim = self.store.claim(command.idempotency_key)
+        if not claim.acquired:
+            if claim.state == "completed" and claim.result is not None:
+                self.store.append_audit({
+                    "event": "integration.idempotent_replay",
+                    "command_id": command.command_id,
+                    "target": command.target,
+                    "provider": claim.result.provider,
+                })
+                return claim.result
+            provider = (
+                self.adapters[command.target].provider
+                if command.target in self.adapters
+                else command.target
+            )
+            return pending_result(command, provider)
 
         if command.target not in self.adapters:
+            self.store.release(command.idempotency_key)
             raise KeyError(f"No adapter registered for target: {command.target}")
 
         adapter = self.adapters[command.target]
@@ -46,10 +66,13 @@ class ProductionIntegrationRuntime:
             })
             last = result
             if result.success:
-                self.store.put_result(command.idempotency_key, result)
+                self.store.complete(command.idempotency_key, result)
                 return result
+            if attempt < command.max_attempts:
+                self._wait(command)
 
         assert last is not None
+        self.store.fail(command.idempotency_key, last)
         dead_letter = make_dead_letter(
             dead_letter_id=f"DLQ-{command.command_id}",
             kind="command",

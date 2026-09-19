@@ -1,3 +1,5 @@
+import threading
+import time
 import unittest
 
 from tooling.integration.runtime import (
@@ -36,6 +38,28 @@ class StubAdapter:
         )
 
 
+class SlowAdapter(StubAdapter):
+    def __init__(self, delay: float = 0.05):
+        super().__init__()
+        self.delay = delay
+
+    def execute(self, command: DomainCommand) -> DeliveryResult:
+        time.sleep(self.delay)
+        return super().execute(command)
+
+
+def command(key: str = "k1", **overrides) -> DomainCommand:
+    values = {
+        "command_id": "cmd-1",
+        "command_type": "erp.create_sales_order",
+        "target": "erp",
+        "payload": {},
+        "idempotency_key": key,
+    }
+    values.update(overrides)
+    return DomainCommand(**values)
+
+
 class IntegrationRuntimeTests(unittest.TestCase):
     def test_order_event_maps_to_erp_command(self):
         event = DomainEvent(
@@ -47,39 +71,59 @@ class IntegrationRuntimeTests(unittest.TestCase):
             payload={"total": 1000},
             idempotency_key="evt:ORD-1",
         )
-        command = order_confirmed_to_erp_command(event)
-        self.assertEqual(command.command_type, "erp.create_sales_order")
-        self.assertEqual(command.payload["order_id"], "ORD-1")
+        mapped = order_confirmed_to_erp_command(event)
+        self.assertEqual(mapped.command_type, "erp.create_sales_order")
+        self.assertEqual(mapped.payload["order_id"], "ORD-1")
 
     def test_retry_then_success(self):
-        runtime = IntegrationRuntime()
+        runtime = IntegrationRuntime(sleep=lambda _: None)
         adapter = StubAdapter(fail_first=True)
         runtime.register("erp", adapter)
-        command = DomainCommand(
-            command_id="cmd-1",
-            command_type="erp.create_sales_order",
-            target="erp",
-            payload={},
-            idempotency_key="k1",
-        )
-        result = runtime.dispatch(command)
+        result = runtime.dispatch(command())
         self.assertTrue(result.success)
         self.assertEqual(adapter.calls, 2)
 
+    def test_backoff_is_honored_between_attempts(self):
+        delays: list[float] = []
+        runtime = IntegrationRuntime(sleep=delays.append)
+        adapter = StubAdapter(fail_first=True)
+        runtime.register("erp", adapter)
+        runtime.dispatch(command(backoff_seconds=7))
+        self.assertEqual(delays, [7])
+
     def test_idempotent_replay_does_not_redeliver(self):
-        runtime = IntegrationRuntime()
+        runtime = IntegrationRuntime(sleep=lambda _: None)
         adapter = StubAdapter()
         runtime.register("erp", adapter)
-        command = DomainCommand(
-            command_id="cmd-1",
-            command_type="erp.create_sales_order",
-            target="erp",
-            payload={},
-            idempotency_key="same",
-        )
-        runtime.dispatch(command)
-        runtime.dispatch(command)
+        cmd = command(key="same")
+        runtime.dispatch(cmd)
+        runtime.dispatch(cmd)
         self.assertEqual(adapter.calls, 1)
+
+    def test_concurrent_dispatch_executes_once(self):
+        runtime = IntegrationRuntime(sleep=lambda _: None)
+        adapter = SlowAdapter()
+        runtime.register("erp", adapter)
+        cmd = command(key="concurrent")
+        barrier = threading.Barrier(4)
+        results: list[DeliveryResult] = []
+        lock = threading.Lock()
+
+        def worker():
+            barrier.wait()
+            result = runtime.dispatch(cmd)
+            with lock:
+                results.append(result)
+
+        threads = [threading.Thread(target=worker) for _ in range(4)]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+
+        self.assertEqual(adapter.calls, 1)
+        self.assertEqual(sum(1 for r in results if r.success), 1)
+        self.assertEqual(sum(1 for r in results if r.pending), 3)
 
     def test_reconciliation_detects_difference(self):
         record = reconcile(

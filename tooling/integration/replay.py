@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from typing import Any
 
 from tooling.integration.production_runtime import ProductionIntegrationRuntime
@@ -31,6 +32,20 @@ def replay_dead_letter(
         correlation_id=payload.get("correlation_id"),
     )
     result = runtime.dispatch(command)
+
+    # Persist the replay outcome on the dead letter so its state is no longer
+    # indistinguishable from an untouched record.
+    updated = dict(dead_letter)
+    updated["status"] = "replayed" if result.success else "open"
+    updated["replay"] = {
+        "authorized_by": authorized_by,
+        "at": datetime.now(timezone.utc).isoformat(),
+        "success": result.success,
+        "command_id": command.command_id,
+        "external_id": result.external_id,
+        "error": result.error,
+    }
+    runtime.store.put_dead_letter(updated)
     runtime.store.append_audit({
         "event": "integration.dead_letter_replayed",
         "dead_letter_id": dead_letter["dead_letter_id"],

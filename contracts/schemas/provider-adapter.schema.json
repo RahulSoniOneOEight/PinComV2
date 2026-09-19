@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Provider Adapter",
+  "type": "object",
+  "required": ["adapter_id","domain","provider","capabilities","commands","events","healthcheck"],
+  "properties": {
+    "adapter_id": {"type":"string"},
+    "domain": {"type":"string"},
+    "provider": {"type":"string"},
+    "capabilities": {"type":"array","items":{"type":"string"}},
+    "commands": {"type":"array","items":{"type":"string"}},
+    "events": {"type":"array","items":{"type":"string"}},
+    "healthcheck": {"type":"string"},
+    "reconciliation_flows": {"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties": true
+}

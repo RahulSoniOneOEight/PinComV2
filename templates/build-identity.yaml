@@ -1,0 +1,10 @@
+build_id: BLD-example-a-revision
+client_id: ""
+direction_id: DIR-EXAMPLE-A
+source_revision: ""
+environment: prototype
+surfaces:
+  - customer-app
+  - web-store
+created_by: ""
+immutable: true

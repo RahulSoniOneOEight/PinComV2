@@ -20,3 +20,29 @@ jobs:
         run: pip install -r requirements-dev.txt
       - name: Run governed repository, contract and workflow validation
         run: python tooling/validation/validate_all.py
+
+  flutter-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Test shared Flutter UI
+        working-directory: packages/agency_flutter_ui
+        run: flutter test
+      - name: Test prototype app
+        working-directory: apps/prototype_app
+        run: flutter test
+
+  web-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Install workspaces
+        run: npm install
+      - name: Build storefront
+        run: npm run web:build

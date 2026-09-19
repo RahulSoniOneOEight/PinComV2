@@ -1,0 +1,20 @@
+adapter_id: commerce-medusa
+domain: commerce
+provider: medusa
+capabilities:
+  - catalogue
+  - pricing
+  - cart
+  - checkout
+  - orders
+  - return-refund
+commands:
+  - commerce.create_order
+  - commerce.cancel_order
+events:
+  - order.created
+  - order.confirmed
+  - order.cancelled
+healthcheck: /health
+reconciliation_flows:
+  - commerce-order-to-erp

@@ -1,0 +1,5 @@
+client_id: reference-retail
+industry: retail
+archetypes: [d2c-commerce, b2b-commerce]
+risk_profile: standard
+status: normalized

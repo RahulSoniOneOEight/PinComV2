@@ -1,0 +1,9 @@
+uat_id: UAT-example
+client_id: ""
+candidate_id: RC-example
+scenarios:
+  - id: critical-commerce-flow
+    status: not-run
+    notes: []
+approved_by: null
+status: draft

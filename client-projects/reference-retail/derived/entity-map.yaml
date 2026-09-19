@@ -1,0 +1,12 @@
+client_id: reference-retail
+entities:
+  order:
+    owner_capability: commerce-order-management
+  inventory:
+    owner_capability: erp-inventory
+  payment:
+    owner_capability: payment-integration
+  shipment:
+    owner_capability: logistics-integration
+  invoice:
+    owner_capability: erp-accounting

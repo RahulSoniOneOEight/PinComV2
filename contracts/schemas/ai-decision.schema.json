@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Proposal Decision",
+  "type": "object",
+  "required": ["decision_id", "proposal_id", "client_id", "reviewer", "decision", "target", "decided_at"],
+  "properties": {
+    "decision_id": {"type": "string", "minLength": 1},
+    "proposal_id": {"type": "string", "minLength": 1},
+    "client_id": {"type": "string", "minLength": 1},
+    "reviewer": {"type": "string", "minLength": 1},
+    "decision": {"enum": ["approved", "modified"]},
+    "target": {"type": "string", "minLength": 1},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

@@ -14,6 +14,9 @@ def main() -> int:
     checks = [
         ("client-input", "client-projects/reference-retail/input/client-input.yaml"),
         ("solution", "client-projects/reference-retail/solution/solution-contract.yaml"),
+        ("data-contract", "client-projects/reference-retail/contracts/data-contract.yaml"),
+        ("business-contract", "client-projects/reference-retail/contracts/business-contract.yaml"),
+        ("change", "client-projects/reference-retail/changes/CHG-001.yaml"),
         ("workflow-state", "client-projects/reference-retail/workflow/workflow-state.yaml"),
         ("ai-proposal", "client-projects/reference-retail/intelligence/ai/interpretation.yaml"),
         ("experience-direction", "client-projects/reference-retail/experience/directions/a.yaml"),

@@ -21,11 +21,17 @@ AI output follows:
 
 OpenCode → specialist model → AI proposal artifact → schema validation → reviewer/human decision → governed project artifact.
 
-Promotion is a human/deterministic step, not an automatic one. Today `tooling.ai.proposals`
-implements `validate` and `review` only; it records a human decision on the proposal. There is
-**no** automatic path that writes AI output into `derived/*` or `solution/*`. To influence the
-deterministic blueprint, a human updates `input/client-input.yaml` and re-runs the onboarding
-engine (which is drift-checked). See `docs/governance-status.md`.
+Promotion is a human-gated step. `tooling.ai.proposals` implements `validate`, `review`, and
+`promote`:
+
+- `review` records a human decision on the proposal;
+- `promote` requires an explicit human promoter **and** an approved/modified human review, then
+  validates the proposal and the decision record against their schemas and writes a decision
+  record to `intelligence/ai/decisions/` (audit evidence appended to `model-runs.jsonl`).
+
+`promote` never writes to `derived/*` or `solution/*`. To influence the deterministic blueprint,
+a human updates `input/client-input.yaml` and re-runs the onboarding engine (which is
+drift-checked). See `docs/governance-status.md`.
 
 ## Proposal location
 
@@ -53,5 +59,5 @@ The provider is selected by role, not hard-coded into business logic. This keeps
 5. Strategy/Architecture agents compare AI proposals with registry-derived outputs.
 6. DeepSeek may generate structured expansions or tests.
 7. Reviewer Agent checks conflicts and risk.
-8. A human records the decision via `tooling.ai.proposals review`; approved proposals inform a human edit of `input/client-input.yaml`.
+8. A human records the decision via `tooling.ai.proposals review`; accepted proposals are promoted via `tooling.ai.proposals promote` into the decisions ledger, which informs a human edit of `input/client-input.yaml`.
 9. The deterministic onboarding engine regenerates governed artifacts; CI validates final repository state.

@@ -17,9 +17,9 @@ Legend:
 | Solution Contract | `contracts/schemas/solution-contract.schema.json`, `client-projects/*/solution/` | Enforced now | JSON Schema validation of the reference instance; generated deterministically by `tooling.onboarding.engine` (drift-checked) |
 | Design Contract | `design-contract/` | Partial | Required files present; no token/component JSON Schema yet |
 | Integration Contract | `platform/integration/*.yaml`, `contracts/schemas/provider-adapter.schema.json` | Partial | Catalogs present; provider adapters schema-validated; unified integration schema pending |
-| Data Contract | — | Roadmap | Canonical entity ownership is described in `docs/domain-platform.md` but has no schema/instance yet |
-| Business Contract | — | Roadmap | Not yet defined |
-| Change Contract | `contracts/schemas/change-contract.schema.json`, `templates/change-contract.yaml` | Roadmap | Schema + template exist; no instance and no CI validation yet |
+| Data Contract | `contracts/schemas/data-contract.schema.json`, `client-projects/*/contracts/data-contract.yaml` | Enforced now | Schema-validated reference instance; defines canonical entity ownership |
+| Business Contract | `contracts/schemas/business-contract.schema.json`, `client-projects/*/contracts/business-contract.yaml` | Enforced now | Schema-validated reference instance |
+| Change Contract | `contracts/schemas/change-contract.schema.json`, `client-projects/*/changes/` | Enforced now | Schema-validated reference instance |
 
 ## Review contracts
 
@@ -53,8 +53,11 @@ rejects a missing or failing staging validation.
 
 | Artifact | Location | Status | Enforcement |
 |---|---|---|---|
-| AI Proposal | `contracts/schemas/ai-proposal.schema.json`, `client-projects/*/intelligence/ai/` | Partial | Reference instance schema-validated; human review recorded |
-| AI promotion | — | Roadmap | No automatic promotion exists; see `docs/ai-operating-model.md` |
+| AI Proposal | `contracts/schemas/ai-proposal.schema.json`, `client-projects/*/intelligence/ai/` | Enforced now | Reference instance schema-validated; human review recorded |
+| AI Decision | `contracts/schemas/ai-decision.schema.json`, `client-projects/*/intelligence/ai/decisions/` | Enforced now | Written only by the promotion gate |
+| AI promotion | `tooling.ai.proposals promote` | Enforced now | Guarded gate: requires an explicit human promoter **and** an approved/modified human review; validates the proposal and the decision record against schema; records audit evidence |
 
-AI output is advisory. It is never written into governed truth (`derived/*`, `solution/*`)
-without a human/deterministic step. There is no automatic promotion path today.
+AI output is advisory. The promotion gate never writes to governed truth (`derived/*`,
+`solution/*`); it records a decision in the `intelligence/ai/decisions/` ledger. Changing
+governed artifacts remains a human/deterministic step (edit `input/client-input.yaml` and re-run
+the onboarding engine). See `docs/ai-operating-model.md`.

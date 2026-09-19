@@ -39,6 +39,9 @@ CONTRACTS = {
     "recovery-record": ROOT / "contracts" / "schemas" / "recovery-record.schema.json",
     "observability-evidence": ROOT / "contracts" / "schemas" / "observability-evidence.schema.json",
     "staging-validation": ROOT / "contracts" / "schemas" / "staging-validation.schema.json",
+    "data-contract": ROOT / "contracts" / "schemas" / "data-contract.schema.json",
+    "business-contract": ROOT / "contracts" / "schemas" / "business-contract.schema.json",
+    "ai-decision": ROOT / "contracts" / "schemas" / "ai-decision.schema.json",
 }
 
 
@@ -53,16 +56,19 @@ def load_document(path: Path) -> Any:
         return yaml.safe_load(fh)
 
 
-def validate(path: Path, contract_type: str) -> list[str]:
+def validate_document(document: Any, contract_type: str) -> list[str]:
     if contract_type not in CONTRACTS:
         raise ContractValidationError(f"Unknown contract type: {contract_type}")
     schema = load_document(CONTRACTS[contract_type])
-    document = load_document(path)
     validator = Draft202012Validator(schema)
     return [
         f"{'/'.join(str(p) for p in error.absolute_path) or '<root>'}: {error.message}"
         for error in sorted(validator.iter_errors(document), key=lambda e: list(e.absolute_path))
     ]
+
+
+def validate(path: Path, contract_type: str) -> list[str]:
+    return validate_document(load_document(path), contract_type)
 
 
 def main() -> int:

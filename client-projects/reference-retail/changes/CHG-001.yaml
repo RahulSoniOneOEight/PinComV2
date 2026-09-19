@@ -1,0 +1,12 @@
+change_id: CHG-001
+request: Add a B2B credit-approval step before high-value orders are fulfilled.
+type: business-rule
+affected_capabilities: [b2b-account, credit-management, approval-workflow]
+affected_domains: [experience, commerce, erp]
+affected_surfaces: [customer-app, web-store, erp]
+affected_entities: [business-account, order]
+affected_events: [order.confirmed]
+required_tests: [business-rule, integration]
+approval_required: true
+status: proposed
+source_bugdrop: null

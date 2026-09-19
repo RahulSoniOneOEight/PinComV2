@@ -29,9 +29,10 @@ class GovernanceDocsTests(unittest.TestCase):
         text = (ROOT / "review" / "README.md").read_text(encoding="utf-8")
         self.assertIn("review-session.schema.json", text)
 
-    def test_ai_promotion_is_documented_as_not_automatic(self):
+    def test_ai_promotion_is_documented_as_a_guarded_gate(self):
         text = (ROOT / "docs" / "governance-status.md").read_text(encoding="utf-8").lower()
-        self.assertIn("no automatic promotion path", text)
+        self.assertIn("guarded gate", text)
+        self.assertIn("never writes to governed truth", text)
 
 
 if __name__ == "__main__":

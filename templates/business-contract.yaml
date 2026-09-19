@@ -1,0 +1,9 @@
+contract_id: BC-000
+client_id: ""
+rules:
+  - id: BR-000
+    statement: ""
+    category: other
+    source: ""
+    notes: []
+status: draft

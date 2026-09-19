@@ -1,0 +1,9 @@
+contract_id: DC-000
+client_id: ""
+entities:
+  - name: entity-name
+    canonical_owner: owning-domain
+    consumers: []
+    projections: []
+    notes: []
+status: draft

@@ -13,5 +13,5 @@ target_state:
   status: confirmed
   total: 1999
 status: matched
-observed_at: 2026-09-19T15:41:00Z
+observed_at: "2026-09-19T15:41:00Z"
 difference: {}

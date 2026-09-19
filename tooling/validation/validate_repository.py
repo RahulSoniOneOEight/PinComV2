@@ -10,20 +10,31 @@ REQUIRED = [
     "docs/architecture.md",
     "docs/client-delivery.md",
     "docs/reuse-policy.md",
+    "docs/onboarding-engine.md",
     "workflows/lifecycle.yaml",
+    "contracts/schemas/client-input.schema.json",
     "contracts/schemas/solution-contract.schema.json",
+    "contracts/schemas/workflow-state.schema.json",
+    "contracts/schemas/change-contract.schema.json",
+    "contracts/schemas/review-artifact.schema.json",
     "platform/provider-registry.yaml",
+    "platform/default-provider-rules.yaml",
     "connectors/provider-registry.yaml",
     "intelligence/industries/retail/profile.yaml",
     "intelligence/archetypes/d2c-commerce.yaml",
+    "intelligence/archetypes/b2b-commerce.yaml",
     "intelligence/capabilities/return-refund.yaml",
     "intelligence/journeys/browse-to-buy.yaml",
     "intelligence/entities/order.yaml",
     "intelligence/surfaces/customer-app.yaml",
     "intelligence/dependencies/return-refund.yaml",
+    "tooling/onboarding/engine.py",
+    "tooling/workflow/runtime.py",
+    "tooling/contracts/validator.py",
     "client-projects/reference-retail/input/client-input.yaml",
     "client-projects/reference-retail/derived/client-profile.yaml",
     "client-projects/reference-retail/derived/benchmark-report.yaml",
+    "client-projects/reference-retail/derived/capability-gap.yaml",
     "client-projects/reference-retail/derived/capability-map.yaml",
     "client-projects/reference-retail/derived/journey-map.yaml",
     "client-projects/reference-retail/derived/entity-map.yaml",
@@ -40,7 +51,11 @@ if missing:
         print(f" - {p}")
     sys.exit(1)
 
-with (ROOT / "contracts/schemas/solution-contract.schema.json").open(encoding="utf-8") as f:
-    json.load(f)
+for schema_path in (ROOT / "contracts" / "schemas").glob("*.json"):
+    with schema_path.open(encoding="utf-8") as f:
+        json.load(f)
 
-print(f"Agency Platform V2 structural validation passed: {len(REQUIRED)} required artifacts present.")
+print(
+    f"Agency Platform V2 structural validation passed: "
+    f"{len(REQUIRED)} required artifacts present."
+)

@@ -1,0 +1,10 @@
+uat_id: UAT-RC-reference-retail-ref001
+client_id: reference-retail
+candidate_id: RC-reference-retail-ref001
+scenarios:
+  - {id: browse-to-buy, status: pass, notes: []}
+  - {id: payment-failure-recovery, status: pass, notes: []}
+  - {id: return-refund, status: pass, notes: []}
+  - {id: order-to-erp, status: pass, notes: []}
+approved_by: reference-uat-owner
+status: passed

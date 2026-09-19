@@ -1,0 +1,12 @@
+adapter_id: support-chatwoot
+domain: customer-support
+provider: chatwoot
+capabilities:
+  - omnichannel-support
+  - customer-conversations
+commands:
+  - support.open_conversation
+events:
+  - customer.support_requested
+healthcheck: /api
+reconciliation_flows: []

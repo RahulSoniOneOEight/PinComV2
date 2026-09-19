@@ -24,6 +24,13 @@ def command_endpoint(command_type: str) -> str:
         "marketplace.sync_seller": "/api/marketplace/sellers/sync",
         "commerce.create_order": "/store/orders",
         "commerce.cancel_order": "/admin/orders/cancel",
+        "payments.create_order": "/payments/orders",
+        "payments.capture": "/payments/capture",
+        "payments.refund": "/payments/refunds",
+        "logistics.create_shipment": "/shipments",
+        "logistics.cancel_shipment": "/shipments/cancel",
+        "logistics.track_shipment": "/shipments/track",
+        "messaging.send_whatsapp": "/messages",
     }
     if command_type not in mapping:
         raise HTTPTransportError(f"No HTTP endpoint mapping for {command_type}")

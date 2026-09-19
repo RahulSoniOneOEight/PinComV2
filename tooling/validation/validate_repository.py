@@ -5,20 +5,19 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 
 REQUIRED = [
-    "README.md",
-    "AGENTS.md",
-    "docs/architecture.md",
-    "docs/client-delivery.md",
-    "docs/reuse-policy.md",
-    "docs/onboarding-engine.md",
+    "README.md","AGENTS.md",".opencode/ai-routing.yaml",
+    ".opencode/agents/architecture.md",".opencode/agents/implementation.md",
+    "docs/architecture.md","docs/client-delivery.md","docs/reuse-policy.md",
+    "docs/onboarding-engine.md","docs/ai-operating-model.md",
     "workflows/lifecycle.yaml",
     "contracts/schemas/client-input.schema.json",
     "contracts/schemas/solution-contract.schema.json",
     "contracts/schemas/workflow-state.schema.json",
     "contracts/schemas/change-contract.schema.json",
     "contracts/schemas/review-artifact.schema.json",
-    "platform/provider-registry.yaml",
-    "platform/default-provider-rules.yaml",
+    "contracts/schemas/ai-proposal.schema.json",
+    "templates/ai-proposal.yaml",
+    "platform/provider-registry.yaml","platform/default-provider-rules.yaml",
     "connectors/provider-registry.yaml",
     "intelligence/industries/retail/profile.yaml",
     "intelligence/archetypes/d2c-commerce.yaml",
@@ -28,9 +27,8 @@ REQUIRED = [
     "intelligence/entities/order.yaml",
     "intelligence/surfaces/customer-app.yaml",
     "intelligence/dependencies/return-refund.yaml",
-    "tooling/onboarding/engine.py",
-    "tooling/workflow/runtime.py",
-    "tooling/contracts/validator.py",
+    "tooling/onboarding/engine.py","tooling/workflow/runtime.py",
+    "tooling/contracts/validator.py","tooling/ai/router.py","tooling/ai/proposals.py",
     "client-projects/reference-retail/input/client-input.yaml",
     "client-projects/reference-retail/derived/client-profile.yaml",
     "client-projects/reference-retail/derived/benchmark-report.yaml",
@@ -42,6 +40,7 @@ REQUIRED = [
     "client-projects/reference-retail/derived/dependency-map.yaml",
     "client-projects/reference-retail/solution/solution-contract.yaml",
     "client-projects/reference-retail/workflow/workflow-state.yaml",
+    "client-projects/reference-retail/intelligence/ai/interpretation.yaml",
 ]
 
 missing = [p for p in REQUIRED if not (ROOT / p).exists()]
@@ -55,7 +54,4 @@ for schema_path in (ROOT / "contracts" / "schemas").glob("*.json"):
     with schema_path.open(encoding="utf-8") as f:
         json.load(f)
 
-print(
-    f"Agency Platform V2 structural validation passed: "
-    f"{len(REQUIRED)} required artifacts present."
-)
+print(f"Agency Platform V2 structural validation passed: {len(REQUIRED)} required artifacts present.")

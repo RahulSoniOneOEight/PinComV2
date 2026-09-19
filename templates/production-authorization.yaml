@@ -1,0 +1,7 @@
+authorization_id: AUTH-example
+client_id: ""
+candidate_id: RC-example
+authorized_by: ""
+decision: approved
+authorized_at: "2026-09-19T00:00:00Z"
+conditions: []

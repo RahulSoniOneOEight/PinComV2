@@ -18,6 +18,7 @@ from tooling.integration.runtime import (
 )
 from tooling.integration.signatures import verify_razorpay_signature
 from tooling.integration.scheduler import ReconciliationJob, ReconciliationScheduler
+from tooling.integration.http_transport import command_endpoint
 
 
 def ok_transport(config, command):
@@ -95,6 +96,11 @@ class ProductionConnectorTests(unittest.TestCase):
         )
         self.assertTrue(result["delivery"].success)
         self.assertEqual(result["reconciliation"]["status"], "matched")
+
+    def test_connector_http_endpoint_mappings(self):
+        self.assertEqual(command_endpoint("payments.create_order"), "/payments/orders")
+        self.assertEqual(command_endpoint("logistics.create_shipment"), "/shipments")
+        self.assertEqual(command_endpoint("messaging.send_whatsapp"), "/messages")
 
     def test_reconciliation_scheduler(self):
         scheduler = ReconciliationScheduler()

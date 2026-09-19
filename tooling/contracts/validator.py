@@ -31,6 +31,14 @@ CONTRACTS = {
     "provider-adapter": ROOT / "contracts" / "schemas" / "provider-adapter.schema.json",
     "dead-letter": ROOT / "contracts" / "schemas" / "dead-letter.schema.json",
     "health-record": ROOT / "contracts" / "schemas" / "health-record.schema.json",
+    "release-candidate": ROOT / "contracts" / "schemas" / "release-candidate.schema.json",
+    "hardening-evidence": ROOT / "contracts" / "schemas" / "hardening-evidence.schema.json",
+    "uat-record": ROOT / "contracts" / "schemas" / "uat-record.schema.json",
+    "production-authorization": ROOT / "contracts" / "schemas" / "production-authorization.schema.json",
+    "release-record": ROOT / "contracts" / "schemas" / "release-record.schema.json",
+    "recovery-record": ROOT / "contracts" / "schemas" / "recovery-record.schema.json",
+    "observability-evidence": ROOT / "contracts" / "schemas" / "observability-evidence.schema.json",
+    "staging-validation": ROOT / "contracts" / "schemas" / "staging-validation.schema.json",
 }
 
 

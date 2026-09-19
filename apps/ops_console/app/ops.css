@@ -1,0 +1,4 @@
+.ops-page { display: grid; gap: 32px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--content-secondary); }
+.ops-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Client Input",
+  "type": "object",
+  "required": ["client_id", "industry", "business_models"],
+  "properties": {
+    "client_id": {"type": "string", "minLength": 1},
+    "industry": {"type": "string", "minLength": 1},
+    "business_models": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "goals": {"type": "array", "items": {"type": "string"}},
+    "requested_capabilities": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "required_integrations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "existing_systems": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "geographies": {"type": "array", "items": {"type": "string"}},
+    "risk_profile": {"type": "string"}
+  },
+  "additionalProperties": true
+}

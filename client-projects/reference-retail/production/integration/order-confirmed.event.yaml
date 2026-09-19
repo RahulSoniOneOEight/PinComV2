@@ -1,0 +1,15 @@
+event_id: evt-ref-order-001
+event_type: order.confirmed
+occurred_at: 2026-09-19T15:40:00Z
+producer: commerce
+aggregate:
+  type: order
+  id: ORD-REF-001
+payload:
+  total: 1999
+  currency: INR
+  customer_id: CUST-REF-001
+correlation_id: corr-ref-001
+causation_id: null
+idempotency_key: event:order:ORD-REF-001:confirmed
+schema_version: 1

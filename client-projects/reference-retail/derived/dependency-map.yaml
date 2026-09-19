@@ -1,0 +1,8 @@
+client_id: reference-retail
+critical_cross_domain_flows:
+  - id: checkout-to-accounting
+    domains: [experience, commerce, integration, erp]
+  - id: order-to-fulfilment
+    domains: [commerce, integration, erp]
+  - id: return-to-refund
+    domains: [experience, commerce, integration, erp, automation]

@@ -1,0 +1,11 @@
+client_id: reference-retail
+direction_id: DIR-REFERENCE-RETAIL-B
+build_identity: unbuilt
+surfaces:
+  - {id: customer-app, runtime: flutter, entry: apps/prototype_app}
+  - {id: web-store, runtime: web, entry: apps/storefront}
+  - {id: commerce-admin, runtime: web, entry: apps/commerce_admin}
+  - {id: analytics, runtime: web, entry: apps/analytics}
+  - {id: erp, runtime: external, entry: external/erp}
+fixtures: [commerce-baseline]
+status: draft

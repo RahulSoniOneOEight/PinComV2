@@ -19,9 +19,17 @@ def main() -> int:
         "client-projects/reference-retail/workflow/workflow-state.yaml")
     run(sys.executable, "-m", "tooling.contracts.validator", "ai-proposal",
         "client-projects/reference-retail/intelligence/ai/interpretation.yaml")
+    run(sys.executable, "-m", "tooling.contracts.validator", "experience-direction",
+        "client-projects/reference-retail/experience/directions/a.yaml")
+    run(sys.executable, "-m", "tooling.contracts.validator", "prototype-manifest",
+        "client-projects/reference-retail/experience/prototypes/a-manifest.yaml")
+    run(sys.executable, "-m", "tooling.contracts.validator", "fixture-set",
+        "client-projects/reference-retail/experience/fixtures/commerce-baseline.yaml")
     run(sys.executable, "-m", "tooling.ai.router", "--role", "strategy")
     run(sys.executable, "-m", "tooling.ai.router", "--role", "implementation")
     run(sys.executable, "-m", "tooling.onboarding.engine", "--client",
+        "reference-retail", "--print-only")
+    run(sys.executable, "-m", "tooling.experience.generator", "--client",
         "reference-retail", "--print-only")
     run(sys.executable, "-m", "tooling.workflow.runtime", "status",
         "--client", "reference-retail")

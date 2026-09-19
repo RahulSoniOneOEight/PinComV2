@@ -1,0 +1,31 @@
+name: Security & Supply Chain
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validation dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Secret scan
+        run: python -m tooling.security.secrets_scan
+      - name: Generate dependency manifest
+        run: python -m tooling.security.sbom --output output/sbom.json
+      - name: Validate performance budget configuration
+        run: python -m tooling.performance.budgets
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-manifest
+          path: output/sbom.json

@@ -1,0 +1,17 @@
+id: d2c-commerce
+industry_agnostic: true
+expected_surfaces:
+  - customer-app
+  - web-store
+  - commerce-admin
+  - analytics
+optional_surfaces:
+  - erp
+  - warehouse
+  - customer-support
+  - ops-console
+journeys:
+  - browse-to-buy
+  - search-to-buy
+  - order-tracking
+  - return-refund

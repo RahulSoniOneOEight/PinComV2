@@ -1,0 +1,24 @@
+client_id: reference-retail
+delivery_exceptions:
+  - dead_letter_id: DLQ-cmd-ref-fail-001
+    provider: tryton
+    command_type: erp.create_sales_order
+    entity_type: order
+    entity_id: ORD-REF-FAIL-001
+    reason: downstream-unavailable
+    attempts: 3
+    status: open
+reconciliation_exceptions:
+  - record_id: rec-ref-order-mismatch-001
+    flow: commerce-order-to-erp
+    entity_type: order
+    entity_id: ORD-REF-002
+    difference:
+      status:
+        source: confirmed
+        target: draft
+    status: mismatch
+provider_health:
+  - provider: tryton
+    status: healthy
+    latency_ms: 42.7

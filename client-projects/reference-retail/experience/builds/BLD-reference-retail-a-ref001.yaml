@@ -1,0 +1,13 @@
+build_id: BLD-reference-retail-a-ref001
+client_id: reference-retail
+direction_id: DIR-REFERENCE-RETAIL-A
+source_revision: ref001
+environment: prototype
+surfaces:
+  - customer-app
+  - web-store
+  - commerce-admin
+  - analytics
+  - erp
+created_by: opencode
+immutable: true

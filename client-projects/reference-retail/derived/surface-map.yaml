@@ -1,0 +1,11 @@
+client_id: reference-retail
+required:
+  - customer-app
+  - web-store
+  - commerce-admin
+  - erp
+  - analytics
+recommended:
+  - warehouse
+  - customer-support
+  - ops-console

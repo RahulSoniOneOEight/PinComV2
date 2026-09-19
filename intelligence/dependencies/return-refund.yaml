@@ -1,0 +1,25 @@
+id: return-refund
+capabilities:
+  - return-refund
+affected_domains:
+  - experience
+  - commerce
+  - erp
+  - integration
+  - automation
+affected_entities:
+  - order
+  - return
+  - refund
+  - payment
+  - inventory
+events:
+  - return.requested
+  - return.received
+  - refund.requested
+  - refund.completed
+required_validation:
+  - contract
+  - integration
+  - reconciliation
+  - e2e

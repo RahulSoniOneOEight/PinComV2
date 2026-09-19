@@ -1,0 +1,13 @@
+dead_letter_id: DLQ-cmd-ref-fail-001
+kind: command
+payload:
+  command_id: cmd-ref-fail-001
+  command_type: erp.create_sales_order
+  target: erp
+  payload:
+    order_id: ORD-REF-FAIL-001
+  idempotency_key: erp-order:ORD-REF-FAIL-001
+reason: downstream-unavailable
+attempts: 3
+created_at: "2026-09-19T16:00:00Z"
+status: open

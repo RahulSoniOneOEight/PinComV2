@@ -1,0 +1,8 @@
+evidence_id: HARD-RC-example
+candidate_id: RC-example
+checks:
+  - id: contract-validation
+    status: not-run
+    evidence: ""
+    notes: []
+status: draft

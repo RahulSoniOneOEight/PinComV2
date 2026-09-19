@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"UAT Record",
+  "type":"object",
+  "required":["uat_id","client_id","candidate_id","scenarios","status"],
+  "properties":{
+    "uat_id":{"type":"string"},
+    "client_id":{"type":"string"},
+    "candidate_id":{"type":"string"},
+    "scenarios":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","status"],
+        "properties":{
+          "id":{"type":"string"},
+          "status":{"enum":["pass","fail","blocked","not-run"]},
+          "notes":{"type":"array","items":{"type":"string"}}
+        }
+      }
+    },
+    "approved_by":{"type":["string","null"]},
+    "status":{"enum":["draft","in-progress","failed","passed"]}
+  },
+  "additionalProperties":true
+}

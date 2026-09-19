@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experience Direction",
+  "type": "object",
+  "required": ["direction_id","client_id","strategy","surfaces","journey_emphasis","design_intent","status"],
+  "properties": {
+    "direction_id": {"type":"string","pattern":"^DIR-[A-Z0-9-]+$"},
+    "client_id": {"type":"string","minLength":1},
+    "strategy": {"type":"string","minLength":1},
+    "surfaces": {"type":"array","items":{"type":"string"},"minItems":1},
+    "journey_emphasis": {"type":"array","items":{"type":"string"}},
+    "design_intent": {"type":"object"},
+    "differentiators": {"type":"array","items":{"type":"string"}},
+    "fixture_set": {"type":"string"},
+    "status": {"enum":["draft","qa-ready","review-ready","selected","rejected"]}
+  },
+  "additionalProperties": true
+}

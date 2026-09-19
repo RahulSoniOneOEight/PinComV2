@@ -1,0 +1,13 @@
+adapter_id: messaging-whatsapp-cloud
+domain: messaging
+provider: meta-whatsapp-cloud
+capabilities:
+  - transactional-message
+  - template-message
+commands:
+  - messaging.send_whatsapp
+events:
+  - messaging.delivered
+  - messaging.failed
+healthcheck: /messages
+reconciliation_flows: []

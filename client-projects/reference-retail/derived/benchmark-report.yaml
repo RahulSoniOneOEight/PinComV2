@@ -1,0 +1,16 @@
+client_id: reference-retail
+baseline:
+  industry: retail
+  archetypes: [d2c-commerce, b2b-commerce]
+findings:
+  required:
+    - checkout
+    - inventory-availability
+    - return-refund
+    - payment-reconciliation
+    - analytics
+  recommended:
+    - customer-support
+    - ops-exceptions
+    - lifecycle-automation
+status: reviewed-for-reference

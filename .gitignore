@@ -28,6 +28,7 @@ build/
 
 # Generated / runtime artifacts
 output/
+storybook-static/
 *.db
 *.sqlite
 *.sqlite3

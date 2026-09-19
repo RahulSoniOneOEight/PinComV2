@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data Contract",
+  "type": "object",
+  "required": ["contract_id", "client_id", "entities", "status"],
+  "properties": {
+    "contract_id": {"type": "string", "minLength": 1},
+    "client_id": {"type": "string", "minLength": 1},
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "canonical_owner", "consumers"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "canonical_owner": {"type": "string", "minLength": 1},
+          "consumers": {"type": "array", "items": {"type": "string"}},
+          "projections": {"type": "array", "items": {"type": "string"}},
+          "notes": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "status": {"enum": ["draft", "review", "approved"]}
+  },
+  "additionalProperties": true
+}

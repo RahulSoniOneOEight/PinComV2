@@ -1,0 +1,20 @@
+adapter_id: erp-tryton
+domain: erp
+provider: tryton
+capabilities:
+  - accounting
+  - inventory
+  - procurement
+  - warehouse
+  - ar-ap
+commands:
+  - erp.create_sales_order
+  - erp.reserve_inventory
+  - erp.create_return
+events:
+  - inventory.reservation_confirmed
+healthcheck: /health
+reconciliation_flows:
+  - commerce-order-to-erp
+  - commerce-inventory-to-erp
+  - commerce-return-to-erp

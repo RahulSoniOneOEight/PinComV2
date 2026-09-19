@@ -1,0 +1,21 @@
+capture_id: CAP-BLD-reference-retail-a-ref001
+client_id: reference-retail
+build_id: BLD-reference-retail-a-ref001
+direction_id: DIR-REFERENCE-RETAIL-A
+targets:
+  - surface: customer-app
+    runtime: flutter
+    viewport: 390x844
+    state: default
+    output: review/artifacts/BLD-reference-retail-a-ref001/customer-app/390x844/default.png
+  - surface: web-store
+    runtime: web
+    viewport: 1440x1024
+    state: default
+    output: review/artifacts/BLD-reference-retail-a-ref001/web-store/1440x1024/default.png
+  - surface: web-store
+    runtime: web
+    viewport: 390x844
+    state: payment-failed
+    output: review/artifacts/BLD-reference-retail-a-ref001/web-store/390x844/payment-failed.png
+status: planned

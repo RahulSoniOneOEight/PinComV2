@@ -1,0 +1,29 @@
+client_id: reference-retail
+mandatory:
+- authentication
+- audit
+core:
+- catalogue
+- search
+- pricing
+- promotions
+- cart
+- checkout
+- orders
+- inventory-availability
+- fulfilment
+- return-refund
+- analytics
+- b2b-account
+- quote-rfq
+recommended:
+- loyalty
+- customer-support
+- lifecycle-automation
+- ops-exceptions
+- credit-management
+- approval-workflow
+- reorder
+requested_additional: []
+later: []
+not_applicable: []

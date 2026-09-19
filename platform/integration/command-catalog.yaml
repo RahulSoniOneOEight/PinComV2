@@ -1,0 +1,16 @@
+version: 1
+commands:
+  erp.create_sales_order:
+    target_domain: erp
+  erp.reserve_inventory:
+    target_domain: erp
+  erp.create_return:
+    target_domain: erp
+  search.index_product:
+    target_domain: search
+  support.open_conversation:
+    target_domain: customer-support
+  automation.trigger_flow:
+    target_domain: automation
+  marketplace.sync_seller:
+    target_domain: marketplace

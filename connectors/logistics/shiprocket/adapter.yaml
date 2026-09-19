@@ -1,0 +1,19 @@
+adapter_id: logistics-shiprocket
+domain: logistics
+provider: shiprocket
+capabilities:
+  - shipment-create
+  - shipment-track
+  - ndr
+  - rto
+commands:
+  - logistics.create_shipment
+  - logistics.cancel_shipment
+  - logistics.track_shipment
+events:
+  - fulfilment.updated
+  - shipment.ndr
+  - shipment.rto
+healthcheck: /v1/external/auth/login
+reconciliation_flows:
+  - fulfilment-to-commerce

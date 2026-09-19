@@ -1,0 +1,25 @@
+version: 1
+flows:
+  commerce-order-to-erp:
+    source: commerce
+    target: erp
+    entity_type: order
+    compare:
+      - external_id
+      - status
+      - total
+  commerce-inventory-to-erp:
+    source: commerce
+    target: erp
+    entity_type: inventory
+    compare:
+      - sku
+      - available_quantity
+  commerce-return-to-erp:
+    source: commerce
+    target: erp
+    entity_type: return
+    compare:
+      - external_id
+      - status
+      - amount

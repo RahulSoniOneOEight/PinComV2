@@ -1,0 +1,29 @@
+id: return-refund
+business_domain: commerce
+classification:
+  retail: core
+journeys:
+  - return-refund
+surfaces:
+  - customer-app
+  - web-store
+  - commerce-admin
+  - erp
+  - ops-console
+entities:
+  - order
+  - return
+  - refund
+  - payment
+  - inventory
+dependencies:
+  - order-management
+  - payment-refund
+  - inventory-adjustment
+  - reconciliation
+provider_strategy: contract-driven
+required_tests:
+  - business-contract
+  - integration
+  - reconciliation
+  - e2e

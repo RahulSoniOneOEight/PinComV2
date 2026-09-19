@@ -1,0 +1,16 @@
+version: 1
+connector_categories:
+  payments:
+    candidates: [razorpay, cashfree]
+  logistics:
+    candidates: [shiprocket, delhivery]
+  messaging:
+    candidates: [meta-whatsapp-cloud-api]
+  analytics:
+    candidates: [posthog, ga4]
+rules:
+  - provider-selection-must-be-recorded-in-solution-contract
+  - commands-must-be-idempotent
+  - retries-must-be-bounded
+  - delivery-state-must-be-observable
+  - reconciliation-required-for-financial-integrations

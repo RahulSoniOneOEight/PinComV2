@@ -1,0 +1,39 @@
+version: 1
+providers:
+  commerce:
+    - id: medusa
+      status: preferred-candidate
+  marketplace:
+    - id: mercur
+      status: preferred-candidate
+  erp:
+    - id: tryton
+      status: preferred-candidate
+    - id: erpnext
+      status: alternative
+  customer-support:
+    - id: chatwoot
+      status: preferred-candidate
+  search:
+    - id: meilisearch
+      status: preferred-candidate
+  automation:
+    - id: activepieces
+      status: preferred-candidate
+    - id: windmill
+      status: alternative
+    - id: n8n
+      status: evaluate-license-and-fit
+  messaging:
+    - id: nats
+      status: preferred-candidate
+    - id: rabbitmq
+      status: alternative
+  cache:
+    - id: valkey
+      status: preferred-candidate
+  bi:
+    - id: superset
+      status: preferred-candidate
+    - id: metabase
+      status: alternative

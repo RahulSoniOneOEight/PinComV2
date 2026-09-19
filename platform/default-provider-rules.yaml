@@ -1,0 +1,57 @@
+version: 1
+rules:
+  experience_mobile:
+    when_surface: customer-app
+    provider:
+      type: experience
+      id: flutter
+  experience_web:
+    when_surface: web-store
+    provider:
+      type: experience
+      id: nextjs
+  commerce:
+    when_any_capability:
+      - catalogue
+      - pricing
+      - cart
+      - checkout
+      - orders
+      - return-refund
+      - b2b-account
+      - quote-rfq
+    provider:
+      type: commerce
+      id: medusa
+  erp:
+    when_any_surface:
+      - erp
+      - warehouse
+    provider:
+      type: erp
+      id: tryton
+  search:
+    when_any_capability:
+      - search
+    provider:
+      type: search
+      id: meilisearch
+  support:
+    when_any_capability:
+      - customer-support
+    provider:
+      type: customer-support
+      id: chatwoot
+  automation:
+    when_any_capability:
+      - lifecycle-automation
+      - approval-workflow
+      - ops-exceptions
+    provider:
+      type: automation
+      id: activepieces
+  database:
+    always: true
+    provider:
+      type: data
+      id: postgresql

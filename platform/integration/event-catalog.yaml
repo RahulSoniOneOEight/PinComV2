@@ -1,0 +1,35 @@
+version: 1
+events:
+  order.created:
+    producer_domain: commerce
+    aggregate: order
+  order.confirmed:
+    producer_domain: commerce
+    aggregate: order
+  order.cancelled:
+    producer_domain: commerce
+    aggregate: order
+  inventory.reservation_requested:
+    producer_domain: commerce
+    aggregate: inventory
+  inventory.reservation_confirmed:
+    producer_domain: erp
+    aggregate: inventory
+  fulfilment.requested:
+    producer_domain: commerce
+    aggregate: shipment
+  fulfilment.updated:
+    producer_domain: fulfilment
+    aggregate: shipment
+  return.requested:
+    producer_domain: commerce
+    aggregate: return
+  refund.requested:
+    producer_domain: commerce
+    aggregate: refund
+  refund.completed:
+    producer_domain: payments
+    aggregate: refund
+  customer.support_requested:
+    producer_domain: customer
+    aggregate: conversation

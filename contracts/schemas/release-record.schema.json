@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Release Record",
+  "type":"object",
+  "required":["release_id","client_id","candidate_id","environment","released_at","released_by","status"],
+  "properties":{
+    "release_id":{"type":"string"},
+    "client_id":{"type":"string"},
+    "candidate_id":{"type":"string"},
+    "environment":{"const":"production"},
+    "released_at":{"type":"string","format":"date-time"},
+    "released_by":{"type":"string","minLength":1},
+    "smoke_status":{"enum":["pending","passed","failed"]},
+    "rollback_reference":{"type":["string","null"]},
+    "status":{"enum":["released","rolled-back","failed"]}
+  },
+  "additionalProperties":true
+}

@@ -1,0 +1,9 @@
+release_id: REL-reference-retail-001
+client_id: reference-retail
+candidate_id: RC-reference-retail-ref001
+environment: production
+released_at: "2026-09-19T17:00:00Z"
+released_by: reference-release-owner
+smoke_status: passed
+rollback_reference: REC-reference-retail-001
+status: released

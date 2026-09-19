@@ -1,0 +1,38 @@
+name: Recovery / Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      client_id:
+        description: Client project ID
+        required: true
+      recovery_id:
+        description: Recovery record ID
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  recovery:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify recovery plan
+        env:
+          CLIENT_ID: ${{ inputs.client_id }}
+          RECOVERY_ID: ${{ inputs.recovery_id }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          from tooling.validation.identifiers import validate_identifier
+          validate_identifier(os.environ["CLIENT_ID"], kind="client_id")
+          validate_identifier(os.environ["RECOVERY_ID"], kind="recovery_id")
+          PY
+          test -f "client-projects/$CLIENT_ID/release/recovery/$RECOVERY_ID.yaml"
+          echo "Recovery plan verified. Environment approval remains required."

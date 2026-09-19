@@ -1,0 +1,29 @@
+id: b2b-commerce
+industry_agnostic: true
+business_models:
+  - b2b
+expected_surfaces:
+  - web-store
+  - commerce-admin
+  - erp
+optional_surfaces:
+  - customer-app
+  - warehouse
+  - customer-support
+  - ops-console
+journeys:
+  - search-to-buy
+  - quote-to-order
+  - repeat-order
+  - credit-order
+core_capabilities:
+  - catalogue
+  - search
+  - pricing
+  - orders
+  - b2b-account
+  - quote-rfq
+recommended_capabilities:
+  - credit-management
+  - approval-workflow
+  - reorder

@@ -1,0 +1,11 @@
+client_id: ""
+industry: retail
+business_models:
+  - d2c
+goals: []
+requested_capabilities: []
+required_integrations: []
+existing_systems: []
+constraints: []
+geographies: []
+risk_profile: standard

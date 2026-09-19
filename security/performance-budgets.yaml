@@ -1,0 +1,19 @@
+version: 1
+budgets:
+  storefront:
+    max_js_kb: 650
+    max_css_kb: 120
+    max_build_seconds: 180
+  review_mode:
+    max_js_kb: 650
+    max_css_kb: 120
+    max_build_seconds: 180
+  ops_console:
+    max_js_kb: 650
+    max_css_kb: 120
+    max_build_seconds: 180
+  flutter_prototype:
+    max_test_seconds: 180
+rules:
+  - budget-failure-blocks-release
+  - warnings-require-review

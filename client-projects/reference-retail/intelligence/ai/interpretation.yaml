@@ -1,0 +1,32 @@
+proposal_id: AI-REF-001
+client_id: reference-retail
+task: industry-archetype-interpretation
+model_role: strategy
+provider: chatgpt
+model: null
+inputs:
+  - input/client-input.yaml
+  - derived/client-profile.yaml
+proposal:
+  industry: retail
+  archetypes:
+    - d2c-commerce
+    - b2b-commerce
+  recommended_review_items:
+    - confirm-launch-scope-for-credit-management
+    - confirm-whether-loyalty-is-phase-one
+rationale:
+  - client business models include d2c and b2b
+  - benchmark includes retail commerce controls and journeys
+uncertainties:
+  - credit ordering is not explicitly confirmed as launch scope
+confidence: high
+registry_validation:
+  status: passed
+  notes:
+    - industry and archetype IDs exist in registry
+human_review:
+  status: pending
+  reviewer: null
+  notes: []
+status: validated

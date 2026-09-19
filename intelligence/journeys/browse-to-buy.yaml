@@ -1,0 +1,19 @@
+id: browse-to-buy
+actors:
+  - customer
+states:
+  - discover
+  - product-detail
+  - cart
+  - checkout
+  - payment
+  - order-confirmed
+  - fulfilment
+surfaces:
+  - customer-app
+  - web-store
+critical_failures:
+  - out-of-stock
+  - price-changed
+  - payment-failed
+  - fulfilment-unavailable

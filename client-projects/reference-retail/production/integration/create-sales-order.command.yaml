@@ -1,0 +1,13 @@
+command_id: cmd-ref-order-001-erp
+command_type: erp.create_sales_order
+target: erp
+payload:
+  order_id: ORD-REF-001
+  total: 1999
+  currency: INR
+  customer_id: CUST-REF-001
+correlation_id: corr-ref-001
+idempotency_key: erp-order:ORD-REF-001
+retry_policy:
+  max_attempts: 3
+  backoff_seconds: 5

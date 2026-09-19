@@ -1,0 +1,8 @@
+authorization_id: AUTH-RC-reference-retail-ref001
+client_id: reference-retail
+candidate_id: RC-reference-retail-ref001
+authorized_by: reference-release-owner
+decision: approved
+authorized_at: "2026-09-19T16:58:00Z"
+conditions:
+  - promote exact staging candidate only

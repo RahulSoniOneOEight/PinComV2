@@ -1,0 +1,55 @@
+version: 1
+stages:
+  - id: client-intake
+    output: input/client-input.yaml
+  - id: normalize-client-truth
+    output: derived/client-profile.yaml
+  - id: classify-industry-archetype
+    output: derived/industry-profile.yaml
+  - id: benchmark-best-practices
+    output: derived/benchmark-report.yaml
+  - id: capability-gap-analysis
+    output: derived/capability-gap.yaml
+  - id: resource-reuse-analysis
+    output: derived/reuse-decisions.yaml
+  - id: capability-map
+    output: derived/capability-map.yaml
+  - id: journey-map
+    output: derived/journey-map.yaml
+  - id: entity-map
+    output: derived/entity-map.yaml
+  - id: surface-map
+    output: derived/surface-map.yaml
+  - id: dependency-map
+    output: derived/dependency-map.yaml
+  - id: solution-architecture
+    output: solution/solution-contract.yaml
+  - id: experience-directions
+    output: experience/directions
+  - id: multi-surface-prototype
+    output: experience/prototypes
+  - id: visual-business-qa
+    output: experience/visual-qa
+  - id: client-review
+    output: feedback
+  - id: change-control
+    output: changes
+  - id: approval-freeze
+    output: approved
+    human_gate: true
+  - id: production-contracts
+    output: contracts
+  - id: productionize
+    output: production
+  - id: cross-domain-qa
+    output: qa
+  - id: uat
+    output: uat
+    human_gate: true
+  - id: production-authorization
+    output: release/production-authorization.yaml
+    human_gate: true
+  - id: release
+    output: release/releases
+  - id: operations
+    output: production/ops

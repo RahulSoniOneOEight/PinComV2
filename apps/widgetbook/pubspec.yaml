@@ -1,0 +1,16 @@
+name: widgetbook
+description: Component catalog for Agency Platform V2 Flutter UI
+publish_to: "none"
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  agency_flutter_ui:
+    path: ../../packages/agency_flutter_ui
+  widgetbook: ^3.10.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true

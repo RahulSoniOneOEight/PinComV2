@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Production Authorization",
+  "type":"object",
+  "required":["authorization_id","client_id","candidate_id","authorized_by","decision","authorized_at"],
+  "properties":{
+    "authorization_id":{"type":"string"},
+    "client_id":{"type":"string"},
+    "candidate_id":{"type":"string"},
+    "authorized_by":{"type":"string","minLength":1},
+    "decision":{"enum":["approved","rejected"]},
+    "authorized_at":{"type":"string","format":"date-time"},
+    "conditions":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":true
+}

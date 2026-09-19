@@ -1,0 +1,11 @@
+change_id: CHG-000
+request: ""
+type: business-rule
+affected_capabilities: []
+affected_domains: []
+affected_surfaces: []
+affected_entities: []
+affected_events: []
+required_tests: []
+approval_required: false
+status: proposed

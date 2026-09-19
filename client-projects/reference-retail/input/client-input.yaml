@@ -1,0 +1,10 @@
+client_id: reference-retail
+industry: retail
+business_models: [d2c, b2b]
+goals:
+  - mobile-and-web-commerce
+  - integrated-inventory
+  - governed-returns
+required_integrations: [payment, logistics, whatsapp]
+constraints:
+  - provider-neutral-contracts

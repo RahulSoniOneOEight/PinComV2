@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Build Identity",
+  "type": "object",
+  "required": ["build_id","client_id","direction_id","source_revision","environment","surfaces","created_by"],
+  "properties": {
+    "build_id": {"type":"string","pattern":"^BLD-[A-Za-z0-9._-]+$"},
+    "client_id": {"type":"string","minLength":1},
+    "direction_id": {"type":"string","minLength":1},
+    "source_revision": {"type":"string","minLength":1},
+    "environment": {"enum":["local","prototype","dev","staging","production"]},
+    "surfaces": {"type":"array","items":{"type":"string"},"minItems":1},
+    "created_by": {"type":"string","minLength":1},
+    "immutable": {"type":"boolean"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Domain Command",
+  "type": "object",
+  "required": ["command_id","command_type","target","payload","idempotency_key"],
+  "properties": {
+    "command_id": {"type":"string","minLength":1},
+    "command_type": {"type":"string","pattern":"^[a-z0-9._-]+$"},
+    "target": {"type":"string","minLength":1},
+    "payload": {"type":"object"},
+    "correlation_id": {"type":["string","null"]},
+    "idempotency_key": {"type":"string","minLength":1},
+    "retry_policy": {
+      "type":"object",
+      "properties":{
+        "max_attempts":{"type":"integer","minimum":1},
+        "backoff_seconds":{"type":"integer","minimum":0}
+      }
+    }
+  },
+  "additionalProperties": true
+}

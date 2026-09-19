@@ -1,0 +1,15 @@
+id: order
+canonical_owner_capability: commerce-order-management
+ownership_policy: solution-contract-resolves-provider
+projections:
+  - erp-accounting
+  - warehouse-fulfilment
+  - analytics
+events:
+  - order.created
+  - order.confirmed
+  - order.cancelled
+  - order.fulfilment_changed
+sensitivity:
+  pii: true
+audit_required: true

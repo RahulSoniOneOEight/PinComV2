@@ -1,0 +1,30 @@
+environment: dev
+integration:
+  http:
+    timeout_seconds: 30
+  event_bus:
+    provider: nats
+    url: nats://127.0.0.1:4222
+    subject_prefix: pinaka
+  durable_store:
+    provider: sqlite
+    path: .runtime/integration.db
+providers:
+  medusa:
+    base_url: http://127.0.0.1:9000
+    token_env: MEDUSA_TOKEN
+  mercur:
+    base_url: http://127.0.0.1:9001
+    token_env: MERCUR_TOKEN
+  tryton:
+    base_url: http://127.0.0.1:8000
+    token_env: TRYTON_TOKEN
+  meilisearch:
+    base_url: http://127.0.0.1:7700
+    token_env: MEILI_MASTER_KEY
+  chatwoot:
+    base_url: http://127.0.0.1:3000
+    token_env: CHATWOOT_TOKEN
+  activepieces:
+    base_url: http://127.0.0.1:8080
+    token_env: ACTIVEPIECES_TOKEN

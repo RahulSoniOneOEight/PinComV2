@@ -1,0 +1,16 @@
+bugdrop_id: BUG-REF-001
+client_id: reference-retail
+review_id: REV-BLD-reference-retail-a-ref001
+artifact_id: ART-0001
+category: visual
+summary: Increase visual separation between price and title
+details: Reference feedback item for Review Mode.
+severity: low
+affected_capabilities:
+  - catalogue
+affected_domains:
+  - experience
+affected_surfaces:
+  - customer-app
+screenshot_ref: review/artifacts/BLD-reference-retail-a-ref001/customer-app/390x844/default.png
+status: open

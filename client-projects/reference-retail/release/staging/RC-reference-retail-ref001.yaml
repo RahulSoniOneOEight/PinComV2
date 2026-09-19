@@ -1,0 +1,11 @@
+validation_id: STG-RC-reference-retail-ref001
+candidate_id: RC-reference-retail-ref001
+environment: staging
+checks:
+  - {id: deploy, status: pass, evidence: "staging candidate deployed"}
+  - {id: smoke-storefront, status: pass, evidence: "storefront smoke"}
+  - {id: smoke-review-mode, status: pass, evidence: "review mode smoke"}
+  - {id: smoke-ops-console, status: pass, evidence: "ops console smoke"}
+  - {id: integration-order-to-erp, status: pass, evidence: "reference reconciliation"}
+  - {id: provider-health, status: pass, evidence: "health records"}
+status: passed

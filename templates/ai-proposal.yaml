@@ -1,0 +1,20 @@
+proposal_id: AI-EXAMPLE-001
+client_id: ""
+task: industry-archetype-interpretation
+model_role: strategy
+provider: chatgpt
+model: null
+inputs:
+  - input/client-input.yaml
+proposal: {}
+rationale: []
+uncertainties: []
+confidence: medium
+registry_validation:
+  status: pending
+  notes: []
+human_review:
+  status: pending
+  reviewer: null
+  notes: []
+status: proposed

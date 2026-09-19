@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PinCommerce Solution Contract",
+  "type": "object",
+  "required": ["version", "client", "providers"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "client": {"type": "string", "minLength": 1},
+    "providers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "provider"],
+        "properties": {
+          "type": {"type": "string"},
+          "provider": {"type": "string"},
+          "version": {"type": ["string", "null"]},
+          "extensions": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

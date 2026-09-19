@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Recovery Record",
+  "type":"object",
+  "required":["recovery_id","release_id","reason","action","status"],
+  "properties":{
+    "recovery_id":{"type":"string"},
+    "release_id":{"type":"string"},
+    "reason":{"type":"string"},
+    "action":{"enum":["rollback","roll-forward","restore","disable-feature"]},
+    "target_candidate_id":{"type":["string","null"]},
+    "status":{"enum":["planned","executing","completed","failed"]},
+    "notes":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":true
+}

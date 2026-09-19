@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Hardening Evidence",
+  "type":"object",
+  "required":["evidence_id","candidate_id","checks","status"],
+  "properties":{
+    "evidence_id":{"type":"string"},
+    "candidate_id":{"type":"string"},
+    "non_blocking_checks":{"type":"array","items":{"type":"string"}},
+    "checks":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","status"],
+        "properties":{
+          "id":{"type":"string"},
+          "status":{"enum":["pass","fail","warning","not-run"]},
+          "evidence":{"type":"string"},
+          "notes":{"type":"array","items":{"type":"string"}}
+        }
+      }
+    },
+    "status":{"enum":["draft","failed","passed"]}
+  },
+  "additionalProperties":true
+}

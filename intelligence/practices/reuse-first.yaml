@@ -1,0 +1,14 @@
+id: reuse-first
+decision_order:
+  - existing-client-implementation
+  - existing-platform-capability
+  - approved-shared-component
+  - approved-open-source-module
+  - configure-existing
+  - extend-existing
+  - custom-build
+required_evidence:
+  - decision
+  - rationale
+  - integration-boundary
+  - replacement-strategy

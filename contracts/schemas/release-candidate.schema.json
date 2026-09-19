@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Release Candidate",
+  "type":"object",
+  "required":["candidate_id","client_id","source_revision","artifact_digest","environment","created_by","immutable","status"],
+  "properties":{
+    "candidate_id":{"type":"string","pattern":"^RC-[A-Za-z0-9._-]+$"},
+    "client_id":{"type":"string","minLength":1},
+    "source_revision":{"type":"string","minLength":1},
+    "artifact_digest":{"type":"string","minLength":1},
+    "environment":{"enum":["staging","production"]},
+    "created_by":{"type":"string","minLength":1},
+    "immutable":{"const":true},
+    "status":{"enum":["created","staging-validating","staging-passed","uat-passed","authorized","released","rejected"]},
+    "components":{"type":"array","items":{"type":"object"}}
+  },
+  "additionalProperties":true
+}

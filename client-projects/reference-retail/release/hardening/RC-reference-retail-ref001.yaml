@@ -1,0 +1,20 @@
+evidence_id: HARD-RC-reference-retail-ref001
+candidate_id: RC-reference-retail-ref001
+non_blocking_checks: [dependency-vulnerability]
+checks:
+  - {id: contract-validation, status: pass, evidence: "CI platform-validation"}
+  - {id: unit-tests, status: pass, evidence: "CI Python/Flutter"}
+  - {id: integration-tests, status: pass, evidence: "integration runtime tests"}
+  - {id: e2e-critical-journeys, status: pass, evidence: "reference journey evidence"}
+  - {id: security-secrets, status: pass, evidence: "no committed production secrets"}
+  - {id: security-authz, status: pass, evidence: "human release gates enforced"}
+  - {id: tenant-isolation, status: pass, evidence: "client-scoped artifact model"}
+  - {id: dependency-vulnerability, status: warning, evidence: "dependency scan required in staging"}
+  - {id: performance-budget, status: pass, evidence: "reference budget accepted"}
+  - {id: accessibility, status: pass, evidence: "experience QA baseline"}
+  - {id: migration-safety, status: pass, evidence: "no destructive reference migration"}
+  - {id: backup-recovery, status: pass, evidence: "recovery record and durable-store plan"}
+  - {id: observability, status: pass, evidence: "observability evidence"}
+  - {id: reconciliation, status: pass, evidence: "commerce-order-to-erp matched"}
+  - {id: provider-health, status: pass, evidence: "Tryton health record"}
+status: passed

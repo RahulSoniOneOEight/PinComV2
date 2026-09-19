@@ -1,0 +1,13 @@
+bugdrop_id: BUG-EXAMPLE-001
+client_id: ""
+review_id: ""
+artifact_id: ""
+category: visual
+summary: ""
+details: ""
+severity: low
+affected_capabilities: []
+affected_domains: []
+affected_surfaces: []
+screenshot_ref: ""
+status: open

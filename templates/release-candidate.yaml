@@ -1,0 +1,9 @@
+candidate_id: RC-example-revision
+client_id: ""
+source_revision: ""
+artifact_digest: ""
+environment: staging
+created_by: ""
+immutable: true
+status: created
+components: []

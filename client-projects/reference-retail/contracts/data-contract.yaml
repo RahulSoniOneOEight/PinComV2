@@ -1,0 +1,32 @@
+contract_id: DC-reference-retail-001
+client_id: reference-retail
+entities:
+  - name: order
+    canonical_owner: commerce
+    consumers: [erp, analytics]
+    projections: [erp-sales-order, analytics-order-fact]
+    notes:
+      - checkout-to-accounting flow
+  - name: inventory
+    canonical_owner: erp
+    consumers: [commerce]
+    projections: [commerce-availability]
+    notes:
+      - erp is the single source of truth for availability
+  - name: payment
+    canonical_owner: payment-integration
+    consumers: [commerce, erp]
+    projections: [commerce-payment-status]
+    notes: []
+  - name: shipment
+    canonical_owner: logistics-integration
+    consumers: [commerce, erp]
+    projections: [commerce-fulfilment-status]
+    notes: []
+  - name: business-account
+    canonical_owner: commerce
+    consumers: [erp, analytics]
+    projections: [erp-customer-account]
+    notes:
+      - ownership of B2B credit lives with commerce; erp consumes projections
+status: approved

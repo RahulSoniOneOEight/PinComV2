@@ -1,0 +1,15 @@
+candidate_id: RC-reference-retail-ref001
+client_id: reference-retail
+source_revision: ref001
+artifact_digest: 4f4d3d22594f2394dd2ef1718cbf914d4df2e6c6b68310a2b971e42d90397612
+environment: staging
+created_by: opencode
+immutable: true
+status: authorized
+components:
+  - path: apps/storefront
+    sha256: 53f9cf0d7ff0d4b73054afc5be9d963b15d2a9443d1683a829c8579c80db0c25
+    size: 1
+  - path: apps/prototype_app
+    sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    size: 1

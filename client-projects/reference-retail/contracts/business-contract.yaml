@@ -1,0 +1,31 @@
+contract_id: BC-reference-retail-001
+client_id: reference-retail
+rules:
+  - id: BR-001
+    statement: B2C prices are shown tax-inclusive; B2B prices are quoted tax-exclusive with negotiated terms.
+    category: pricing
+    source: input/client-input.yaml
+    notes:
+      - quote-to-order uses negotiated pricing
+  - id: BR-002
+    statement: Returns follow a documented return/refund policy, with an approval step for high-value refunds.
+    category: returns
+    source: goals/governed-returns
+    notes: []
+  - id: BR-003
+    statement: Inventory availability is sourced from the ERP and is the single source of truth.
+    category: fulfilment
+    source: goals/integrated-inventory
+    notes: []
+  - id: BR-004
+    statement: Provider selection stays behind provider-neutral contracts; no provider-specific rule leaks into business logic.
+    category: compliance
+    source: constraints/provider-neutral-contracts
+    notes: []
+  - id: BR-005
+    statement: High-value B2B orders require credit/approval before fulfilment.
+    category: approval
+    source: derived/capability-map.yaml
+    notes:
+      - subject to the credit-approval change contract
+status: approved

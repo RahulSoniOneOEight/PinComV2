@@ -1,0 +1,23 @@
+id: product-card
+version: 1
+capabilities:
+  - catalogue
+  - pricing
+  - inventory-availability
+states:
+  - default
+  - discounted
+  - low-stock
+  - out-of-stock
+  - loading
+  - error
+required_fields:
+  - product_id
+  - title
+  - media
+  - price
+optional_fields:
+  - compare_at_price
+  - badge
+  - rating
+  - delivery_promise

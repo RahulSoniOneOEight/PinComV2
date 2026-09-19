@@ -1,0 +1,26 @@
+client_id: reference-retail
+requested: []
+core_missing:
+- catalogue
+- search
+- pricing
+- promotions
+- cart
+- checkout
+- orders
+- inventory-availability
+- fulfilment
+- return-refund
+- analytics
+- b2b-account
+- quote-rfq
+recommended_missing:
+- loyalty
+- customer-support
+- lifecycle-automation
+- ops-exceptions
+- credit-management
+- approval-workflow
+- reorder
+covered_by_request: []
+not_in_reference_baseline: []

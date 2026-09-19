@@ -1,0 +1,12 @@
+adapter_id: automation-activepieces
+domain: automation
+provider: activepieces
+capabilities:
+  - workflow-automation
+  - webhook-actions
+  - scheduled-actions
+commands:
+  - automation.trigger_flow
+events: []
+healthcheck: /api/v1/health
+reconciliation_flows: []

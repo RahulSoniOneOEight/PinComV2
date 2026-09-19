@@ -1,0 +1,19 @@
+adapter_id: logistics-delhivery
+domain: logistics
+provider: delhivery
+capabilities:
+  - shipment-create
+  - shipment-track
+  - ndr
+  - rto
+commands:
+  - logistics.create_shipment
+  - logistics.cancel_shipment
+  - logistics.track_shipment
+events:
+  - fulfilment.updated
+  - shipment.ndr
+  - shipment.rto
+healthcheck: /api/cmu/create.json
+reconciliation_flows:
+  - fulfilment-to-commerce

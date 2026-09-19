@@ -25,6 +25,10 @@ CONTRACTS = {
     "review-session": ROOT / "contracts" / "schemas" / "review-session.schema.json",
     "bugdrop": ROOT / "contracts" / "schemas" / "bugdrop.schema.json",
     "capture-manifest": ROOT / "contracts" / "schemas" / "capture-manifest.schema.json",
+    "domain-event": ROOT / "contracts" / "schemas" / "domain-event.schema.json",
+    "domain-command": ROOT / "contracts" / "schemas" / "domain-command.schema.json",
+    "reconciliation-record": ROOT / "contracts" / "schemas" / "reconciliation-record.schema.json",
+    "provider-adapter": ROOT / "contracts" / "schemas" / "provider-adapter.schema.json",
 }
 
 

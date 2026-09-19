@@ -1,0 +1,26 @@
+name: Recovery / Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      client_id:
+        description: Client project ID
+        required: true
+      recovery_id:
+        description: Recovery record ID
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  recovery:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify recovery plan
+        shell: bash
+        run: |
+          test -f "client-projects/${{ inputs.client_id }}/release/recovery/${{ inputs.recovery_id }}.yaml"
+          echo "Recovery plan verified. Environment approval remains required."

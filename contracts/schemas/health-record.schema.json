@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Provider Health Record",
+  "type":"object",
+  "required":["provider","status","checked_at"],
+  "properties":{
+    "provider":{"type":"string"},
+    "status":{"enum":["healthy","degraded","unreachable"]},
+    "checked_at":{"type":"string","format":"date-time"},
+    "latency_ms":{"type":["number","null"]},
+    "details":{"type":"object"}
+  },
+  "additionalProperties":true
+}

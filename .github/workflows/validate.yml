@@ -48,3 +48,5 @@ jobs:
         run: npm run web:build
       - name: Build Review Mode
         run: npm run review:build
+      - name: Build Ops Console
+        run: npm run ops:build

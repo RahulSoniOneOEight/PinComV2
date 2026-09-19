@@ -1,0 +1,14 @@
+version: 1
+webhooks:
+  medusa.order:
+    provider: medusa
+    canonical_event: order.confirmed
+    aggregate_type: order
+  mercur.seller:
+    provider: mercur
+    canonical_event: seller.updated
+    aggregate_type: seller
+  chatwoot.conversation:
+    provider: chatwoot
+    canonical_event: customer.support_requested
+    aggregate_type: conversation

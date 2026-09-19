@@ -1,0 +1,12 @@
+id: button
+version: 1
+variants: [primary, secondary, destructive, ghost]
+sizes: [sm, md, lg]
+states: [default, hover, pressed, disabled, loading, focus]
+requirements:
+  - accessible-name
+  - keyboard-focus
+  - loading-state-does-not-shift-layout
+bindings:
+  flutter: packages/agency_flutter_ui
+  web: packages/agency_web_ui

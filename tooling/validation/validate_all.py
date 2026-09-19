@@ -32,6 +32,8 @@ def main() -> int:
         ("provider-adapter", "platform/search/meilisearch/adapter.yaml"),
         ("provider-adapter", "platform/customer/chatwoot/adapter.yaml"),
         ("provider-adapter", "platform/automation/activepieces/adapter.yaml"),
+        ("dead-letter", "client-projects/reference-retail/production/ops/dead-letter.yaml"),
+        ("health-record", "client-projects/reference-retail/production/ops/tryton-health.yaml"),
     ]
     for contract_type, path in checks:
         run(sys.executable, "-m", "tooling.contracts.validator", contract_type, path)

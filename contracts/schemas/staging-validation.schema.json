@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Staging Validation",
+  "type":"object",
+  "required":["validation_id","candidate_id","environment","checks","status"],
+  "properties":{
+    "validation_id":{"type":"string"},
+    "candidate_id":{"type":"string"},
+    "environment":{"const":"staging"},
+    "checks":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","status"],
+        "properties":{
+          "id":{"type":"string"},
+          "status":{"enum":["pass","fail","warning","not-run"]},
+          "evidence":{"type":"string"}
+        }
+      }
+    },
+    "status":{"enum":["draft","failed","passed"]}
+  },
+  "additionalProperties":true
+}

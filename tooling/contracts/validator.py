@@ -16,6 +16,7 @@ CONTRACTS = {
     "workflow-state": ROOT / "contracts" / "schemas" / "workflow-state.schema.json",
     "change": ROOT / "contracts" / "schemas" / "change-contract.schema.json",
     "review-artifact": ROOT / "contracts" / "schemas" / "review-artifact.schema.json",
+    "ai-proposal": ROOT / "contracts" / "schemas" / "ai-proposal.schema.json",
 }
 
 

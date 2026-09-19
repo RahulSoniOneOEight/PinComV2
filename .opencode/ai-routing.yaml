@@ -1,0 +1,46 @@
+version: 1
+roles:
+  strategy:
+    preferred_provider: chatgpt
+    purpose:
+      - client-brief-interpretation
+      - industry-archetype-reasoning
+      - capability-gap-enrichment
+      - journey-strategy
+    fallback_provider: deepseek
+
+  architecture:
+    preferred_provider: chatgpt
+    purpose:
+      - system-boundary-review
+      - entity-ownership-review
+      - dependency-analysis
+      - solution-architecture
+    fallback_provider: deepseek
+
+  implementation:
+    preferred_provider: deepseek
+    purpose:
+      - structured-generation
+      - code-generation
+      - fixture-generation
+      - adapter-skeletons
+      - repetitive-yaml
+    fallback_provider: chatgpt
+
+  reviewer:
+    preferred_provider: chatgpt
+    purpose:
+      - architecture-review
+      - consistency-review
+      - risk-review
+      - final-blueprint-review
+    fallback_provider: deepseek
+
+rules:
+  - ai-output-is-proposal-not-project-truth
+  - deterministic-engine-remains-authoritative-baseline
+  - ai-output-must-be-written-under-intelligence/ai
+  - promotion-to-derived-or-solution-requires-validation
+  - material-business-or-production-decisions-require-human-review
+  - record-provider-role-inputs-and-decision-status

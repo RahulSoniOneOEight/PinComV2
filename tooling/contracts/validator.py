@@ -27,6 +27,7 @@ CONTRACTS = {
     "capture-manifest": ROOT / "contracts" / "schemas" / "capture-manifest.schema.json",
     "domain-event": ROOT / "contracts" / "schemas" / "domain-event.schema.json",
     "domain-command": ROOT / "contracts" / "schemas" / "domain-command.schema.json",
+    "order-created-v1": ROOT / "contracts" / "schemas" / "order-created.v1.schema.json",
     "reconciliation-record": ROOT / "contracts" / "schemas" / "reconciliation-record.schema.json",
     "provider-adapter": ROOT / "contracts" / "schemas" / "provider-adapter.schema.json",
     "dead-letter": ROOT / "contracts" / "schemas" / "dead-letter.schema.json",

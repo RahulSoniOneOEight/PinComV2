@@ -3,6 +3,9 @@ events:
   order.created:
     producer_domain: commerce
     aggregate: order
+    version: 1
+    contract: order.created.v1
+    schema: contracts/schemas/order-created.v1.schema.json
   order.confirmed:
     producer_domain: commerce
     aggregate: order

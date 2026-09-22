@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -21,9 +22,18 @@ class SQLiteRuntimeStore:
         self.conn.row_factory = sqlite3.Row
         self._closed = False
         # Allow concurrent workers to serialize on the database rather than
-        # failing fast with "database is locked".
-        self.conn.execute("pragma journal_mode = wal")
+        # failing fast with "database is locked". busy_timeout must be set
+        # before switching journal mode, and the switch itself is retried
+        # because several workers may open the same file simultaneously.
         self.conn.execute("pragma busy_timeout = 30000")
+        for attempt in range(10):
+            try:
+                self.conn.execute("pragma journal_mode = wal")
+                break
+            except sqlite3.OperationalError:
+                if attempt == 9:
+                    raise
+                time.sleep(0.1 * (attempt + 1))
         self._init_schema()
 
     def close(self) -> None:

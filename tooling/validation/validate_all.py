@@ -28,6 +28,7 @@ def main() -> int:
         ("bugdrop", "client-projects/reference-retail/feedback/BUG-REF-001.yaml"),
         ("domain-event", "client-projects/reference-retail/production/integration/order-confirmed.event.yaml"),
         ("domain-command", "client-projects/reference-retail/production/integration/create-sales-order.command.yaml"),
+        ("order-created-v1", "templates/order-created.v1.yaml"),
         ("reconciliation-record", "client-projects/reference-retail/production/integration/order-to-erp.reconciliation.yaml"),
         ("provider-adapter", "platform/commerce/medusa/adapter.yaml"),
         ("provider-adapter", "platform/marketplace/mercur/adapter.yaml"),

@@ -1,38 +1,83 @@
+name: pincommerce-staging
+
+# Base infrastructure dependencies for local/staging.
+#
+# Provider *application* containers (Medusa, Tryton, ...) are intentionally kept
+# out of this file so the base platform stays provider-neutral (see
+# docs/production-connectors.md). Attach them through
+# docker-compose.providers.yml, which layers on top of this file.
+#
+# Copy .env.example to .env next to this file to override the defaults below.
+# Never commit real credentials.
+
 services:
   postgres:
     image: postgres:16
     environment:
-      POSTGRES_DB: pincommerce
-      POSTGRES_USER: pincommerce
-      POSTGRES_PASSWORD: pincommerce
+      POSTGRES_DB: ${POSTGRES_DB:-pincommerce}
+      POSTGRES_USER: ${POSTGRES_USER:-pincommerce}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pincommerce}
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U pincommerce -d pincommerce"]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-pincommerce} -d ${POSTGRES_DB:-pincommerce}",
+        ]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - staging
+
+  valkey:
+    image: valkey/valkey:8-alpine
+    command: ["valkey-server", "--appendonly", "yes", "--save", "60", "1"]
+    ports:
+      - "${VALKEY_PORT:-6379}:6379"
+    volumes:
+      - valkey-data:/data
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - staging
 
   nats:
     image: nats:2.10
-    command: ["-js"]
+    command: ["-js", "-sd", "/data", "-m", "8222"]
     ports:
       - "4222:4222"
       - "8222:8222"
+    volumes:
+      - nats-data:/data
+    networks:
+      - staging
 
   meilisearch:
     image: getmeili/meilisearch:v1.10
     environment:
       MEILI_ENV: development
       MEILI_NO_ANALYTICS: "true"
-      MEILI_MASTER_KEY: dev-master-key
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-dev-master-key}
     ports:
-      - "7700:7700"
+      - "${MEILI_PORT:-7700}:7700"
     volumes:
       - meili-data:/meili_data
+    networks:
+      - staging
 
 volumes:
   postgres-data:
+  valkey-data:
+  nats-data:
   meili-data:
+
+networks:
+  staging:
+    name: pincommerce-staging

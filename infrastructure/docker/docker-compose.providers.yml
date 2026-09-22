@@ -1,0 +1,149 @@
+name: pincommerce-staging
+
+# Optional provider *application* containers.
+#
+# These are deliberately kept out of docker-compose.staging.yml so the base
+# platform stays provider-neutral (see docs/production-connectors.md). They are
+# gated behind the "providers" profile and layer on top of the base file.
+#
+# Start the provider stack:
+#   docker compose \
+#     -f docker-compose.staging.yml \
+#     -f docker-compose.providers.yml \
+#     --profile providers up -d
+#
+# Medusa publishes no official image, so MEDUSA_IMAGE must point at an image
+# built from the client's Medusa project (default: pincommerce-medusa:staging).
+# The image already sets its own entrypoint/command and working directory
+# (.medusa/server); do not override them here.
+#
+# Never commit real credentials; override the dev defaults through the
+# gitignored .env next to these files.
+
+x-tryton-environment: &tryton-environment
+  DB_HOSTNAME: postgres
+  DB_PORT: "5432"
+  DB_USER: ${POSTGRES_USER:-pincommerce}
+  DB_PASSWORD: ${POSTGRES_PASSWORD:-pincommerce}
+  TRYTOND_DATABASE_URI: postgresql://${POSTGRES_USER:-pincommerce}:${POSTGRES_PASSWORD:-pincommerce}@postgres:5432/${TRYTON_DB:-tryton}
+  TRYTOND_CONFIG: /etc/trytond.conf
+
+x-medusa-environment: &medusa-environment
+  NODE_ENV: production
+  # sslmode=disable is required: the staging PostgreSQL has no TLS, and Medusa
+  # defaults to TLS for any non-localhost database host.
+  DATABASE_URL: postgres://${POSTGRES_USER:-pincommerce}:${POSTGRES_PASSWORD:-pincommerce}@postgres:5432/${MEDUSA_DB:-pincommerce_medusa}?sslmode=disable
+  REDIS_URL: redis://valkey:6379
+  EVENTS_REDIS_URL: redis://valkey:6379
+  WE_REDIS_URL: redis://valkey:6379
+  CACHE_REDIS_URL: redis://valkey:6379
+  LOCKING_REDIS_URL: redis://valkey:6379
+  STORE_CORS: ${MEDUSA_STORE_CORS:-http://localhost:8000,http://localhost:9000,https://docs.medusajs.com}
+  ADMIN_CORS: ${MEDUSA_ADMIN_CORS:-http://localhost:5173,http://localhost:9000,https://docs.medusajs.com}
+  AUTH_CORS: ${MEDUSA_AUTH_CORS:-http://localhost:5173,http://localhost:9000,https://docs.medusajs.com}
+  JWT_SECRET: ${MEDUSA_JWT_SECRET:-dev-jwt-secret}
+  COOKIE_SECRET: ${MEDUSA_COOKIE_SECRET:-dev-cookie-secret}
+  # Canonical order.created.v1 event publishing (existing staging NATS JetStream).
+  NATS_URL: nats://nats:4222
+  PINCOMMERCE_TENANT_ID: ${PINCOMMERCE_TENANT_ID:-reference-retail}
+
+services:
+  tryton:
+    image: ${TRYTON_IMAGE:-tryton/tryton:8.0}
+    profiles: ["providers"]
+    environment:
+      <<: *tryton-environment
+    ports:
+      - "${TRYTON_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/', timeout=5).getcode() == 200 else 1)",
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    restart: unless-stopped
+    networks:
+      - staging
+
+  # One-shot Tryton database initialization/update. Deliberately NOT part of the
+  # "providers" profile so the Tryton server never initializes the schema on
+  # start. Run it explicitly:
+  #   docker compose -f docker-compose.staging.yml -f docker-compose.providers.yml \
+  #     --profile tryton-init run --rm tryton-init
+  tryton-init:
+    image: ${TRYTON_IMAGE:-tryton/tryton:8.0}
+    profiles: ["tryton-init"]
+    environment:
+      <<: *tryton-environment
+      TRYTON_ADMIN_PASSWORD: ${TRYTON_ADMIN_PASSWORD:-admin}
+    command:
+      - sh
+      - -c
+      - >-
+        printf "%s" "$${TRYTON_ADMIN_PASSWORD}" > /tmp/trytonpass &&
+        export TRYTONPASSFILE=/tmp/trytonpass &&
+        trytond-admin -d "$${TRYTON_DB:-tryton}" -u sale --activate-dependencies &&
+        trytond-admin -d "$${TRYTON_DB:-tryton}" -p
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+    networks:
+      - staging
+
+  medusa:
+    image: ${MEDUSA_IMAGE:-pincommerce-medusa:staging}
+    profiles: ["providers"]
+    environment:
+      <<: *medusa-environment
+    ports:
+      - "${MEDUSA_PORT:-9000}:9000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "require('http').get('http://127.0.0.1:9000/health',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
+    restart: unless-stopped
+    networks:
+      - staging
+
+  # One-shot database migration. Deliberately NOT part of the "providers"
+  # profile so the Medusa app never migrates on start. Run it explicitly:
+  #   docker compose -f docker-compose.staging.yml -f docker-compose.providers.yml \
+  #     --profile medusa-migrate run --rm medusa-migrate
+  medusa-migrate:
+    image: ${MEDUSA_IMAGE:-pincommerce-medusa:staging}
+    profiles: ["medusa-migrate"]
+    environment:
+      <<: *medusa-environment
+    command:
+      ["node", "/app/apps/backend/node_modules/@medusajs/cli/cli.js", "db:migrate"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+    restart: "no"
+    networks:
+      - staging

@@ -1,0 +1,12 @@
+event_id: evt-order-1001-created
+event_type: order.created
+version: 1
+source_system: medusa
+tenant_id: reference-retail
+entity_id: order_1001
+correlation_id: corr-order-1001
+occurred_at: "2026-09-22T00:00:00Z"
+payload:
+  currency: INR
+  total: 2499
+  customer_id: cust_1001

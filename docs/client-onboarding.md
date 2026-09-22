@@ -69,6 +69,30 @@ Generate experience directions, prototype manifests and coverage:
 
 `python -m tooling.experience.generator --client acme-retail`
 
+For Medusa/Mercur/Tryton, unspecified behavior uses the governed standard core baseline. If the client brief changes a core behavior, record only the affected overlay in `input/client-input.yaml#core_module_requirements`.
+
+Generate linked commerce/ERP/finance demo data:
+
+`python -m tooling.prototype.demo_data --client acme-retail`
+
+Generate the functional core-runtime plan:
+
+`python -m tooling.prototype.core_runtime --client acme-retail`
+
+Generate provider-specific seed bundles from the linked demo dataset:
+
+`python -m tooling.prototype.seed_bundle --client acme-retail`
+
+Provision the required real core services, apply the baseline plus client overlays, and import the applicable seed bundle. Then record health + seed evidence for each required module:
+
+`python -m tooling.prototype.runtime_evidence --client acme-retail --provider medusa --health-ref <health-evidence> --seed-ref <seed-evidence>`
+
+Repeat for Mercur and/or Tryton when required. Payments/logistics/messaging may use the governed mock scenario catalog during Phase C.
+
+Verify the core runtime:
+
+`python -m tooling.prototype.core_runtime --client acme-retail --check`
+
 Generate an implementation-evidence plan for the selected direction:
 
 `python -m tooling.experience.implementation --client acme-retail --direction a.yaml`
@@ -83,7 +107,7 @@ Create an immutable build/capture/review bundle:
 
 `python -m tooling.review.session --client acme-retail --direction a.yaml --source-revision <git-sha> --created-by <actor>`
 
-The Review Session command independently re-runs the prototype completeness gate and refuses to open client review if coverage or implementation evidence is incomplete.
+The Review Session command independently re-runs both gates. It refuses client review if UI coverage/implementation evidence is incomplete or if a required Medusa/Mercur/Tryton runtime lacks healthy evidence, linked demo data, or ready prototype provider bindings.
 
 Plan governed Visual + Business QA from the generated capture manifest:
 

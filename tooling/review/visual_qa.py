@@ -19,6 +19,15 @@ REQUIRED_CHECKS = (
     "critical-states",
     "business-rules",
     "journey-coverage",
+    "design-selection",
+    "semantic-theme",
+    "motion-and-reduced-motion",
+    "asset-quality-and-source",
+    "component-quality-threshold",
+    "state-completeness",
+    "performance-budget",
+    "cross-platform-parity",
+    "design-debt",
 )
 
 

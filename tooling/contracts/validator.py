@@ -68,6 +68,15 @@ CONTRACTS = {
     "data-contract": ROOT / "contracts" / "schemas" / "data-contract.schema.json",
     "business-contract": ROOT / "contracts" / "schemas" / "business-contract.schema.json",
     "ai-decision": ROOT / "contracts" / "schemas" / "ai-decision.schema.json",
+    "design-source-inventory": ROOT / "contracts" / "schemas" / "design-source-inventory.schema.json",
+    "design-selection": ROOT / "contracts" / "schemas" / "design-selection.schema.json",
+    "theme-resolution": ROOT / "contracts" / "schemas" / "theme-resolution.schema.json",
+    "asset-selection": ROOT / "contracts" / "schemas" / "asset-selection.schema.json",
+    "design-quality-evaluation": ROOT / "contracts" / "schemas" / "design-quality-evaluation.schema.json",
+    "design-implementation-plan": ROOT / "contracts" / "schemas" / "design-implementation-plan.schema.json",
+    "component-benchmark": ROOT / "contracts" / "schemas" / "component-benchmark.schema.json",
+    "design-health": ROOT / "contracts" / "schemas" / "design-health.schema.json",
+    "design-outcome": ROOT / "contracts" / "schemas" / "design-outcome.schema.json",
 }
 
 

@@ -25,10 +25,11 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          from tooling.experience.debt_report import build_report, to_markdown
+          from tooling.experience.debt_report import build_report, to_markdown, to_html
           report=build_report(Path("."))
           Path("artifacts/design-debt/report.json").write_text(json.dumps(report,indent=2))
           Path("artifacts/design-debt/report.md").write_text(to_markdown(report))
+          Path("artifacts/design-debt/index.html").write_text(to_html(report))
           print(json.dumps(report,indent=2))
           PY
       - uses: actions/upload-artifact@v4

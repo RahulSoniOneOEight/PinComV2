@@ -14,6 +14,11 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
+  --motion-instant: 80ms;
+  --motion-fast: 140ms;
+  --motion-standard: 220ms;
+  --motion-slow: 320ms;
+  --motion-page: 380ms;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--surface-page); color: var(--content-primary); font-family: Arial, sans-serif; }
@@ -24,6 +29,8 @@ button:focus-visible { outline: 3px solid currentColor; outline-offset: 2px; }
 .agency-card { border: 1px solid var(--border-default); border-radius: var(--radius-md); background: var(--surface-raised); padding: var(--space-md); }
 .agency-card-action { width: 100%; display: grid; gap: var(--space-sm); padding: 0; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
 .agency-card-action:disabled { cursor: not-allowed; opacity: .65; }
+.agency-card-action, .agency-chip, .agency-quantity button { transition: opacity var(--motion-fast) ease, transform var(--motion-fast) ease; }
+.agency-icon { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
 .agency-body { font-size: 16px; line-height: 1.5; }
 .agency-title { font-size: 24px; line-height: 1.25; font-weight: 600; }
 .agency-price { display: flex; align-items: baseline; gap: var(--space-sm); }

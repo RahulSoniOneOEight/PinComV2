@@ -31,3 +31,19 @@ def to_markdown(report: dict[str, Any]) -> str:
             detail = item.get("path") or ", ".join(item.get("families", []))
             lines.append("- " + str(item.get("type")) + " — " + str(detail))
     return "\n".join(lines) + "\n"
+
+
+def to_html(report: dict[str, Any]) -> str:
+    rows = []
+    for item in report.get("findings", []):
+        detail = item.get("path") or ", ".join(item.get("families", []))
+        rows.append("<tr><td>" + str(item.get("type")) + "</td><td>" + str(detail) + "</td></tr>")
+    return (
+        "<!doctype html><html><head><meta charset='utf-8'><title>Design Debt</title>"
+        "<style>body{font-family:system-ui;margin:32px;max-width:1000px}table{border-collapse:collapse;width:100%}"
+        "th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#f5f5f5}</style></head><body>"
+        "<h1>Design Debt Dashboard</h1><p>Status: <strong>" + str(report["status"]) + "</strong></p>"
+        "<p>Findings: <strong>" + str(report["finding_count"]) + "</strong></p>"
+        "<table><thead><tr><th>Type</th><th>Location / detail</th></tr></thead><tbody>"
+        + "".join(rows) + "</tbody></table></body></html>"
+    )

@@ -1,0 +1,26 @@
+version: 1
+client_id: reference-retail
+integration_map_ref: derived/integration-map.yaml
+bindings:
+  - id: commerce-erp-order
+    provider: tryton
+    adapter_ref: platform/erp/tryton/adapter.yaml
+    criticality: critical
+    commands: [create-sales-order]
+    events: [order-confirmed]
+    retry: {max_attempts: 5, backoff: exponential}
+    reconciliation: platform/integration/reconciliation-flows.yaml#order-to-erp
+    credential_ref: secrets/tryton
+    sla: "p95 < 5m"
+    fallback: dead-letter-and-manual-reconcile
+  - id: commerce-runtime
+    provider: medusa
+    adapter_ref: platform/commerce/medusa/adapter.yaml
+    criticality: critical
+    commands: []
+    events: [order-confirmed]
+    retry: {max_attempts: 5, backoff: exponential}
+    reconciliation: platform/integration/reconciliation-flows.yaml
+    credential_ref: secrets/medusa
+    sla: "99.9%"
+    fallback: queue-and-replay

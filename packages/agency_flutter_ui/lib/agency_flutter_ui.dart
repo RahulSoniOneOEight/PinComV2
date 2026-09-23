@@ -23,6 +23,44 @@ abstract final class AgencyText {
   static const TextStyle metric = TextStyle(fontSize: 30, height: 1.15, fontWeight: FontWeight.w700);
 }
 
+enum AgencyMotionToken { instant, fast, standard, slow, page }
+
+abstract final class AgencyMotion {
+  static const _durations = {
+    AgencyMotionToken.instant: Duration(milliseconds: 80),
+    AgencyMotionToken.fast: Duration(milliseconds: 140),
+    AgencyMotionToken.standard: Duration(milliseconds: 220),
+    AgencyMotionToken.slow: Duration(milliseconds: 320),
+    AgencyMotionToken.page: Duration(milliseconds: 380),
+  };
+
+  static Duration resolve(BuildContext context, AgencyMotionToken token) {
+    final media = MediaQuery.maybeOf(context);
+    if (media?.disableAnimations ?? false) return Duration.zero;
+    return _durations[token]!;
+  }
+}
+
+enum AgencyIconConcept { increment, decrement, search, warning, success, error }
+
+class AgencyIcon extends StatelessWidget {
+  const AgencyIcon(this.concept, {this.size = 20, super.key});
+  final AgencyIconConcept concept;
+  final double size;
+
+  IconData get _nativeFallback => switch (concept) {
+    AgencyIconConcept.increment => Icons.add,
+    AgencyIconConcept.decrement => Icons.remove,
+    AgencyIconConcept.search => Icons.search,
+    AgencyIconConcept.warning => Icons.warning_amber,
+    AgencyIconConcept.success => Icons.check_circle_outline,
+    AgencyIconConcept.error => Icons.cancel_outlined,
+  };
+
+  @override
+  Widget build(BuildContext context) => Icon(_nativeFallback, size: size);
+}
+
 abstract final class AgencyTheme {
   static ThemeData light() {
     final scheme = ColorScheme.fromSeed(seedColor: const Color(0xFF17181A));
@@ -180,13 +218,13 @@ class B2BQuickOrder extends StatelessWidget {
               IconButton(
                 tooltip: 'Decrease ${line.name}',
                 onPressed: onQuantityChanged == null ? null : () => onQuantityChanged!(line.sku, line.quantity > 0 ? line.quantity - 1 : 0),
-                icon: const Icon(Icons.remove),
+                icon: const AgencyIcon(AgencyIconConcept.decrement),
               ),
               Text('${line.quantity}'),
               IconButton(
                 tooltip: 'Increase ${line.name}',
                 onPressed: onQuantityChanged == null ? null : () => onQuantityChanged!(line.sku, line.quantity + 1),
-                icon: const Icon(Icons.add),
+                icon: const AgencyIcon(AgencyIconConcept.increment),
               ),
             ])),
           ])).toList(),

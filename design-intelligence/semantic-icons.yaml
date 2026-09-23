@@ -15,6 +15,8 @@ concepts:
   account: user
   success: check-circle
   error: cancel
+  increment: plus
+  decrement: minus
 rules:
   - components-request-semantic-concepts-not-library-glyphs
   - one-icon-family-per-product-surface-by-default

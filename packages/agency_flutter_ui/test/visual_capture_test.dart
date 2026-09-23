@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:agency_flutter_ui/agency_flutter_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -26,6 +28,7 @@ final viewports = <String, Size>{
 };
 
 void main() {
+  final runVisualCapture = Platform.environment['RUN_VISUAL_CAPTURE'] == 'true';
   for (final entry in cases.entries) {
     for (final viewport in viewports.entries) {
       testWidgets('capture ' + entry.key + ' ' + viewport.key, (tester) async {
@@ -37,7 +40,7 @@ void main() {
           find.byType(Scaffold),
           matchesGoldenFile('goldens/' + entry.key + '__' + viewport.key + '.png'),
         );
-      });
+      }, skip: !runVisualCapture);
     }
   }
 }

@@ -71,7 +71,10 @@ for (const [pattern, storyId] of cases) {
       const unlabeled = nodes.filter((el) => {
         const label = el.getAttribute("aria-label") || el.getAttribute("title") || (el.textContent || "").trim();
         const labelledBy = el.getAttribute("aria-labelledby");
-        return !label && !labelledBy;
+        const id = el.getAttribute("id");
+        const explicitLabel = id ? document.querySelector('label[for="' + CSS.escape(id) + '"]') : null;
+        const wrappingLabel = el.closest("label");
+        return !label && !labelledBy && !explicitLabel && !wrappingLabel;
       }).length;
       const focusable = nodes.filter((el) => !el.hasAttribute("disabled") && el.getAttribute("tabindex") !== "-1").length;
       return { interactive_count: nodes.length, unlabeled_interactive: unlabeled, focusable_interactive: focusable };

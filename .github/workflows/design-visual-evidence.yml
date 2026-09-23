@@ -1,0 +1,57 @@
+name: Design Visual Evidence
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  web-render-measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r requirements-dev.txt
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - name: Build Storybook
+        run: npm --workspace apps/storybook run build-storybook
+      - name: Serve Storybook
+        run: |
+          npx --yes http-server apps/storybook/storybook-static -p 6006 > /tmp/storybook.log 2>&1 &
+          for i in {1..30}; do curl -fsS http://127.0.0.1:6006 >/dev/null && break; sleep 1; done
+      - name: Capture screenshots, accessibility and performance
+        run: node tooling/experience/web_evidence.mjs
+      - name: Validate rendered evidence
+        run: |
+          python - <<'PY'
+          import json
+          from tooling.experience.visual_evidence import evaluate_evidence
+          payload=json.load(open("artifacts/design-evidence/evidence.json"))
+          result=evaluate_evidence(payload)
+          print(json.dumps(result, indent=2))
+          raise SystemExit(0 if result["status"]=="passed" else 2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: design-visual-evidence
+          path: artifacts/design-evidence
+
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - run: python -m unittest tests.test_visual_evidence -v

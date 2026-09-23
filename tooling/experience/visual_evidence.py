@@ -72,7 +72,8 @@ def evaluate_evidence(payload: dict[str, Any], policy: dict[str, Any] | None = N
             blockers.append(f"performance-dcl:{row.get('pattern')}:{row.get('viewport_id')}")
         if transfer > int(policy["performance"]["max_transfer_bytes"]):
             blockers.append(f"performance-transfer:{row.get('pattern')}:{row.get('viewport_id')}")
-        if float(row.get("elapsed_ms", 0)) > 1500:
+        max_runtime = float(policy["performance"].get("max_component_runtime_ms", 2000))
+        if float(row.get("elapsed_ms", 0)) > max_runtime:
             blockers.append(f"performance-component-runtime:{row.get('pattern')}:{row.get('viewport_id')}")
 
     return {

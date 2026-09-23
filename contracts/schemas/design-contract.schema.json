@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "client_id",
+    "source_refs",
+    "tokens",
+    "components",
+    "icons",
+    "motion",
+    "bindings"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "client_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "tokens": {
+      "type": "object",
+      "required": [
+        "foundation",
+        "semantic",
+        "theme"
+      ],
+      "properties": {
+        "foundation": {
+          "type": "string"
+        },
+        "semantic": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "flutter",
+          "web"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "evaluated",
+              "approved",
+              "deprecated"
+            ]
+          },
+          "flutter": {
+            "type": "string"
+          },
+          "web": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "icons": {
+      "type": "object",
+      "required": [
+        "system",
+        "semantic_mapping"
+      ],
+      "properties": {
+        "system": {
+          "type": "string"
+        },
+        "semantic_mapping": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "motion": {
+      "type": "object",
+      "required": [
+        "tokens",
+        "policy"
+      ],
+      "properties": {
+        "tokens": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "bindings": {
+      "type": "object",
+      "required": [
+        "flutter",
+        "web"
+      ],
+      "properties": {
+        "flutter": {
+          "type": "string"
+        },
+        "web": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

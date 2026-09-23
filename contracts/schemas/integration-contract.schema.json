@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "client_id",
+    "integration_map_ref",
+    "bindings"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "client_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "integration_map_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "provider",
+          "adapter_ref",
+          "criticality",
+          "commands",
+          "events",
+          "retry",
+          "reconciliation",
+          "credential_ref",
+          "sla",
+          "fallback"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "adapter_ref": {
+            "type": "string"
+          },
+          "criticality": {
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          "commands": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "retry": {
+            "type": "object",
+            "required": [
+              "max_attempts",
+              "backoff"
+            ],
+            "properties": {
+              "max_attempts": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "backoff": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "reconciliation": {
+            "type": "string"
+          },
+          "credential_ref": {
+            "type": "string"
+          },
+          "sla": {
+            "type": "string"
+          },
+          "fallback": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

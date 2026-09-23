@@ -1,0 +1,27 @@
+version: 1
+client_id: reference-retail
+source_refs:
+  - experience/design/source-inventory.yaml
+tokens:
+  foundation: design-contract/tokens/foundation.yaml
+  semantic: design-contract/tokens/semantic.yaml
+  theme: design-contract/themes/default.yaml
+components:
+  - {id: product-card, status: approved, flutter: ProductCard, web: ProductCard}
+  - {id: category-rail, status: approved, flutter: CategoryRail, web: CategoryRail}
+  - {id: b2b-quick-order, status: approved, flutter: B2BQuickOrder, web: B2BQuickOrder}
+  - {id: dashboard-kpi, status: approved, flutter: DashboardKpi, web: DashboardKpi}
+  - {id: exception-table, status: approved, flutter: ExceptionTable, web: ExceptionTable}
+  - {id: filter-bar, status: approved, flutter: FilterBar, web: FilterBar}
+  - {id: checkout-summary, status: approved, flutter: CheckoutSummary, web: CheckoutSummary}
+  - {id: navigation-menu, status: approved, flutter: NavigationMenu, web: NavigationMenu}
+  - {id: form-section, status: approved, flutter: FormSection, web: FormSection}
+icons:
+  system: iconoir
+  semantic_mapping: design-intelligence/semantic-icons.yaml
+motion:
+  tokens: design-intelligence/motion-tokens.yaml
+  policy: design-intelligence/motion-policy.yaml
+bindings:
+  flutter: packages/agency_flutter_ui
+  web: packages/agency_web_ui

@@ -42,6 +42,7 @@ jobs:
           raise SystemExit(0 if result["status"]=="passed" else 2)
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: design-visual-evidence
           path: artifacts/design-evidence
@@ -56,6 +57,8 @@ jobs:
           channel: stable
       - name: Generate Flutter rendered goldens
         working-directory: packages/agency_flutter_ui
+        env:
+          RUN_VISUAL_CAPTURE: "true"
         run: |
           flutter pub get
           flutter test --update-goldens test/visual_capture_test.dart

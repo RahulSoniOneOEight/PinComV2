@@ -1,5 +1,17 @@
 import type { ReactNode } from "react";
 
+export type AgencyIconConcept = "increment" | "decrement" | "search" | "warning" | "success" | "error";
+
+export function AgencyIcon({ concept }: { concept: AgencyIconConcept }) {
+  const path = concept === "increment" ? "M12 5v14M5 12h14"
+    : concept === "decrement" ? "M5 12h14"
+    : concept === "search" ? "M11 4a7 7 0 1 0 0 14a7 7 0 0 0 0-14Zm5 12l4 4"
+    : concept === "warning" ? "M12 4l9 16H3L12 4Zm0 5v5m0 3h.01"
+    : concept === "success" ? "M5 12l4 4L19 6"
+    : "M6 6l12 12M18 6L6 18";
+  return <svg className="agency-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" data-semantic-icon={concept}><path d={path} /></svg>;
+}
+
 export type CommerceFixture =
   | "default" | "loading" | "empty" | "failure" | "approval-pending" | "payment-failed"
   | "disabled"
@@ -62,9 +74,9 @@ export function B2BQuickOrder({ lines, state = "default", onQuantityChange }: {
           <tr key={line.sku}>
             <td>{line.sku}</td><td>{line.name}</td>
             <td><div className="agency-quantity">
-              <button aria-label={`Decrease ${line.name}`} onClick={() => onQuantityChange?.(line.sku, Math.max(0, line.quantity - 1))}>−</button>
+              <button aria-label={`Decrease ${line.name}`} onClick={() => onQuantityChange?.(line.sku, Math.max(0, line.quantity - 1))}><AgencyIcon concept="decrement" /></button>
               <span>{line.quantity}</span>
-              <button aria-label={`Increase ${line.name}`} onClick={() => onQuantityChange?.(line.sku, line.quantity + 1)}>+</button>
+              <button aria-label={`Increase ${line.name}`} onClick={() => onQuantityChange?.(line.sku, line.quantity + 1)}><AgencyIcon concept="increment" /></button>
             </div></td>
           </tr>
         ))}</tbody>

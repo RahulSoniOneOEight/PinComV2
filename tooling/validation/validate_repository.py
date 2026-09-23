@@ -22,6 +22,7 @@ REQUIRED = [
     "docs/agency-control-plane.md","docs/governance-status.md",
     "docs/functional-prototype-runtime.md","docs/abc-seamless-flow.md",
     "docs/production-plan-compiler.md",
+    "docs/preproduction-completion.md",
     "docs/phase-d-productionization.md",
     "docs/marketplace-a-to-d.md",
     "docs/phase-e1-staging.md",

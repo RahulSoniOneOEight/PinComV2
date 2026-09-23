@@ -33,6 +33,15 @@ CAPABILITY_OWNERS = {
     "credit-management": "commerce",
     "approval-workflow": "commerce",
     "reorder": "commerce",
+    "seller-onboarding": "marketplace",
+    "seller-catalogue": "marketplace",
+    "seller-inventory": "marketplace",
+    "marketplace-orders": "marketplace",
+    "commissions": "marketplace",
+    "settlements": "marketplace",
+    "seller-analytics": "marketplace",
+    "seller-approval": "marketplace",
+    "payout-reconciliation": "marketplace",
 }
 
 PROVIDER_ADAPTERS = {
@@ -117,6 +126,57 @@ def _production_selections(project: Path) -> tuple[dict[str, str], dict[str, str
         {str(k): str(v) for k, v in integrations.items()},
         {str(k): str(v) for k, v in runtime_versions.items()},
     )
+
+
+def build_migration_steps(marketplace_required: bool) -> list[dict[str, str]]:
+    steps = [
+        {
+            "id": "replace-demo-data",
+            "dataset": "prototype-demo-dataset",
+            "action": "replace-demo",
+            "target": "all-production-runtimes",
+            "verification": "no demo-only identities remain in production data",
+        },
+        {
+            "id": "migrate-master-data",
+            "dataset": "customers-products-parties",
+            "action": "migrate",
+            "target": "canonical owners from data contract",
+            "verification": "record counts and identity mapping reconcile",
+        },
+        {
+            "id": "load-opening-inventory",
+            "dataset": "opening-inventory",
+            "action": "load",
+            "target": "erp",
+            "verification": "warehouse/SKU quantities reconcile to approved opening snapshot",
+        },
+        {
+            "id": "load-opening-finance",
+            "dataset": "opening-finance",
+            "action": "load",
+            "target": "erp",
+            "verification": "trial balance and AR/AP opening balances reconcile",
+        },
+    ]
+    if marketplace_required:
+        steps.extend([
+            {
+                "id": "migrate-marketplace-sellers",
+                "dataset": "sellers-offers-commission-rules",
+                "action": "migrate",
+                "target": "marketplace",
+                "verification": "seller identities, offers and commission rules read back from marketplace runtime",
+            },
+            {
+                "id": "load-opening-seller-settlements",
+                "dataset": "opening-seller-settlements",
+                "action": "load",
+                "target": "marketplace-and-erp",
+                "verification": "seller payable and settlement opening balances reconcile to ERP",
+            },
+        ])
+    return steps
 
 
 def _approved_overlays(project: Path, baseline: dict[str, Any]) -> list[str]:
@@ -301,40 +361,17 @@ def build_production_plan(client_id: str, root: Path = ROOT) -> tuple[dict[str, 
         "status": "blocked" if blockers else "draft",
     }
 
+    marketplace_required = any(
+        item.get("provider") == "mercur" and item.get("required")
+        for item in runtime_rows
+    )
+    migration_steps = build_migration_steps(marketplace_required)
+
     migration = {
         "migration_plan_id": f"MIGPLAN-{client_id}-v{version}",
         "client_id": client_id,
         "source_scope_ref": current["baseline_ref"],
-        "steps": [
-            {
-                "id": "replace-demo-data",
-                "dataset": "prototype-demo-dataset",
-                "action": "replace-demo",
-                "target": "all-production-runtimes",
-                "verification": "no demo-only identities remain in production data",
-            },
-            {
-                "id": "migrate-master-data",
-                "dataset": "customers-products-parties",
-                "action": "migrate",
-                "target": "canonical owners from data contract",
-                "verification": "record counts and identity mapping reconcile",
-            },
-            {
-                "id": "load-opening-inventory",
-                "dataset": "opening-inventory",
-                "action": "load",
-                "target": "erp",
-                "verification": "warehouse/SKU quantities reconcile to approved opening snapshot",
-            },
-            {
-                "id": "load-opening-finance",
-                "dataset": "opening-finance",
-                "action": "load",
-                "target": "erp",
-                "verification": "trial balance and AR/AP opening balances reconcile",
-            },
-        ],
+        "steps": migration_steps,
         "blocking_items": [],
         "status": "ready",
     }

@@ -1,0 +1,11 @@
+version: 1
+packages:
+  - {id: shadcn-flutter, ecosystem: pub, package: shadcn_flutter, runtime: flutter}
+  - {id: data-table-2, ecosystem: pub, package: data_table_2, runtime: flutter}
+  - {id: flutter-form-builder, ecosystem: pub, package: flutter_form_builder, runtime: flutter}
+  - {id: fl-chart, ecosystem: pub, package: fl_chart, runtime: flutter}
+  - {id: tanstack-table, ecosystem: npm, package: "@tanstack/react-table", runtime: web}
+  - {id: tanstack-query, ecosystem: npm, package: "@tanstack/react-query", runtime: web}
+  - {id: react-hook-form, ecosystem: npm, package: react-hook-form, runtime: web}
+  - {id: recharts, ecosystem: npm, package: recharts, runtime: web}
+  - {id: embla-carousel-react, ecosystem: npm, package: embla-carousel-react, runtime: web}

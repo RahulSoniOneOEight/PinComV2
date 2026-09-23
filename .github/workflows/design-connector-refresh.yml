@@ -1,0 +1,47 @@
+name: Design Connector and Dependency Refresh
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - run: python -m unittest tests.test_design_connectors_learning_ops -v
+
+  live-dependency-snapshot:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - name: Collect current dependency metadata
+        run: |
+          mkdir -p artifacts/dependency-refresh
+          python - <<'PY'
+          import json, yaml
+          from tooling.experience.dependency_collectors import collect_sources
+          rows=yaml.safe_load(open("design-intelligence/dependency-sources.yaml"))["packages"]
+          data={"dependencies": collect_sources(rows)}
+          open("artifacts/dependency-refresh/snapshot.json","w").write(json.dumps(data,indent=2))
+          print(json.dumps(data,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dependency-refresh
+          path: artifacts/dependency-refresh

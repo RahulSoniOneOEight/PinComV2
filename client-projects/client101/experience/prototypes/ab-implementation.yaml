@@ -1,0 +1,1913 @@
+implementation_id: IMP-client101-ab
+client_id: client101
+direction_id: DIR-CLIENT101-AB
+surfaces:
+- surface: customer-app
+  runtime_ref: apps/prototype_app
+  screens:
+  - id: home
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: search
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: product-list
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: product-detail
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: cart
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: checkout
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: orders
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: profile
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: category
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: search-results
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: address
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: delivery
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: payment
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-confirmation
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-detail
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: inventory
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: return-request
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: return-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: rfq
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: quote-detail
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: support
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: account
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: approval-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: categories
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: product-listing
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: seller-comparison
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-tracking
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: conversation
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-help
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: return-help
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: all-critical-purchase-and-account-screens
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: referral
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: rewards-balance
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: rewards-history
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: rewards-rules
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  components:
+  - id: navigation
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: search-bar
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: product-card
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: cart-line
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-card
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: category-navigation
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: product-gallery
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: variant-selector
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: search-suggestions
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: filter-control
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: sort-control
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: promotion-banner
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: coupon-entry
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: discount-breakdown
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: quantity-selector
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: price-summary
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: address-card
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: delivery-option
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: payment-method
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-summary
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-timeline
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: availability-indicator
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: warehouse-availability
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: return-reason
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: pickup-option
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: refund-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: rfq-form
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: quote-line
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: quote-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: support-entry
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: whatsapp-cta
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: ticket-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: credit-limit-card
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: credit-balance
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: credit-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: approval-banner
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: approver-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: approval-action
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: category-rail
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: filter-bar
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: seller-offer-table
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: availability-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: seller-group
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: checkout-section
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: payment-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: shipment-group
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: related-product-rail
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: quick-add
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: external-price-comparison
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: freshness-label
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: chat-thread
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: media-message
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: quick-reply
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: escalation-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: whatsapp-action
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: language-selector
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: localized-content
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: network-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: referral-code
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: reward-balance
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: earning-rule
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: redemption-option
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: expiry-status
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  states:
+  - id: default
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: loading
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: empty
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: failure
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: out-of-stock
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: no-results
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: coupon-valid
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: coupon-invalid
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: payment-failed
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: order-success
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: in-stock
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: low-stock
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: approval-pending
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: rejected
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: refunded
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: draft
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: submitted
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: approved
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: available
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: partially-used
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: limit-exceeded
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: error
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: unavailable-at-pincode
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: validation-error
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: confirmed
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: partially-fulfilled
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: delivered
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: added
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: stale
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: unavailable
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: match-confidence-low
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: open
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: waiting
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: assigned
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: escalated
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: resolved
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: english
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: hindi
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: low-bandwidth
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: offline
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: retry
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: earned
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: redeemed
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: expired
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  - id: disabled
+    status: implemented
+    evidence_ref: apps/prototype_app/lib/main.dart
+  status: complete
+- surface: web-store
+  runtime_ref: apps/storefront
+  screens:
+  - id: home
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: search
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: product-list
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: product-detail
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: cart
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: checkout
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: account
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: orders
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: category
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: search-results
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: address
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: delivery
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: payment
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-confirmation
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-detail
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: inventory
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: return-request
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: return-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: rfq
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: quote-detail
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: support
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: approval-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: categories
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: product-listing
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: seller-comparison
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-tracking
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: conversation
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-help
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: return-help
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: all-critical-purchase-and-account-screens
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: referral
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: rewards-balance
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: rewards-history
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: rewards-rules
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  components:
+  - id: header
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: navigation
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: search-bar
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: product-card
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: cart-line
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-card
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: category-navigation
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: product-gallery
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: variant-selector
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: search-suggestions
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: filter-control
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: sort-control
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: promotion-banner
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: coupon-entry
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: discount-breakdown
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: quantity-selector
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: price-summary
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: address-card
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: delivery-option
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: payment-method
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-summary
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-timeline
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: availability-indicator
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: warehouse-availability
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: return-reason
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: pickup-option
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: refund-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: rfq-form
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: quote-line
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: quote-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: support-entry
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: whatsapp-cta
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: ticket-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: credit-limit-card
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: credit-balance
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: credit-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: approval-banner
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: approver-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: approval-action
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: category-rail
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: filter-bar
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: seller-offer-table
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: availability-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: seller-group
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: checkout-section
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: payment-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: shipment-group
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: related-product-rail
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: quick-add
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: external-price-comparison
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: freshness-label
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: chat-thread
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: media-message
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: quick-reply
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: escalation-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: whatsapp-action
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: language-selector
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: localized-content
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: network-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: referral-code
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: reward-balance
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: earning-rule
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: redemption-option
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: expiry-status
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  states:
+  - id: default
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: loading
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: empty
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: failure
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: out-of-stock
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: no-results
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: coupon-valid
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: coupon-invalid
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: payment-failed
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: order-success
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: in-stock
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: low-stock
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: approval-pending
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: rejected
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: refunded
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: draft
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: submitted
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: approved
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: available
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: partially-used
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: limit-exceeded
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: error
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: unavailable-at-pincode
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: validation-error
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: confirmed
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: partially-fulfilled
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: delivered
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: added
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: stale
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: unavailable
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: match-confidence-low
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: open
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: waiting
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: assigned
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: escalated
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: resolved
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: english
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: hindi
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: low-bandwidth
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: offline
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: retry
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: earned
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: redeemed
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: expired
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  - id: disabled
+    status: implemented
+    evidence_ref: apps/storefront/app/page.tsx
+  status: complete
+- surface: commerce-admin
+  runtime_ref: apps/commerce_admin
+  screens:
+  - id: dashboard
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: products
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: orders
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: inventory
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: promotions
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: returns
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: customers
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: settings
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: home
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: category
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: product-list
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: product-detail
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: search
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: search-results
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: cart
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: checkout
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: return-request
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: return-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: rfq
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: quote-detail
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: exceptions
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: exception-detail
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: account
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: approval-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: seller-approval
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: catalogue
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: order-operations
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: fulfilment
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: disputes
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: payment-reconciliation
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: seller-payables
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: commission-rules
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: settlements
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: refunds
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: accounting-postings
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: executive-overview
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: sales
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: finance
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: customer
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: conversion
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: merchandising
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: delivery
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: support
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: automation
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: anomaly
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: referral
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: rewards-balance
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: rewards-history
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: rewards-rules
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  components:
+  - id: data-table
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: filter-bar
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: form
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: status-chip
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: bulk-actions
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: category-navigation
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: product-card
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: product-gallery
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: variant-selector
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: search-bar
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: search-suggestions
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: filter-control
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: sort-control
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: promotion-banner
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: coupon-entry
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: discount-breakdown
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: availability-indicator
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: warehouse-availability
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: return-reason
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: pickup-option
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: refund-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: metric-card
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: trend-chart
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: rfq-form
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: quote-line
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: quote-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: exception-card
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: retry-action
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: replay-action
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: credit-limit-card
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: credit-balance
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: credit-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: approval-banner
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: approver-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: approval-action
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: exception-table
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: audit-history
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: reconciliation-table
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: commission-breakdown
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: settlement-card
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: journal-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: funnel
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: referral-code
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: reward-balance
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: earning-rule
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: redemption-option
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: expiry-status
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  states:
+  - id: default
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: loading
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: empty
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: failure
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: out-of-stock
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: no-results
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: coupon-valid
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: coupon-invalid
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: in-stock
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: low-stock
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: approval-pending
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: rejected
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: refunded
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: draft
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: submitted
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: approved
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: open
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: retrying
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: resolved
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: failed
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: available
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: partially-used
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: limit-exceeded
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: error
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: escalated
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: pending
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: matched
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: mismatched
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: adjusted
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: posted
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: settled
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: alert
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: earned
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: redeemed
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: expired
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  - id: disabled
+    status: implemented
+    evidence_ref: apps/commerce_admin/app/page.tsx
+  status: complete
+- surface: analytics
+  runtime_ref: apps/analytics
+  screens:
+  - id: dashboard
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: sales
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: orders
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: inventory
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: fulfilment
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: customers
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: exceptions
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: exception-detail
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: payment-reconciliation
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: seller-payables
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: commission-rules
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: settlements
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: refunds
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: accounting-postings
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: executive-overview
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: finance
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: customer
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: conversion
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: merchandising
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: delivery
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: returns
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: support
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: automation
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: anomaly
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  components:
+  - id: metric-card
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: trend-chart
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: filter-bar
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: data-table
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: exception-card
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: retry-action
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: replay-action
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: status-chip
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: reconciliation-table
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: commission-breakdown
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: settlement-card
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: journal-status
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: exception-table
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: funnel
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  states:
+  - id: default
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: loading
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: empty
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: failure
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: open
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: retrying
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: resolved
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: failed
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: pending
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: matched
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: mismatched
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: adjusted
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: posted
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: settled
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: error
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  - id: alert
+    status: implemented
+    evidence_ref: apps/analytics/app/page.tsx
+  status: complete
+- surface: erp
+  runtime_ref: platform/erp/tryton/adapter.yaml
+  screens:
+  - id: products
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:products
+  - id: sales-orders
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:sales-orders
+  - id: purchases
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:purchases
+  - id: inventory
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:inventory
+  - id: warehouse
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:warehouse
+  - id: invoices
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:invoices
+  - id: product-detail
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:product-detail
+  - id: rfq
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:rfq
+  - id: quote-detail
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:quote-detail
+  - id: account
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:account
+  - id: checkout
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:checkout
+  - id: approval-status
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:approval-status
+  - id: payment-reconciliation
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:payment-reconciliation
+  - id: seller-payables
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:seller-payables
+  - id: commission-rules
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:commission-rules
+  - id: settlements
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:settlements
+  - id: refunds
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:refunds
+  - id: accounting-postings
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#screen:accounting-postings
+  components:
+  - id: data-table
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:data-table
+  - id: form
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:form
+  - id: status-chip
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:status-chip
+  - id: document-lines
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:document-lines
+  - id: availability-indicator
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:availability-indicator
+  - id: warehouse-availability
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:warehouse-availability
+  - id: rfq-form
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:rfq-form
+  - id: quote-line
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:quote-line
+  - id: quote-status
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:quote-status
+  - id: credit-limit-card
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:credit-limit-card
+  - id: credit-balance
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:credit-balance
+  - id: credit-status
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:credit-status
+  - id: approval-banner
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:approval-banner
+  - id: approver-status
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:approver-status
+  - id: approval-action
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:approval-action
+  - id: reconciliation-table
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:reconciliation-table
+  - id: commission-breakdown
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:commission-breakdown
+  - id: settlement-card
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:settlement-card
+  - id: journal-status
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:journal-status
+  - id: exception-table
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#component:exception-table
+  states:
+  - id: default
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:default
+  - id: loading
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:loading
+  - id: empty
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:empty
+  - id: failure
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:failure
+  - id: in-stock
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:in-stock
+  - id: low-stock
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:low-stock
+  - id: out-of-stock
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:out-of-stock
+  - id: draft
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:draft
+  - id: submitted
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:submitted
+  - id: approved
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:approved
+  - id: rejected
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:rejected
+  - id: available
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:available
+  - id: partially-used
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:partially-used
+  - id: limit-exceeded
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:limit-exceeded
+  - id: approval-pending
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:approval-pending
+  - id: pending
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:pending
+  - id: matched
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:matched
+  - id: mismatched
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:mismatched
+  - id: failed
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:failed
+  - id: adjusted
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:adjusted
+  - id: posted
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:posted
+  - id: settled
+    status: implemented
+    evidence_ref: platform/erp/tryton/adapter.yaml#state:settled
+  status: complete
+- surface: seller-portal
+  runtime_ref: apps/seller_portal
+  screens:
+  - id: dashboard
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: catalogue
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: inventory
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: pricing
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: orders
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: returns
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: settlements
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: settings
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: home
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: category
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: product-list
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: product-detail
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: search
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: search-results
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: return-request
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: return-status
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: quick-order
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: material-list-upload
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: rfq-detail
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: quote-negotiation
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: quote-checkout
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: seller-signup
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: otp-verification
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: seller-profile
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: verification-review
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: offers
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: rfqs
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: commissions
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  components:
+  - id: metric-card
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: data-table
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: filter-bar
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: form
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: status-chip
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: category-navigation
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: product-card
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: product-gallery
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: variant-selector
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: search-bar
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: search-suggestions
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: filter-control
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: sort-control
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: availability-indicator
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: warehouse-availability
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: return-reason
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: pickup-option
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: refund-status
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: b2b-quick-order
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: file-upload
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: quote-table
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: counter-offer
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: negotiation-history
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: mobile-input
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: otp-input
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: seller-profile-form
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: document-upload
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: approval-status
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: offer-table
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: inventory-table
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: order-table
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: commission-breakdown
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: settlement-card
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  states:
+  - id: default
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: loading
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: empty
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: failure
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: out-of-stock
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: no-results
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: in-stock
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: low-stock
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: approval-pending
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: rejected
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: refunded
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: draft
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: submitted
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: quoted
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: countered
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: accepted
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: expired
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: converted
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: account-created
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: incomplete
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: under-review
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: verified
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: action-required
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: active
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: allocated
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: fulfilled
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: return-requested
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: settlement-pending
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  - id: settled
+    status: implemented
+    evidence_ref: apps/seller_portal/app/page.tsx
+  status: complete
+status: draft

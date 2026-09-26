@@ -1,0 +1,40 @@
+direction_id: DIR-CLIENT101-B
+client_id: client101
+strategy: search-first
+surfaces:
+- customer-app
+- web-store
+- commerce-admin
+- analytics
+- erp
+- seller-portal
+journey_emphasis:
+- browse-to-buy
+- search-to-buy
+- order-tracking
+- return-refund
+- quote-to-order
+- repeat-order
+- credit-order
+- seller-onboarding
+- seller-catalogue
+- marketplace-order
+- seller-fulfilment
+- seller-return
+- seller-settlement
+design_intent:
+  density: compact
+  navigation: search-led
+  discovery: intent-driven
+  interaction: fast
+differentiators:
+- search and intent dominate entry
+- faster route to product/action
+- compact information density
+fixture_set: commerce-baseline
+visual_preset: compact-commerce
+design_selection_ref: experience/design/selection.yaml
+theme_resolution_ref: experience/design/theme-resolution.yaml
+asset_plan_ref: experience/design/asset-plan.yaml
+motion_policy_ref: design-intelligence/motion-policy.yaml
+status: draft

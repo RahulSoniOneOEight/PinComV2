@@ -1,0 +1,14 @@
+{"actor": "opencode", "event": "workflow.advance", "from": "client-intake", "human_gate_approved": false, "timestamp": "2026-09-25T17:28:19.826366+00:00", "to": "normalize-client-truth"}
+{"actor": "opencode", "event": "workflow.advance", "from": "normalize-client-truth", "human_gate_approved": false, "timestamp": "2026-09-25T17:28:26.576845+00:00", "to": "classify-industry-archetype"}
+{"actor": "opencode", "event": "workflow.advance", "from": "classify-industry-archetype", "human_gate_approved": false, "timestamp": "2026-09-25T17:28:44.981156+00:00", "to": "benchmark-best-practices"}
+{"actor": "opencode", "event": "workflow.advance", "from": "benchmark-best-practices", "human_gate_approved": false, "timestamp": "2026-09-25T17:28:52.347857+00:00", "to": "capability-gap-analysis"}
+{"actor": "opencode", "event": "workflow.advance", "from": "capability-gap-analysis", "human_gate_approved": false, "timestamp": "2026-09-25T17:28:59.086696+00:00", "to": "resource-reuse-analysis"}
+{"actor": "opencode", "event": "workflow.advance", "from": "resource-reuse-analysis", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:05.738716+00:00", "to": "capability-map"}
+{"actor": "opencode", "event": "workflow.advance", "from": "capability-map", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:12.837020+00:00", "to": "journey-map"}
+{"actor": "opencode", "event": "workflow.advance", "from": "journey-map", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:20.040922+00:00", "to": "entity-map"}
+{"actor": "opencode", "event": "workflow.advance", "from": "entity-map", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:25.171409+00:00", "to": "surface-map"}
+{"actor": "opencode", "event": "workflow.advance", "from": "surface-map", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:31.913663+00:00", "to": "integration-map"}
+{"actor": "opencode", "event": "workflow.advance", "from": "integration-map", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:38.221236+00:00", "to": "dependency-map"}
+{"actor": "opencode", "event": "workflow.advance", "from": "dependency-map", "human_gate_approved": false, "timestamp": "2026-09-25T17:29:49.469655+00:00", "to": "solution-architecture"}
+{"actor": "opencode", "event": "workflow.advance", "from": "solution-architecture", "human_gate_approved": false, "timestamp": "2026-09-25T17:58:50.400454+00:00", "to": "experience-directions"}
+{"actor": "opencode", "event": "workflow.advance", "from": "experience-directions", "human_gate_approved": false, "timestamp": "2026-09-25T18:05:54.020575+00:00", "to": "multi-surface-prototype"}

@@ -1,0 +1,63 @@
+client_id: client101
+version: 1
+status: review-ready-with-open-production-decisions
+product_name: BuildKart
+phase_1:
+  business_models: [d2c, b2c, b2b, marketplace, multi-vendor]
+  languages: [en-IN, hi-IN]
+  geography:
+    country: India
+    orientation: Tier-2 and emerging Indian markets
+    operation: India-wide
+    initial_states_and_cities: TBD
+    prototype_fixtures: Synthetic addresses representing Tier-2 Indian cities; not a production rollout decision.
+  scale:
+    initial_orders_per_month: 1000
+    three_month_target_orders_per_month: 10000
+    initial_gmv_inr: 1 crore
+    three_month_target_gmv_inr: 5 crore
+    sellers: 10
+    approximate_skus_per_seller: 30
+    approximate_seller_sku_listings: 300
+  included_growth_capabilities:
+    referral: true
+    rewards: true
+    advanced_loyalty: false
+    personalisation: false
+operating_model:
+  ownership: mixed-and-configurable
+  catalogue: Seller owns listing and offer data; platform owns canonical catalogue and governance.
+  inventory: Seller or platform warehouse owns stock; platform aggregates availability.
+  fulfilment: Seller or warehouse fulfils; platform orchestrates splits, shipments and tracking.
+  returns: Platform owns unified orchestration; sellers process applicable seller-specific acceptance.
+  customer_support: Platform is primary; seller-specific cases may be routed to sellers.
+  seller_kyc: Seller submits and updates KYC; one prototype superadmin reviews it. Production document policy remains open.
+  seller_product_updates: Seller creates and updates product listings, offers and stock; one prototype superadmin reviews governed changes.
+prototype_defaults:
+  configurable: true
+  production_approved: false
+  payment_provider: razorpay
+  logistics_provider: shiprocket
+  communication_provider: meta-whatsapp-cloud
+  support_provider: TBD
+  seller_commission_percent: 10
+  settlement_timing: T+3 days
+  competitive_price_data: Clearly labelled synthetic price, source, timestamp and freshness fixtures only.
+  approval_actor: One prototype superadmin with no implied production authority.
+  selected_experience_direction: DIR-CLIENT101-AB
+  experience_strategy: Discovery-led category browsing with persistent search, compact results and fast conversion.
+production_decisions_open:
+  - initial-launch-states-and-cities
+  - peak-tps-and-concurrency
+  - production-provider-selection
+  - seller-kyc-document-policy
+  - competitive-price-policy
+  - contractual-slas-rto-rpo-and-retention
+  - privacy-and-data-classification-policy
+  - named-human-approvers
+governance:
+  prototype-defaults-are-not-production-rules: true
+  provider-neutral-contracts-required: true
+  human-production-approval-required: true
+  source_register: input/source-register.yaml
+  client_input: input/client-input.yaml

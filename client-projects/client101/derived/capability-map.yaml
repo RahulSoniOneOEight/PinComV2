@@ -1,0 +1,54 @@
+client_id: client101
+mandatory:
+- authentication
+- audit
+core:
+- catalogue
+- search
+- pricing
+- promotions
+- cart
+- checkout
+- orders
+- inventory-availability
+- fulfilment
+- return-refund
+- analytics
+- b2b-account
+- quote-rfq
+- seller-onboarding
+- seller-catalogue
+- seller-inventory
+- marketplace-orders
+- commissions
+- settlements
+recommended:
+- customer-support
+- lifecycle-automation
+- ops-exceptions
+- credit-management
+- approval-workflow
+- reorder
+- seller-analytics
+- seller-approval
+- payout-reconciliation
+requested_additional:
+- cart-merchandising
+- competitor-price-intelligence
+- customer-specific-pricing
+- gst-billing
+- material-lists
+- moq-and-pack-size
+- multi-seller-cart
+- multilingual
+- project-site-purchasing
+- quantity-slab-pricing
+- ratings-and-reviews
+- referral
+- rewards
+- seller-comparison
+- split-order-fulfilment
+later:
+- loyalty
+- personalisation
+not_applicable: []

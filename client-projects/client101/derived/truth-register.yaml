@@ -1,0 +1,995 @@
+client_id: client101
+version: 1
+records:
+- truth_id: TRUTH-0001
+  path: industry
+  value: retail
+  classification: fact
+  confidence: 1.0
+  sources: &id001
+  - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+  - https://app.notion.com/p/client101-3e6ddf8e5f6a80f3b201ff2474a374e4#3e6ddf8e5f6a807abcbffa05af2fb58c
+  - https://app.notion.com/p/client101-3e6ddf8e5f6a80f3b201ff2474a374e4#3e6ddf8e5f6a807db1eddb9e47afd14f
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0002
+  path: business_models
+  value:
+  - d2c
+  - b2c
+  - b2b
+  - marketplace
+  - multi-vendor
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0003
+  path: goals
+  value:
+  - unified-b2c-and-b2b-multi-seller-marketplace
+  - simple-mobile-first-tier-2-shopping
+  - integrated-commerce-inventory-fulfilment-and-finance
+  - efficient-rfq-bulk-credit-and-repeat-procurement
+  - governed-seller-operations-and-settlements
+  - operational-automation-and-management-visibility
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0004
+  path: requested_capabilities
+  value:
+  - catalogue
+  - search
+  - pricing
+  - promotions
+  - cart
+  - checkout
+  - orders
+  - inventory-availability
+  - fulfilment
+  - return-refund
+  - analytics
+  - customer-support
+  - lifecycle-automation
+  - ops-exceptions
+  - b2b-account
+  - quote-rfq
+  - credit-management
+  - approval-workflow
+  - reorder
+  - seller-onboarding
+  - seller-catalogue
+  - seller-inventory
+  - marketplace-orders
+  - commissions
+  - settlements
+  - seller-analytics
+  - seller-approval
+  - payout-reconciliation
+  - customer-specific-pricing
+  - quantity-slab-pricing
+  - moq-and-pack-size
+  - multi-seller-cart
+  - seller-comparison
+  - split-order-fulfilment
+  - gst-billing
+  - project-site-purchasing
+  - material-lists
+  - competitor-price-intelligence
+  - cart-merchandising
+  - ratings-and-reviews
+  - referral
+  - rewards
+  - multilingual
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0005
+  path: deferred_capabilities
+  value:
+  - loyalty
+  - personalisation
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0006
+  path: required_integrations
+  value:
+  - payment
+  - logistics
+  - whatsapp
+  - communications
+  - support-telephony
+  - search
+  - erp-accounting
+  - competitor-price-intelligence
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0007
+  path: channels
+  value:
+  - mobile-app
+  - web-storefront
+  - b2b-portal
+  - seller-portal
+  - commerce-operations-admin
+  - erp-accounting
+  - whatsapp-assisted-commerce
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0008
+  path: volumes
+  value:
+    launch_sellers: 10
+    approximate_skus_per_seller: 30
+    approximate_seller_sku_listings: 300
+    initial_orders_per_month: 1000
+    three_month_target_orders_per_month: 10000
+    initial_gmv_inr: 1 crore
+    three_month_target_gmv_inr: 5 crore
+    customers: TBD
+    warehouses_and_stores: TBD
+    peak_tps_and_concurrent_users: TBD
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0009
+  path: stakeholders
+  value:
+  - id: prototype-superadmin
+    name: BuildKart Superadmin
+    role: prototype-superadmin-approval
+    approval_scope:
+    - prototype-seller-kyc
+    - prototype-product-updates
+    - prototype-content
+    - prototype-operations
+    environment: prototype
+    production_authority: false
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0010
+  path: compliance
+  value:
+  - gst-billing-and-business-documents
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0011
+  path: constraints
+  value:
+  - greenfield-no-existing-commerce-erp-wms-or-support-system
+  - phase-1-includes-b2c-b2b-seller-commerce-operations-and-erp-accounting-experiences
+  - provider-neutral-integration-contracts
+  - mixed-catalogue-inventory-and-fulfilment-ownership
+  - mobile-first-and-data-light
+  - english-and-hindi-at-launch
+  - recommendation-logic-must-be-configurable
+  - competitor-price-data-must-record-source-price-and-observation-timestamp
+  - project-site-is-a-first-class-b2b-entity-not-only-an-address
+  - standard-core-behavior-unless-an-explicit-client-overlay-is-defined
+  - india-wide-operation-without-hard-coded-state-or-city
+  - scale-from-1000-to-10000-monthly-orders-without-architectural-redesign
+  - secure-authentication-and-role-based-least-privilege-authorization
+  - encryption-in-transit-and-secure-secret-management
+  - audit-correlation-observability-backup-and-recovery-controls
+  - configurable-privacy-and-data-retention-controls
+  - idempotent-durable-integrations-with-retry-dlq-replay-and-reconciliation
+  - advanced-loyalty-programme-not-in-phase-1
+  - personalisation-not-in-phase-1
+  - competitive-price-production-collection-disabled-until-policy-approval
+  - prototype-competitive-price-data-is-synthetic-and-clearly-labelled
+  - prototype-location-data-uses-synthetic-tier-2-indian-city-fixtures
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0012
+  path: geographies
+  value:
+  - india
+  - tier-2-and-emerging-indian-markets
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0013
+  path: risk_profile
+  value: high
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0014
+  path: languages
+  value:
+  - en-IN
+  - hi-IN
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0015
+  path: non_functional_requirements
+  value:
+    confirmed_capacity:
+      initial_orders_per_month: 1000
+      three_month_target_orders_per_month: 10000
+      initial_gmv_inr: 1 crore
+      three_month_target_gmv_inr: 5 crore
+    required_characteristics:
+    - secure-authentication
+    - authorization-and-rbac
+    - least-privilege
+    - encryption-in-transit
+    - secure-secret-management
+    - audit-trails
+    - correlation-and-trace-ids
+    - observability
+    - backup-and-recovery
+    - privacy-controls
+    - configurable-data-retention
+    - idempotent-operations
+    - durable-integration-events
+    - retry-and-dlq
+    - controlled-replay
+    - reconciliation
+    approval_required:
+    - contractual-uptime-sla
+    - response-time-sla
+    - peak-tps-and-concurrency
+    - rto
+    - rpo
+    - retention-periods
+    - privacy-policy
+    - data-classification-policy
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0016
+  path: experience_requirements
+  value:
+  - requirement_id: REQ-C101-CONSUMER-001
+    statement: Consumers can discover category-specific products, compare seller offers
+      and see local availability before adding an offer to cart.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    requested_screens:
+    - home
+    - categories
+    - search
+    - product-listing
+    - product-detail
+    - seller-comparison
+    requested_components:
+    - category-rail
+    - search-bar
+    - filter-bar
+    - product-card
+    - seller-offer-table
+    - availability-status
+    required_states:
+    - default
+    - loading
+    - empty
+    - error
+    - out-of-stock
+    - unavailable-at-pincode
+  - requirement_id: REQ-C101-CHECKOUT-001
+    statement: A buyer can use one cart and checkout across multiple sellers while
+      seller and warehouse order splits remain visible after purchase.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    - b2b-portal
+    requested_screens:
+    - cart
+    - checkout
+    - payment
+    - order-confirmation
+    - order-detail
+    - order-tracking
+    requested_components:
+    - cart-line
+    - seller-group
+    - checkout-section
+    - payment-status
+    - shipment-group
+    - order-timeline
+    required_states:
+    - default
+    - validation-error
+    - payment-failed
+    - confirmed
+    - partially-fulfilled
+    - delivered
+  - requirement_id: REQ-C101-MERCH-001
+    statement: Cart and checkout show configurable complementary product recommendations
+      with quick-add before checkout completion.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    - b2b-portal
+    requested_screens:
+    - cart
+    - checkout
+    requested_components:
+    - related-product-rail
+    - product-card
+    - quick-add
+    required_states:
+    - default
+    - loading
+    - empty
+    - error
+    - added
+  - requirement_id: REQ-C101-PRICE-001
+    statement: Product cards and product detail can compare marketplace prices with
+      clearly labelled synthetic competitor-price fixtures, including source labels
+      and freshness context; the prototype does not collect live competitor data.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    - b2b-portal
+    requested_screens:
+    - product-listing
+    - product-detail
+    requested_components:
+    - product-card
+    - external-price-comparison
+    - freshness-label
+    required_states:
+    - available
+    - stale
+    - unavailable
+    - match-confidence-low
+  - requirement_id: REQ-C101-B2B-001
+    statement: A business buyer can register with GST details, manage multiple users
+      and use role-based purchasing approvals.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - b2b-portal
+    requested_screens:
+    - business-registration
+    - verification-status
+    - team-users
+    - approval-workflow
+    requested_components:
+    - gst-form
+    - verification-banner
+    - user-table
+    - role-selector
+    - approval-status
+    required_states:
+    - draft
+    - pending-verification
+    - verified
+    - rejected
+    - approval-pending
+    - approved
+  - requirement_id: REQ-C101-B2B-002
+    statement: B2B buyers can use customer-specific pricing, quantity slabs, MOQ and
+      pack-size rules, credit terms and partial or advance payment where allowed.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - b2b-portal
+    requested_screens:
+    - catalogue
+    - product-detail
+    - cart
+    - checkout
+    - account-credit
+    requested_components:
+    - trade-price
+    - quantity-breaks
+    - moq-message
+    - pack-size-selector
+    - credit-limit-card
+    - payment-terms
+    required_states:
+    - eligible
+    - ineligible
+    - below-moq
+    - credit-available
+    - limit-exceeded
+    - approval-pending
+  - requirement_id: REQ-C101-B2B-003
+    statement: B2B buyers can submit an RFQ or material list, receive seller counter-offers
+      and convert an accepted quote into an order.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - b2b-portal
+    - seller-portal
+    requested_screens:
+    - quick-order
+    - material-list-upload
+    - rfq-detail
+    - quote-negotiation
+    - quote-checkout
+    requested_components:
+    - b2b-quick-order
+    - file-upload
+    - quote-table
+    - counter-offer
+    - negotiation-history
+    required_states:
+    - draft
+    - submitted
+    - quoted
+    - countered
+    - accepted
+    - rejected
+    - expired
+    - converted
+  - requirement_id: REQ-C101-PROJECT-001
+    statement: A business account can manage multiple projects or sites and associate
+      delivery locations, material lists, carts, RFQs, orders and reorder history
+      with each project.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - b2b-portal
+    requested_screens:
+    - projects
+    - project-detail
+    - project-material-list
+    - project-orders
+    - project-reorder
+    requested_components:
+    - project-selector
+    - site-address
+    - material-list
+    - purchase-history
+    - reorder-action
+    required_states:
+    - active
+    - archived
+    - empty
+    - approval-pending
+    - reordered
+  - requirement_id: REQ-C101-SELLER-001
+    statement: Sellers can create an account with mobile number and OTP, submit and
+      update their profile and KYC for prototype superadmin review, create and update
+      product listings, offers and stock, fulfil allocated orders, respond to RFQs
+      and review commissions and settlements.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - seller-portal
+    requested_screens:
+    - seller-signup
+    - otp-verification
+    - seller-profile
+    - verification-review
+    - offers
+    - inventory
+    - orders
+    - rfqs
+    - returns
+    - commissions
+    - settlements
+    requested_components:
+    - mobile-input
+    - otp-input
+    - seller-profile-form
+    - document-upload
+    - approval-status
+    - offer-table
+    - inventory-table
+    - order-table
+    - quote-table
+    - commission-breakdown
+    - settlement-card
+    required_states:
+    - account-created
+    - incomplete
+    - submitted
+    - under-review
+    - verified
+    - action-required
+    - rejected
+    - active
+    - allocated
+    - fulfilled
+    - return-requested
+    - settlement-pending
+    - settled
+  - requirement_id: REQ-C101-OPS-001
+    statement: Operations users can oversee sellers, catalogue, inventory, split orders,
+      fulfilment, returns, disputes and service exceptions.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - commerce-admin
+    - ops-console
+    requested_screens:
+    - seller-approval
+    - catalogue
+    - inventory
+    - order-operations
+    - fulfilment
+    - returns
+    - disputes
+    - exceptions
+    requested_components:
+    - data-table
+    - filter-bar
+    - status-chip
+    - bulk-actions
+    - exception-table
+    - audit-history
+    required_states:
+    - default
+    - loading
+    - empty
+    - error
+    - open
+    - escalated
+    - resolved
+  - requirement_id: REQ-C101-FINANCE-001
+    statement: Finance users can reconcile customer payments, seller payables, commissions,
+      fees, promotions, refunds and settlement adjustments with ERP accounting records.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - commerce-admin
+    - erp
+    - analytics
+    requested_screens:
+    - payment-reconciliation
+    - seller-payables
+    - commission-rules
+    - settlements
+    - refunds
+    - accounting-postings
+    requested_components:
+    - reconciliation-table
+    - commission-breakdown
+    - settlement-card
+    - journal-status
+    - exception-table
+    required_states:
+    - pending
+    - matched
+    - mismatched
+    - failed
+    - adjusted
+    - posted
+    - settled
+  - requirement_id: REQ-C101-CX-001
+    statement: Buyers can use in-product support and WhatsApp-assisted commerce for
+      enquiries, buying assistance, returns and escalation.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    - b2b-portal
+    - customer-support
+    requested_screens:
+    - support
+    - conversation
+    - order-help
+    - return-help
+    requested_components:
+    - chat-thread
+    - media-message
+    - quick-reply
+    - escalation-status
+    - whatsapp-action
+    required_states:
+    - open
+    - waiting
+    - assigned
+    - escalated
+    - resolved
+  - requirement_id: REQ-C101-ANALYTICS-001
+    statement: Business, growth, merchandising, fulfilment and customer-experience
+      users can review functional dashboards and automation exceptions.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - analytics
+    - commerce-admin
+    requested_screens:
+    - executive-overview
+    - sales
+    - finance
+    - customer
+    - conversion
+    - merchandising
+    - inventory
+    - delivery
+    - returns
+    - support
+    - automation
+    - anomaly
+    requested_components:
+    - metric-card
+    - trend-chart
+    - funnel
+    - filter-bar
+    - exception-table
+    required_states:
+    - default
+    - loading
+    - empty
+    - error
+    - alert
+  - requirement_id: REQ-C101-LOCALIZATION-001
+    statement: Critical buying and account journeys are mobile-first, data-light and
+      available in English and Hindi.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    - b2b-portal
+    requested_screens:
+    - all-critical-purchase-and-account-screens
+    requested_components:
+    - language-selector
+    - localized-content
+    - network-status
+    required_states:
+    - english
+    - hindi
+    - low-bandwidth
+    - offline
+    - retry
+  - requirement_id: REQ-C101-REWARDS-001
+    statement: Phase 1 includes referral and configurable rewards using points or
+      credits, earning and redemption rules, referral-linked rewards and expiry configuration,
+      without advanced loyalty or personalisation.
+    ux_impact: true
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    requested_surfaces:
+    - customer-app
+    - web-store
+    - commerce-admin
+    requested_screens:
+    - referral
+    - rewards-balance
+    - rewards-history
+    - rewards-rules
+    requested_components:
+    - referral-code
+    - reward-balance
+    - earning-rule
+    - redemption-option
+    - expiry-status
+    required_states:
+    - available
+    - earned
+    - redeemed
+    - expired
+    - disabled
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0017
+  path: core_module_requirements
+  value:
+  - requirement_id: REQ-C101-CORE-001
+    module: mercur
+    target: marketplace-order-management
+    change: Support a unified multi-seller cart with seller and warehouse allocation,
+      child orders, split fulfilment, seller-specific returns and settlement consequences.
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+  - requirement_id: REQ-C101-CORE-002
+    module: medusa
+    target: b2b-commerce
+    change: Support business accounts, customer-specific and quantity-slab pricing,
+      MOQ and pack sizes, RFQ conversion, credit and approval workflows, and project
+      or site purchasing context.
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+  - requirement_id: REQ-C101-CORE-003
+    module: tryton
+    target: marketplace-finance
+    change: Post and reconcile payments, seller payables, commissions, fees, promotion
+      adjustments, refunds, credit and settlement entries.
+    source_refs:
+    - https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0018
+  path: marketplace_requirements
+  value:
+    seller_onboarding: mobile number and OTP account creation followed by progressive
+      seller profile, verification, approval and activation
+    seller_kyc: seller owns profile data entry, document upload and resubmission;
+      the prototype superadmin reviews and approves submissions; exact production
+      legal document checklist remains TBD and must not be hard-coded
+    catalogue_ownership: seller owns seller-specific product, listing and offer creation
+      and updates; the prototype superadmin reviews governed changes; platform owns
+      canonical catalogue, taxonomy, attributes, governance, association and search
+      representation
+    inventory_ownership: seller maintains seller-owned stock; platform or warehouse
+      maintains managed stock; platform aggregates customer-facing availability
+    fulfilment_ownership: seller or warehouse performs physical fulfilment; platform
+      orchestrates splits, shipments, tracking and consolidated delivery status
+    returns_ownership: platform owns unified return and refund orchestration; seller
+      processes seller-specific acceptance where applicable
+    customer_support_ownership: platform owns primary support and orchestration; seller-specific
+      cases may be routed or escalated to sellers
+    commission_model: configurable percentage; prototype default is governed as an
+      assumption
+    settlement_cycle: configurable; prototype T+3 default is governed as an assumption
+    payout_model: configurable seller payable after commission, gateway fees, logistics
+      adjustments, seller-funded promotions, refunds, returns, chargebacks and other
+      adjustments
+    dispute_model: seller-specific resolution with marketplace admin oversight
+    responsibility_model: mixed and configurable
+    settlement_capabilities:
+    - eligibility
+    - holds
+    - payout-status
+    - adjustment-ledger
+    - reconciliation
+    - refund-reversals
+    - failed-payout-retry
+    - settlement-statements
+  classification: fact
+  confidence: 1.0
+  sources: *id001
+  status: confirmed
+  notes: []
+- truth_id: TRUTH-0019
+  path: assumptions
+  value: Prototype provider defaults are Razorpay, Shiprocket and Meta WhatsApp Cloud
+    API; all remain configurable and do not constitute production approval.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0020
+  path: assumptions
+  value: Seller commission remains configurable and uses 10 percent only as a prototype
+    default, not a production rule.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0021
+  path: assumptions
+  value: Settlement timing remains configurable and uses T+3 days only as a prototype
+    default, not a production rule.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0022
+  path: assumptions
+  value: Standard configurable prototype values may be used for B2B credit approval
+    and partial payment until production rules are confirmed.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0023
+  path: assumptions
+  value: Prototype competitive pricing uses clearly labelled synthetic data points
+    for marketplace and competitor prices, source labels, observation timestamps and
+    freshness states; no live competitor collection occurs.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0024
+  path: assumptions
+  value: Competitive pricing exposes an extension interface only; production collection
+    remains disabled until an approved legal and operational policy exists.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0025
+  path: assumptions
+  value: Prototype location and address fixtures focus on representative Tier-2 Indian
+    cities and remain synthetic; they do not approve the production rollout city list.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0026
+  path: assumptions
+  value: Sellers own prototype KYC submission and resubmission plus product, listing,
+    offer and stock updates; one prototype superadmin performs review and approval.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0027
+  path: assumptions
+  value: The BuildKart prototype uses one superadmin for prototype approvals only;
+    production approval roles and separation of duties remain subject to human approval.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0028
+  path: assumptions
+  value: Configurable load-test assumptions may be used for prototype testing until
+    peak TPS and concurrent-user targets are approved; they are not client-approved
+    SLAs.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0029
+  path: assumptions
+  value: High risk profile is assigned because the scope includes marketplace finance,
+    seller settlements, B2B credit and ERP accounting.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0030
+  path: assumptions
+  value: GitHub URLs remain provenance metadata in onboarding; reference repositories
+    never override Client 101 decisions or become dependencies without governed evaluation.
+  classification: assumption
+  confidence: 0.5
+  sources: *id001
+  status: open
+  notes:
+  - Requires explicit confirmation before production scope freeze.
+- truth_id: TRUTH-0031
+  path: open_questions
+  value: Which states and cities are included in the initial India launch?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+- truth_id: TRUTH-0032
+  path: open_questions
+  value: What exact peak TPS and concurrent-user targets should be approved?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+- truth_id: TRUTH-0033
+  path: open_questions
+  value: Which payment, logistics, communication and support providers are approved
+    for production?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+- truth_id: TRUTH-0034
+  path: open_questions
+  value: What exact legal KYC document checklist and regulatory policy apply to seller
+    verification?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+- truth_id: TRUTH-0035
+  path: open_questions
+  value: What approved policy governs competitive-price sources, collection mechanism,
+    legal terms, product matching, attribution, freshness, rate limits, retention
+    and audit evidence?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+- truth_id: TRUTH-0036
+  path: open_questions
+  value: What contractual uptime and response-time SLAs, RTO, RPO, retention periods,
+    privacy policy and data-classification policy should be approved?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+- truth_id: TRUTH-0037
+  path: open_questions
+  value: Who are the named individuals for the mandatory business, design, technology,
+    finance, UAT and production-release approval roles?
+  classification: unknown
+  confidence: 0.0
+  sources: *id001
+  status: open
+  notes: []
+open_questions:
+- Which states and cities are included in the initial India launch?
+- What exact peak TPS and concurrent-user targets should be approved?
+- Which payment, logistics, communication and support providers are approved for production?
+- What exact legal KYC document checklist and regulatory policy apply to seller verification?
+- What approved policy governs competitive-price sources, collection mechanism, legal
+  terms, product matching, attribution, freshness, rate limits, retention and audit
+  evidence?
+- What contractual uptime and response-time SLAs, RTO, RPO, retention periods, privacy
+  policy and data-classification policy should be approved?
+- Who are the named individuals for the mandatory business, design, technology, finance,
+  UAT and production-release approval roles?
+conflicts: []
+status: needs-input

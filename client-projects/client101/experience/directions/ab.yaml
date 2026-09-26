@@ -1,0 +1,50 @@
+direction_id: DIR-CLIENT101-AB
+client_id: client101
+product_name: BuildKart
+strategy: discovery-and-search
+source_directions:
+- DIR-CLIENT101-A
+- DIR-CLIENT101-B
+surfaces:
+- customer-app
+- web-store
+- commerce-admin
+- analytics
+- erp
+- seller-portal
+journey_emphasis:
+- browse-to-buy
+- search-to-buy
+- order-tracking
+- return-refund
+- quote-to-order
+- repeat-order
+- credit-order
+- seller-onboarding
+- seller-catalogue
+- marketplace-order
+- seller-fulfilment
+- seller-return
+- seller-settlement
+design_intent:
+  density: compact-balanced
+  navigation: category-and-search-led
+  discovery: editorial-and-intent-driven
+  interaction: guided-and-fast
+differentiators:
+- visual category discovery on home and category entry points
+- persistent prominent search across customer shopping surfaces
+- compact result and comparison layouts optimized for data-light use
+- guided discovery that transitions quickly into product and checkout actions
+- seller and operations surfaces remain task-efficient
+selection_rationale:
+- Both discovery and search are primary BuildKart acquisition and conversion paths.
+- Tier-2 India focus benefits from recognizable category navigation and direct search.
+- Compact result layouts support mobile-first and data-light constraints.
+fixture_set: commerce-baseline
+visual_preset: compact-commerce
+design_selection_ref: experience/design/selection.yaml
+theme_resolution_ref: experience/design/theme-resolution.yaml
+asset_plan_ref: experience/design/asset-plan.yaml
+motion_policy_ref: design-intelligence/motion-policy.yaml
+status: selected

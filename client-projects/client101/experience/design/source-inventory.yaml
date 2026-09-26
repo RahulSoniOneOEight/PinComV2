@@ -1,0 +1,46 @@
+inventory_id: DSI-client101
+client_id: client101
+sources:
+- id: SRC-001
+  type: other
+  ref: https://app.notion.com/p/client101-3e6ddf8e5f6a80f3b201ff2474a374e4#3e6ddf8e5f6a807abcbffa05af2fb58c
+  authority: client-authoritative
+  notes: Attached feature note covering D2C features, automations, dashboards and
+    provider candidates.
+- id: SRC-002
+  type: other
+  ref: https://app.notion.com/p/client101-3e6ddf8e5f6a80f3b201ff2474a374e4#3e6ddf8e5f6a807db1eddb9e47afd14f
+  authority: client-authoritative
+  notes: Attached B2B and B2C design and functional source package; not authority
+    for the final technology stack.
+- id: SRC-003
+  type: git
+  ref: https://github.com/coderbaba0/flipkart_clone
+  authority: advisory
+  notes: Small Flutter marketplace UI reference only; no license was detected, so
+    do not copy code or assets without explicit permission.
+- id: SRC-004
+  type: git
+  ref: https://github.com/bagisto/opensource-ecommerce-mobile-app
+  authority: advisory
+  notes: Active Flutter commerce reference for product, cart, checkout, account, returns,
+    localization and testing patterns. It uses Bagisto GraphQL and must not define
+    the Medusa or Mercur integration architecture.
+- id: SRC-005
+  type: git
+  ref: https://github.com/medusajs/ui
+  authority: advisory
+  notes: Medusa admin component and design-system reference only; it does not override
+    Client 101 requirements, approved UX or PinCommerce component governance.
+- id: SRC-PLATFORM
+  type: git
+  ref: https://github.com/RahulSoniOneOEight/pincommerce
+  authority: approved-reference
+  notes: Governed implementation platform for Client 101; this URL is provenance metadata
+    and is not automatically cloned by onboarding.
+- id: source-ref-1
+  type: other
+  ref: https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+  authority: client-authoritative
+  notes: existing onboarding source reference
+status: evaluated

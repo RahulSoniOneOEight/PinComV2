@@ -1,0 +1,57 @@
+client_id: client101
+industry: retail
+business_models:
+- d2c
+- b2c
+- b2b
+- marketplace
+- multi-vendor
+archetypes:
+- d2c-commerce
+- b2b-commerce
+- marketplace
+geographies:
+- india
+- tier-2-and-emerging-indian-markets
+risk_profile: high
+goals:
+- unified-b2c-and-b2b-multi-seller-marketplace
+- simple-mobile-first-tier-2-shopping
+- integrated-commerce-inventory-fulfilment-and-finance
+- efficient-rfq-bulk-credit-and-repeat-procurement
+- governed-seller-operations-and-settlements
+- operational-automation-and-management-visibility
+existing_systems: []
+constraints:
+- greenfield-no-existing-commerce-erp-wms-or-support-system
+- phase-1-includes-b2c-b2b-seller-commerce-operations-and-erp-accounting-experiences
+- provider-neutral-integration-contracts
+- mixed-catalogue-inventory-and-fulfilment-ownership
+- mobile-first-and-data-light
+- english-and-hindi-at-launch
+- recommendation-logic-must-be-configurable
+- competitor-price-data-must-record-source-price-and-observation-timestamp
+- project-site-is-a-first-class-b2b-entity-not-only-an-address
+- standard-core-behavior-unless-an-explicit-client-overlay-is-defined
+- india-wide-operation-without-hard-coded-state-or-city
+- scale-from-1000-to-10000-monthly-orders-without-architectural-redesign
+- secure-authentication-and-role-based-least-privilege-authorization
+- encryption-in-transit-and-secure-secret-management
+- audit-correlation-observability-backup-and-recovery-controls
+- configurable-privacy-and-data-retention-controls
+- idempotent-durable-integrations-with-retry-dlq-replay-and-reconciliation
+- advanced-loyalty-programme-not-in-phase-1
+- personalisation-not-in-phase-1
+- competitive-price-production-collection-disabled-until-policy-approval
+- prototype-competitive-price-data-is-synthetic-and-clearly-labelled
+- prototype-location-data-uses-synthetic-tier-2-indian-city-fixtures
+required_integrations:
+- payment
+- logistics
+- whatsapp
+- communications
+- support-telephony
+- search
+- erp-accounting
+- competitor-price-intelligence
+status: normalized

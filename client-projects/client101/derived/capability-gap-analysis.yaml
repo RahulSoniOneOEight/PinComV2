@@ -1,0 +1,217 @@
+client_id: client101
+requested:
+- analytics
+- approval-workflow
+- b2b-account
+- cart
+- cart-merchandising
+- catalogue
+- checkout
+- commissions
+- competitor-price-intelligence
+- credit-management
+- customer-specific-pricing
+- customer-support
+- fulfilment
+- gst-billing
+- inventory-availability
+- lifecycle-automation
+- marketplace-orders
+- material-lists
+- moq-and-pack-size
+- multi-seller-cart
+- multilingual
+- ops-exceptions
+- orders
+- payout-reconciliation
+- pricing
+- project-site-purchasing
+- promotions
+- quantity-slab-pricing
+- quote-rfq
+- ratings-and-reviews
+- referral
+- reorder
+- return-refund
+- rewards
+- search
+- seller-analytics
+- seller-approval
+- seller-catalogue
+- seller-comparison
+- seller-inventory
+- seller-onboarding
+- settlements
+- split-order-fulfilment
+core_missing: []
+recommended_missing: []
+covered_by_request:
+- catalogue
+- search
+- pricing
+- promotions
+- cart
+- checkout
+- orders
+- inventory-availability
+- fulfilment
+- return-refund
+- analytics
+- b2b-account
+- quote-rfq
+- seller-onboarding
+- seller-catalogue
+- seller-inventory
+- marketplace-orders
+- commissions
+- settlements
+- customer-support
+- lifecycle-automation
+- ops-exceptions
+- credit-management
+- approval-workflow
+- reorder
+- seller-analytics
+- seller-approval
+- payout-reconciliation
+not_in_reference_baseline:
+- cart-merchandising
+- competitor-price-intelligence
+- customer-specific-pricing
+- gst-billing
+- material-lists
+- moq-and-pack-size
+- multi-seller-cart
+- multilingual
+- project-site-purchasing
+- quantity-slab-pricing
+- ratings-and-reviews
+- referral
+- rewards
+- seller-comparison
+- split-order-fulfilment
+deferred:
+- loyalty
+- personalisation
+items:
+- capability: cart-merchandising
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: competitor-price-intelligence
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: customer-specific-pricing
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: gst-billing
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: material-lists
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: moq-and-pack-size
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: multi-seller-cart
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: multilingual
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: project-site-purchasing
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: quantity-slab-pricing
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: ratings-and-reviews
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: referral
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: rewards
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: seller-comparison
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+- capability: split-order-fulfilment
+  gap_type: client-specific
+  severity: review
+  priority: 2
+  impact:
+  - custom-scope
+  - architecture-review
+  recommendation: reuse-extend-build-analysis
+blocking_count: 0

@@ -1,0 +1,81 @@
+client_id: client101
+version: 1
+classification_values:
+  - client-confirmed
+  - source-derived
+  - prototype-assumption
+  - pincommerce-derived
+  - open-tbd
+  - source-conflict
+authority_precedence:
+  - client-confirmed-decision
+  - approved-client101-contract-or-decision
+  - client-supplied-source-requirement
+  - pincommerce-derived-recommendation
+  - best-practice-reference-source
+sources:
+  - id: SRC-000
+    name: Client 101 Notion brief
+    type: notion
+    ref: https://app.notion.com/p/3e6ddf8e5f6a80f3b201ff2474a374e4
+    authority: client-confirmed
+    artifact_status: available
+    purpose: Confirmed scope, operating decisions, assumptions and open questions.
+  - id: SRC-001
+    name: D2C Feature Note
+    type: document
+    ref: https://app.notion.com/p/client101-3e6ddf8e5f6a80f3b201ff2474a374e4#3e6ddf8e5f6a807abcbffa05af2fb58c
+    authority: client-supplied-source-requirement
+    artifact_status: available-as-notion-attachment
+    purpose: D2C features, automations, dashboards and provider candidates.
+  - id: SRC-002
+    name: B2B and B2C design and functional package
+    type: design-source-package
+    ref: https://app.notion.com/p/client101-3e6ddf8e5f6a80f3b201ff2474a374e4#3e6ddf8e5f6a807db1eddb9e47afd14f
+    authority: client-supplied-source-requirement
+    artifact_status: available-as-notion-attachment
+    purpose: B2B and B2C functional and design reference; not authority for the production technology stack.
+  - id: SRC-003
+    name: Flipkart-like marketplace reference
+    type: git
+    ref: https://github.com/coderbaba0/flipkart_clone
+    revision: 402182d0bcfacb94943ac669cc9b9c8a1363218f
+    authority: best-practice-reference-source
+    artifact_status: available-inspected
+    license_status: no-license-detected
+    purpose: D2C and B2C marketplace reference.
+    reuse_policy: Do not copy code or assets without explicit permission and license approval.
+  - id: SRC-004
+    name: Open-source Ecommerce Mobile App / App UI Reference
+    type: git
+    ref: https://github.com/bagisto/opensource-ecommerce-mobile-app
+    revision: e2869a40eea9432928ed74008c830e05633b96c2
+    authority: best-practice-reference-source
+    artifact_status: available-inspected
+    license_status: readme-claims-mit-but-license-file-not-detected
+    purpose: Mobile commerce UX, navigation, interaction and reusable ecommerce pattern reference.
+    reuse_policy: Evaluate patterns through PinCommerce component governance; do not adopt the Bagisto GraphQL architecture.
+  - id: SRC-005
+    name: Medusa UI Reference
+    type: git
+    ref: https://github.com/medusajs/ui
+    revision: 4ccf55b414c18f83b69091abc9402bc561f6ac8d
+    authority: best-practice-reference-source
+    artifact_status: available-inspected
+    license_status: no-license-detected
+    purpose: Commerce and admin UI component and design-system reference.
+    reuse_policy: Evaluate patterns through PinCommerce component governance before adoption.
+  - id: SRC-PLATFORM
+    name: PinCommerce implementation platform
+    type: git
+    ref: https://github.com/RahulSoniOneOEight/pincommerce
+    authority: pincommerce-derived
+    artifact_status: available-local-and-remote
+    purpose: Governed implementation framework for Client 101.
+reference_policy:
+  requirements_authority: false
+  automatic_architecture_authority: false
+  automatic_ux_approval: false
+  automatic_dependency_approval: false
+  rule: Reference repositories never override an approved Client 101 decision.
+conflicts: []

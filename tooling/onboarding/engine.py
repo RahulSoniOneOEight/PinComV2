@@ -175,10 +175,17 @@ def resolve_surface_map(
     client_input: dict[str, Any],
     benchmark: dict[str, Any],
 ) -> dict[str, Any]:
+    # Merge archetype-derived surfaces with the client's explicitly confirmed
+    # required surfaces (e.g. a client-confirmed "b2b" portal or "ops-console").
+    client_required = list(client_input.get("required_surfaces") or [])
+    required = unique(benchmark["expected"]["surfaces"] + client_required)
+    recommended = [
+        s for s in benchmark["expected"]["optional_surfaces"] if s not in set(required)
+    ]
     return {
         "client_id": client_input["client_id"],
-        "required": benchmark["expected"]["surfaces"],
-        "recommended": benchmark["expected"]["optional_surfaces"],
+        "required": required,
+        "recommended": recommended,
     }
 
 

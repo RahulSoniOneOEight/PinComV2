@@ -1,0 +1,11 @@
+client_id: client101
+critic: visual-semantic
+findings:
+- severity: major
+  issue: 'unresolved imagery/assets: journey-browse-to-buy-hero, journey-search-to-buy-hero,
+    journey-order-tracking-hero, journey-return-refund-hero, journey-quote-to-order-hero,
+    journey-repeat-order-hero, journey-credit-order-hero, journey-seller-onboarding-hero,
+    journey-seller-catalogue-hero, journey-marketplace-order-hero, journey-seller-fulfilment-hero,
+    journey-seller-return-hero, journey-seller-settlement-hero'
+  rule: imagery
+status: passed

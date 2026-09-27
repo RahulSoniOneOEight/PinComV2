@@ -1,0 +1,51 @@
+approval_id: EXP-client101-piv2-49
+client_id: client101
+review_package_ref: experience/review/DRP-client101-piv2-49.yaml
+design_revision: piv2-49
+source_revision: main@8aa7ae7
+prototype_revision_ref: experience/revisions/PROTO-client101-ac-001.yaml
+review_round_ref: feedback/rounds/ROUND-client101-ac-001.yaml
+surface_decisions:
+- surface: customer-app
+  status: approved
+- surface: web-store
+  status: approved
+- surface: commerce-admin
+  status: approved
+- surface: analytics
+  status: approved
+- surface: erp
+  status: approved
+- surface: seller-portal
+  status: approved
+journey_decisions:
+- journey: browse-to-buy
+  status: approved
+- journey: search-to-buy
+  status: approved
+- journey: order-tracking
+  status: approved
+- journey: return-refund
+  status: approved
+- journey: quote-to-order
+  status: approved
+- journey: repeat-order
+  status: approved
+- journey: credit-order
+  status: approved
+- journey: seller-onboarding
+  status: approved
+- journey: seller-catalogue
+  status: approved
+- journey: marketplace-order
+  status: approved
+- journey: seller-fulfilment
+  status: approved
+- journey: seller-return
+  status: approved
+- journey: seller-settlement
+  status: approved
+decision: approved
+approved_by: RS (Project Lead)
+approved_at: '2026-09-27'
+immutable: true

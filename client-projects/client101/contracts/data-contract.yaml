@@ -1,0 +1,59 @@
+contract_id: DC-client101
+client_id: client101
+entities:
+  - name: order
+    canonical_owner: commerce
+    consumers: [experience, marketplace, erp, automation]
+    projections: [order-detail, order-history]
+    notes: [Canonical order record owned by the commerce domain; marketplace allocation and ERP posting consume it]
+  - name: inventory
+    canonical_owner: erp
+    consumers: [commerce, marketplace, experience]
+    projections: [stock-level, availability]
+    notes: [Seller/warehouse availability and stock; mixed ownership model]
+  - name: payment
+    canonical_owner: payments
+    consumers: [commerce, marketplace, erp]
+    projections: [payment-status, refund]
+    notes: [Provider-neutral payment boundary]
+  - name: shipment
+    canonical_owner: logistics
+    consumers: [commerce, experience, marketplace]
+    projections: [tracking, delivery-status]
+    notes: [Split-order tracking across seller/warehouse/fulfilment locations]
+  - name: business-account
+    canonical_owner: commerce
+    consumers: [experience, marketplace, erp]
+    projections: [b2b-account, credit-status]
+    notes: [B2B account, GSTIN, multiple users and approval workflows]
+  - name: seller
+    canonical_owner: marketplace
+    consumers: [commerce, experience, erp]
+    projections: [seller-profile, seller-status]
+    notes: [Seller onboarding and KYC]
+  - name: seller-offer
+    canonical_owner: marketplace
+    consumers: [commerce, experience]
+    projections: [offer, seller-price, seller-stock]
+    notes: [Multi-seller offers with price, stock, MOQ, delivery and return conditions]
+  - name: marketplace-order-allocation
+    canonical_owner: marketplace
+    consumers: [commerce, erp, logistics]
+    projections: [order-split, seller-sub-order]
+    notes: [Backend order split by seller/warehouse/fulfilment location]
+  - name: commission
+    canonical_owner: marketplace
+    consumers: [erp, finance]
+    projections: [commission-rule]
+    notes: [Configurable commission; 10 percent prototype default]
+  - name: seller-settlement
+    canonical_owner: marketplace
+    consumers: [erp, finance]
+    projections: [settlement, payable]
+    notes: [Seller payable, gateway/logistics/promotion adjustments, refund liability]
+  - name: seller-payout-reconciliation
+    canonical_owner: marketplace
+    consumers: [erp, finance]
+    projections: [payout, reconciliation-status]
+    notes: [Payout reconciliation against marketplace finance]
+status: draft

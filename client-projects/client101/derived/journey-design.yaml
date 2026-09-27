@@ -1,0 +1,168 @@
+# Journey Design — client101 (BuildKart)
+# The authoritative 18-field journey specification.
+# DOWNSTREAM: derived/journey-graph.yaml (executable nodes), design-ir.yaml (screens/components), Penpot build.
+# direction variation (A/B/C) is captured on the direction-sensitive fields.
+client_id: client101
+version: 1
+status: review-ready
+direction_reference: experience/review/M1-direction-review.md
+journeys:
+  - id: browse-to-buy
+    surface: customer-app
+    persona: B2C household buyer (Tier-2)
+    goal: Buy home-improvement items (e.g., 6 bathroom fittings)
+    trigger: Opens app / taps category / sees deal banner
+    context: Mobile, low bandwidth, Hindi/English, mixed catalogue
+    phase: [discover, evaluate, buy]
+    user_action: Browse category -> product -> compare sellers -> add to cart
+    intent_thought: Is this the right size / value / will it deliver here?
+    touchpoint: {a: guided home->PDP, b: dense category+filter, c: editorial discovery rail}
+    information_needed: [price, pack size, delivery date, seller rating, return policy]
+    decision: Select SKU / seller / quantity
+    system_response: {a: instant add-to-cart + upsell, b: fast price/stock recalc, c: rich imagery load}
+    business_rule: [MOQ per seller, seller-wise return window]
+    success_state: Item added to cart
+    failure_state: Stock unavailable / no delivery to pincode
+    recovery: Alternate pack size / seller / nearby seller
+    emotion_friction: {a: least friction, b: neutral info-dense, c: delight but heavier}
+    metric: [conversion, task time, abandonment]
+    resulting_ui: {a: ProductCard + sticky CTA, b: ProductCard(compact) + FilterChip, c: ProductCard(visual) + Carousel}
+  - id: search-to-buy
+    surface: customer-app
+    persona: B2C buyer with a known need (e.g., 1-inch PVC elbow)
+    goal: Find a specific SKU and buy fast
+    trigger: Taps search (voice/vernacular)
+    context: Mobile, vernacular input, spec-driven products
+    phase: [search, evaluate, buy]
+    user_action: Search -> filter/sort -> product -> add to cart
+    intent_thought: Which seller has it in stock, cheapest, soonest?
+    touchpoint: {a: guided search overlay, b: command-style search+filter, c: visual results}
+    information_needed: [price, stock, delivery, seller rating, specs]
+    decision: Select SKU / seller / quantity
+    system_response: {a: ranked by conversion, b: ranked by relevance+price, c: ranked by visual match}
+    business_rule: [spec attributes, MOQ, seller availability]
+    success_state: Product added to cart
+    failure_state: No results / out-of-stock everywhere
+    recovery: Similar SKU / back-in-stock alert / WhatsApp assist
+    emotion_friction: {a: fast, b: efficient, c: exploratory but slower}
+    metric: [zero-result rate, search-to-cart rate, task time]
+    resulting_ui: {a: SearchControl + guided, b: SearchControl + FilterChip, c: SearchControl + visual grid}
+  - id: order-tracking
+    surface: customer-app
+    persona: B2C buyer awaiting delivery
+    goal: Know where the order / each package is
+    trigger: Opens order / taps notification
+    context: Mobile, split shipments (multi-seller)
+    phase: [receive]
+    user_action: Open order -> see shipment status -> contact if stuck
+    intent_thought: When will it arrive? Is it split?
+    touchpoint: {a: Orders + CTA, b: Orders + dense timeline, c: Orders + rich visual}
+    information_needed: [shipment status, transporter, ETA, seller per package]
+    decision: Wait / escalate
+    system_response: {a: minimal status + CTA, b: dense timeline, c: rich status visual}
+    business_rule: split-order = per-seller tracking IDs
+    success_state: Out for delivery / Delivered
+    failure_state: Delay / NDR / failed delivery
+    recovery: Reschedule / contact seller / raise exception
+    emotion_friction: {a: low, b: clear, c: reassuring visual}
+    metric: [WISMO contacts, delivery exception rate]
+    resulting_ui: [ShipmentStatus, OrderCard]
+  - id: return-refund
+    surface: customer-app
+    persona: B2C buyer with a wrong/damaged item
+    goal: Return / replace / refund without friction
+    trigger: Opens order -> return/replace
+    context: Mobile, seller-specific return policies
+    phase: [support, service]
+    user_action: Select product -> reason -> request return -> track refund
+    intent_thought: Who pays return shipping? How long for refund?
+    touchpoint: {a: Orders + 1-click return, b: clear step list, c: guided visual}
+    information_needed: [return window, pickup option, refund status]
+    decision: Return / replace / refund
+    system_response: {a: 1-click return + status, b: clear step list, c: guided visual}
+    business_rule: [seller responsibility, refund liability, settlement adjustment]
+    success_state: Return requested / refund issued
+    failure_state: Out-of-window / dispute
+    recovery: Dispute escalation to platform admin
+    emotion_friction: {a: least friction, b: transparent, c: reassuring}
+    metric: [return rate, refund TAT, disputes]
+    resulting_ui: [ReturnStatus, reason selector, ShipmentStatus(reverse)]
+  - id: quote-to-order
+    surface: b2b
+    persona: Retailer / contractor buying bulk
+    goal: Get best price for a quantity / material list
+    trigger: RFQ / Request Best Price on high-value items
+    context: B2B portal, GSTIN, trade pricing, MOQ
+    phase: [evaluate, negotiate, buy]
+    user_action: Upload material list / SKU+Qty -> get quotes -> negotiate -> accept
+    intent_thought: Best price for this quantity; can seller do better?
+    touchpoint: {a: guided RFQ wizard, b: dense quote table, c: visual catalogue RFQ}
+    information_needed: [unit price, slab pricing, MOQ, lead time, seller]
+    decision: Accept / counter-offer / reject quote
+    system_response: {a: single best-price, b: side-by-side quotes, c: rich comparison}
+    business_rule: [quantity slabs, trade tiers, credit limit]
+    success_state: Quote accepted -> order
+    failure_state: No quotes / price too high
+    recovery: Counter-offer / alternate seller / WhatsApp
+    emotion_friction: {a: simple, b: efficient for power users, c: heavy}
+    metric: [RFQ->order rate, negotiation cycles]
+    resulting_ui: [RFQForm, DataTable(quotes), CreditLimit]
+  - id: repeat-order
+    surface: b2b
+    persona: Retailer / contractor reordering
+    goal: Reorder previous purchase / saved list fast
+    trigger: Reorder reminder / stock low / open history
+    context: B2B, project/site lists, credit
+    phase: [reorder]
+    user_action: Open history / project -> reorder -> checkout
+    intent_thought: Same as last time, restock
+    touchpoint: {a: one-tap reorder, b: SKU+qty quick order, c: visual history}
+    information_needed: [SKU, qty, price, credit available]
+    decision: Reorder as-is / edit qty
+    system_response: {a: instant reorder CTA, b: fast SKU entry, c: rich list}
+    business_rule: [MOQ, credit limit, trade price]
+    success_state: Reorder placed
+    failure_state: Price/stock changed
+    recovery: Adjust qty / alternate seller
+    emotion_friction: {a: minimal, b: fastest, c: moderate}
+    metric: [reorder rate, repeat purchase cycle]
+    resulting_ui: [ReorderAction, OrderCard(b2b)]
+  - id: credit-order
+    surface: b2b
+    persona: Retailer / business sub-user
+    goal: Buy on credit within limit / get approval
+    trigger: Checkout with credit / order over threshold
+    context: B2B, credit limit, payment terms, multi-user approval
+    phase: [buy]
+    user_action: Select credit -> submit -> (manager) approve -> order
+    intent_thought: Is my credit sufficient? Will it be approved?
+    touchpoint: {a: simple credit selector, b: balance+terms panel, c: visual account}
+    information_needed: [credit limit, available, terms, outstanding]
+    decision: Use credit / partial payment / request approval
+    system_response: {a: auto-approve if within limit, b: explicit approval step, c: clear status}
+    business_rule: [credit limit, 30-day terms, approval workflow]
+    success_state: Order approved & placed
+    failure_state: Limit exceeded / approval rejected
+    recovery: Partial payment / manager override / alternate payment
+    emotion_friction: {a: low, b: clear on risk, c: reassuring}
+    metric: [credit approval TAT, order rate]
+    resulting_ui: [CreditLimit, ApprovalStatus, CheckoutSummary]
+required_not_designed:
+  - id: seller-onboarding
+    surface: seller-portal
+    note: required by client; no screens in piv2
+  - id: seller-catalogue
+    surface: seller-portal
+    note: required by client; no screens in piv2
+  - id: marketplace-order
+    surface: commerce-admin
+    note: order allocation; required; no screens in piv2
+  - id: seller-fulfilment
+    surface: seller-portal
+    note: required; no screens in piv2
+  - id: seller-return
+    surface: seller-portal
+    note: required; no screens in piv2
+  - id: seller-settlement
+    surface: [seller-portal, erp]
+    note: required; no screens in piv2

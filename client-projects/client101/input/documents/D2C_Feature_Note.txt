@@ -1,0 +1,236 @@
+﻿﻿D2C Feature Note
+D2C FEATURE NOTE
+Customer App • Automations • Dashboards
+A concise functional scope for a direct-to-consumer commerce platform, covering the customer-facing experience, automation workflows, and management dashboards.
+APP
+25 feature areas
+	AUTOMATION
+29 workflows
+	DASHBOARDS
+5 functional sections
+	
+
+1. D2C App Features
+Core customer-facing capabilities for discovery, shopping, checkout, post-purchase service, and engagement.
+Module
+	Key Features
+	Onboarding & Login
+	OTP, email/social login, guest browsing, profile setup
+	Home
+	Hero banners, featured categories, collections, new arrivals, deals
+	Categories
+	Category/subcategory navigation, curated collections
+	Search
+	Smart search, autocomplete, recent and trending searches
+	Filters & Sort
+	Price, brand, rating, attributes, availability, delivery
+	Product Listing
+	Product cards, pricing, discounts, badges, stock status
+	Product Detail
+	Images/video, variants, specifications, reviews, delivery ETA
+	Merchandising
+	Related products, complementary items, recently viewed, buy-more-save-more
+	Wishlist
+	Save products and collections
+	Cart
+	Quantity updates, save for later, recommendations, cart summary
+	Promotions & Coupons
+	Coupon codes, automatic discounts, first-order offers, cart-value offers, bundles, BOGO, free shipping, referral codes, influencer codes
+	Checkout
+	Address, shipping, payment, tax, order review
+	Payments
+	UPI, cards, net banking, wallets, COD
+	Delivery Options
+	Standard, express, pickup, scheduled delivery
+	Orders
+	Order history, order details, tracking, cancellation
+	Returns & Refunds
+	Return, replacement, refund tracking
+	Reorder
+	Repeat previous purchases
+	Loyalty & Rewards
+	Points, rewards, membership benefits
+	Ratings & Reviews
+	Product ratings, text/photo/video reviews
+	Personalisation
+	Recommendations, recently viewed, preferred categories
+	Notifications
+	Push, WhatsApp, email, SMS
+	Support
+	Chat, WhatsApp, FAQ, ticketing
+	Referral
+	Refer-a-friend and referral rewards
+	Content / Inspiration
+	Blogs, buying guides, videos, shoppable content
+	Profile & Settings
+	Addresses, preferences, saved details, privacy, notifications
+	
+
+2. D2C Automations
+Event-driven workflows supporting conversion, fulfilment, service, merchandising, and business monitoring.
+Automation
+	What it does
+	Welcome Journey
+	Signup -> onboarding communication and first-purchase journey
+	Browse Abandonment
+	Follow up when users view products/categories but do not add to cart
+	Cart Abandonment
+	Remind users about products left in cart
+	Checkout Abandonment
+	Recover users who start checkout but do not complete payment
+	Payment Failure Recovery
+	Send retry link/reminder after failed payment
+	COD Confirmation
+	Confirm COD orders before fulfilment
+	Price Drop Alert
+	Notify users when viewed/wishlisted products drop in price
+	Back-in-Stock Alert
+	Notify users when unavailable products return
+	Wishlist Reminder
+	Remind users about saved products
+	Order Confirmation
+	Send confirmation after order placement
+	Shipment Updates
+	Send packed, shipped, out-for-delivery and delivered updates
+	Delivery Exception Alert
+	Notify customers about delays, NDR or failed delivery
+	Return & Refund Updates
+	Automate return, pickup and refund-status communication
+	Review Request
+	Ask for ratings/reviews after delivery
+	Cross-sell Journey
+	Recommend complementary products after purchase
+	Reorder Reminder
+	Trigger reminder based on expected repurchase cycle
+	Referral Automation
+	Trigger referral rewards when conditions are met
+	Coupon Expiry Reminder
+	Notify users before active coupons expire
+	Promotion Triggering
+	Activate offers based on campaign rules, cart value, product or category conditions
+	Customer Segmentation
+	Group users by behaviour, spend, frequency or lifecycle stage
+	Support Routing
+	Classify and route customer queries automatically
+	Support Escalation
+	Escalate unresolved or high-priority issues
+	Fraud / Risk Check
+	Flag suspicious orders, repeated COD failures or unusual behaviour
+	Inventory-led Promotion
+	Promote overstock or slow-moving products
+	Low-stock Alert
+	Alert internal teams when important SKUs fall below threshold
+	Merchandising Automation
+	Refresh rankings, featured products and collection ordering
+	Campaign Performance Alert
+	Flag sudden drops in conversion or campaign performance
+	Daily Business Summary
+	Send sales, orders, returns, payment and stock KPIs
+	Anomaly Detection
+	Detect unusual spikes/drops in sales, returns, refunds or cancellations
+	
+
+3. D2C Dashboards
+Dashboards grouped into five functional areas so business, commerce, operations, and customer teams can work from a clear reporting structure.
+Function / Section
+	Dashboards
+	Business & Finance
+	Executive Overview; Sales Dashboard; Finance Dashboard
+	Customer & Growth
+	Customer Dashboard; Acquisition Dashboard; Conversion Funnel; Cart & Checkout Dashboard
+	Commerce & Merchandising
+	Product Performance; Category Performance; Merchandising Dashboard; Promotion & Coupon Dashboard
+	Operations & Fulfilment
+	Inventory Dashboard; Order Operations; Delivery Dashboard; Returns & Refunds; Payment Dashboard
+	Customer Experience & Intelligence
+	Customer Support Dashboard; Reviews & Ratings; Automation Performance; Anomaly Dashboard
+	4. Operating Structure
+The D2C platform can be organised into three connected layers:
+* Customer-facing app features
+* Automation and lifecycle workflows
+* Functional dashboards for business, commerce, operations, customer experience, and intelligence
+Architecture: D2C App  →  Commerce  →  ERP  →  Automation / AI
+
+
+
+4. Service Providers & Integrations
+Recommended India-focused service providers that can integrate with the D2C app, commerce backend and operations layer.
+Shipping & Logistics
+Platform
+	Brief
+	Link
+	Shiprocket
+	Multi-courier shipping and enablement platform for domestic and cross-border shipping, courier selection, labels, tracking and COD.
+	Website
+	Delhivery
+	Nationwide logistics and supply-chain provider covering parcel delivery, reverse logistics, NDR management and direct API integration.
+	Website
+	Ekart Logistics
+	Ecommerce and retail logistics provider for parcel movement, last-mile delivery, returns and same/next-day fulfilment models.
+	Website
+	Unicommerce
+	Ecommerce operations platform covering OMS, inventory, warehouse operations, fulfilment, returns and shipping integrations.
+	Website
+	Shipmozo
+	Multi-carrier shipping aggregator for courier comparison, smart allocation, tracking, COD and NDR/RTO management.
+	Website
+	NimbusPost
+	Ecommerce shipping aggregator for multi-courier shipping, shipment management, COD and delivery operations.
+	Website
+	Shipyaari
+	Multi-carrier logistics platform offering ecommerce shipping, courier recommendations, returns, COD and API integrations.
+	Website
+	
+
+Payment Gateways
+Platform
+	Brief
+	Link
+	Razorpay
+	Full-stack payment gateway for UPI, cards, net banking, wallets, refunds, settlements and developer APIs.
+	Website
+	Cashfree Payments
+	India-focused payment gateway and payouts platform for UPI, cards, net banking, collections and payment APIs.
+	Website
+	PhonePe Payment Gateway
+	Online payment gateway for UPI, cards and ecommerce checkout with PhonePe ecosystem integration.
+	Website
+	PayU
+	Established India payment platform supporting UPI, cards, net banking, EMI and ecommerce payment flows.
+	Website
+	Easebuzz
+	Payment platform for SMEs and growing businesses with payment gateway APIs and collection solutions.
+	Website
+	CCAvenue
+	Long-established payment gateway offering broad domestic and international payment-method coverage.
+	Website
+	Paytm Payment Gateway
+	Online payment acceptance for ecommerce and apps with UPI and other mainstream payment methods.
+	Website
+	
+
+Incoming Call Center / Cloud Telephony
+Platform
+	Brief
+	Link
+	Exotel
+	Cloud telephony and contact-center platform for virtual numbers, IVR, inbound/outbound calling, routing, recordings, APIs and CRM integration.
+	Website
+	Knowlarity
+	Cloud call-center platform with IVR, virtual/toll-free numbers, routing, recording, monitoring and CRM integration.
+	Website
+	MyOperator
+	India-focused cloud telephony for inbound/outbound calls, IVR, call tracking, recordings and distributed support teams.
+	Website
+	Ameyo
+	Enterprise contact-center and customer-engagement platform for inbound support, outbound calling and omnichannel service.
+	Website
+	Tata Smartflo
+	Cloud contact-center platform with routing, CRM integration, dashboards, agent management and omnichannel support.
+	Website
+	
+
+Integration Approach
+App / Web → Commerce → Integration Layer → Service Provider → ERP / Reporting
+Using a common integration layer keeps the platform provider-neutral and makes it easier to add, replace or run multiple providers without changing the customer-facing app.
+D2C Feature Note

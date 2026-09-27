@@ -1,0 +1,85 @@
+qa_id: VQA-BLD-client101-penpot-piv2-b2b
+client_id: client101
+direction_id: pending
+surface: b2b
+build_identity: BLD-client101-penpot-piv2
+checks:
+- id: design-contract
+  status: pass
+  evidence: 12 component refs resolve to registry
+  notes: []
+- id: responsive
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: accessibility
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: critical-states
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: business-rules
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: journey-coverage
+  status: pass
+  evidence: 13 journeys have nodes
+  notes: []
+- id: design-selection
+  status: pass
+  evidence: component contracts present
+  notes: []
+- id: semantic-theme
+  status: pass
+  evidence: semantic color roles resolved
+  notes: []
+- id: motion-and-reduced-motion
+  status: pass
+  evidence: 8 motion contracts
+  notes: []
+- id: asset-quality-and-source
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: component-quality-threshold
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: state-completeness
+  status: pass
+  evidence: every Design-IR node declares states
+  notes: []
+- id: performance-budget
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: cross-platform-parity
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+- id: design-debt
+  status: not-run
+  evidence: experience/captures/b2b-home.png, experience/captures/b2b-search.png,
+    experience/captures/b2b-cart.png, experience/captures/b2b-login.png, experience/captures/b2b-credit.png,
+    experience/captures/comp-b2b-product-card.png
+  notes: []
+status: review-ready

@@ -15,7 +15,7 @@ def _load(path:Path)->dict[str,Any]:
     if not isinstance(value,dict): raise CriticError(f"Expected mapping: {path}")
     return value
 
-def design_critic(client_id:str,root:Path=ROOT)->dict[str,Any]:
+def design_critic(client_id:str,root:Path=ROOT,reviewer:str|None=None)->dict[str,Any]:
     p=root/"client-projects"/client_id
     ir=_load(p/"experience"/"design"/"design-ir.yaml")
     reg=_load(p/"experience"/"design"/"component-contract-registry.yaml")
@@ -31,9 +31,9 @@ def design_critic(client_id:str,root:Path=ROOT)->dict[str,Any]:
             missing=required-set(node.get("state_refs",[]))
             if missing: findings.append({"severity":"major","node":node["id"],"issue":"missing states: "+", ".join(sorted(missing))})
     if not theme.get("semantic_roles"): findings.append({"severity":"blocker","issue":"semantic color roles absent"})
-    return {"client_id":client_id,"critic":"design","findings":findings,"status":"passed" if not any(x["severity"]=="blocker" for x in findings) else "blocked"}
+    return {"client_id":client_id,"critic":"design","reviewer":reviewer,"findings":findings,"status":"passed" if not any(x["severity"]=="blocker" for x in findings) else "blocked"}
 
-def journey_critic(client_id:str,root:Path=ROOT)->dict[str,Any]:
+def journey_critic(client_id:str,root:Path=ROOT,reviewer:str|None=None)->dict[str,Any]:
     graph=_load(root/"client-projects"/client_id/"derived"/"journey-graph.yaml")
     findings=[]
     for journey in graph.get("journeys",[]):
@@ -47,9 +47,9 @@ def journey_critic(client_id:str,root:Path=ROOT)->dict[str,Any]:
                 if target not in ids: findings.append({"severity":"blocker","node":node.get("id"),"issue":f"dead next target {target}"})
         declared=set(journey.get("surfaces",[]))
         if declared!=surfaces: findings.append({"severity":"major","journey":journey.get("id"),"issue":"declared surfaces do not match nodes"})
-    return {"client_id":client_id,"critic":"journey","findings":findings,"status":"passed" if not any(x["severity"]=="blocker" for x in findings) else "blocked"}
+    return {"client_id":client_id,"critic":"journey","reviewer":reviewer,"findings":findings,"status":"passed" if not any(x["severity"]=="blocker" for x in findings) else "blocked"}
 
-def reference_critic(client_id:str,root:Path=ROOT)->dict[str,Any]:
+def reference_critic(client_id:str,root:Path=ROOT,reviewer:str|None=None)->dict[str,Any]:
     refs=_load(root/"client-projects"/client_id/"experience"/"references"/"adaptation.yaml")
     findings=[]
     for source in refs.get("sources",[]):
@@ -58,4 +58,4 @@ def reference_critic(client_id:str,root:Path=ROOT)->dict[str,Any]:
             if pattern.get("decision") not in {"REUSE","ADAPT","COMBINE","MODERNIZE","REJECT","BUILD_NEW"}:
                 findings.append({"severity":"blocker","source":source.get("source_id"),"pattern":pattern.get("id"),"issue":"decision missing"})
             if not pattern.get("reason"): findings.append({"severity":"major","pattern":pattern.get("id"),"issue":"decision rationale missing"})
-    return {"client_id":client_id,"critic":"reference","findings":findings,"status":"passed" if not any(x["severity"]=="blocker" for x in findings) else "blocked"}
+    return {"client_id":client_id,"critic":"reference","reviewer":reviewer,"findings":findings,"status":"passed" if not any(x["severity"]=="blocker" for x in findings) else "blocked"}

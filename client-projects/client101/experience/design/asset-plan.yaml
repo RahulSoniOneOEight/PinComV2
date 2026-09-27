@@ -1,0 +1,126 @@
+asset_plan_id: ASSET-client101
+client_id: client101
+source_order:
+- client-media
+- approved-reference
+- approved-open-source
+- generated-if-authorized
+requests:
+- id: journey-browse-to-buy-hero
+  purpose: journey imagery for browse-to-buy
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: browse-to-buy
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-search-to-buy-hero
+  purpose: journey imagery for search-to-buy
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: search-to-buy
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-order-tracking-hero
+  purpose: journey imagery for order-tracking
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: order-tracking
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-return-refund-hero
+  purpose: journey imagery for return-refund
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: return-refund
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-quote-to-order-hero
+  purpose: journey imagery for quote-to-order
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: quote-to-order
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-repeat-order-hero
+  purpose: journey imagery for repeat-order
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: repeat-order
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-credit-order-hero
+  purpose: journey imagery for credit-order
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: credit-order
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-seller-onboarding-hero
+  purpose: journey imagery for seller-onboarding
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: seller-onboarding
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-seller-catalogue-hero
+  purpose: journey imagery for seller-catalogue
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: seller-catalogue
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-marketplace-order-hero
+  purpose: journey imagery for marketplace-order
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: marketplace-order
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-seller-fulfilment-hero
+  purpose: journey imagery for seller-fulfilment
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: seller-fulfilment
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-seller-return-hero
+  purpose: journey imagery for seller-return
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: seller-return
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+- id: journey-seller-settlement-hero
+  purpose: journey imagery for seller-settlement
+  provider_policy: client-owned-or-approved-open-source-first
+  query:
+    journey: seller-settlement
+    surfaces:
+    - customer-app
+  selected_asset: null
+  status: planned
+status: ready

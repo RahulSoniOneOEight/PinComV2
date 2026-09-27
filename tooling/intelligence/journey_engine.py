@@ -31,6 +31,11 @@ CAPABILITY_SURFACE = {
     "approval-workflow": ["b2b", "commerce-admin"],
     "seller-settlements": ["seller-portal", "commerce-admin", "erp"],
     "payout-reconciliation": ["commerce-admin", "erp", "analytics"],
+    "seller-onboarding": ["seller-portal"],
+    "seller-catalogue": ["seller-portal"],
+    "seller-inventory": ["seller-portal", "commerce-admin"],
+    "seller-approval": ["commerce-admin"],
+    "marketplace-orders": ["seller-portal", "commerce-admin"],
 }
 
 DEFAULT_JOURNEYS = {
@@ -60,6 +65,26 @@ DEFAULT_JOURNEYS = {
         ("review-orders", "orders"), ("calculate-settlement", "seller-settlements"),
         ("post-accounting", "seller-settlements"), ("reconcile-payout", "payout-reconciliation"),
     ],
+    "seller-onboarding": [
+        ("register-business", "seller-onboarding"), ("submit-kyc", "seller-onboarding"),
+        ("verify-documents", "seller-approval"), ("approve-seller", "seller-approval"),
+    ],
+    "seller-catalogue": [
+        ("add-product", "seller-catalogue"), ("set-pricing", "seller-catalogue"),
+        ("set-stock", "seller-inventory"), ("publish-offer", "seller-catalogue"),
+    ],
+    "marketplace-order": [
+        ("receive-order", "marketplace-orders"), ("split-allocate", "marketplace-orders"),
+        ("release-to-seller", "marketplace-orders"),
+    ],
+    "seller-fulfilment": [
+        ("pick-items", "fulfilment"), ("pack", "fulfilment"),
+        ("dispatch", "fulfilment"), ("mark-delivered", "fulfilment"),
+    ],
+    "seller-return": [
+        ("receive-return", "return-refund"), ("inspect", "return-refund"),
+        ("refund-adjust", "return-refund"),
+    ],
 }
 
 def _load(path: Path) -> dict[str, Any]:
@@ -73,6 +98,8 @@ def _load(path: Path) -> dict[str, Any]:
 def _actor(journey_id: str) -> str:
     if "seller" in journey_id:
         return "seller"
+    if "marketplace" in journey_id:
+        return "operator"
     if any(x in journey_id for x in ("quote", "credit", "repeat")):
         return "b2b-buyer"
     if "reconciliation" in journey_id:
@@ -80,7 +107,10 @@ def _actor(journey_id: str) -> str:
     return "customer"
 
 def _surface(capability: str, actor: str, required: list[str], previous: str | None = None) -> str:
-    candidates = CAPABILITY_SURFACE.get(capability, []) + SURFACE_BY_ACTOR.get(actor, [])
+    # Actor-specific surfaces take precedence over capability-generic surfaces, so a
+    # seller's fulfilment lands on seller-portal (not customer-app) and a B2B buyer's
+    # RFQ lands on b2b (not seller-portal).
+    candidates = SURFACE_BY_ACTOR.get(actor, []) + CAPABILITY_SURFACE.get(capability, [])
     if previous and previous in candidates and previous in required:
         return previous
     for candidate in candidates:

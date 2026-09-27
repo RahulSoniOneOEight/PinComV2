@@ -1,0 +1,67 @@
+client_id: client101
+version: 1
+source_integrity_rule: >
+  A filename alone is not a usable source reference. Every source must distinguish
+  the source name from the actual artifact/location. Artifact Status = Available means
+  the actual file/link/repository is accessible from a governed location.
+sources:
+  - id: SRC-001
+    type: document
+    source_name: D2C_Feature_Note_Updated(1).docx
+    artifact_location: https://docs.google.com/document/d/1rTV5LD6mv2WYji4nfvAOLQ630o6zazUr/edit
+    provenance:
+      origin: Notion client101 page (resolved to Google Docs document)
+      note: D2C feature note (25 feature areas, 29 automations, 5 dashboard groups, provider candidates).
+    purpose: Feature, automation, dashboard and integration requirements.
+    applies_to:
+      - d2c-b2c-app
+      - automation
+      - dashboards
+      - provider-candidates
+    authority: client-supplied-source
+    status: available
+  - id: SRC-002
+    type: figma-export
+    source_name: b2b+b2c(1).zip
+    artifact_location: https://drive.google.com/file/d/1gqCuFOQ2yEqC3ocnpBl2DLfSCXMxiLuu/view
+    provenance:
+      origin: Notion client101 page (resolved to Google Drive archive)
+      note: Vite/React prototype (App.tsx D2C + B2BApp.tsx B2B) with three embedded design briefs. Design/functional source, not production technology.
+    purpose: Design/functional reference and marketplace journey/feature source.
+    applies_to:
+      - d2c-b2c-app
+    authority: client-supplied-source
+    status: available
+  - id: SRC-003
+    type: git
+    source_name: flipkart like reference
+    artifact_location: https://github.com/coderbaba0/flipkart_clone
+    provenance:
+      origin: Notion client101 page (source table)
+    purpose: Existing code / reuse / functional reference and marketplace journey/feature source.
+    applies_to:
+      - d2c-b2c-app
+    authority: best-practices-reference
+    status: available
+  - id: SRC-004
+    type: git
+    source_name: App UI reference (Bagisto mobile e-commerce app)
+    artifact_location: https://github.com/bagisto/opensource-ecommerce-mobile-app
+    provenance:
+      origin: Notion client101 page (resolved to GitHub repository)
+    purpose: Existing code / reuse / functional reference and marketplace journey/feature source.
+    applies_to:
+      - d2c-b2c-app
+    authority: best-practices-reference
+    status: available
+  - id: SRC-005
+    type: git
+    source_name: Medusa UI reference (Medusa UI component library)
+    artifact_location: https://github.com/medusajs/ui
+    provenance:
+      origin: Notion client101 page (resolved to GitHub repository)
+    purpose: Existing code / reuse / functional reference (design-system components and icons).
+    applies_to:
+      - commerce-backend
+    authority: best-practices-reference
+    status: available

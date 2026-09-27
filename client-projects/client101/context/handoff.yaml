@@ -1,0 +1,22 @@
+version: 1
+client_id: client101
+resume:
+  first_action: validate-workflow-state
+  load:
+    - workflow/workflow-state.yaml
+    - context/CURRENT.md
+    - context/decisions.yaml
+warnings:
+  - Step 19 (direction selection) is a human gate; auto-generated selection.yaml is component selection only
+  - Visual QA captures are real (Penpot MCP export) but checks are not-run (model has no image input; pending human visual review)
+blockers:
+  - human-direction-selection (Step 19) — gates direction-specific prototypes (Step 28)
+  - prototype-evidence (Step 28)
+  - feedback-channel-and-items (Step 41)
+  - human-experience-decision (Step 42)
+  - re-QA-after-review (Step 44)
+  - experience-freeze (Step 45)
+do_not_repeat:
+  - do not fabricate Penpot project/revision IDs
+  - do not create human direction/experience/freeze decisions
+  - do not mark visual QA checks pass without visual inspection

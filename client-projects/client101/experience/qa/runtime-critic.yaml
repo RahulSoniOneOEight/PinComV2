@@ -1,7 +1,0 @@
-client_id: client101
-critic: runtime
-checks:
-- id: core-runtime
-  passed: false
-  evidence: 'Missing core runtime input: D:\Pinaka_Agents\pincommerce\client-projects\client101\experience\prototype-core-runtime.yaml'
-status: blocked

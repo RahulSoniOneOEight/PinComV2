@@ -7,7 +7,7 @@ This layer makes the pre-build experience lifecycle measurable. It does not clai
 1. Every declared reference must be inspected and reduced to evidenced patterns. No `pending-analysis` reference can pass.
 2. Every extracted pattern receives REUSE, ADAPT, COMBINE, MODERNIZE, REJECT or BUILD_NEW.
 3. Detailed journeys require executable nodes with success/error transitions.
-4. A client-facing design review requires a Penpot-backed design revision, Design IR, component contracts and visual QA.
+4. A client-facing design review requires an OpenPencil-backed design revision, Design IR, component contracts and visual QA.
 5. Builders cannot self-approve. Human Review Round approval is required.
 6. Experience approval is immutable and bound to design revision, source revision, prototype revision and review round.
 7. Production UI work must consume the approved experience baseline; changing approved upstream design invalidates downstream approval.
@@ -20,7 +20,7 @@ The human-facing package contains Overview, Directions, Design System, Screens, 
 
 Create the governed review package:
 
-    python -m tooling.review.design_review package --client <client> --design-revision <revision> --source-revision <git-sha> --penpot-ref <penpot-project-or-revision>
+    python -m tooling.review.design_review package --client <client> --design-revision <revision> --source-revision <git-sha> --design-ref <openpencil-design-revision>
 
 After the Review Round has approved every required surface and journey and QA has been recorded:
 
@@ -30,4 +30,4 @@ Strictly assess all 45 pre-build steps:
 
     python -m tooling.orchestrator.phase1_45 --client <client> --check
 
-A non-zero exit means the client is not allowed to claim Steps 1–45 complete. External design systems such as Penpot still require valid credentials and a real project/revision; the gate deliberately does not fabricate them.
+A non-zero exit means the client is not allowed to claim Steps 1–45 complete. OpenPencil is local and headless: the design revision is the content hash of the committed `.fig`/`.pen` file, so the gate verifies real evidence without credentials and still deliberately does not fabricate it.

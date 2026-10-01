@@ -5,6 +5,7 @@ sources:
   supported:
     - figma
     - penpot
+    - openpencil
     - git
     - reference-site
     - brand-guide

@@ -6,6 +6,8 @@ on:
       - 'tooling/experience/ui_system.py'
       - 'tooling/experience/ui_resolver.py'
       - 'tooling/experience/design_build_qa.py'
+      - 'tooling/experience/openpencil_automation.py'
+      - 'tooling/experience/openpencil_bridge.py'
       - 'tooling/experience/penpot_automation.py'
       - 'tooling/orchestrator/design_gate.py'
       - 'contracts/schemas/master-design-system.schema.json'
@@ -16,6 +18,7 @@ on:
       - 'apps/review_mode/**'
       - '.opencode/agents/ui-builder.md'
       - 'tests/test_ui_system_r1_r4.py'
+      - 'tests/test_openpencil_design_source.py'
       - '.github/workflows/ui-system-r1-r4.yml'
   push:
     branches: [main]

@@ -26,7 +26,7 @@ Client truth + existing platform
 -> domain capability intelligence
 -> implementation gap
 -> experience strategy
--> implementation-aware Penpot/design contracts
+-> implementation-aware OpenPencil/design contracts
 -> Flutter/Web/Admin/ERP build
 -> real Medusa/Mercur/NATS/Tryton core integration
 -> Design Critic + Journey Critic + Runtime Critic

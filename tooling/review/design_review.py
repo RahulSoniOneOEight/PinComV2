@@ -14,8 +14,8 @@ def load(path:Path)->dict[str,Any]:
     if not isinstance(value,dict): raise DesignReviewError(f"Expected mapping: {path}")
     return value
 
-def build_package(client:str, *, design_revision:str, source_revision:str, penpot_ref:str, root:Path=ROOT)->dict[str,Any]:
-    if not penpot_ref.strip(): raise DesignReviewError("penpot_ref is required for design review")
+def build_package(client:str, *, design_revision:str, source_revision:str, design_ref:str, root:Path=ROOT)->dict[str,Any]:
+    if not design_ref.strip(): raise DesignReviewError("a design reference is required for design review")
     p=root/"client-projects"/client
     graph=load(p/"derived"/"journey-graph.yaml")
     surfaces=load(p/"derived"/"surface-map.yaml").get("required",[])
@@ -37,7 +37,7 @@ def build_package(client:str, *, design_revision:str, source_revision:str, penpo
       ("references",["experience/references/adaptation.yaml"]),("qa",qa_refs),
       ("feedback",["feedback"]),("approval",["feedback"])
     ]
-    doc={"package_id":f"DRP-{client}-{design_revision}","client_id":client,"design_revision":design_revision,"source_revision":source_revision,"penpot_ref":penpot_ref,
+    doc={"package_id":f"DRP-{client}-{design_revision}","client_id":client,"design_revision":design_revision,"source_revision":source_revision,"openpencil_ref":design_ref,
          "sections":[{"id":i,"title":i.replace("-"," ").title(),"evidence_refs":r} for i,r in sections],
          "surface_refs":list(surfaces),"journey_refs":[j["id"] for j in graph.get("journeys",[])],"qa_refs":qa_refs,"status":"review-ready"}
     errors=validate_document(doc,"design-review-package")
@@ -60,13 +60,15 @@ def approve(client:str, *, package_file:str, prototype_revision_ref:str, review_
 
 def main()->int:
     ap=argparse.ArgumentParser(); sub=ap.add_subparsers(dest="cmd",required=True)
-    b=sub.add_parser("package"); b.add_argument("--client",required=True); b.add_argument("--design-revision",required=True); b.add_argument("--source-revision",required=True); b.add_argument("--penpot-ref",required=True)
+    b=sub.add_parser("package"); b.add_argument("--client",required=True); b.add_argument("--design-revision",required=True); b.add_argument("--source-revision",required=True); b.add_argument("--design-ref"); b.add_argument("--penpot-ref")
     a=sub.add_parser("approve"); a.add_argument("--client",required=True); a.add_argument("--package",required=True); a.add_argument("--prototype-revision-ref",required=True); a.add_argument("--review-round-ref",required=True); a.add_argument("--approved-by",required=True); a.add_argument("--approved-at",required=True)
     x=ap.parse_args()
     try:
       p=ROOT/"client-projects"/x.client
       if x.cmd=="package":
-        d=build_package(x.client,design_revision=x.design_revision,source_revision=x.source_revision,penpot_ref=x.penpot_ref); out=p/"experience"/"review"/f"{d['package_id']}.yaml"
+        design_ref=x.design_ref or x.penpot_ref
+        if not design_ref: raise DesignReviewError("--design-ref is required")
+        d=build_package(x.client,design_revision=x.design_revision,source_revision=x.source_revision,design_ref=design_ref); out=p/"experience"/"review"/f"{d['package_id']}.yaml"
       else:
         d=approve(x.client,package_file=x.package,prototype_revision_ref=x.prototype_revision_ref,review_round_ref=x.review_round_ref,approved_by=x.approved_by,approved_at=x.approved_at); out=p/"approved"/"experience-approval.yaml"
       if out.exists(): raise DesignReviewError(f"Refusing to overwrite immutable/review artifact: {out}")

@@ -76,7 +76,7 @@ export default async function ReviewPage({params}:{params:Promise<{client:string
         <article className="agency-card"><h3>Goals & principles</h3><ul>{(synthesis?.principles||strategy?.principles||[]).map((x:string)=><li key={x}>{x}</li>)}</ul></article>
         <article className="agency-card"><h3>Users & surfaces</h3><p>{required.join(" · ")||"No required surfaces recorded"}</p><p>{(journeys?.journeys||[]).map((x:any)=>x.actor).filter((x:string,i:number,a:string[])=>a.indexOf(x)===i).join(" · ")}</p></article>
         <article className="agency-card"><h3>Key journeys</h3><ul>{(journeys?.journeys||[]).map((x:any)=><li key={x.id}>{x.id} — {(x.surfaces||[]).join(" → ")}</li>)}</ul></article>
-        <article className="agency-card"><h3>Decision baseline</h3><p>Direction: {session.direction_id}</p><p>Penpot: {pkg?.penpot_ref||"required"}</p><p>Source revision: {pkg?.source_revision||"not packaged"}</p></article>
+        <article className="agency-card"><h3>Decision baseline</h3><p>Direction: {session.direction_id}</p><p>OpenPencil: {pkg?.openpencil_ref||pkg?.penpot_ref||"required"}</p><p>Source revision: {pkg?.source_revision||"not packaged"}</p></article>
       </div>
     </section>
 
@@ -87,11 +87,11 @@ export default async function ReviewPage({params}:{params:Promise<{client:string
     </section>
 
     <section id="design-system" className="review-section">
-      <div className="section-heading"><h2>Design system</h2>{pkg?.penpot_ref&&<span className="status-chip">Penpot {pkg.penpot_ref}</span>}</div>
+      <div className="section-heading"><h2>Design system</h2>{(pkg?.openpencil_ref||pkg?.penpot_ref)&&<span className="status-chip">OpenPencil {pkg.openpencil_ref||pkg.penpot_ref}</span>}</div>
       <div className="summary-grid">
         <article className="agency-card"><h3>Semantic colors</h3><div className="token-list">{Object.entries(theme?.semantic_roles||{}).map(([k,v])=><div className="token-row" key={k}><span>{k}</span><code>{String(v)}</code></div>)}</div></article>
         <article className="agency-card"><h3>Typography & imagery</h3><p>Fonts: {(theme?.overrides?.fonts||[]).join(", ")||"default tokens"}</p><p>Image direction: {(theme?.overrides?.image_direction||[]).join(", ")||"not specified"}</p><p>Motion: {theme?.overrides?.motion_preference||"balanced"}</p></article>
-        <article className="agency-card"><h3>Master tokens</h3><p>{Object.keys(masterDesign?.tokens||{}).join(" · ")||"not materialized"}</p><p>Breakpoints: {Object.entries(masterDesign?.breakpoints||{}).map(([k,v])=>`${k}:${v}`).join(" · ")}</p></article><article className="agency-card"><h3>Icons & motion</h3><p>Icons: {iconRegistry?.policy ? `${iconRegistry.policy.primary} → ${iconRegistry.policy.secondary} → ${iconRegistry.policy.fallback}` : "not materialized"}</p><p>Motion contracts: {(motionRegistry?.motions||[]).length}</p></article><article className="agency-card wide"><h3>Components & implementation mapping</h3><div className="component-grid">{(implementationRegistry?.components||[]).map((m:any)=><div className="component-cell" key={m.semantic_id}><strong>{m.semantic_id}</strong><span>Penpot: {m.penpot?.component}</span><small>Flutter: {m.flutter?.owned_component} · {m.flutter?.primitive}</small><small>Web: {m.web?.owned_component} · {m.web?.primitive}</small></div>)}</div>{!implementationRegistry&&<div className="component-grid">{(components?.components||[]).map((x:any)=><div className="component-cell" key={x.id}><strong>{x.id}</strong><span>{(x.variants||[]).join(", ")}</span><small>{(x.states||[]).join(" · ")}</small></div>)}</div>}</article>
+        <article className="agency-card"><h3>Master tokens</h3><p>{Object.keys(masterDesign?.tokens||{}).join(" · ")||"not materialized"}</p><p>Breakpoints: {Object.entries(masterDesign?.breakpoints||{}).map(([k,v])=>`${k}:${v}`).join(" · ")}</p></article><article className="agency-card"><h3>Icons & motion</h3><p>Icons: {iconRegistry?.policy ? `${iconRegistry.policy.primary} → ${iconRegistry.policy.secondary} → ${iconRegistry.policy.fallback}` : "not materialized"}</p><p>Motion contracts: {(motionRegistry?.motions||[]).length}</p></article><article className="agency-card wide"><h3>Components & implementation mapping</h3><div className="component-grid">{(implementationRegistry?.components||[]).map((m:any)=><div className="component-cell" key={m.semantic_id}><strong>{m.semantic_id}</strong><span>OpenPencil: {(m.openpencil||m.penpot)?.component}</span><small>Flutter: {m.flutter?.owned_component} · {m.flutter?.primitive}</small><small>Web: {m.web?.owned_component} · {m.web?.primitive}</small></div>)}</div>{!implementationRegistry&&<div className="component-grid">{(components?.components||[]).map((x:any)=><div className="component-cell" key={x.id}><strong>{x.id}</strong><span>{(x.variants||[]).join(", ")}</span><small>{(x.states||[]).join(" · ")}</small></div>)}</div>}</article>
       </div>
     </section>
 
@@ -140,7 +140,7 @@ export default async function ReviewPage({params}:{params:Promise<{client:string
     <section id="approval" className="review-section">
       <h2>Experience decision</h2>
       <p>Final experience approval remains a hard human gate and is valid only after all required surfaces and journeys are approved, feedback is resolved, QA is recorded and the exact design/prototype revisions are bound.</p>
-      <code>{pkg ? `Package ${pkg.package_id} · Penpot ${pkg.penpot_ref}` : "Review package not yet generated"}</code>
+      <code>{pkg ? `Package ${pkg.package_id} · OpenPencil ${pkg.openpencil_ref||pkg.penpot_ref}` : "Review package not yet generated"}</code>
     </section>
   </main>;
 }

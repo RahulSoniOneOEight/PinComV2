@@ -61,12 +61,13 @@ class ExperienceIntegrityTests(unittest.TestCase):
                 "journeys": _hash(self.graph),
             },
         }
-        self._write("experience/design/penpot-manifest.yaml", manifest)
-        self._write("experience/design/penpot-observed.yaml", {
+        self._write("experience/design/openpencil-manifest.yaml", manifest)
+        self._write("experience/design/openpencil-observed.yaml", {
             "project_ref": "p",
             "revision_ref": "r1",
             "components": ["card"],
-            "interactive_journeys": ["buy"],
+            "journey_screens": ["buy"],
+            "source": "openpencil-cli",
         })
         self._write("experience/visual-qa/VQA-web.yaml", {
             "surface": "web",
@@ -94,7 +95,7 @@ class ExperienceIntegrityTests(unittest.TestCase):
         result = evaluate("c", self.root)
         self.assertEqual(result["status"], "blocked")
         self.assertTrue(any("Design IR surfaces differ" in x for x in result["blockers"]))
-        self.assertTrue(any("Penpot manifest is stale" in x for x in result["blockers"]))
+        self.assertTrue(any("Design manifest is stale" in x for x in result["blockers"]))
 
     def test_missing_design_node_blocks(self):
         changed = dict(self.design_ir)
@@ -116,6 +117,36 @@ class ExperienceIntegrityTests(unittest.TestCase):
         result = evaluate("c", self.root)
         self.assertEqual(result["status"], "blocked")
         self.assertTrue(any("visual-qa web not passed" in x for x in result["blockers"]))
+
+
+    def test_legacy_penpot_evidence_still_evaluates(self):
+        """Backwards compatibility: clients onboarded on Penpot keep validating."""
+        design = self.p / "experience" / "design"
+        (design / "openpencil-manifest.yaml").unlink()
+        (design / "openpencil-observed.yaml").unlink()
+        self._write("experience/design/penpot-manifest.yaml", {
+            "project_ref": "p",
+            "revision_ref": "r1",
+            "required_surfaces": ["web"],
+            "required_journeys": ["buy"],
+            "required_components": ["card"],
+            "input_hashes": {
+                "design_ir": _hash(self.design_ir),
+                "components": _hash(self.components),
+                "theme": _hash(self.theme),
+                "journeys": _hash(self.graph),
+            },
+        })
+        self._write("experience/design/penpot-observed.yaml", {
+            "project_ref": "p",
+            "revision_ref": "r1",
+            "components": ["card"],
+            "interactive_journeys": ["buy"],
+            "source": "penpot-mcp",
+        })
+        result = evaluate("c", self.root)
+        self.assertEqual(result["status"], "passed")
+        self.assertTrue(result["checks"]["design_source"])
 
 
 if __name__ == "__main__":

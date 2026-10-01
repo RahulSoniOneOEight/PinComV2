@@ -5,7 +5,8 @@ This layer turns the Stage 2 contracts into operating collectors.
 ## Source connectors
 
 - Figma: authenticated `/v1/files/{file_key}` collection using `FIGMA_TOKEN`
-- Penpot: configurable authenticated design-export endpoint using `PENPOT_API_URL` and `PENPOT_TOKEN`
+- OpenPencil: local, headless CLI over a committed `.fig`/`.pen` design file (no endpoint or token required)
+- Penpot (legacy): configurable authenticated design-export endpoint using `PENPOT_API_URL` and `PENPOT_TOKEN`
 - Reference sites: HTML metadata, stylesheet references and embedded color extraction
 - all collected source data passes through the provenance-aware ingestion boundary
 

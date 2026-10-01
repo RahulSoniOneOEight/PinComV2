@@ -10,12 +10,15 @@ on:
       - 'tooling/experience/visual_critic.py'
       - 'tooling/experience/source_connectors.py'
       - 'tooling/experience/source_ingestion.py'
+      - 'tooling/experience/openpencil_automation.py'
+      - 'tooling/experience/openpencil_bridge.py'
       - 'tooling/experience/penpot_automation.py'
       - 'tooling/review/regeneration.py'
       - 'tooling/review/authz.py'
       - 'apps/review_mode/**'
       - 'contracts/schemas/review-feedback.schema.json'
       - 'tests/test_phase1_final_gaps.py'
+      - 'tests/test_openpencil_design_source.py'
       - '.github/workflows/phase1-final-gaps.yml'
   push:
     branches: [main]

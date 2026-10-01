@@ -10,7 +10,7 @@ icons:
     size: 20
     flutter: {package: phosphor_flutter, symbol: PhosphorIcons.shoppingCart}
     web: {package: "@phosphor-icons/react", symbol: ShoppingCart}
-    penpot: {source: phosphor-svg, name: shopping-cart}
+    openpencil: {source: phosphor-svg, name: shopping-cart}
   - semantic_id: commerce.search
     family: Phosphor
     name: magnifying-glass
@@ -18,7 +18,7 @@ icons:
     size: 20
     flutter: {package: phosphor_flutter, symbol: PhosphorIcons.magnifyingGlass}
     web: {package: "@phosphor-icons/react", symbol: MagnifyingGlass}
-    penpot: {source: phosphor-svg, name: magnifying-glass}
+    openpencil: {source: phosphor-svg, name: magnifying-glass}
   - semantic_id: commerce.account
     family: Phosphor
     name: user
@@ -26,5 +26,5 @@ icons:
     size: 20
     flutter: {package: phosphor_flutter, symbol: PhosphorIcons.user}
     web: {package: "@phosphor-icons/react", symbol: User}
-    penpot: {source: phosphor-svg, name: user}
+    openpencil: {source: phosphor-svg, name: user}
 status: review-ready

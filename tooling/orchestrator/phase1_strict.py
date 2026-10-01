@@ -9,7 +9,7 @@ from tooling.intelligence.journey_engine import build as build_journeys, validat
 from tooling.experience.reference_engine import analyze as analyze_references, apply_decisions
 from tooling.experience.synthesis import synthesize
 from tooling.experience.critics import design_critic, journey_critic, reference_critic
-from tooling.experience.penpot_bridge import build_manifest, verify_manifest, PenpotBridgeError
+from tooling.experience.openpencil_bridge import OPENPENCIL_MANIFEST, build_manifest, design_evidence_paths, verify_manifest, OpenPencilBridgeError
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -27,7 +27,7 @@ def _write(path:Path,value:dict[str,Any],overwrite:bool)->None:
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(yaml.safe_dump(value,sort_keys=False),encoding="utf-8")
 
-def generate(client_id:str, *, root:Path=ROOT, overwrite:bool=False, penpot_project:str|None=None, penpot_revision:str|None=None)->dict[str,Any]:
+def generate(client_id:str, *, root:Path=ROOT, overwrite:bool=False, design_file:str|None=None, project_ref:str|None=None, revision_ref:str|None=None, penpot_project:str|None=None, penpot_revision:str|None=None)->dict[str,Any]:
     p=root/"client-projects"/client_id
     graph=build_journeys(client_id,root)
     errors=validate_executable(graph)
@@ -55,13 +55,14 @@ def generate(client_id:str, *, root:Path=ROOT, overwrite:bool=False, penpot_proj
         _write(p/"experience"/"qa"/f"{name}-critic-v2.yaml",value,overwrite)
         if value["status"]!="passed": raise StrictPhase1Error(f"{name} critic blocked")
 
-    penpot=None
-    if penpot_project or penpot_revision:
-        if not penpot_project or not penpot_revision: raise StrictPhase1Error("Both penpot_project and penpot_revision are required")
-        penpot=build_manifest(client_id,project_ref=penpot_project,revision_ref=penpot_revision,root=root)
-        _write(p/"experience"/"design"/"penpot-manifest.yaml",penpot,overwrite)
+    project_ref = project_ref or penpot_project
+    revision_ref = revision_ref or penpot_revision
+    manifest=None
+    if design_file or project_ref or revision_ref:
+        manifest=build_manifest(client_id,design_file=design_file,project_ref=project_ref,revision_ref=revision_ref,root=root)
+        _write(p/"experience"/"design"/OPENPENCIL_MANIFEST,manifest,overwrite)
 
-    return {"client_id":client_id,"journeys":"passed","references":"passed","synthesis":"passed","critics":{k:v["status"] for k,v in critics.items()},"penpot":"manifest-created" if penpot else "external-evidence-required","status":"ready-for-design" if penpot else "blocked-on-penpot"}
+    return {"client_id":client_id,"journeys":"passed","references":"passed","synthesis":"passed","critics":{k:v["status"] for k,v in critics.items()},"design_source":"manifest-created" if manifest else "external-evidence-required","status":"ready-for-design" if manifest else "blocked-on-design-source"}
 
 def check(client_id:str, root:Path=ROOT)->dict[str,Any]:
     p=root/"client-projects"/client_id
@@ -76,10 +77,9 @@ def check(client_id:str, root:Path=ROOT)->dict[str,Any]:
             for pattern in source.get("patterns",[]):
                 if pattern.get("decision") not in {"REUSE","ADAPT","COMBINE","MODERNIZE","REJECT","BUILD_NEW"}: blockers.append(f"{pattern.get('id')}: missing decision")
     except StrictPhase1Error as exc: blockers.append(str(exc))
-    manifest=p/"experience"/"design"/"penpot-manifest.yaml"
-    observed=p/"experience"/"design"/"penpot-observed.yaml"
-    if not manifest.exists() or not observed.exists():
-        blockers.append("real Penpot manifest/observed evidence missing")
+    manifest,observed=design_evidence_paths(p)
+    if manifest is None or observed is None:
+        blockers.append("real design manifest/observed evidence missing")
     else:
         blockers += verify_manifest(_load(manifest),_load(observed))
     try:
@@ -91,11 +91,11 @@ def check(client_id:str, root:Path=ROOT)->dict[str,Any]:
     return {"client_id":client_id,"status":"passed" if not blockers else "blocked","blockers":blockers}
 
 def main()->int:
-    ap=argparse.ArgumentParser();ap.add_argument("--client",required=True);ap.add_argument("--root",type=Path,default=ROOT);ap.add_argument("--overwrite",action="store_true");ap.add_argument("--check",action="store_true");ap.add_argument("--penpot-project");ap.add_argument("--penpot-revision")
+    ap=argparse.ArgumentParser();ap.add_argument("--client",required=True);ap.add_argument("--root",type=Path,default=ROOT);ap.add_argument("--overwrite",action="store_true");ap.add_argument("--check",action="store_true");ap.add_argument("--design-file");ap.add_argument("--project-ref");ap.add_argument("--revision-ref");ap.add_argument("--penpot-project");ap.add_argument("--penpot-revision")
     a=ap.parse_args()
     try:
-        value=check(a.client,a.root) if a.check else generate(a.client,root=a.root,overwrite=a.overwrite,penpot_project=a.penpot_project,penpot_revision=a.penpot_revision)
-        print(yaml.safe_dump(value,sort_keys=False));return 0 if value["status"] in {"passed","ready-for-design","blocked-on-penpot"} else 2
-    except (StrictPhase1Error,PenpotBridgeError) as exc:
+        value=check(a.client,a.root) if a.check else generate(a.client,root=a.root,overwrite=a.overwrite,design_file=a.design_file,project_ref=a.project_ref,revision_ref=a.revision_ref,penpot_project=a.penpot_project,penpot_revision=a.penpot_revision)
+        print(yaml.safe_dump(value,sort_keys=False));return 0 if value["status"] in {"passed","ready-for-design","blocked-on-design-source"} else 2
+    except (StrictPhase1Error,OpenPencilBridgeError) as exc:
         print(f"phase1-strict-error: {exc}");return 2
 if __name__=="__main__": raise SystemExit(main())

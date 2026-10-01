@@ -6,7 +6,7 @@ import json
 import hashlib
 import yaml
 
-from tooling.experience.penpot_bridge import verify_manifest
+from tooling.experience.openpencil_bridge import design_evidence_paths, verify_manifest
 from tooling.review.visual_qa import REQUIRED_CHECKS
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -79,8 +79,14 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
     design_ir = _load(project / "experience" / "design" / "design-ir.yaml")
     components = _load(project / "experience" / "design" / "component-contract-registry.yaml")
     theme = _load(project / "experience" / "design" / "theme-resolution.yaml")
-    manifest = _load(project / "experience" / "design" / "penpot-manifest.yaml")
-    observed = _load(project / "experience" / "design" / "penpot-observed.yaml")
+    manifest_path, observed_path = design_evidence_paths(project)
+    if manifest_path is None or observed_path is None:
+        raise ExperienceIntegrityError(
+            "Missing design evidence: expected openpencil-manifest.yaml/openpencil-observed.yaml "
+            "(or legacy penpot-*.yaml)"
+        )
+    manifest = _load(manifest_path)
+    observed = _load(observed_path)
 
     blockers: list[str] = []
 
@@ -106,7 +112,7 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
         )
     if manifest_surfaces != required_surfaces:
         blockers.append(
-            "Penpot manifest surfaces differ from required surface map: "
+            "Design manifest surfaces differ from required surface map: "
             f"required={sorted(required_surfaces)} manifest={sorted(manifest_surfaces)}"
         )
 
@@ -150,7 +156,7 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
     manifest_journeys = {str(x) for x in manifest.get("required_journeys", [])}
     if manifest_journeys != set(graph_journeys):
         blockers.append(
-            "Penpot manifest journeys differ from journey graph: "
+            "Design manifest journeys differ from journey graph: "
             f"graph={sorted(graph_journeys)} manifest={sorted(manifest_journeys)}"
         )
 
@@ -163,10 +169,10 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
     manifest_hashes = manifest.get("input_hashes", {})
     stale = sorted(key for key, value in expected_hashes.items() if manifest_hashes.get(key) != value)
     if stale:
-        blockers.append("Penpot manifest is stale for inputs: " + ", ".join(stale))
+        blockers.append("Design manifest is stale for inputs: " + ", ".join(stale))
 
-    penpot_errors = verify_manifest(manifest, observed)
-    blockers.extend(f"Penpot: {error}" for error in penpot_errors)
+    design_errors = verify_manifest(manifest, observed)
+    blockers.extend(f"Design source: {error}" for error in design_errors)
 
     qa_blockers, qa_summary = _visual_qa(project, required_surfaces)
     blockers.extend(qa_blockers)
@@ -175,7 +181,7 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
         "surfaces": not any("surface" in x.lower() for x in blockers),
         "journeys": not any("journey" in x.lower() or "nodes differ" in x.lower() for x in blockers),
         "design_ir": mapped_nodes == required_nodes and required_nodes > 0 and not any("Design IR" in x for x in blockers),
-        "penpot": not any(x.startswith("Penpot") for x in blockers),
+        "design_source": not any(x.startswith("Design source") for x in blockers),
         "visual_qa": not qa_blockers,
     }
 

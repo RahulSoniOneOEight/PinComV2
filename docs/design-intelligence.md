@@ -9,7 +9,7 @@ The design evaluator consumes:
 - required journeys and experience requirements
 - existing client app/web systems
 - reusable Git code/components
-- Figma/Penpot references
+- Figma/OpenPencil references
 - brand guides and brand colors
 - reference websites
 - client media
@@ -93,7 +93,7 @@ The default threshold is 80/100, with deterministic evidence required. High-valu
 ## Flow
 
 ```text
-Client requirements + brand/assets + Git/Figma/Penpot/reference sites
+Client requirements + brand/assets + Git/Figma/OpenPencil/reference sites
 → source inventory
 → classify experience and surface type
 → reuse evaluation
@@ -160,7 +160,7 @@ Reusable components must prove:
 
 ### Source ingestion
 
-`tooling.experience.source_import` normalizes exported Figma, Penpot, Git component inventory, reference-site analysis and brand-guide metadata into the same design-intelligence shape. Network/provider-specific extraction remains outside the deterministic core; exported evidence is normalized before it can influence governed selection.
+`tooling.experience.source_import` normalizes exported Figma, OpenPencil, Penpot (legacy), Git component inventory, reference-site analysis and brand-guide metadata into the same design-intelligence shape. Network/provider-specific extraction remains outside the deterministic core; exported evidence is normalized before it can influence governed selection.
 
 ### Theme compiler
 

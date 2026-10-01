@@ -7,6 +7,7 @@ import hashlib
 import yaml
 
 from tooling.experience.integrity import evaluate as evaluate_experience_integrity
+from tooling.experience.openpencil_bridge import design_evidence_paths, resolve_design_ref
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -36,17 +37,16 @@ def assert_build_allowed(client_id: str, root: Path = ROOT) -> dict[str, Any]:
         raise DesignGateError("Approved design revision does not match review package")
     if package.get("source_revision") != approval.get("source_revision"):
         raise DesignGateError("Approved source revision does not match review package")
-    penpot_ref = package.get("penpot_ref")
-    if not penpot_ref:
-        raise DesignGateError("Approved review package has no Penpot revision")
+    design_ref = resolve_design_ref(package)
+    if not design_ref:
+        raise DesignGateError("Approved review package has no design revision (openpencil_ref)")
     design_ir_path = p / "experience" / "design" / "design-ir.yaml"
     component_registry_path = p / "experience" / "design" / "component-contract-registry.yaml"
     master_design_path = p / "experience" / "design" / "master-design-system.yaml"
     implementation_registry_path = p / "experience" / "design" / "ui-implementation-registry.yaml"
     icon_registry_path = p / "experience" / "design" / "icon-registry.yaml"
     motion_registry_path = p / "experience" / "design" / "motion-registry.yaml"
-    penpot_manifest_path = p / "experience" / "design" / "penpot-manifest.yaml"
-    penpot_observed_path = p / "experience" / "design" / "penpot-observed.yaml"
+    manifest_path, observed_path = design_evidence_paths(p)
     design_ir = _load(design_ir_path)
     component_registry = _load(component_registry_path)
     master_design = _load(master_design_path)
@@ -65,12 +65,12 @@ def assert_build_allowed(client_id: str, root: Path = ROOT) -> dict[str, Any]:
         raise DesignGateError("Icon registry is not review-ready/approved")
     if motion_registry.get("status") not in {"review-ready","approved"}:
         raise DesignGateError("Motion registry is not review-ready/approved")
-    if not penpot_manifest_path.exists() or not penpot_observed_path.exists():
-        raise DesignGateError("Penpot manifest/observed revision evidence is required")
-    penpot_manifest = _load(penpot_manifest_path)
-    penpot_observed = _load(penpot_observed_path)
-    if penpot_manifest.get("revision_ref") != penpot_observed.get("revision_ref"):
-        raise DesignGateError("Observed Penpot revision does not match approved manifest")
+    if manifest_path is None or observed_path is None:
+        raise DesignGateError("Design manifest/observed revision evidence is required")
+    design_manifest = _load(manifest_path)
+    design_observed = _load(observed_path)
+    if design_manifest.get("revision_ref") != design_observed.get("revision_ref"):
+        raise DesignGateError("Observed design revision does not match approved manifest")
     integrity = evaluate_experience_integrity(client_id, root)
     if integrity.get("status") != "passed":
         detail = "; ".join(integrity.get("blockers", [])[:8])
@@ -80,15 +80,15 @@ def assert_build_allowed(client_id: str, root: Path = ROOT) -> dict[str, Any]:
         "allowed": True,
         "approval_id": approval["approval_id"],
         "design_revision": approval["design_revision"],
-        "penpot_ref": penpot_ref,
+        "openpencil_ref": design_ref,
         "design_ir_sha256": _sha(design_ir_path),
         "component_registry_sha256": _sha(component_registry_path),
         "master_design_system_sha256": _sha(master_design_path),
         "implementation_registry_sha256": _sha(implementation_registry_path),
         "icon_registry_sha256": _sha(icon_registry_path),
         "motion_registry_sha256": _sha(motion_registry_path),
-        "penpot_manifest_sha256": _sha(penpot_manifest_path),
-        "penpot_observed_sha256": _sha(penpot_observed_path),
+        "design_manifest_sha256": _sha(manifest_path),
+        "design_observed_sha256": _sha(observed_path),
         "experience_integrity": integrity,
     }
 

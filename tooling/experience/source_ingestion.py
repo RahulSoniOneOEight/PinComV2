@@ -5,7 +5,7 @@ import json
 from datetime import datetime, timezone
 from typing import Any
 
-SUPPORTED = {"figma", "penpot", "git", "reference-site", "brand-guide", "client-media"}
+SUPPORTED = {"figma", "penpot", "openpencil", "git", "reference-site", "brand-guide", "client-media"}
 
 
 class SourceIngestionError(RuntimeError):
@@ -38,7 +38,7 @@ def ingest(source_type: str, source_id: str, payload: dict[str, Any], *, capture
             "assets": _list(payload.get("assets")),
             "notes": _list(payload.get("notes")),
         }
-    elif source_type == "penpot":
+    elif source_type in {"penpot", "openpencil"}:
         normalized = {
             "source_ref": payload.get("project_id") or payload.get("source_ref"),
             "components": _list(payload.get("components")),

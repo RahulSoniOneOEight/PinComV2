@@ -24,17 +24,32 @@
         "type": "object",
         "required": [
           "semantic_id",
-          "penpot",
           "flutter",
           "web",
           "qa"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "openpencil"
+            ]
+          },
+          {
+            "required": [
+              "penpot"
+            ]
+          }
         ],
         "properties": {
           "semantic_id": {
             "type": "string"
           },
-          "penpot": {
+          "openpencil": {
             "type": "object"
+          },
+          "penpot": {
+            "type": "object",
+            "description": "Legacy design component mapping for clients onboarded before the OpenPencil migration"
           },
           "flutter": {
             "type": "object",

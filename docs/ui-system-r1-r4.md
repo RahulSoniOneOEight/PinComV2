@@ -9,18 +9,18 @@ This implementation binds the shared design/build system into the existing Steps
 - Motion registry with Flutter/Web runtime mapping
 - Deterministic UI resolver
 
-## R2 — Penpot Design Automation (P5-P7)
-- Semantic Penpot operations generated from Master Design System, Design IR, journey graph and implementation registry
-- Real write execution supported through a configured authenticated Penpot bridge endpoint (`PENPOT_WRITE_URL`)
+## R2 — OpenPencil Design Automation (P5-P7)
+- Semantic OpenPencil operations generated from Master Design System, Design IR, journey graph and implementation registry
+- Local write execution: operations are applied to a committed `.fig`/`.pen` design file through the OpenPencil CLI (no endpoint or token)
 - Exact project/revision evidence required
 - Responsive breakpoints, states, components and interactive journeys included in the operation payload
 
-The repository does not invent Penpot revisions. CI can validate payload generation; live Penpot writes require an authorized bridge endpoint and token.
+The repository does not invent design revisions. Revisions are content hashes of the committed OpenPencil design file, so CI can validate both payload generation and the observed revision without credentials (legacy Penpot sources still require an authorized bridge endpoint and token).
 
 ## R3 — Governance & Human Review (P8-P10)
 - Existing Review Mode V2 remains the consolidated human review surface
 - Existing critics/change loop/re-QA remain authoritative
-- Experience freeze now binds Master Design System, implementation, icon and motion registries plus Penpot observed revision
+- Experience freeze now binds Master Design System, implementation, icon and motion registries plus OpenPencil observed revision
 
 ## R4 — Runtime Mapping & Drift Prevention (P11-P14)
 - Platform implementation registry maps semantic components to owned Flutter/Web components and specialist libraries

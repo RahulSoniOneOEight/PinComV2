@@ -29,7 +29,8 @@ def resolve_component(semantic_id: str, platform: str, *, root: Path = ROOT, cli
     item = next((x for x in registry.get("components", []) if x.get("semantic_id") == semantic_id or semantic_id in x.get("aliases", [])), None)
     if not item:
         raise ResolverError(f"No approved mapping for {semantic_id}")
-    return {"semantic_id": semantic_id, "penpot": item["penpot"], platform: item[platform], "qa": item["qa"]}
+    source = item.get("openpencil") or item.get("penpot")
+    return {"semantic_id": semantic_id, "openpencil": source, platform: item[platform], "qa": item["qa"]}
 
 def resolve_specialist(kind: str, platform: str, *, root: Path = ROOT, client_id: str | None = None) -> Any:
     registry = _registry(root, client_id)
@@ -49,8 +50,8 @@ def resolve_icon(semantic_id: str, platform: str, *, root: Path = ROOT, client_i
     item = next((x for x in registry.get("icons", []) if x.get("semantic_id") == semantic_id), None)
     if not item:
         raise ResolverError(f"No approved icon mapping for {semantic_id}")
-    if platform not in {"flutter","web","penpot"}:
-        raise ResolverError("icon platform must be flutter, web, or penpot")
+    if platform not in {"flutter","web","penpot","openpencil"}:
+        raise ResolverError("icon platform must be flutter, web, penpot, or openpencil")
     return {"semantic_id": semantic_id, "family": item["family"], "name": item["name"], platform: item[platform]}
 
 def main() -> int:

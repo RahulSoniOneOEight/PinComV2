@@ -4,7 +4,7 @@ Stage 2 connects the governed design runtime to external design evidence, depend
 
 ## Design-source ingestion
 
-`tooling.experience.source_ingestion` supports Figma, Penpot, Git, reference sites, brand guides and client media. Figma/Penpot provider-shaped payloads are normalized directly. Every normalized source carries a source ID/type, capture timestamp, deterministic SHA-256 content hash and optional provider reference.
+`tooling.experience.source_ingestion` supports Figma, OpenPencil, Penpot (legacy), Git, reference sites, brand guides and client media. Figma/OpenPencil/Penpot provider-shaped payloads are normalized directly. Every normalized source carries a source ID/type, capture timestamp, deterministic SHA-256 content hash and optional provider reference.
 
 `merge_inventory` rejects duplicate or unprovenanced records. Provider authentication and network collection remain outside the deterministic acceptance core; collected API/export payloads enter through the same provenance boundary.
 
@@ -21,7 +21,7 @@ A blocked dependency cannot win a visual benchmark or be promoted into the runti
 ## Flow
 
 ```text
-Figma / Penpot / Git / reference / brand / client media
+Figma / OpenPencil / Penpot / Git / reference / brand / client media
 → provenance + normalization
 → source inventory
 → dependency snapshots

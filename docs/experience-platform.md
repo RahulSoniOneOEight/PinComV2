@@ -117,7 +117,7 @@ Coverage alone is not sufficient. Before the Review Session can be created, the 
 Design choice is also governed before prototype composition:
 
 ```text
-Client/brand/Figma/Penpot/Git/reference sources
+Client/brand/Figma/OpenPencil/Git/reference sources
 → Design Source Inventory
 → component/icon/motion candidate evaluation
 → visual preset + semantic theme resolution

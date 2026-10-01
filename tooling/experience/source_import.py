@@ -7,7 +7,7 @@ from typing import Any
 
 import yaml
 
-SUPPORTED = {"figma","penpot","git","reference-site","brand-guide"}
+SUPPORTED = {"figma","penpot","openpencil","git","reference-site","brand-guide"}
 
 
 class SourceImportError(RuntimeError):

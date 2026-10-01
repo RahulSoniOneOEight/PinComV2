@@ -75,6 +75,49 @@ def fetch_penpot(project_id: str, *, api_url: str | None = None, token: str | No
     return ingest("penpot", f"penpot:{project_id}", payload)
 
 
+def fetch_openpencil(design_file: str, *, binary: str | None = None) -> dict[str, Any]:
+    """Read a committed OpenPencil design file (.fig/.pen) and normalize it.
+
+    OpenPencil is local and headless, so this connector shells out to the CLI
+    rather than calling a remote API: there is no endpoint and no token. The
+    legacy Penpot connector (:func:`fetch_penpot`) remains available for
+    sources that have not been migrated.
+    """
+    import json as _json
+    import subprocess
+
+    binary = binary or os.getenv("OPENPENCIL_BIN", "openpencil")
+    if not os.path.exists(design_file):
+        raise ConnectorError(f"OpenPencil design file not found: {design_file}")
+
+    def run(*args: str) -> Any:
+        proc = subprocess.run([binary, *args, "--json"], capture_output=True, text=True)
+        if proc.returncode != 0:
+            detail = (proc.stderr or proc.stdout or "").strip()[:300]
+            raise ConnectorError(f"openpencil {' '.join(args)} failed: {detail}")
+        return _json.loads(proc.stdout)
+
+    components = run("find", design_file, "--type", "COMPONENT")
+    frames = run("find", design_file, "--type", "FRAME")
+    info = run("info", design_file)
+    payload = {
+        "source_ref": design_file,
+        "components": [{"id": c.get("id"), "name": c.get("name")} for c in components if isinstance(c, dict)],
+        "patterns": [
+            {
+                "id": f.get("id"),
+                "name": f.get("name"),
+                "kind": "frame",
+                "evidence": {"width": f.get("width"), "height": f.get("height")},
+            }
+            for f in frames
+            if isinstance(f, dict)
+        ],
+        "notes": [f"pages:{info.get('pages')}", f"total_nodes:{info.get('totalNodes')}"],
+    }
+    return ingest("openpencil", f"openpencil:{design_file}", payload)
+
+
 def fetch_github_reference(owner: str, repo: str, *, token: str | None = None, ref: str = "HEAD", opener: Callable[..., Any] = urllib.request.urlopen) -> dict[str, Any]:
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "PinCommerce-DesignIntelligence/1.0"}
     token = token or os.getenv("GITHUB_TOKEN")

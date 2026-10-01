@@ -5,6 +5,7 @@ from typing import Any
 import yaml
 
 from tooling.experience.integrity import evaluate as evaluate_experience_integrity
+from tooling.experience.openpencil_bridge import resolve_design_ref
 from tooling.review.visual_qa import REQUIRED_CHECKS
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -119,7 +120,7 @@ def assess(client:str,root:Path=ROOT)->dict[str,Any]:
     try:
         integrity=evaluate_experience_integrity(client,root)
     except Exception as exc:
-        integrity={"status":"blocked","checks":{"surfaces":False,"journeys":False,"design_ir":False,"penpot":False,"visual_qa":False},"blockers":[str(exc)]}
+        integrity={"status":"blocked","checks":{"surfaces":False,"journeys":False,"design_ir":False,"design_source":False,"visual_qa":False},"blockers":[str(exc)]}
     integrity_ok=integrity.get("status")=="passed"
     integrity_checks=integrity.get("checks",{})
 
@@ -127,7 +128,7 @@ def assess(client:str,root:Path=ROOT)->dict[str,Any]:
 
     review_pkgs=list((p/"experience"/"review").glob("DRP-*.yaml")) if (p/"experience"/"review").exists() else []
     package=load(review_pkgs[-1]) if review_pkgs else {}
-    package_ok=bool(package.get("penpot_ref")) and package.get("status") in {"review-ready","approved"}
+    package_ok=bool(resolve_design_ref(package)) and package.get("status") in {"review-ready","approved"}
 
     rounds=list((p/"feedback"/"rounds").glob("*.yaml")) if (p/"feedback"/"rounds").exists() else []
     round_docs=[load(x) for x in rounds]
@@ -163,11 +164,11 @@ def assess(client:str,root:Path=ROOT)->dict[str,Any]:
       (21,bool(component.get("components")),"component contracts"),
       (22,design_ok and integrity_checks.get("design_ir",False),"implementation-aware Design IR with journey/node integrity"),
       (23,asset_plan_ok and icons_motion_ok,f"icons/imagery/motion plan (>= {MIN_ICONS} icons, >= {MIN_MOTIONS} motions)"),
-      (24,package_ok and integrity_checks.get("penpot",False),"Penpot-backed design revision verified against manifest"),
+      (24,package_ok and integrity_checks.get("design_source",False),"OpenPencil-backed design revision verified against manifest"),
       (25,design_ok and integrity_checks.get("design_ir",False),"screen composition represented in Design IR for every journey node"),
       (26,all(n.get("state_refs") for j in design_ir.get("journeys",[]) for n in j.get("nodes",[])) if design_ir.get("journeys") else False,"state design"),
       (27,visual_ok and integrity_checks.get("visual_qa",False),"responsive evidence (all mandatory visual QA checks passed)"),
-      (28,ex("experience/prototypes") and any_yaml(p/"experience"/"prototypes") and integrity_checks.get("penpot",False),"interactive prototype evidence verified against journeys"),
+      (28,ex("experience/prototypes") and any_yaml(p/"experience"/"prototypes") and integrity_checks.get("design_source",False),"interactive prototype evidence verified against journeys"),
       (29,visual_ok and integrity_checks.get("visual_qa",False),"automated design QA (all mandatory checks passed)"),
       (30,critics["design"],"independent design critic"),
       (31,critics["journey"],"independent journey critic"),

@@ -27,8 +27,19 @@
           "weight",
           "size",
           "flutter",
-          "web",
-          "penpot"
+          "web"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "openpencil"
+            ]
+          },
+          {
+            "required": [
+              "penpot"
+            ]
+          }
         ]
       }
     },

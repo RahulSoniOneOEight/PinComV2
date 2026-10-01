@@ -13,7 +13,7 @@ from tooling.experience.direction_synthesis import build as build_directions
 from tooling.experience.asset_intelligence import build as build_assets
 from tooling.experience.visual_critic import evaluate as visual_critic
 from tooling.review.authz import authorize, ReviewAuthError
-from tooling.experience.penpot_automation import build_operations
+from tooling.experience.openpencil_automation import build_operations
 
 class Phase1FinalGapTests(unittest.TestCase):
     def setUp(self):

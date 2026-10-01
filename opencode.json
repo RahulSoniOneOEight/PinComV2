@@ -5,8 +5,10 @@
     "lsp": "allow"
   },
   "mcp": {
-    "penpot": {
-      "enabled": false
+    "openpencil": {
+      "type": "local",
+      "command": ["openpencil-mcp"],
+      "enabled": true
     }
   }
 }

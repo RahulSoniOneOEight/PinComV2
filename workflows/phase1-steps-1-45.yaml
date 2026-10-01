@@ -4,7 +4,7 @@ objective: "Complete the design-first authority chain before production UI imple
 policy:
   production_ui_before_experience_freeze: forbidden
   unresolved_reference_source: blocker
-  missing_penpot_revision: blocker
+  missing_design_revision: blocker
   self_approval_by_builder: forbidden
   silent_upstream_mutation_to_pass_downstream: forbidden
 groups:
@@ -19,7 +19,7 @@ groups:
     exit: all-references-decided-and-direction-selected
   - id: design
     steps: [20,21,22,23,24,25,26,27,28]
-    exit: penpot-backed-interactive-design-ready
+    exit: openpencil-backed-design-ready
   - id: independent-qa
     steps: [29,30,31,32]
     exit: independent-critics-and-visual-qa-pass

@@ -33,7 +33,7 @@ stages:
     human_gate: false
     outputs: [experience/strategy.yaml, experience/directions]
     completion: validator-pass
-  - id: design-system-and-penpot
+  - id: design-system-and-openpencil
     human_gate: false
     inputs: [experience/strategy.yaml, design-system/components, design-system/tokens]
     outputs: [experience/design/design-brief.yaml, experience/design/design-ir.yaml]

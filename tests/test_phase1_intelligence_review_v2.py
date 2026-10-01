@@ -6,7 +6,7 @@ import yaml
 from tooling.intelligence.input_intelligence import normalize_statements
 from tooling.intelligence.journey_engine import build, validate_executable
 from tooling.experience.reference_engine import apply_decisions
-from tooling.experience.penpot_bridge import verify_manifest
+from tooling.experience.openpencil_bridge import verify_manifest
 from tooling.review.change_loop import ChangeLoopError
 
 class IntelligenceV2Tests(unittest.TestCase):

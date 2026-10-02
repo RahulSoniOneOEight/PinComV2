@@ -152,3 +152,63 @@ selection_rules_applied:
 - subject-relevance evaluated by reading the returned alt text, and two first picks
   were rejected and refetched
 - crop-compatibility, palette-compatibility and brand-tone evaluation remain outstanding
+selections:
+- slot: product-card media (B2C Home light + dark, Search results, Orders thumb)
+  provider: pexels
+  provider_asset_id: '34295404'
+  photographer: Zulfugar Karimov
+  source_page_url: https://www.pexels.com/photo/34295404/
+  query: chrome plumbing faucet tap
+  alt: Close-up of a chrome faucet with a marble background
+  orientation: landscape
+  visual_qa_status: pending-human-review
+  status: applied
+- slot: product-card media, category 2 (wire)
+  provider: pexels
+  provider_asset_id: '29596327'
+  photographer: Andrew Durkin
+  source_page_url: https://www.pexels.com/photo/29596327/
+  query: electrical wire cable coil
+  alt: Multiple large spools of industrial cable
+  orientation: landscape
+  visual_qa_status: pending-human-review
+  status: applied
+- slot: B2B trade card 1 (cement)
+  provider: pexels
+  provider_asset_id: '29817952'
+  photographer: Aliaksei Smalenski
+  source_page_url: https://www.pexels.com/photo/29817952/
+  query: cement bags pallet warehouse
+  alt: Pile of orange cement bags on a wooden pallet
+  orientation: landscape
+  visual_qa_status: pending-human-review
+  status: applied
+- slot: B2B trade card 2 (steel)
+  provider: pexels
+  provider_asset_id: '46167'
+  photographer: Pixabay
+  source_page_url: https://www.pexels.com/photo/46167/
+  query: steel reinforcement bars
+  alt: Close-up of stacked steel reinforcing bars
+  orientation: landscape
+  visual_qa_status: pending-human-review
+  status: applied
+- slot: cart line 3 (ceiling fan)
+  provider: pexels
+  provider_asset_id: '8031964'
+  photographer: Curtis Adams
+  source_page_url: https://www.pexels.com/photo/8031964/
+  query: ceiling fan blades white ceiling
+  alt: A spacious nursery room featuring a crib
+  orientation: landscape
+  visual_qa_status: REJECTED
+  status: rejected
+  reject_reason: 'subject mismatch: keyword search returns rooms rather than the product;
+    needs a client product photo'
+request_summary:
+  requests_planned: 6
+  assets_applied: 4
+  assets_rejected: 1
+  slots_filled: 31
+  note: requests describe media slots; selections list the specific assets chosen
+    for them

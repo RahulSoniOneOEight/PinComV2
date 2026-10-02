@@ -5,8 +5,8 @@ taxonomy_ref: design-contract/design-element-inventory.yaml
 evaluated_on: '2026-10-02'
 summary:
   total: 99
-  done: 74
-  partial: 12
+  done: 75
+  partial: 11
   missing: 13
 elements:
 - id: F1
@@ -266,9 +266,11 @@ elements:
   note: 'Credit dashboard built: available-credit hero with utilisation bar, three
     KPI tiles and Dashboard/Invoices/Pay/Limit tabs.'
 - id: T10
-  status: partial
-  evidence: experience/design/
-  note: 1 of 3 steps built
+  status: done
+  evidence: experience/design/apnakart-app.fig
+  note: Seller onboarding screen now covers registration, KYC submission, document
+    verification, correction recovery and approval progress in one verified operational
+    flow; exported as seller-onboarding.png.
 - id: T11
   status: partial
   evidence: experience/design/
@@ -445,7 +447,8 @@ elements:
 - id: G4
   status: done
   evidence: experience/design/design-ir.yaml
-  note: design-ir.yaml links 2 journeys / 3 screen nodes to component and state refs.
+  note: design-ir.yaml links all 13 governed journeys / 51 journey nodes to registry
+    component refs and default, loading, empty, error and success states.
 - id: G5
   status: done
   evidence: experience/design/visual-baselines.yaml

@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-app.fig
-revision_ref: sha256:2f3072df6e031587c11cf79cf3460b754be0fa68f0e5a357f931bae1c3a38b53
+revision_ref: sha256:7f75e567386c13fc606579585b542234fb07daaf03f6e52501e44447b0af07d1
 components:
 - action.button
 - commerce.product-card
@@ -40,6 +40,12 @@ journey_screens:
 - quote-to-order
 - repeat-order
 - credit-order
+- seller-onboarding
+- seller-catalogue
+- marketplace-order
+- seller-fulfilment
+- seller-return
+- seller-settlement
 matched_frames:
   browse-to-buy: browse-to-buy
   search-to-buy: search-to-buy
@@ -48,6 +54,12 @@ matched_frames:
   quote-to-order: quote-to-order
   repeat-order: repeat-order
   credit-order: credit-order
+  seller-onboarding: "S13 \xC2\xB7 Seller onboarding"
+  seller-catalogue: "S14 \xC2\xB7 Seller catalogue"
+  marketplace-order: "S18 \xC2\xB7 Marketplace order"
+  seller-fulfilment: "S15 \xC2\xB7 Seller fulfilment"
+  seller-return: "S16 \xC2\xB7 Seller return"
+  seller-settlement: "S17 \xC2\xB7 Seller settlement"
 frames:
 - Icon / ph:house
 - Icon / ph:squares-four
@@ -768,19 +780,277 @@ frames:
 - credit-order_dot4
 - shWithAction
 - shPlain
+- "S13 \xC2\xB7 Seller onboarding"
+- StatusBar
+- navigation.app-bar
+- Frame
+- Help
+- Content
+- Progress
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- BusinessCard
+- Frame
+- Frame
+- Frame
+- DocumentReview
+- Frame
+- GSTCertificate
+- Frame
+- Frame
+- BankProof
+- Frame
+- Frame
+- PANReview
+- Frame
+- Frame
+- Frame
+- OptionalEmpty
+- ReviewAction
+- SellerBottomNav
+- Frame
+- Frame
+- Frame
+- Frame
+- "S14 \xC2\xB7 Seller catalogue"
+- StatusBar
+- navigation.app-bar
+- Frame
+- AddProduct
+- Content
+- Filters
+- Frame
+- Frame
+- Segments
+- Frame
+- Frame
+- Frame
+- BulkBar
+- ProductList
+- ProductRow1
+- Frame
+- Frame
+- Frame
+- Frame
+- ProductRow2
+- Frame
+- Frame
+- Frame
+- Frame
+- ProductRow3
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- SkeletonLoading
+- Frame
+- Frame
+- Frame
+- Frame
+- PublishOffer
+- SellerBottomNav
+- Frame
+- Frame
+- Frame
+- Frame
+- "S15 \xC2\xB7 Seller fulfilment"
+- StatusBar
+- navigation.app-bar
+- Frame
+- Frame
+- Content
+- ShiftSummary
+- Frame
+- Frame
+- Frame
+- Segments
+- Frame
+- Frame
+- Frame
+- commerce.order-card
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- PickProgress
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- PackedOrder
+- Frame
+- Frame
+- Frame
+- SyncError
+- Frame
+- EmptyLater
+- SellerBottomNav
+- Frame
+- Frame
+- Frame
+- Frame
+- "S16 \xC2\xB7 Seller return"
+- StatusBar
+- navigation.app-bar
+- Frame
+- Frame
+- Content
+- ReturnHeader
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Item
+- Frame
+- Frame
+- ConditionChoices
+- Frame
+- Frame
+- Frame
+- Evidence
+- Frame
+- Frame
+- Adjustment
+- Frame
+- Frame
+- ValidationError
+- Actions
+- Frame
+- Frame
+- SellerBottomNav
+- Frame
+- Frame
+- Frame
+- Frame
+- "S17 \xC2\xB7 Seller settlement"
+- StatusBar
+- navigation.app-bar
+- Frame
+- Frame
+- Content
+- PeriodFilter
+- Frame
+- Frame
+- SettlementHeader
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Calculation
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Exception
+- Frame
+- Frame
+- Frame
+- Accounting
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Actions
+- Frame
+- Frame
+- AdminBottomNav
+- Frame
+- Frame
+- Frame
+- Frame
+- "S18 \xC2\xB7 Marketplace order"
+- StatusBar
+- navigation.app-bar
+- Frame
+- Frame
+- Content
+- QueueFilter
+- Frame
+- Frame
+- OrderHeader
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Allocation1
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Allocation2
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- AutoAllocation
+- Frame
+- ReleaseSummary
+- Frame
+- Frame
+- Actions
+- Frame
+- Frame
+- AdminBottomNav
+- Frame
+- Frame
+- Frame
+- Frame
 info:
   pages: 3
-  totalNodes: 1421
+  totalNodes: 1901
   types:
-    FRAME: 719
+    FRAME: 977
     VECTOR: 104
-    TEXT: 567
+    TEXT: 789
     COMPONENT: 31
   fonts:
   - Hind
   - Inter
   pageCounts:
-    "ApnaKart \xC2\xB7 Design": 1421
+    "ApnaKart \xC2\xB7 Design": 1901
     "00 \xC2\xB7 Foundations": 0
     "01 \xC2\xB7 Screens \xC2\xB7 B2C": 0
 source: openpencil-cli

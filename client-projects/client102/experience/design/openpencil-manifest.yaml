@@ -1,9 +1,9 @@
 client_id: client102
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-app.fig
-revision_ref: sha256:2f3072df6e031587c11cf79cf3460b754be0fa68f0e5a357f931bae1c3a38b53
+revision_ref: sha256:7f75e567386c13fc606579585b542234fb07daaf03f6e52501e44447b0af07d1
 source: openpencil-cli
 input_hashes:
-  design_ir: sha256:bc5850523979ed14a4fe41cee30013060132cae5ed8acd26ed0da59f8402a782
+  design_ir: sha256:0297e4556226d37a8ff19e67b4d972a9e0e439ba023efe23d985145f1e24b5c7
   components: sha256:551ed77efe61d567a8477d971abea2f11976e47190fc104f4f40ee98dd91e0ea
   theme: sha256:dbf5d1b51f56a23fad1c6d83112f96c0831dabb9ee1a686d74def0897eee3fd4
   journeys: sha256:e1bd3899cbf48b2aa0d2678ffd1cdca8606edcb020211153669ea8f3908f3394
@@ -24,6 +24,12 @@ required_journeys:
 - quote-to-order
 - repeat-order
 - credit-order
+- seller-onboarding
+- seller-catalogue
+- marketplace-order
+- seller-fulfilment
+- seller-return
+- seller-settlement
 required_components:
 - action.button
 - commerce.product-card
@@ -41,6 +47,12 @@ required_components:
 - control.segmented
 - input.text-field
 - feedback.status-pill
+- feedback.empty-state
+- feedback.error-state
+- feedback.toast
+- feedback.loading-overlay
+- feedback.skeleton-row
+- commerce.order-card
 - layout.screen-shell
 requirements:
   components_editable: true

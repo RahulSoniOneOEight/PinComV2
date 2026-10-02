@@ -183,6 +183,194 @@ journeys:
     surface: b2b
     component_refs: *id005
     state_refs: *id002
+- id: seller-onboarding
+  nodes:
+  - id: seller-onboarding.1
+    surface: seller-portal
+    component_refs:
+    - input.text-field
+    - action.button
+    - feedback.status-pill
+    - navigation.app-bar
+    state_refs: *id002
+  - id: seller-onboarding.2
+    surface: seller-portal
+    component_refs:
+    - input.text-field
+    - action.button
+    - feedback.status-pill
+    - feedback.error-state
+    state_refs: *id002
+  - id: seller-onboarding.3
+    surface: seller-portal
+    component_refs:
+    - feedback.status-pill
+    - feedback.error-state
+    - feedback.skeleton-row
+    - action.button
+    state_refs: *id002
+  - id: seller-onboarding.4
+    surface: seller-portal
+    component_refs:
+    - feedback.status-pill
+    - feedback.empty-state
+    - action.button
+    - navigation.bottom-nav-item
+    state_refs: *id002
+- id: seller-catalogue
+  nodes:
+  - id: seller-catalogue.1
+    surface: seller-portal
+    component_refs:
+    - input.text-field
+    - action.button
+    - commerce.product-card
+    - navigation.app-bar
+    state_refs: *id002
+  - id: seller-catalogue.2
+    surface: seller-portal
+    component_refs:
+    - commerce.price-block
+    - input.text-field
+    - action.button
+    - feedback.error-state
+    state_refs: *id002
+  - id: seller-catalogue.3
+    surface: seller-portal
+    component_refs:
+    - commerce.stock-badge
+    - feedback.status-pill
+    - feedback.skeleton-row
+    - action.button
+    state_refs: *id002
+  - id: seller-catalogue.4
+    surface: seller-portal
+    component_refs:
+    - commerce.product-card
+    - feedback.status-pill
+    - feedback.empty-state
+    - action.button
+    state_refs: *id002
+- id: marketplace-order
+  nodes:
+  - id: marketplace-order.1
+    surface: commerce-admin
+    component_refs:
+    - commerce.order-card
+    - input.text-field
+    - feedback.status-pill
+    - navigation.app-bar
+    state_refs: *id002
+  - id: marketplace-order.2
+    surface: commerce-admin
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - feedback.loading-overlay
+    - feedback.error-state
+    state_refs: *id002
+  - id: marketplace-order.3
+    surface: commerce-admin
+    component_refs:
+    - commerce.order-card
+    - action.button
+    - feedback.empty-state
+    - navigation.bottom-nav-item
+    state_refs: *id002
+- id: seller-fulfilment
+  nodes:
+  - id: seller-fulfilment.1
+    surface: seller-portal
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - action.button
+    - navigation.app-bar
+    state_refs: *id002
+  - id: seller-fulfilment.2
+    surface: seller-portal
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - feedback.skeleton-row
+    - action.button
+    state_refs: *id002
+  - id: seller-fulfilment.3
+    surface: seller-portal
+    component_refs:
+    - commerce.order-card
+    - feedback.error-state
+    - feedback.toast
+    - action.button
+    state_refs: *id002
+  - id: seller-fulfilment.4
+    surface: seller-portal
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - feedback.empty-state
+    - navigation.bottom-nav-item
+    state_refs: *id002
+- id: seller-return
+  nodes:
+  - id: seller-return.1
+    surface: seller-portal
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - navigation.app-bar
+    - action.button
+    state_refs: *id002
+  - id: seller-return.2
+    surface: seller-portal
+    component_refs:
+    - commerce.order-card
+    - control.segmented
+    - input.text-field
+    - feedback.error-state
+    state_refs: *id002
+  - id: seller-return.3
+    surface: seller-portal
+    component_refs:
+    - commerce.price-block
+    - feedback.status-pill
+    - feedback.empty-state
+    - action.button
+    state_refs: *id002
+- id: seller-settlement
+  nodes:
+  - id: seller-settlement.1
+    surface: erp
+    component_refs:
+    - commerce.order-card
+    - input.text-field
+    - feedback.status-pill
+    - navigation.app-bar
+    state_refs: *id002
+  - id: seller-settlement.2
+    surface: erp
+    component_refs:
+    - commerce.price-block
+    - commerce.order-card
+    - feedback.error-state
+    - feedback.skeleton-row
+    state_refs: *id002
+  - id: seller-settlement.3
+    surface: erp
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - feedback.toast
+    - action.button
+    state_refs: *id002
+  - id: seller-settlement.4
+    surface: erp
+    component_refs:
+    - commerce.order-card
+    - feedback.status-pill
+    - feedback.empty-state
+    - navigation.bottom-nav-item
+    state_refs: *id002
 components:
 - action.button
 - commerce.product-card
@@ -200,5 +388,11 @@ components:
 - control.segmented
 - input.text-field
 - feedback.status-pill
+- feedback.empty-state
+- feedback.error-state
+- feedback.toast
+- feedback.loading-overlay
+- feedback.skeleton-row
+- commerce.order-card
 - layout.screen-shell
 status: review-ready

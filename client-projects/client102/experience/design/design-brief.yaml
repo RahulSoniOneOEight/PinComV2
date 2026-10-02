@@ -154,6 +154,13 @@ screen_map:
   b2c.refund-reasons: S25 · Refund Reasons
   b2c.orders-returned: S26 · Orders Returned
   b2b.home.long: S8L · B2B Home (long)
+  b2b.home.rev2: S8B · B2B Home (rev2)
+  b2b.procurement-lists.rev2: W-B2B-01 · Procurement Lists (rev2)
+  b2b.procurement-list-editor.rev2: W-B2B-01A · Create / Add SKU to List (rev2)
+  b2b.trade-offers.rev2: W-B2B-02 · Trade Offers & Deals (rev2)
+  b2b.products-listing.rev2: W-B2B-03 · Products Listing (rev2)
+  b2b.product-detail.rev2: W-B2B-04 · Product Detail (rev2)
+  b2b.common-cart-journey.rev2: W-B2B-05 · Common Cart Journey References (rev2)
   b2b.quotation-cart: S27 · Quotation Cart
   b2b.quotes-received: S28 · Quotes Received
   b2b.quote-compare: S29 · Quote Compare

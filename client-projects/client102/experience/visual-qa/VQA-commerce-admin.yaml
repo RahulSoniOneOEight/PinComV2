@@ -1,9 +1,9 @@
-qa_id: VQA-DESIGN-a8f219e6-commerce-admin
+qa_id: VQA-DESIGN-660eb4b1-commerce-admin
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: commerce-admin
-build_identity: DESIGN-a8f219e6
-capture_id: DESIGN-a8f219e6
+build_identity: DESIGN-660eb4b1
+capture_id: DESIGN-660eb4b1
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:

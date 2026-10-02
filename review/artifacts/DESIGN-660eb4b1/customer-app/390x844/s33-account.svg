@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(334, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G   100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="52" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 10)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Account</text>
+      </g>
+      <g transform="translate(99, -24)"/>
+      <g transform="translate(354, 14)">
+        <path d="M12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15ZM12 3L13.5 5L16 4.5L16.5 7L18.5 8.5L16.5 10L16 12.5L13.5 12L12 21L10.5 19L8 19.5L7.5 17L5.5 15.5L7.5 14L8 11.5L10.5 12L12 3Z" fill="none" stroke="#384959" stroke-width="1.6"/>
+      </g>
+    </g>
+    <g transform="translate(0, 86)">
+      <g transform="translate(16, 16)" filter="url(#fx0)">
+        <rect width="358" height="80" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <rect width="56" height="56" rx="999" ry="999" fill="#BDDCFC"/>
+          <g transform="translate(16.5, 12)">
+            <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">RS</text>
+          </g>
+        </g>
+        <g transform="translate(80, 15.5)">
+          <g>
+            <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Rahul Sharma</text>
+          </g>
+          <g transform="translate(0, 30)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">+91 98765 43210</text>
+          </g>
+        </g>
+        <g transform="translate(191, 30.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Edit</text>
+        </g>
+      </g>
+      <g transform="translate(16, 108)">
+        <g>
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M5 2.5L15 2.5L15 17.5L12.5 15.83L10 17.5L7.5 15.83L5 17.5L5 2.5Z" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">My Orders</text>
+          </g>
+          <g transform="translate(119, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+        <g transform="translate(0, 56)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M10 16.67C10 16.67 3.75 12.67 3.75 8.42C3.48 6.83 4.31 5.27 5.77 4.59C7.22 3.9 8.95 4.28 10 5.5C11.05 4.28 12.78 3.9 14.23 4.59C15.69 5.27 16.52 6.83 16.25 8.42C16.25 12.67 10 16.67 10 16.67Z" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">Wishlist</text>
+          </g>
+          <g transform="translate(104, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+        <g transform="translate(0, 112)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M10 17.5C10 17.5 4.17 12.17 4.17 8.33C4.17 5.11 6.78 2.5 10 2.5C13.22 2.5 15.83 5.11 15.83 8.33C15.83 12.16 10 17.5 10 17.5Z" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">Saved Addresses</text>
+          </g>
+          <g transform="translate(158, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+        <g transform="translate(0, 168)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M2.5 5L17.5 5L17.5 15L2.5 15L2.5 5Z" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">Payment Methods</text>
+          </g>
+          <g transform="translate(166, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+        <g transform="translate(0, 224)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M5 2.5L12.5 2.5L15 5L15 17.5L5 17.5L5 2.5Z" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">GST &amp; Invoices</text>
+          </g>
+          <g transform="translate(146, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+        <g transform="translate(0, 280)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M10 15L10 15.08M7.5 7.5C7.49 6.22 8.43 5.14 9.7 4.99C10.97 4.84 12.14 5.66 12.43 6.9C12.72 8.15 12.03 9.41 10.83 9.83C10.16 10.16 10 10.58 10 11.25" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">Help &amp; Support</text>
+          </g>
+          <g transform="translate(149, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+        <g transform="translate(0, 336)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 14)">
+            <path d="M3.33 5.83L16.67 5.83M5.83 10L16.67 10M7.5 14.17L16.67 14.17" fill="none" stroke="#384959" stroke-width="1.67"/>
+          </g>
+          <g transform="translate(44, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">Settings</text>
+          </g>
+          <g transform="translate(106, -26)"/>
+          <g transform="translate(330, 16)">
+            <path d="M6 4L10 8L6 12" fill="none" stroke="#55708A" stroke-width="1.33"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(8, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M4 11L12 4L20 11M6 10L6 20L18 20L18 10" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Home</text>
+        </g>
+      </g>
+      <g transform="translate(84.4, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M4 4L10 4L10 10L4 10L4 4ZM14 4L20 4L20 10L14 10L14 4ZM4 14L10 14L10 20L4 20L4 14ZM14 14L20 14L20 20L14 20L14 14Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Browse</text>
+        </g>
+      </g>
+      <g transform="translate(160.8, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M6 3L18 3L18 21L15 19L12 21L9 19L6 21L6 3Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(237.2, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M3 4L5 4L7.2 15L17.5 15L19.3 7L6 7M9 20C9 20.55 9.45 21 10 21C10.55 21 11 20.55 11 20M16 20C16 20.55 16.45 21 17 21C17.55 21 18 20.55 18 20" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(1.5, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Cart</text>
+        </g>
+      </g>
+      <g transform="translate(313.6, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="none" stroke="#384959" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

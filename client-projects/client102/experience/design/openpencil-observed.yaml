@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-app.fig
-revision_ref: sha256:15ff3c1d9d5a48ee6aa0d4758dd9ab0281bfafd4f8368fb7b34ae897667a608a
+revision_ref: sha256:660eb4b1fc59ed82a8bd908d2b6be966230523425dd9bdd3315bbb96a586f58d
 components:
 - action.button
 - commerce.product-card

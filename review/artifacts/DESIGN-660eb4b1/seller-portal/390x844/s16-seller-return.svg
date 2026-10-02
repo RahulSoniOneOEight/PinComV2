@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(16, 5)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(329, 5)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 28)">
+      <rect width="390" height="68" fill="#384959"/>
+      <g transform="translate(16, 7)">
+        <g>
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#BDDCFC">RETURNS DESK</text>
+        </g>
+        <g transform="translate(0, 22)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#FFFFFF">Inspect return</text>
+        </g>
+      </g>
+      <g transform="translate(330, 12)">
+        <rect width="44" height="44" rx="8" ry="8" fill="#273746"/>
+        <g transform="translate(15.5, 9)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">⋮</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 96)">
+      <g transform="translate(16, 16)" filter="url(#fx0)">
+        <rect width="358" height="98" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g>
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">RTN-20491</text>
+            </g>
+            <g transform="translate(0, 22)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Order AK-881742 · Received today</text>
+            </g>
+          </g>
+          <g transform="translate(257, 0)">
+            <rect width="77" height="26" rx="999" ry="999" fill="#E7F1FF"/>
+            <g transform="translate(8, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#175CD3">INSPECTION</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 60)">
+          <g>
+            <rect width="108.67" height="4" rx="4" ry="4" fill="#384959"/>
+            <g transform="translate(0, 8)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Received</text>
+            </g>
+          </g>
+          <g transform="translate(112.67, 0)">
+            <rect width="108.67" height="4" rx="4" ry="4" fill="#88BDF2"/>
+            <g transform="translate(0, 8)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#175CD3">Inspect</text>
+            </g>
+          </g>
+          <g transform="translate(225.33, 0)">
+            <rect width="108.67" height="4" rx="4" ry="4" fill="#DFE7F0"/>
+            <g transform="translate(0, 8)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Refund</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 126)">
+        <rect width="358" height="76" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <rect width="52" height="52" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(13, 15)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">PVC</text>
+          </g>
+        </g>
+        <g transform="translate(76, 8.5)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">PVC Pipe 2 inch</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Qty 2 · Claimed: damaged</text>
+          </g>
+          <g transform="translate(0, 40)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Paid ₹1,280</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 214)">
+        <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#456079">INSPECTION RESULT</text>
+      </g>
+      <g transform="translate(16, 245)">
+        <g>
+          <rect width="114" height="48" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(31, 14.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#FFFFFF">Damaged</text>
+          </g>
+        </g>
+        <g transform="translate(122, 0)">
+          <rect width="114" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(29, 14.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Resellable</text>
+          </g>
+        </g>
+        <g transform="translate(244, 0)">
+          <rect width="114" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(30.5, 14.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Mismatch</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 305)">
+        <rect width="358" height="64" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <rect width="40" height="40" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(15, 7)">
+            <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">+</text>
+          </g>
+        </g>
+        <g transform="translate(64, 12)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Add damage photos</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Required · 0 of 3 attached</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 381)">
+        <rect width="358" height="102" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Refund adjustment</text>
+          </g>
+          <g transform="translate(122, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#B42318">− ₹180</text>
+          </g>
+        </g>
+        <g transform="translate(12, 42)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Customer refund</text>
+          </g>
+          <g transform="translate(119, 0)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹1,100</text>
+          </g>
+        </g>
+        <g transform="translate(12, 72)">
+          <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Deduction requires evidence and customer notification.</text>
+        </g>
+      </g>
+      <g transform="translate(16, 495)">
+        <rect width="358" height="52" rx="8" ry="8" fill="#FDECEB"/>
+        <g transform="translate(12, 13)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#B42318">!</text>
+        </g>
+        <g transform="translate(25, 16.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#B42318">Attach at least one photo to continue</text>
+        </g>
+      </g>
+      <g transform="translate(16, 559)">
+        <g>
+          <rect width="175" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(55, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Save draft</text>
+          </g>
+        </g>
+        <g transform="translate(183, 0)">
+          <rect width="175" height="48" rx="8" ry="8" fill="#DFE7F0"/>
+          <g transform="translate(37, 13)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#55708A">Approve refund</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(8, 8)">
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Dashboard</text>
+        </g>
+      </g>
+      <g transform="translate(103.5, 8)">
+        <rect width="87.5" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(199, 8)">
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Catalogue</text>
+        </g>
+      </g>
+      <g transform="translate(294.5, 8)">
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

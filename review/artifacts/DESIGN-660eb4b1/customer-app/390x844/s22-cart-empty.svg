@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(334, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G   100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="52" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 14)">
+        <path d="M15 18L9 12L15 6" fill="none" stroke="#384959" stroke-width="2"/>
+      </g>
+      <g transform="translate(48, 13)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Cart</text>
+      </g>
+    </g>
+    <g transform="translate(0, 86)">
+      <g transform="translate(135, 212)">
+        <rect width="120" height="120" rx="999" ry="999" fill="#EAF3FE"/>
+        <g transform="translate(36, 36)">
+          <path d="M6 8L10 8L14.4 30L35 30L38.6 14L12 14M18 40C18 41.1 18.9 42 20 42C21.1 42 22 41.1 22 40M32 40C32 41.1 32.9 42 34 42C35.1 42 36 41.1 36 40" fill="none" stroke="#55708A" stroke-width="3.6"/>
+        </g>
+      </g>
+      <g transform="translate(112, 348)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Your cart is empty</text>
+      </g>
+      <g transform="translate(64, 396)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Add products from any seller to get started.</text>
+      </g>
+      <g transform="translate(117, 434)">
+        <rect width="156" height="48" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(24, 11)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">Start Shopping</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(8, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M4 11L12 4L20 11M6 10L6 20L18 20L18 10" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Home</text>
+        </g>
+      </g>
+      <g transform="translate(84.4, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M4 4L10 4L10 10L4 10L4 4ZM14 4L20 4L20 10L14 10L14 4ZM4 14L10 14L10 20L4 20L4 14ZM14 14L20 14L20 20L14 20L14 14Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Browse</text>
+        </g>
+      </g>
+      <g transform="translate(160.8, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M6 3L18 3L18 21L15 19L12 21L9 19L6 21L6 3Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(237.2, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M3 4L5 4L7.2 15L17.5 15L19.3 7L6 7M9 20C9 20.55 9.45 21 10 21C10.55 21 11 20.55 11 20M16 20C16 20.55 16.45 21 17 21C17.55 21 18 20.55 18 20" fill="none" stroke="#384959" stroke-width="2"/>
+        </g>
+        <g transform="translate(1.5, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Cart</text>
+        </g>
+      </g>
+      <g transform="translate(313.6, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

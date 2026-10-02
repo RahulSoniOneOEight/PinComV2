@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+    <filter id="fx1">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+    <filter id="fx2">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(334, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G   100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="52" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 14)">
+        <path d="M15 18L9 12L15 6" fill="none" stroke="#384959" stroke-width="2"/>
+      </g>
+      <g transform="translate(48, 13)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Returns &amp; Refunds</text>
+      </g>
+    </g>
+    <g transform="translate(0, 86)">
+      <g transform="translate(16, 16)">
+        <g>
+          <rect width="114" height="40" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(49.5, 10.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#FFFFFF">All</text>
+          </g>
+        </g>
+        <g transform="translate(122, 0)">
+          <rect width="114" height="40" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(31, 10.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Refunded</text>
+          </g>
+        </g>
+        <g transform="translate(244, 0)">
+          <rect width="114" height="40" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(29, 10.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Reviewing</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 68)" filter="url(#fx0)">
+        <rect width="358" height="154" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g transform="translate(0, 2)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Order #BK-10245</text>
+          </g>
+          <g transform="translate(277, 0)">
+            <rect width="57" height="26" rx="4" ry="4" fill="#E5F5ED"/>
+            <g transform="translate(4, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#067647">Refunded</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 50)">
+          <rect width="48" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(60, 3.5)">
+            <g>
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Ceramic Floor Tiles 600x600</text>
+            </g>
+            <g transform="translate(0, 23)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Qty 1 · ₹1,150 · Delivered 28 Sep</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 110)">
+          <rect width="334" height="1" fill="#DCE6F0"/>
+        </g>
+        <g transform="translate(12, 123)">
+          <g transform="translate(0, 0.5)">
+            <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Refund ₹1,150 to UPI · 30 Sep</text>
+          </g>
+          <g transform="translate(141, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">View refund</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 234)" filter="url(#fx1)">
+        <rect width="358" height="154" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g transform="translate(0, 2)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Order #BK-10230</text>
+          </g>
+          <g transform="translate(273, 0)">
+            <rect width="61" height="26" rx="4" ry="4" fill="#E7F1FF"/>
+            <g transform="translate(4, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#175CD3">Reviewing</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 50)">
+          <rect width="48" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(60, 3.5)">
+            <g>
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Bib Cock 15mm · Chrome</text>
+            </g>
+            <g transform="translate(0, 23)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Qty 2 · ₹970 · Delivered 24 Sep</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 110)">
+          <rect width="334" height="1" fill="#DCE6F0"/>
+        </g>
+        <g transform="translate(12, 123)">
+          <g transform="translate(0, 0.5)">
+            <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Quality check in progress</text>
+          </g>
+          <g transform="translate(130, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Track request</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 400)" filter="url(#fx2)">
+        <rect width="358" height="154" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g transform="translate(0, 2)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Order #BK-10218</text>
+          </g>
+          <g transform="translate(249, 0)">
+            <rect width="85" height="26" rx="4" ry="4" fill="#FFF1D8"/>
+            <g transform="translate(4, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#9A610A">Request placed</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 50)">
+          <rect width="48" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(60, 3.5)">
+            <g>
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Ceiling Fan 1200mm</text>
+            </g>
+            <g transform="translate(0, 23)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Qty 1 · ₹2,499 · Delivered 20 Sep</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 110)">
+          <rect width="334" height="1" fill="#DCE6F0"/>
+        </g>
+        <g transform="translate(12, 123)">
+          <g transform="translate(0, 0.5)">
+            <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Pickup scheduled 7 Oct</text>
+          </g>
+          <g transform="translate(129, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Cancel request</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(8, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M4 11L12 4L20 11M6 10L6 20L18 20L18 10" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Home</text>
+        </g>
+      </g>
+      <g transform="translate(84.4, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M4 4L10 4L10 10L4 10L4 4ZM14 4L20 4L20 10L14 10L14 4ZM4 14L10 14L10 20L4 20L4 14ZM14 14L20 14L20 20L14 20L14 14Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Browse</text>
+        </g>
+      </g>
+      <g transform="translate(160.8, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M6 3L18 3L18 21L15 19L12 21L9 19L6 21L6 3Z" fill="none" stroke="#384959" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(237.2, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M3 4L5 4L7.2 15L17.5 15L19.3 7L6 7M9 20C9 20.55 9.45 21 10 21C10.55 21 11 20.55 11 20M16 20C16 20.55 16.45 21 17 21C17.55 21 18 20.55 18 20" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(1.5, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Cart</text>
+        </g>
+      </g>
+      <g transform="translate(313.6, 8)">
+        <g transform="translate(22.2, 1)">
+          <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="none" stroke="#55708A" stroke-width="2"/>
+        </g>
+        <g transform="translate(0, 29)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

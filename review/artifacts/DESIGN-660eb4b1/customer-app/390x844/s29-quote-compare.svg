@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(334, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G   100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="52" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 14)">
+        <path d="M15 18L9 12L15 6" fill="none" stroke="#384959" stroke-width="2"/>
+      </g>
+      <g transform="translate(48, 13)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Compare Quotes</text>
+      </g>
+      <g transform="translate(181, -24)"/>
+      <g transform="translate(315, 13)">
+        <rect width="63" height="26" rx="4" ry="4" fill="#EAF3FE"/>
+        <g transform="translate(4, 4)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">RFQ #4410</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 86)">
+      <g transform="translate(16, 16)" filter="url(#fx0)">
+        <rect width="358" height="229" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g transform="translate(0, 15.5)">
+            <g>
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#456079">Criteria</text>
+            </g>
+          </g>
+          <g transform="translate(110, 0)">
+            <g transform="translate(14.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">TileHub</text>
+            </g>
+            <g transform="translate(21, 23)">
+              <rect width="30" height="26" rx="4" ry="4" fill="#E5F5ED"/>
+              <g transform="translate(4, 4)">
+                <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#067647">Best</text>
+              </g>
+            </g>
+          </g>
+          <g transform="translate(182, 15)">
+            <g transform="translate(11.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Ceramica</text>
+            </g>
+          </g>
+          <g transform="translate(254, 15)">
+            <g transform="translate(9.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">BuildMart</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 69)">
+          <rect width="334" height="1" fill="#DCE6F0"/>
+        </g>
+        <g transform="translate(12, 78)">
+          <g transform="translate(0, 0.5)">
+            <g>
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Unit price</text>
+            </g>
+          </g>
+          <g transform="translate(110, 0)">
+            <g transform="translate(23, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹985</text>
+            </g>
+          </g>
+          <g transform="translate(182, 0)">
+            <g transform="translate(20.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">₹1,010</text>
+            </g>
+          </g>
+          <g transform="translate(254, 0)">
+            <g transform="translate(20, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">₹1,047</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 105)">
+          <g transform="translate(0, 0.5)">
+            <g>
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">GST 18%</text>
+            </g>
+          </g>
+          <g transform="translate(110, 0)">
+            <g transform="translate(12, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Included</text>
+            </g>
+          </g>
+          <g transform="translate(182, 0)">
+            <g transform="translate(23, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">Extra</text>
+            </g>
+          </g>
+          <g transform="translate(254, 0)">
+            <g transform="translate(13.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">Included</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 132)">
+          <g transform="translate(0, 0.5)">
+            <g>
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Delivery</text>
+            </g>
+          </g>
+          <g transform="translate(110, 0)">
+            <g transform="translate(24, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Free</text>
+            </g>
+          </g>
+          <g transform="translate(182, 0)">
+            <g transform="translate(24.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">Free</text>
+            </g>
+          </g>
+          <g transform="translate(254, 0)">
+            <g transform="translate(18.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">₹2,000</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 159)">
+          <g transform="translate(0, 0.5)">
+            <g>
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Validity</text>
+            </g>
+          </g>
+          <g transform="translate(110, 0)">
+            <g transform="translate(19, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">7 days</text>
+            </g>
+          </g>
+          <g transform="translate(182, 0)">
+            <g transform="translate(19.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">5 days</text>
+            </g>
+          </g>
+          <g transform="translate(254, 0)">
+            <g transform="translate(16, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">10 days</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 186)">
+          <rect width="334" height="1" fill="#DCE6F0"/>
+        </g>
+        <g transform="translate(12, 195)">
+          <g transform="translate(0, 1.5)">
+            <g>
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Total</text>
+            </g>
+          </g>
+          <g transform="translate(110, 0)">
+            <g transform="translate(6.5, 0)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹1,38,500</text>
+            </g>
+          </g>
+          <g transform="translate(182, 1.5)">
+            <g transform="translate(12, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">₹1,42,000</text>
+            </g>
+          </g>
+          <g transform="translate(254, 1.5)">
+            <g transform="translate(12.5, 0)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">₹1,47,200</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 261)">
+        <rect width="358" height="77" rx="12" ry="12" fill="#E5F5ED"/>
+        <g transform="translate(16, 16)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#067647">TileHub is best on total</text>
+          </g>
+          <g transform="translate(0, 26)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Saves ₹8,700 vs highest quote · GST invoice included</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 354)">
+        <rect width="358" height="60" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(12, 12)">
+          <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Sellers cannot see each other's prices. You can negotiate before accepting.</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 738)">
+      <rect width="390" height="106" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(16, 16)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(0, 11)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">Accept TileHub · ₹1,38,500</text>
+        </g>
+      </g>
+      <g transform="translate(16, 72)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">Accepting converts this quote into a purchase order.</text>
+      </g>
+    </g>
+  </g>
+</svg>

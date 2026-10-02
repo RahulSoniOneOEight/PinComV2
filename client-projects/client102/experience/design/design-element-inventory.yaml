@@ -5,9 +5,9 @@ taxonomy_ref: design-contract/design-element-inventory.yaml
 evaluated_on: '2026-10-02'
 summary:
   total: 99
-  done: 62
+  done: 65
   partial: 15
-  missing: 22
+  missing: 19
 elements:
 - id: F1
   status: done
@@ -43,9 +43,10 @@ elements:
   evidence: experience/design/
   note: 0/768/1024/1440
 - id: F8
-  status: missing
-  evidence: null
-  note: undefined
+  status: done
+  evidence: experience/design/master-design-system.yaml
+  note: 'Layout grid defined: 4pt unit, 4/8/12/12 columns, margins 16/24/32/48, gutters
+    12/16/20/24, content max-width 1440.'
 - id: F9
   status: done
   evidence: experience/design/master-design-system.yaml
@@ -147,9 +148,11 @@ elements:
   note: commerce.product-card specified for retail + b2b-trade with 6 states; master
     created.
 - id: C2
-  status: missing
-  evidence: null
-  note: order history not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: commerce.order-card specified (order/b2b-order/invoice/shipment variants,
+    5 states) and mastered; rendered in context on the Orders screen with status,
+    total, Track and Reorder.
 - id: C3
   status: missing
   evidence: null
@@ -408,9 +411,11 @@ elements:
   note: state.focus-visible component built (border.focus ring on button and input)
     with R-focus-visible, R-focus-order and R-focus-trap rules.
 - id: A5
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/accessibility.yaml
+  note: 'Labelling, alt-text and semantics defined: 9 icon-only controls mapped to
+    accessible names, alt-text policy per media class, heading map per screen, form
+    labelling and landmark rules.'
 - id: A6
   status: done
   evidence: experience/design/motion-registry.yaml

@@ -129,6 +129,28 @@ tokens:
     disabled: 0.4
     scrim: 0.45
     muted: 0.7
+  grid:
+    unit: 4
+    columns:
+      phone: 4
+      tablet: 8
+      desktop: 12
+      wide: 12
+    margin:
+      phone: 16
+      tablet: 24
+      desktop: 32
+      wide: 48
+    gutter:
+      phone: 12
+      tablet: 16
+      desktop: 20
+      wide: 24
+    content_max_width:
+      wide: 1440
+    spec_ref: experience/design/layout-spec.yaml
+    note: product grids use span-based columns; operational surfaces may use full
+      width
 breakpoints:
   phone: 0
   tablet: 768

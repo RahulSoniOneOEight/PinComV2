@@ -1,0 +1,91 @@
+client_id: client102
+standard: WCAG 2.2 AA
+policy_ref: design-intelligence/accessibility-performance-policy.yaml
+alt_text:
+  meaningful_media: describe the product or campaign subject, not the file — e.g.
+    'Chrome bib cock, 15mm, front view'
+  decorative_media: mark decorative so it is skipped; never describe ornament
+  placeholder: placeholders announce 'image not available' rather than a fake description
+  seller_supplied: never trust merchant alt text verbatim; regenerate from the catalogue
+    title
+  rule: a media slot without a declared alt-text policy blocks approval
+accessible_names:
+- element: app-bar back chevron
+  icon_only: true
+  accessible_name: Back
+  screens:
+  - Cart
+  - Checkout
+  - Search results
+- element: quick-add plus on a list row
+  icon_only: true
+  accessible_name: Add {product} to cart
+  screens:
+  - Search results
+- element: search field glyph
+  icon_only: true
+  accessible_name: Search products, brands or SKU
+  screens:
+  - B2C Home
+  - Search results
+- element: quantity stepper minus
+  icon_only: true
+  accessible_name: Decrease quantity of {product}
+  screens:
+  - Cart
+- element: quantity stepper plus
+  icon_only: true
+  accessible_name: Increase quantity of {product}
+  screens:
+  - Cart
+- element: bottom-nav item
+  icon_only: false
+  accessible_name: label text, with current state announced
+  screens:
+  - all
+- element: status badge
+  icon_only: false
+  accessible_name: status word is in the badge text, so colour is never the only signal
+  screens:
+  - Orders
+  - product cards
+- element: sheet drag handle
+  icon_only: true
+  accessible_name: Sort options sheet, swipe down or tap outside to dismiss
+  screens:
+  - bottom sheet
+- element: toast
+  icon_only: false
+  accessible_name: announced through a polite live region; auto-dismiss is pausable
+  screens:
+  - all
+headings:
+  rule: one h1-equivalent per screen; section headers are ordered and never skipped
+  map:
+    B2C Home:
+    - ApnaKart (h1)
+    - Deals for you (h2)
+    Cart:
+    - Cart (h1)
+    Checkout:
+    - Checkout (h1)
+    - DELIVER TO (h2)
+    - PAYMENT METHOD (h2)
+    Orders:
+    - My Orders (h1)
+    Search results:
+    - 248 results for 'wire' (h1)
+    Login:
+    - Welcome back (h1)
+    Onboarding:
+    - Everything you need… (h1)
+forms:
+- every field has a persistent visible label; placeholders are never the only label
+- errors are announced and described in text, not only by border colour
+- required fields are marked in text, not by an asterisk alone
+landmarks:
+- app-bar is a banner region
+- bottom nav is a navigation landmark
+- scroll region is the main landmark
+- toasts live in a status region
+status: review-ready

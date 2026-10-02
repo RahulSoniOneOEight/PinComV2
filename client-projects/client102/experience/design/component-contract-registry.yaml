@@ -794,4 +794,46 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+- id: commerce.order-card
+  semantic_role: Order or record row with status and post-order actions
+  variants:
+  - order
+  - b2b-order
+  - invoice
+  - shipment
+  states:
+  - default
+  - loading
+  - empty
+  - error
+  - action-pending
+  tokens:
+  - surface.raised
+  - border.default
+  - content.primary
+  - content.secondary
+  - feedback.info
+  - feedback.success
+  - feedback.warning
+  - action.primary
+  - action.secondary
+  implementation:
+    flutter: packages/agency_flutter_ui/OrderCard
+    web: packages/agency_web_ui/OrderCard
+  accessibility:
+  - status-conveyed-by-text-not-colour-alone
+  - min-target-44
+  - action-labels-are-explicit-track-reorder
+  - amount-announced-with-currency
+  qa:
+  - contrast-check
+  - target-size-check
+  - state-coverage
+  lifecycle:
+    state: candidate
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 status: review-ready

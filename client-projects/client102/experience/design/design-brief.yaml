@@ -187,6 +187,36 @@ screen_map:
   b2c.sign-up: S36 · Sign Up
   b2c.browse: S37 · Browse
   b2c.category-results: S38 · Category results
+  b2c.filters: S39 · Filters
+  b2b.verify-otp: S40 · Verify OTP
+  b2c.saved-addresses: S41 · Saved addresses
+  b2c.payment-methods: S42 · Payment methods
+  b2c.help: S43 · Help
+  b2c.gst-invoices: S44 · GST & invoices (B2C)
+  b2c.settings: S45 · Settings
+  b2c.request-return: S46 · Request return
+  b2c.return-status: S47 · Return status
+  b2c.refund-tracking: S48 · Refund tracking
+  b2c.wishlist-cart-confirm: S49 · Wishlist → cart confirm
+  b2c.order-detail: S50 · Order detail
+  b2b.business-checkout: S51 · Business checkout
+  b2b.order-confirmed: S52 · Order confirmed (B2B)
+  b2b.quick-order-search-results: S53 · Quick order search results
+  b2b.quick-order-centre: S54 · Quick order centre
+  b2b.procurement-list-detail: S55 · Procurement list detail
+  b2b.catalogue: S56 · Catalogue
+  b2b.accept-quote: S57 · Accept quote
+  b2b.approvals: S58 · Approvals
+  b2b.gst-invoices: S59 · GST invoices (B2B)
+  b2b.projects-sites: S60 · Projects & sites
+  b2b.project-detail: S61 · Project detail
+  b2b.material-list: S62 · Material list
+  b2b.site-selector: S63 · Site selector
+  b2b.split-tracking: S64 · Split tracking
+  b2b.buyer-seller-chat: S65 · Buyer-seller chat
+  b2b.business-account: S66 · Business account
+  b2b.team-roles: S67 · Team & roles
+  b2b.price-advantage: S68 · Price advantage
   # S20t is a 390x200 technical fragment, not a screen. Deliberately not mapped.
 journey_node_map:
   browse-to-buy.1: S3 · B2C Home

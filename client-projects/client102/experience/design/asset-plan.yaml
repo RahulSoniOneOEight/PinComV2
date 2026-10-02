@@ -1,0 +1,123 @@
+asset_plan_id: ASSET-client102
+client_id: client102
+source_order:
+- client-media
+- approved-reference
+- approved-open-source
+- pexels
+- generated-neutral-placeholder
+watermarks:
+- id: watermark.draft-not-approved
+  text: DRAFT · NOT APPROVED
+  usage: any screen rendered from a design revision that is not approved
+  placement: repeated diagonal band across the screen
+  opacity: 0.08
+  token: content.primary
+- id: watermark.sample-imagery
+  text: SAMPLE
+  usage: generated placeholders and any unlicensed stock imagery
+  placement: centred on the media slot
+  opacity: 0.12
+  token: content.primary
+- id: watermark.seller-supplied
+  text: SELLER IMAGE
+  usage: merchant-supplied product media awaiting moderation
+  placement: bottom-right corner label
+  opacity: 0.9
+  token: content.inverse
+placeholder_strategy:
+  fallback: generated-neutral-placeholder
+  rules:
+  - placeholders preserve the slot aspect ratio so layout never shifts when the real
+    asset lands
+  - every placeholder carries watermark.sample-imagery
+  - placeholder surface is surface.interactive with the media.placeholder icon
+  - nothing carrying a placeholder watermark may pass design-build QA
+crop_rules:
+  product-card-media:
+    aspect: '4:3'
+    fit: cover
+    focal: centre
+    min_resolution: 800x600
+  hero-banner:
+    aspect: '16:6'
+    fit: cover
+    focal: centre-safe-band
+    overlay_text: verify-contrast-4.5
+  category-tile:
+    aspect: '1:1'
+    fit: cover
+    focal: centre
+    min_resolution: 400x400
+  avatar-seller:
+    aspect: '1:1'
+    fit: cover
+    focal: top-third
+    min_resolution: 200x200
+  onboarding-illustration:
+    aspect: '16:9'
+    fit: contain
+    focal: centre
+    note: vector illustration, not photography
+pattern_rules:
+- id: pattern.campaign-background
+  usage: hero and campaign surfaces
+  construction: repeating geometric shapes in surface.accent, <= 0.08 opacity
+  rule: must not reduce overlay text contrast below 4.5:1
+- id: pattern.merchandising-frame
+  usage: split merchandising tile and seasonal framing
+  construction: surface.accent container with surface.raised inner cards, radius 12
+  rule: framing must not compete with the product image
+requests:
+- id: media.product-card
+  purpose: product imagery for every product card
+  provider_policy: client-media-first
+  query:
+    subject: product on neutral background
+    orientation: landscape
+    per: sku
+  crop: product-card-media
+  selected_asset: null
+  status: blocked
+  blocker: No stock photo provider configured (Pexels/Unsplash API key required in
+    OpenPencil AI chat settings)
+- id: media.hero-seasonal
+  purpose: seasonal campaign hero imagery
+  provider_policy: client-media-first
+  query:
+    subject: electrical tools and switches
+    orientation: landscape
+  crop: hero-banner
+  selected_asset: null
+  status: blocked
+  blocker: No stock photo provider configured (Pexels/Unsplash API key required in
+    OpenPencil AI chat settings)
+- id: media.category-tile
+  purpose: category rail imagery (x4)
+  provider_policy: generated-neutral-placeholder
+  query:
+    subject: category object
+    orientation: square
+    count: 4
+  crop: category-tile
+  selected_asset: null
+  status: planned
+- id: media.onboarding-illustration
+  purpose: first-run hero illustration
+  provider_policy: generated-vector-illustration
+  query:
+    subject: delivery and trade commerce
+    orientation: landscape
+  crop: onboarding-illustration
+  selected_asset: null
+  status: planned
+- id: logo.apnakart-wordmark
+  purpose: brand wordmark and app mark
+  provider_policy: client-owned
+  query:
+    kind: logo
+  selected_asset: null
+  status: planned
+  note: client-input lists brand name confirmation as an open question; ApnaKart treated
+    as the working resolution
+status: ready

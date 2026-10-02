@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Design Element Inventory",
+  "type": "object",
+  "required": ["version", "client_id", "taxonomy_ref", "elements", "status"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "client_id": { "type": "string", "minLength": 1 },
+    "project": { "type": "string" },
+    "taxonomy_ref": { "type": "string", "minLength": 1 },
+    "evaluated_on": { "type": "string" },
+    "summary": { "type": "object" },
+    "elements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z][0-9]+$" },
+          "status": { "enum": ["done", "partial", "missing", "not-applicable"] },
+          "evidence": { "type": ["string", "null"] },
+          "note": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "plan": { "type": "array", "items": { "type": "object" } },
+    "status": { "enum": ["draft", "review-ready", "approved"] }
+  },
+  "additionalProperties": true
+}

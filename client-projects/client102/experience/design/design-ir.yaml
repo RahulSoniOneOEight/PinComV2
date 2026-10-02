@@ -1,0 +1,76 @@
+client_id: client102
+surfaces:
+- customer-app
+- web-store
+- b2b
+- seller-portal
+- commerce-admin
+- erp
+- analytics
+- ops-console
+journeys:
+- id: browse-to-buy
+  nodes:
+  - id: b2c.home
+    surface: customer-app
+    component_refs:
+    - commerce.product-card
+    - commerce.price-block
+    - commerce.offer-badge
+    - commerce.stock-badge
+    - commerce.search-bar
+    - commerce.hero-banner
+    - commerce.section-header
+    - commerce.trust-row-item
+    - navigation.app-bar
+    - navigation.bottom-nav-item
+    - navigation.category-item
+    state_refs:
+    - default
+    - loading
+    - empty
+    - error
+- id: customer-onboarding
+  nodes:
+  - id: b2c.onboarding
+    surface: customer-app
+    component_refs:
+    - action.button
+    - feedback.status-pill
+    state_refs:
+    - default
+    - loading
+    - error
+  - id: b2c.login
+    surface: customer-app
+    component_refs:
+    - action.button
+    - input.text-field
+    - control.segmented
+    - feedback.status-pill
+    - navigation.app-bar
+    state_refs:
+    - default
+    - empty
+    - loading
+    - error
+    - success
+components:
+- action.button
+- commerce.product-card
+- commerce.price-block
+- commerce.offer-badge
+- commerce.stock-badge
+- commerce.b2b-trade-block
+- commerce.search-bar
+- commerce.hero-banner
+- commerce.section-header
+- commerce.trust-row-item
+- navigation.app-bar
+- navigation.bottom-nav-item
+- navigation.category-item
+- control.segmented
+- input.text-field
+- feedback.status-pill
+- layout.screen-shell
+status: review-ready

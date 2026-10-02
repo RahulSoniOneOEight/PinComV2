@@ -95,6 +95,7 @@ CONTRACTS = {
     "icon-registry": ROOT / "contracts" / "schemas" / "icon-registry.schema.json",
     "motion-registry": ROOT / "contracts" / "schemas" / "motion-registry.schema.json",
     "design-build-evidence": ROOT / "contracts" / "schemas" / "design-build-evidence.schema.json",
+    "design-element-inventory": ROOT / "contracts" / "schemas" / "design-element-inventory.schema.json",
 }
 
 

@@ -1,0 +1,1058 @@
+policy:
+  primary: Phosphor
+  secondary: Iconoir
+  fallback: Hugeicons
+  rationale: Matches the governed platform icon policy. Primary is Phosphor; Iconoir
+    is the secondary substitute; Hugeicons is the fallback. All entries below were
+    verified to resolve in OpenPencil as ph:<name> via search_icons.
+  weights:
+    rest: regular
+    selected: fill
+    emphasis: bold
+  sizes:
+    inline: 16
+    control: 20
+    nav: 24
+    illustrative: 48
+icons:
+- semantic_id: navigation.home
+  family: Phosphor
+  name: house
+  weight: regular
+  size: 24
+  note: Bottom nav + breadcrumb root
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.house
+  web:
+    package: '@phosphor-icons/react'
+    symbol: House
+  openpencil:
+    source: phosphor-svg
+    name: house
+    iconify: ph:house
+- semantic_id: navigation.browse
+  family: Phosphor
+  name: squares-four
+  weight: regular
+  size: 24
+  note: 'Bottom nav: browse categories'
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.squaresFour
+  web:
+    package: '@phosphor-icons/react'
+    symbol: SquaresFour
+  openpencil:
+    source: phosphor-svg
+    name: squares-four
+    iconify: ph:squares-four
+- semantic_id: navigation.orders
+  family: Phosphor
+  name: package
+  weight: regular
+  size: 24
+  note: 'Bottom nav: orders'
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.package
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Package
+  openpencil:
+    source: phosphor-svg
+    name: package
+    iconify: ph:package
+- semantic_id: navigation.cart
+  family: Phosphor
+  name: shopping-cart
+  weight: regular
+  size: 24
+  note: 'Bottom nav: cart, with item count badge'
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.shoppingCart
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ShoppingCart
+  openpencil:
+    source: phosphor-svg
+    name: shopping-cart
+    iconify: ph:shopping-cart
+- semantic_id: navigation.account
+  family: Phosphor
+  name: user
+  weight: regular
+  size: 24
+  note: 'Bottom nav: account'
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.user
+  web:
+    package: '@phosphor-icons/react'
+    symbol: User
+  openpencil:
+    source: phosphor-svg
+    name: user
+    iconify: ph:user
+- semantic_id: navigation.search
+  family: Phosphor
+  name: magnifying-glass
+  weight: regular
+  size: 20
+  note: Header search entry
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.magnifyingGlass
+  web:
+    package: '@phosphor-icons/react'
+    symbol: MagnifyingGlass
+  openpencil:
+    source: phosphor-svg
+    name: magnifying-glass
+    iconify: ph:magnifying-glass
+- semantic_id: navigation.back
+  family: Phosphor
+  name: arrow-left
+  weight: regular
+  size: 20
+  note: App bar back
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.arrowLeft
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ArrowLeft
+  openpencil:
+    source: phosphor-svg
+    name: arrow-left
+    iconify: ph:arrow-left
+- semantic_id: navigation.tracking
+  family: Phosphor
+  name: truck
+  weight: regular
+  size: 20
+  note: Order tracking / shipment
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.truck
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Truck
+  openpencil:
+    source: phosphor-svg
+    name: truck
+    iconify: ph:truck
+- semantic_id: navigation.returns
+  family: Phosphor
+  name: arrow-u-up-left
+  weight: regular
+  size: 20
+  note: Return / refund journey
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.arrowUUpLeft
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ArrowUUpLeft
+  openpencil:
+    source: phosphor-svg
+    name: arrow-u-up-left
+    iconify: ph:arrow-u-up-left
+- semantic_id: navigation.location
+  family: Phosphor
+  name: map-pin
+  weight: regular
+  size: 20
+  note: Delivery address, site selector
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.mapPin
+  web:
+    package: '@phosphor-icons/react'
+    symbol: MapPin
+  openpencil:
+    source: phosphor-svg
+    name: map-pin
+    iconify: ph:map-pin
+- semantic_id: navigation.notifications
+  family: Phosphor
+  name: bell
+  weight: regular
+  size: 20
+  note: App bar notifications
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.bell
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Bell
+  openpencil:
+    source: phosphor-svg
+    name: bell
+    iconify: ph:bell
+- semantic_id: commerce.price
+  family: Phosphor
+  name: tag
+  weight: regular
+  size: 20
+  note: Selling price / offer tag
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.tag
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Tag
+  openpencil:
+    source: phosphor-svg
+    name: tag
+    iconify: ph:tag
+- semantic_id: commerce.discount
+  family: Phosphor
+  name: seal-percent
+  weight: regular
+  size: 16
+  note: Discount badge (on Offer surface)
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.sealPercent
+  web:
+    package: '@phosphor-icons/react'
+    symbol: SealPercent
+  openpencil:
+    source: phosphor-svg
+    name: seal-percent
+    iconify: ph:seal-percent
+- semantic_id: commerce.wishlist
+  family: Phosphor
+  name: heart
+  weight: regular
+  size: 20
+  note: Save for later
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.heart
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Heart
+  openpencil:
+    source: phosphor-svg
+    name: heart
+    iconify: ph:heart
+- semantic_id: commerce.rating
+  family: Phosphor
+  name: star
+  weight: regular
+  size: 16
+  note: Ratings / reviews
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.star
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Star
+  openpencil:
+    source: phosphor-svg
+    name: star
+    iconify: ph:star
+- semantic_id: commerce.store
+  family: Phosphor
+  name: storefront
+  weight: regular
+  size: 20
+  note: Seller storefront
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.storefront
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Storefront
+  openpencil:
+    source: phosphor-svg
+    name: storefront
+    iconify: ph:storefront
+- semantic_id: commerce.payment
+  family: Phosphor
+  name: credit-card
+  weight: regular
+  size: 20
+  note: Payment methods
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.creditCard
+  web:
+    package: '@phosphor-icons/react'
+    symbol: CreditCard
+  openpencil:
+    source: phosphor-svg
+    name: credit-card
+    iconify: ph:credit-card
+- semantic_id: commerce.invoice
+  family: Phosphor
+  name: receipt
+  weight: regular
+  size: 20
+  note: Invoice / GST document
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.receipt
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Receipt
+  openpencil:
+    source: phosphor-svg
+    name: receipt
+    iconify: ph:receipt
+- semantic_id: commerce.barcode
+  family: Phosphor
+  name: barcode
+  weight: regular
+  size: 20
+  note: Scan barcode to add
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.barcode
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Barcode
+  openpencil:
+    source: phosphor-svg
+    name: barcode
+    iconify: ph:barcode
+- semantic_id: commerce.quick-order
+  family: Phosphor
+  name: lightning
+  weight: regular
+  size: 20
+  note: Quick order / express
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.lightning
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Lightning
+  openpencil:
+    source: phosphor-svg
+    name: lightning
+    iconify: ph:lightning
+- semantic_id: commerce.reorder
+  family: Phosphor
+  name: arrows-clockwise
+  weight: regular
+  size: 20
+  note: Reorder / buy again
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.arrowsClockwise
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ArrowsClockwise
+  openpencil:
+    source: phosphor-svg
+    name: arrows-clockwise
+    iconify: ph:arrows-clockwise
+- semantic_id: commerce.quote
+  family: Phosphor
+  name: file-text
+  weight: regular
+  size: 20
+  note: Quote / RFQ document
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.fileText
+  web:
+    package: '@phosphor-icons/react'
+    symbol: FileText
+  openpencil:
+    source: phosphor-svg
+    name: file-text
+    iconify: ph:file-text
+- semantic_id: commerce.compare
+  family: Phosphor
+  name: scales
+  weight: regular
+  size: 20
+  note: Compare quotes / price comparison
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.scales
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Scales
+  openpencil:
+    source: phosphor-svg
+    name: scales
+    iconify: ph:scales
+- semantic_id: commerce.secure
+  family: Phosphor
+  name: shield-check
+  weight: regular
+  size: 20
+  note: Secure payments trust cue
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.shieldCheck
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ShieldCheck
+  openpencil:
+    source: phosphor-svg
+    name: shield-check
+    iconify: ph:shield-check
+- semantic_id: b2b.trade
+  family: Phosphor
+  name: handshake
+  weight: regular
+  size: 20
+  note: Trade / dealer pricing
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.handshake
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Handshake
+  openpencil:
+    source: phosphor-svg
+    name: handshake
+    iconify: ph:handshake
+- semantic_id: b2b.credit
+  family: Phosphor
+  name: wallet
+  weight: regular
+  size: 20
+  note: Credit account, dues, limit
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.wallet
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Wallet
+  openpencil:
+    source: phosphor-svg
+    name: wallet
+    iconify: ph:wallet
+- semantic_id: b2b.approval
+  family: Phosphor
+  name: seal-check
+  weight: regular
+  size: 20
+  note: Approval queue / approved state
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.sealCheck
+  web:
+    package: '@phosphor-icons/react'
+    symbol: SealCheck
+  openpencil:
+    source: phosphor-svg
+    name: seal-check
+    iconify: ph:seal-check
+- semantic_id: b2b.project
+  family: Phosphor
+  name: folder-open
+  weight: regular
+  size: 20
+  note: Projects
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.folderOpen
+  web:
+    package: '@phosphor-icons/react'
+    symbol: FolderOpen
+  openpencil:
+    source: phosphor-svg
+    name: folder-open
+    iconify: ph:folder-open
+- semantic_id: b2b.site
+  family: Phosphor
+  name: map-pin
+  weight: regular
+  size: 20
+  note: Delivery sites within a project
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.mapPin
+  web:
+    package: '@phosphor-icons/react'
+    symbol: MapPin
+  openpencil:
+    source: phosphor-svg
+    name: map-pin
+    iconify: ph:map-pin
+- semantic_id: b2b.material-list
+  family: Phosphor
+  name: clipboard-text
+  weight: regular
+  size: 20
+  note: Project material list
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.clipboardText
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ClipboardText
+  openpencil:
+    source: phosphor-svg
+    name: clipboard-text
+    iconify: ph:clipboard-text
+- semantic_id: b2b.upload-list
+  family: Phosphor
+  name: upload-simple
+  weight: regular
+  size: 20
+  note: Upload bulk order list
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.uploadSimple
+  web:
+    package: '@phosphor-icons/react'
+    symbol: UploadSimple
+  openpencil:
+    source: phosphor-svg
+    name: upload-simple
+    iconify: ph:upload-simple
+- semantic_id: b2b.saved-list
+  family: Phosphor
+  name: bookmark-simple
+  weight: regular
+  size: 20
+  note: Saved procurement list
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.bookmarkSimple
+  web:
+    package: '@phosphor-icons/react'
+    symbol: BookmarkSimple
+  openpencil:
+    source: phosphor-svg
+    name: bookmark-simple
+    iconify: ph:bookmark-simple
+- semantic_id: b2b.team
+  family: Phosphor
+  name: users-three
+  weight: regular
+  size: 20
+  note: Team and roles
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.usersThree
+  web:
+    package: '@phosphor-icons/react'
+    symbol: UsersThree
+  openpencil:
+    source: phosphor-svg
+    name: users-three
+    iconify: ph:users-three
+- semantic_id: b2b.chat
+  family: Phosphor
+  name: chat-circle-text
+  weight: regular
+  size: 20
+  note: Buyer-seller chat / assistance
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.chatCircleText
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ChatCircleText
+  openpencil:
+    source: phosphor-svg
+    name: chat-circle-text
+    iconify: ph:chat-circle-text
+- semantic_id: b2b.rfq
+  family: Phosphor
+  name: file-arrow-up
+  weight: regular
+  size: 20
+  note: Raise RFQ
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.fileArrowUp
+  web:
+    package: '@phosphor-icons/react'
+    symbol: FileArrowUp
+  openpencil:
+    source: phosphor-svg
+    name: file-arrow-up
+    iconify: ph:file-arrow-up
+- semantic_id: b2b.stock
+  family: Phosphor
+  name: warehouse
+  weight: regular
+  size: 20
+  note: Warehouse / fulfilment
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.warehouse
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Warehouse
+  openpencil:
+    source: phosphor-svg
+    name: warehouse
+    iconify: ph:warehouse
+- semantic_id: action.filter
+  family: Phosphor
+  name: sliders-horizontal
+  weight: regular
+  size: 20
+  note: Faceted filter
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.slidersHorizontal
+  web:
+    package: '@phosphor-icons/react'
+    symbol: SlidersHorizontal
+  openpencil:
+    source: phosphor-svg
+    name: sliders-horizontal
+    iconify: ph:sliders-horizontal
+- semantic_id: action.sort
+  family: Phosphor
+  name: sort-ascending
+  weight: regular
+  size: 20
+  note: Sort results
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.sortAscending
+  web:
+    package: '@phosphor-icons/react'
+    symbol: SortAscending
+  openpencil:
+    source: phosphor-svg
+    name: sort-ascending
+    iconify: ph:sort-ascending
+- semantic_id: action.close
+  family: Phosphor
+  name: x
+  weight: regular
+  size: 20
+  note: Dismiss / clear
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.x
+  web:
+    package: '@phosphor-icons/react'
+    symbol: X
+  openpencil:
+    source: phosphor-svg
+    name: x
+    iconify: ph:x
+- semantic_id: action.menu
+  family: Phosphor
+  name: list
+  weight: regular
+  size: 20
+  note: Overflow menu
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.list
+  web:
+    package: '@phosphor-icons/react'
+    symbol: List
+  openpencil:
+    source: phosphor-svg
+    name: list
+    iconify: ph:list
+- semantic_id: action.delete
+  family: Phosphor
+  name: trash
+  weight: regular
+  size: 20
+  note: Remove line / delete
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.trash
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Trash
+  openpencil:
+    source: phosphor-svg
+    name: trash
+    iconify: ph:trash
+- semantic_id: action.edit
+  family: Phosphor
+  name: pencil-simple
+  weight: regular
+  size: 20
+  note: Edit
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.pencilSimple
+  web:
+    package: '@phosphor-icons/react'
+    symbol: PencilSimple
+  openpencil:
+    source: phosphor-svg
+    name: pencil-simple
+    iconify: ph:pencil-simple
+- semantic_id: action.share
+  family: Phosphor
+  name: share-network
+  weight: regular
+  size: 20
+  note: Share product or order
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.shareNetwork
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ShareNetwork
+  openpencil:
+    source: phosphor-svg
+    name: share-network
+    iconify: ph:share-network
+- semantic_id: action.chevron-right
+  family: Phosphor
+  name: caret-right
+  weight: regular
+  size: 16
+  note: Row disclosure
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.caretRight
+  web:
+    package: '@phosphor-icons/react'
+    symbol: CaretRight
+  openpencil:
+    source: phosphor-svg
+    name: caret-right
+    iconify: ph:caret-right
+- semantic_id: action.chevron-down
+  family: Phosphor
+  name: caret-down
+  weight: regular
+  size: 16
+  note: Expand / collapse
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.caretDown
+  web:
+    package: '@phosphor-icons/react'
+    symbol: CaretDown
+  openpencil:
+    source: phosphor-svg
+    name: caret-down
+    iconify: ph:caret-down
+- semantic_id: action.plus
+  family: Phosphor
+  name: plus
+  weight: regular
+  size: 20
+  note: Increase quantity / quick add
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.plus
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Plus
+  openpencil:
+    source: phosphor-svg
+    name: plus
+    iconify: ph:plus
+- semantic_id: action.minus
+  family: Phosphor
+  name: minus
+  weight: regular
+  size: 20
+  note: Decrease quantity
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.minus
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Minus
+  openpencil:
+    source: phosphor-svg
+    name: minus
+    iconify: ph:minus
+- semantic_id: action.check
+  family: Phosphor
+  name: check
+  weight: regular
+  size: 20
+  note: Selected / confirm
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.check
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Check
+  openpencil:
+    source: phosphor-svg
+    name: check
+    iconify: ph:check
+- semantic_id: action.download
+  family: Phosphor
+  name: download-simple
+  weight: regular
+  size: 20
+  note: Download invoice / list
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.downloadSimple
+  web:
+    package: '@phosphor-icons/react'
+    symbol: DownloadSimple
+  openpencil:
+    source: phosphor-svg
+    name: download-simple
+    iconify: ph:download-simple
+- semantic_id: action.refresh
+  family: Phosphor
+  name: arrows-clockwise
+  weight: regular
+  size: 20
+  note: Refresh data
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.arrowsClockwise
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ArrowsClockwise
+  openpencil:
+    source: phosphor-svg
+    name: arrows-clockwise
+    iconify: ph:arrows-clockwise
+- semantic_id: action.scan
+  family: Phosphor
+  name: scan
+  weight: regular
+  size: 20
+  note: Scan SKU
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.scan
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Scan
+  openpencil:
+    source: phosphor-svg
+    name: scan
+    iconify: ph:scan
+- semantic_id: action.camera
+  family: Phosphor
+  name: camera
+  weight: regular
+  size: 20
+  note: Upload photo (returns evidence)
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.camera
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Camera
+  openpencil:
+    source: phosphor-svg
+    name: camera
+    iconify: ph:camera
+- semantic_id: action.more
+  family: Phosphor
+  name: dots-three-vertical
+  weight: regular
+  size: 20
+  note: Row overflow
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.dotsThreeVertical
+  web:
+    package: '@phosphor-icons/react'
+    symbol: DotsThreeVertical
+  openpencil:
+    source: phosphor-svg
+    name: dots-three-vertical
+    iconify: ph:dots-three-vertical
+- semantic_id: action.external
+  family: Phosphor
+  name: arrow-square-out
+  weight: regular
+  size: 20
+  note: Open external link
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.arrowSquareOut
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ArrowSquareOut
+  openpencil:
+    source: phosphor-svg
+    name: arrow-square-out
+    iconify: ph:arrow-square-out
+- semantic_id: action.logout
+  family: Phosphor
+  name: sign-out
+  weight: regular
+  size: 20
+  note: Sign out
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.signOut
+  web:
+    package: '@phosphor-icons/react'
+    symbol: SignOut
+  openpencil:
+    source: phosphor-svg
+    name: sign-out
+    iconify: ph:sign-out
+- semantic_id: action.settings
+  family: Phosphor
+  name: gear-six
+  weight: regular
+  size: 20
+  note: Settings
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.gearSix
+  web:
+    package: '@phosphor-icons/react'
+    symbol: GearSix
+  openpencil:
+    source: phosphor-svg
+    name: gear-six
+    iconify: ph:gear-six
+- semantic_id: action.help
+  family: Phosphor
+  name: question
+  weight: regular
+  size: 20
+  note: Help / support
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.question
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Question
+  openpencil:
+    source: phosphor-svg
+    name: question
+    iconify: ph:question
+- semantic_id: action.language
+  family: Phosphor
+  name: translate
+  weight: regular
+  size: 16
+  note: Language switch (EN / HI)
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.translate
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Translate
+  openpencil:
+    source: phosphor-svg
+    name: translate
+    iconify: ph:translate
+- semantic_id: feedback.info
+  family: Phosphor
+  name: info
+  weight: regular
+  size: 20
+  note: Informational
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.info
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Info
+  openpencil:
+    source: phosphor-svg
+    name: info
+    iconify: ph:info
+- semantic_id: feedback.warning
+  family: Phosphor
+  name: warning
+  weight: regular
+  size: 20
+  note: Low stock / validation warning
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.warning
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Warning
+  openpencil:
+    source: phosphor-svg
+    name: warning
+    iconify: ph:warning
+- semantic_id: feedback.success
+  family: Phosphor
+  name: check-circle
+  weight: regular
+  size: 20
+  note: Success / in stock / delivered
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.checkCircle
+  web:
+    package: '@phosphor-icons/react'
+    symbol: CheckCircle
+  openpencil:
+    source: phosphor-svg
+    name: check-circle
+    iconify: ph:check-circle
+- semantic_id: feedback.error
+  family: Phosphor
+  name: x-circle
+  weight: regular
+  size: 20
+  note: Error / unavailable / failed
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.xCircle
+  web:
+    package: '@phosphor-icons/react'
+    symbol: XCircle
+  openpencil:
+    source: phosphor-svg
+    name: x-circle
+    iconify: ph:x-circle
+- semantic_id: feedback.pending
+  family: Phosphor
+  name: clock
+  weight: regular
+  size: 20
+  note: Pending approval / in transit
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.clock
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Clock
+  openpencil:
+    source: phosphor-svg
+    name: clock
+    iconify: ph:clock
+- semantic_id: media.image
+  family: Phosphor
+  name: image
+  weight: regular
+  size: 20
+  note: Image asset affordance
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.image
+  web:
+    package: '@phosphor-icons/react'
+    symbol: Image
+  openpencil:
+    source: phosphor-svg
+    name: image
+    iconify: ph:image
+- semantic_id: media.placeholder
+  family: Phosphor
+  name: image-square
+  weight: regular
+  size: 48
+  note: Product image placeholder
+  flutter:
+    package: phosphor_flutter
+    symbol: PhosphorIcons.imageSquare
+  web:
+    package: '@phosphor-icons/react'
+    symbol: ImageSquare
+  openpencil:
+    source: phosphor-svg
+    name: image-square
+    iconify: ph:image-square
+status: review-ready

@@ -1,0 +1,430 @@
+client_id: client102
+components:
+- id: action.button
+  semantic_role: Primary action control
+  variants:
+  - primary
+  - secondary
+  - tertiary
+  - destructive
+  states:
+  - default
+  - hover
+  - pressed
+  - focus
+  - disabled
+  - loading
+  tokens:
+  - action.primary
+  - action.hover
+  - action.secondary
+  - action.destructive
+  - action.disabled
+  - content.inverse
+  - border.focus
+  implementation:
+    flutter: packages/agency_flutter_ui/AppButton
+    web: packages/agency_web_ui/Button
+  accessibility:
+  - accessible-name
+  - keyboard-focus
+  - min-target-44
+  - loading-preserves-layout
+  - text-contrast-4.5
+  qa:
+  - visual-baseline
+  - contrast-check
+  - focus-visible-check
+  - target-size-check
+- id: commerce.product-card
+  semantic_role: Product summary and add-to-cart entry
+  variants:
+  - retail
+  - b2b-trade
+  states:
+  - default
+  - loading
+  - empty
+  - unavailable
+  - added
+  - error
+  tokens:
+  - surface.raised
+  - border.default
+  - surface.interactive
+  - content.primary
+  - content.secondary
+  - action.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/ProductCard
+    web: packages/agency_web_ui/ProductCard
+  accessibility:
+  - image-alt-text
+  - accessible-action-name
+  - min-target-44
+  - price-readable-by-screenreader
+  qa:
+  - visual-baseline
+  - state-coverage
+  - contrast-check
+- id: commerce.price-block
+  semantic_role: Selling price against MRP
+  variants:
+  - retail
+  - b2b-tier
+  states:
+  - default
+  - unavailable
+  - loading
+  tokens:
+  - content.primary
+  - content.secondary
+  - content.muted
+  implementation:
+    flutter: packages/agency_flutter_ui/PriceBlock
+    web: packages/agency_web_ui/PriceBlock
+  accessibility:
+  - currency-announced-once
+  - mrp-differentiated-not-by-colour-alone
+  qa:
+  - contrast-check
+  - format-check
+- id: commerce.offer-badge
+  semantic_role: Promotional discount indicator
+  variants:
+  - discount
+  - bestseller
+  - deal
+  states:
+  - default
+  tokens:
+  - commerce.discount.bg
+  - commerce.discount.fg
+  - commerce.bestseller.bg
+  - commerce.bestseller.fg
+  implementation:
+    flutter: packages/agency_flutter_ui/OfferBadge
+    web: packages/agency_web_ui/OfferBadge
+  accessibility:
+  - not-colour-alone
+  - contrast-4.5
+  qa:
+  - contrast-check
+- id: commerce.stock-badge
+  semantic_role: Availability indicator
+  variants:
+  - in-stock
+  - low-stock
+  - unavailable
+  states:
+  - default
+  tokens:
+  - commerce.in-stock.bg
+  - commerce.in-stock.fg
+  - commerce.low-stock.bg
+  - commerce.low-stock.fg
+  - commerce.unavailable.bg
+  - commerce.unavailable.fg
+  implementation:
+    flutter: packages/agency_flutter_ui/StockBadge
+    web: packages/agency_web_ui/StockBadge
+  accessibility:
+  - status-word-plus-colour
+  - contrast-4.5
+  qa:
+  - contrast-check
+  - state-coverage
+- id: commerce.b2b-trade-block
+  semantic_role: Trade price, MOQ and tier entry
+  variants:
+  - compact
+  - expanded
+  states:
+  - default
+  - loading
+  - restricted
+  tokens:
+  - commerce.b2b.bg
+  - commerce.b2b.fg
+  - content.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/B2BTradeBlock
+    web: packages/agency_web_ui/B2BTradeBlock
+  accessibility:
+  - trade-price-labelled-not-colour-alone
+  - min-target-44
+  qa:
+  - contrast-check
+  - role-visibility-check
+- id: commerce.search-bar
+  semantic_role: Persistent catalogue search entry
+  variants:
+  - header
+  - inline
+  states:
+  - default
+  - focused
+  - filled
+  - disabled
+  - loading
+  tokens:
+  - surface.raised
+  - border.control
+  - border.focus
+  - content.muted
+  - content.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/SearchBar
+    web: packages/agency_web_ui/SearchBar
+  accessibility:
+  - accessible-name
+  - placeholder-not-the-only-label
+  - keyboard-focus
+  - min-target-44
+  qa:
+  - visual-baseline
+  - focus-visible-check
+- id: commerce.hero-banner
+  semantic_role: Campaign or seasonal promotion
+  variants:
+  - seasonal
+  - campaign
+  states:
+  - default
+  - loading
+  tokens:
+  - surface.accent
+  - content.primary
+  - action.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/HeroBanner
+    web: packages/agency_web_ui/HeroBanner
+  accessibility:
+  - overlay-text-contrast
+  - image-alt-text
+  - cta-accessible-name
+  qa:
+  - overlay-contrast-check
+  - visual-baseline
+- id: commerce.section-header
+  semantic_role: Section title with optional action
+  variants:
+  - plain
+  - with-action
+  states:
+  - default
+  tokens:
+  - content.primary
+  - content.secondary
+  implementation:
+    flutter: packages/agency_flutter_ui/SectionHeader
+    web: packages/agency_web_ui/SectionHeader
+  accessibility:
+  - heading-semantics
+  - link-accessible-name
+  qa:
+  - semantic-heading-check
+- id: commerce.trust-row-item
+  semantic_role: Reassurance cue
+  variants:
+  - default
+  states:
+  - default
+  tokens:
+  - surface.interactive
+  - content.secondary
+  implementation:
+    flutter: packages/agency_flutter_ui/TrustItem
+    web: packages/agency_web_ui/TrustItem
+  accessibility:
+  - not-icon-only
+  - contrast-4.5
+  qa:
+  - contrast-check
+- id: navigation.app-bar
+  semantic_role: Top navigation and context
+  variants:
+  - home
+  - back
+  - with-action
+  states:
+  - default
+  - scrolled
+  tokens:
+  - action.primary
+  - content.inverse
+  - surface.raised
+  - border.default
+  implementation:
+    flutter: packages/agency_flutter_ui/AppBar
+    web: packages/agency_web_ui/AppBar
+  accessibility:
+  - back-has-accessible-name
+  - actions-min-target-44
+  - safe-area-top
+  qa:
+  - visual-baseline
+  - target-size-check
+- id: navigation.bottom-nav-item
+  semantic_role: Persistent primary navigation destination
+  variants:
+  - default
+  - selected
+  states:
+  - default
+  - selected
+  - pressed
+  - focus
+  - disabled
+  tokens:
+  - nav.active
+  - surface.raised
+  - content.muted
+  - border.focus
+  implementation:
+    flutter: packages/agency_flutter_ui/BottomNavItem
+    web: packages/agency_web_ui/BottomNavItem
+  accessibility:
+  - icon-plus-label
+  - selected-not-colour-alone
+  - min-target-48
+  - screenreader-current-state
+  qa:
+  - contrast-check
+  - target-size-check
+  - state-coverage
+- id: navigation.category-item
+  semantic_role: Category entry in a rail or grid
+  variants:
+  - default
+  - selected
+  states:
+  - default
+  - selected
+  tokens:
+  - surface.accent
+  - content.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/CategoryItem
+    web: packages/agency_web_ui/CategoryItem
+  accessibility:
+  - icon-plus-label
+  - min-target-44
+  qa:
+  - target-size-check
+- id: control.segmented
+  semantic_role: Mutually exclusive mode selector
+  variants:
+  - two-way
+  - three-way
+  states:
+  - default
+  - selected
+  - pressed
+  - focus
+  - disabled
+  tokens:
+  - surface.interactive
+  - action.primary
+  - content.secondary
+  - content.inverse
+  - border.focus
+  implementation:
+    flutter: packages/agency_flutter_ui/SegmentedControl
+    web: packages/agency_web_ui/SegmentedControl
+  accessibility:
+  - radiogroup-semantics
+  - keyboard-arrow-navigation
+  - selected-not-colour-alone
+  - min-target-44
+  qa:
+  - focus-visible-check
+  - target-size-check
+- id: input.text-field
+  semantic_role: Labelled single-line input
+  variants:
+  - phone
+  - labelled
+  - otp
+  states:
+  - default
+  - focus
+  - filled
+  - error
+  - disabled
+  - readonly
+  tokens:
+  - surface.raised
+  - border.control
+  - border.focus
+  - content.muted
+  - feedback.error
+  - action.disabled
+  implementation:
+    flutter: packages/agency_flutter_ui/AppTextField
+    web: packages/agency_web_ui/TextField
+  accessibility:
+  - label-associated
+  - error-announced-not-colour-alone
+  - min-target-48
+  - keyboard-focus
+  - autocomplete-hint
+  qa:
+  - focus-visible-check
+  - label-association-check
+  - target-size-check
+- id: feedback.status-pill
+  semantic_role: Compact status or filter chip
+  variants:
+  - neutral
+  - info
+  - success
+  - warning
+  - error
+  states:
+  - default
+  - selected
+  - dismissible
+  tokens:
+  - surface.interactive
+  - feedback.info
+  - feedback.success
+  - feedback.warning
+  - feedback.error
+  - content.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/StatusPill
+    web: packages/agency_web_ui/StatusPill
+  accessibility:
+  - status-word-plus-colour
+  - dismiss-has-accessible-name
+  - min-target-44
+  qa:
+  - contrast-check
+  - target-size-check
+- id: layout.screen-shell
+  semantic_role: Shared surface shell with persistent navigation
+  variants:
+  - b2c
+  - b2b
+  states:
+  - default
+  - loading
+  - offline
+  tokens:
+  - surface.page
+  - surface.raised
+  - nav.active
+  - border.default
+  implementation:
+    flutter: packages/agency_flutter_ui/SurfaceShell
+    web: packages/agency_web_ui/SurfaceShell
+  accessibility:
+  - skip-to-content
+  - landmark-regions
+  - safe-area-handling
+  - focus-order-matches-visual
+  qa:
+  - focus-order-check
+  - landmark-check
+status: review-ready

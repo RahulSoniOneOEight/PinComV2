@@ -1,0 +1,151 @@
+brief_id: DB-client102-001
+client_id: client102
+palette_name: stormy-morning
+theme_ref: experience/design/theme-resolution.yaml
+master_design_system_ref: experience/design/master-design-system.yaml
+status: review-ready
+component_token_map:
+  header:
+    surface: color.action.primary
+    content: color.content.inverse
+  bottom_navigation:
+    surface: color.surface.raised
+    content: color.content.secondary
+    selected: color.nav.active
+  search_bar:
+    surface: color.surface.raised
+    border: color.border.control
+    focus_border: color.border.focus
+    placeholder: color.content.muted
+  category_icon_circle:
+    surface: color.surface.accent
+  hero_seasonal_banner:
+    surface: color.surface.accent
+    content: color.content.primary
+  product_card_surface:
+    surface: color.surface.raised
+  product_image_background:
+    surface: color.surface.interactive
+  product_selling_price:
+    content: color.content.primary
+  product_metadata_mrp:
+    content: color.content.secondary
+  primary_purchase_button:
+    surface: color.action.primary
+    content: color.content.inverse
+    hover: color.action.hover
+  secondary_button:
+    surface: color.action.secondary
+    content: color.content.primary
+  merchandising_swimlane_label:
+    content: color.content.secondary
+  split_merchandising_tile:
+    container: color.surface.accent
+    inner_card: color.surface.raised
+  b2b_quantity_tier_selected:
+    surface: commerce.tier.selected.bg
+    content: commerce.tier.selected.fg
+  b2b_price_summary:
+    surface: color.surface.interactive
+  credit_dashboard_kpi_tile:
+    surface: color.surface.raised
+    accent_surface: color.surface.accent
+  modal_bottom_sheet:
+    surface: color.surface.raised
+  cart_related_items_panel:
+    surface: color.surface.page
+  input_focus:
+    border: color.border.focus
+  discount_badge:
+    surface: commerce.discount.bg
+    content: commerce.discount.fg
+  in_stock_badge:
+    surface: commerce.in-stock.bg
+    content: commerce.in-stock.fg
+  low_stock_warning:
+    surface: commerce.low-stock.bg
+    content: commerce.low-stock.fg
+  unavailable_error:
+    surface: commerce.unavailable.bg
+    content: commerce.unavailable.fg
+  b2b_dealer_badge:
+    surface: commerce.b2b.bg
+    content: commerce.b2b.fg
+rules:
+- id: RULE-accent-not-button-surface
+  statement: 'action.selected (#88BDF2) and content.muted (#55708A) are accents, selected
+    surfaces and decorative fills. Never place small white text on #88BDF2 (measured
+    1.98:1). Selected surfaces take content.on-selected (#384959, 4.68:1).
+
+    '
+  measured:
+    white_on_88BDF2: 1.98
+    on_selected_on_88BDF2: 4.68
+- id: RULE-primary-action-contrast
+  statement: Primary actions use action.primary (Storm Navy) with content.inverse.
+    9.27:1.
+- id: RULE-control-boundary
+  statement: 'Decorative dividers may use border.default/border.strong. Input and
+    control boundaries must use border.control (#748EAA) to satisfy WCAG 1.4.11 (3:1).
+
+    '
+  measured:
+    control_vs_page: 3.24
+    control_vs_raised: 3.39
+    control_vs_interactive: 3.03
+- id: RULE-focus-visible
+  statement: Every interactive element shows a visible focus ring using border.focus
+    (3.49:1 vs page).
+- id: RULE-disabled-exempt
+  statement: action.disabled (#DFE7F0) is below 3:1 by design; inactive components
+    are exempt from WCAG contrast. Do not use it for enabled content.
+- id: RULE-state-coverage
+  statement: Every data-backed component defines default, loading, empty, error and
+    success states before approval.
+- id: RULE-semantic-only
+  statement: Component code references semantic roles, never raw hex. Theme changes
+    must not require component edits.
+- id: RULE-contrast-gate
+  statement: Any new colour pair is added only after theme_compiler contrast checks
+    pass at 4.5:1 text / 3:1 non-text.
+surface_density:
+  customer-app: comfortable
+  web-store: comfortable
+  b2b: compact
+  seller-portal: compact
+  commerce-admin: compact
+  erp: compact
+  analytics: compact
+  ops-console: compact
+open_items:
+- Dark theme is defined for the token set; only the light screens are drawn in dark.
+- Typography families/scale are decided (Hind, 8 roles); brand font licensing is unconfirmed.
+- 'Stock photography is blocked: no Pexels/Unsplash provider configured, so all media
+  slots use the governed generated placeholder.'
+- Brand mark is a text lockup only; no final logo asset exists.
+openpencil_document: client-projects/client102/experience/design/apnakart-app.fig
+screen_map:
+  b2c.onboarding: S1 · Onboarding
+  b2c.login: S2 · Login
+  b2c.home: S3 · B2C Home
+  b2c.home.dark: S3D · B2C Home (Dark)
+component_registry_ref: experience/design/component-contract-registry.yaml
+design_ir_ref: experience/design/design-ir.yaml
+asset_plan_ref: experience/design/asset-plan.yaml
+decoration_rules:
+  watermarks:
+  - watermark.draft-not-approved
+  - watermark.sample-imagery
+  - watermark.seller-supplied
+  patterns:
+  - pattern.campaign-background
+  - pattern.merchandising-frame
+  rules:
+  - 'R-watermark-draft: any unapproved revision carries watermark.draft-not-approved'
+  - 'R-watermark-sample: placeholders and unlicensed stock carry watermark.sample-imagery'
+  - 'R-pattern-restraint: background patterns stay at or below 0.08 opacity and never
+    reduce text contrast below 4.5:1'
+  - 'R-image-treatment: every media slot declares aspect, fit and focal point in the
+    crop rules before build'
+  - 'R-placeholder-honesty: a placeholder watermark may never reach a client review
+    or production build'

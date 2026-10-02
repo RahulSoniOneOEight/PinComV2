@@ -1,0 +1,635 @@
+version: 1
+id: design-element-inventory
+title: Design Element Taxonomy
+purpose: Canonical list of design element families every client project must evaluate
+  before its design can be reviewed or approved. A client project instantiates this
+  taxonomy at experience/design/design-element-inventory.yaml and reports a status
+  plus evidence per element.
+levels:
+- id: F
+  name: Foundations (design decisions, no visible artifact)
+- id: P
+  name: Primitives (atoms)
+- id: C
+  name: Components (molecules)
+- id: T
+  name: Patterns (organisms)
+- id: L
+  name: Layouts & templates
+- id: X
+  name: Cross-cutting overlays & decoration
+- id: N
+  name: Content & language
+- id: A
+  name: Accessibility
+- id: G
+  name: Governance & evidence
+statuses:
+- done
+- partial
+- missing
+- not-applicable
+evaluations:
+- required
+- conditional
+- optional
+evaluation_rules:
+  required: Must reach status done before experience approval.
+  conditional: Required only when the client scope includes the capability; otherwise
+    not-applicable with a reason.
+  optional: Recommended; may remain missing with a recorded decision.
+elements:
+- id: F1
+  level: F
+  name: Colour / theming
+  description: Semantic colour roles, light and dark modes, state colours
+  governed_by: design-contract/tokens/semantic.yaml, themes/default.yaml
+  evaluation: required
+- id: F2
+  level: F
+  name: Typography scale
+  description: Font families, a limited type scale, weights, line-heights, numerals
+  governed_by: design-intelligence/component-metadata.yaml
+  evaluation: required
+- id: F3
+  level: F
+  name: Spacing scale
+  description: A single spacing scale applied consistently
+  governed_by: design-contract/tokens/foundation.yaml
+  evaluation: required
+- id: F4
+  level: F
+  name: Radius scale
+  description: A limited set of corner radii
+  governed_by: design-contract/tokens/foundation.yaml
+  evaluation: required
+- id: F5
+  level: F
+  name: Elevation
+  description: Shadow/level scale for layering surfaces
+  governed_by: design-contract/tokens/foundation.yaml
+  evaluation: required
+- id: F6
+  level: F
+  name: Motion tokens
+  description: Duration and curve tokens incl. reduced-motion
+  governed_by: design-intelligence/motion-tokens.yaml
+  evaluation: required
+- id: F7
+  level: F
+  name: Breakpoints
+  description: Responsive stops for phone/tablet/desktop/wide
+  governed_by: platform/ui/master-design-system.yaml
+  evaluation: required
+- id: F8
+  level: F
+  name: Layout grid
+  description: Column/gutter/margin grid definition
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: F9
+  level: F
+  name: Z-index / layering
+  description: Ordered layering scale for overlays, sticky bars, toasts
+  governed_by: design-contract/tokens/foundation.yaml
+  evaluation: required
+- id: F10
+  level: F
+  name: Opacity / scrim scale
+  description: Opacity steps and scrim values
+  governed_by: design-contract/tokens/foundation.yaml
+  evaluation: conditional
+- id: P1
+  level: P
+  name: Icons
+  description: One governed family with semantic mapping
+  governed_by: contracts/schemas/icon-registry.schema.json
+  evaluation: required
+- id: P2
+  level: P
+  name: Buttons
+  description: Variants, sizes and all interaction states
+  governed_by: design-contract/components/button.yaml
+  evaluation: required
+- id: P3
+  level: P
+  name: Text inputs
+  description: Single-line input with label, help and error
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: P4
+  level: P
+  name: Search bar
+  description: Persistent search entry
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: P5
+  level: P
+  name: Badges / pills
+  description: Status and promotion badges
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: P6
+  level: P
+  name: Shapes
+  description: Rectangles, ellipses, lines with semantic names
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: P7
+  level: P
+  name: Dividers / separators
+  description: Horizontal and vertical separators
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: P8
+  level: P
+  name: Quantity stepper
+  description: Increment/decrement control
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: P9
+  level: P
+  name: Filter chips
+  description: Selectable filter tokens
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: P10
+  level: P
+  name: Segmented control
+  description: Mutually exclusive mode switch
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: P11
+  level: P
+  name: Images (raster)
+  description: Photography and raster media with crop rules
+  governed_by: design-intelligence/asset-sources.yaml
+  evaluation: required
+- id: P12
+  level: P
+  name: Illustration
+  description: Vector illustration style and usage
+  governed_by: design-intelligence/asset-sources.yaml
+  evaluation: conditional
+- id: P13
+  level: P
+  name: Logos / brand marks
+  description: Wordmark, app icon, partner/payment marks
+  governed_by: design-intelligence/asset-sources.yaml
+  evaluation: required
+- id: P14
+  level: P
+  name: Avatars / user content
+  description: Profile, seller and review imagery
+  governed_by: design-intelligence/asset-sources.yaml
+  evaluation: conditional
+- id: P15
+  level: P
+  name: Checkbox
+  description: Multi-select control
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: P16
+  level: P
+  name: Radio
+  description: Single-select control
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: P17
+  level: P
+  name: Switch / toggle
+  description: Binary setting control
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: P18
+  level: P
+  name: Slider
+  description: Range input
+  governed_by: design-contract/components/*
+  evaluation: optional
+- id: P19
+  level: P
+  name: Tooltip
+  description: Contextual help surface
+  governed_by: design-contract/components/*
+  evaluation: optional
+- id: P20
+  level: P
+  name: Progress / spinner / skeleton
+  description: Loading and progress affordances
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: C1
+  level: C
+  name: Product card
+  description: Product summary with price, media and action
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C2
+  level: C
+  name: Order / list card
+  description: Row-based record display
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C3
+  level: C
+  name: KPI / metric card
+  description: Dashboard metric tile
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: conditional
+- id: C4
+  level: C
+  name: Nav bar (app bar)
+  description: Top navigation with actions
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C5
+  level: C
+  name: Bottom navigation
+  description: Persistent primary navigation
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C6
+  level: C
+  name: Tabs
+  description: In-page section switching
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: conditional
+- id: C7
+  level: C
+  name: Price block
+  description: Selling price vs MRP hierarchy
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C8
+  level: C
+  name: Quantity tier selector
+  description: MOQ / tier pricing selection
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: conditional
+- id: C9
+  level: C
+  name: Rating / review
+  description: Ratings, review counts, review list
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: conditional
+- id: C10
+  level: C
+  name: Form field
+  description: Label + control + help + validation error as one unit
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C11
+  level: C
+  name: Hero / banner
+  description: Campaign or seasonal promotion block
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C12
+  level: C
+  name: Trust / benefit row
+  description: Reassurance cues near decision points
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: conditional
+- id: C13
+  level: C
+  name: Category rail item
+  description: Category entry with icon/illustration
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C14
+  level: C
+  name: Empty state
+  description: No-data presentation
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C15
+  level: C
+  name: Error state
+  description: Failure presentation with recovery
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C16
+  level: C
+  name: Snackbar / toast
+  description: Transient feedback
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C17
+  level: C
+  name: Modal / bottom sheet
+  description: Focused overlay task
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: C18
+  level: C
+  name: Section header
+  description: Section title with optional action
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: T1
+  level: T
+  name: Product grid
+  description: Responsive product listing
+  governed_by: design-contract/patterns/product-card.yaml
+  evaluation: required
+- id: T2
+  level: T
+  name: Merchandising swimlane
+  description: Horizontal scroll of curated content
+  governed_by: design-contract/patterns/*
+  evaluation: conditional
+- id: T3
+  level: T
+  name: Cart lines
+  description: Editable order draft
+  governed_by: design-contract/patterns/*
+  evaluation: required
+- id: T4
+  level: T
+  name: Checkout summary
+  description: Totals, tax, delivery summary
+  governed_by: design-contract/patterns/*
+  evaluation: required
+- id: T5
+  level: T
+  name: Filter panel
+  description: Faceted refinement
+  governed_by: design-contract/patterns/*
+  evaluation: conditional
+- id: T6
+  level: T
+  name: Search results
+  description: Query results with sort/filter
+  governed_by: design-contract/patterns/*
+  evaluation: required
+- id: T7
+  level: T
+  name: RFQ / quote flow
+  description: Request and compare quotes
+  governed_by: design-contract/patterns/*
+  evaluation: conditional
+- id: T8
+  level: T
+  name: Procurement list
+  description: Bulk list to order draft
+  governed_by: design-contract/patterns/*
+  evaluation: conditional
+- id: T9
+  level: T
+  name: Credit dashboard
+  description: Credit position, dues, approvals
+  governed_by: design-contract/patterns/*
+  evaluation: conditional
+- id: T10
+  level: T
+  name: Onboarding flow
+  description: First-run value and entry
+  governed_by: design-contract/patterns/*
+  evaluation: required
+- id: T11
+  level: T
+  name: Auth flow (OTP)
+  description: Phone + OTP authentication
+  governed_by: design-contract/patterns/*
+  evaluation: required
+- id: T12
+  level: T
+  name: Approval workflow
+  description: Pending/approved/rejected queue
+  governed_by: design-contract/patterns/*
+  evaluation: conditional
+- id: L1
+  level: L
+  name: Phone template
+  description: Base mobile frame and margins
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: L2
+  level: L
+  name: Page shell + persistent nav
+  description: Shared navigation shell per surface
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: L3
+  level: L
+  name: Tablet layout
+  description: Tablet composition rules
+  governed_by: design-intelligence/surface-profiles.yaml
+  evaluation: conditional
+- id: L4
+  level: L
+  name: Desktop / wide layout
+  description: Desktop composition rules
+  governed_by: design-intelligence/surface-profiles.yaml
+  evaluation: conditional
+- id: L5
+  level: L
+  name: Density modes
+  description: Comfortable vs compact per surface
+  governed_by: design-intelligence/surface-profiles.yaml
+  evaluation: required
+- id: L6
+  level: L
+  name: Grid / column system
+  description: Column and gutter system
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: L7
+  level: L
+  name: Safe areas / insets
+  description: Device safe areas and insets
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: L8
+  level: L
+  name: Scroll regions & sticky
+  description: Scroll containers, sticky headers/action bars
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: L9
+  level: L
+  name: Screen templates
+  description: List, detail, form, dashboard, hub templates
+  governed_by: design-contract/README.md
+  evaluation: required
+- id: X1
+  level: X
+  name: Watermarks
+  description: Draft/not-approved, seller, sample-imagery watermarks
+  governed_by: design-intelligence/visual-evidence.yaml
+  evaluation: required
+- id: X2
+  level: X
+  name: Decorative frames / borders
+  description: Card frames, ribbons, section framing
+  governed_by: design-intelligence/visual-presets.yaml
+  evaluation: conditional
+- id: X3
+  level: X
+  name: Background patterns / textures
+  description: Campaign and merchandising backgrounds
+  governed_by: design-intelligence/visual-presets.yaml
+  evaluation: conditional
+- id: X4
+  level: X
+  name: Gradients
+  description: Gradient fills for hero/overlays
+  governed_by: design-intelligence/visual-presets.yaml
+  evaluation: optional
+- id: X5
+  level: X
+  name: Scrims / overlays
+  description: Dimming behind modals and sheets
+  governed_by: design-contract/tokens/semantic.yaml
+  evaluation: required
+- id: X6
+  level: X
+  name: Section separators / ornaments
+  description: Visual rhythm between sections
+  governed_by: design-intelligence/visual-presets.yaml
+  evaluation: conditional
+- id: X7
+  level: X
+  name: Corner treatments
+  description: Consistent radius language per surface
+  governed_by: design-contract/tokens/foundation.yaml
+  evaluation: required
+- id: X8
+  level: X
+  name: Loading overlay
+  description: Blocking/non-blocking loading surface
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: X9
+  level: X
+  name: Modal / sheet chrome
+  description: Header, drag handle, close affordance
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: X10
+  level: X
+  name: Toast / banner chrome
+  description: Placement and stacking rules
+  governed_by: design-contract/components/*
+  evaluation: required
+- id: X11
+  level: X
+  name: Sticky action bars
+  description: Persistent primary action area
+  governed_by: design-contract/components/*
+  evaluation: conditional
+- id: X12
+  level: X
+  name: Image treatment
+  description: Crop, focal point, overlay text legibility
+  governed_by: design-intelligence/asset-sources.yaml
+  evaluation: required
+- id: N1
+  level: N
+  name: Microcopy / tone
+  description: Voice, tone and wording standards
+  governed_by: design-intelligence/ux-telemetry-policy.yaml
+  evaluation: required
+- id: N2
+  level: N
+  name: Localisation
+  description: Multi-language strings and script support
+  governed_by: design-intelligence/stage2-policy.yaml
+  evaluation: required
+- id: N3
+  level: N
+  name: Number / currency / date formats
+  description: Locale formatting rules
+  governed_by: design-intelligence/stage2-policy.yaml
+  evaluation: required
+- id: N4
+  level: N
+  name: Terminology glossary
+  description: Canonical business terms
+  governed_by: design-intelligence/domain-pattern-packs.yaml
+  evaluation: required
+- id: N5
+  level: N
+  name: Error message catalogue
+  description: Standard error and recovery strings
+  governed_by: design-intelligence/ux-telemetry-policy.yaml
+  evaluation: required
+- id: N6
+  level: N
+  name: Legal / consent copy
+  description: Terms, privacy, consent text
+  governed_by: design-intelligence/ux-telemetry-policy.yaml
+  evaluation: required
+- id: A1
+  level: A
+  name: Text contrast
+  description: Text meets WCAG AA 4.5:1
+  governed_by: design-intelligence/accessibility-performance-policy.yaml
+  evaluation: required
+- id: A2
+  level: A
+  name: Non-text contrast
+  description: Boundaries meet 3:1
+  governed_by: design-intelligence/accessibility-performance-policy.yaml
+  evaluation: required
+- id: A3
+  level: A
+  name: Touch targets
+  description: Interactive targets >= 44x44
+  governed_by: design-intelligence/accessibility-performance-policy.yaml
+  evaluation: required
+- id: A4
+  level: A
+  name: Focus visibility
+  description: Visible focus indicator on all interactive elements
+  governed_by: design-intelligence/accessibility-performance-policy.yaml
+  evaluation: required
+- id: A5
+  level: A
+  name: Labels / alt text / semantics
+  description: Accessible names and imagery alternatives
+  governed_by: design-intelligence/accessibility-performance-policy.yaml
+  evaluation: required
+- id: A6
+  level: A
+  name: Reduced motion
+  description: Motion degrades when reduced-motion is set
+  governed_by: design-intelligence/motion-policy.yaml
+  evaluation: required
+- id: G1
+  level: G
+  name: Token + rationale documentation
+  description: Tokens documented with evidence
+  governed_by: contracts/schemas/master-design-system.schema.json
+  evaluation: required
+- id: G2
+  level: G
+  name: Icon registry
+  description: Governed icon mapping
+  governed_by: contracts/schemas/icon-registry.schema.json
+  evaluation: required
+- id: G3
+  level: G
+  name: Component specifications
+  description: Registry with variants, sizes and states
+  governed_by: contracts/schemas/component-contract-registry.schema.json
+  evaluation: required
+- id: G4
+  level: G
+  name: Design IR
+  description: Screen to journey to component traceability
+  governed_by: contracts/schemas/design-ir.schema.json
+  evaluation: required
+- id: G5
+  level: G
+  name: Visual baselines / drift
+  description: Approved baselines and drift detection
+  governed_by: design-intelligence/visual-evidence.yaml
+  evaluation: required
+- id: G6
+  level: G
+  name: Component lifecycle / versioning
+  description: Lifecycle states and versioning policy
+  governed_by: design-intelligence/component-lifecycle.yaml
+  evaluation: required

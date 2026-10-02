@@ -1,0 +1,518 @@
+version: 1
+client_id: client102
+project: ApnaKart
+taxonomy_ref: design-contract/design-element-inventory.yaml
+evaluated_on: '2026-10-02'
+summary:
+  total: 99
+  done: 36
+  partial: 19
+  missing: 44
+elements:
+- id: F1
+  status: done
+  evidence: experience/design/
+  note: 24 roles x light+dark; all pairs contrast-verified
+- id: F2
+  status: done
+  evidence: experience/design/master-design-system.yaml
+  note: 8 type roles over 6 sizes (11/12/14/16/20/24) x 3 weights (400/600/700). Canvas
+    collapsed from 23 styles to 12 and now uses exactly those sizes.
+- id: F3
+  status: done
+  evidence: experience/design/master-design-system.yaml
+  note: 4pt scale applied (4/8/12/16/24); arbitrary 2/6/10/14/20 removed. Analyzer's
+    8pt grid still flags 4 and 12.
+- id: F4
+  status: done
+  evidence: experience/design/master-design-system.yaml
+  note: Radius language reduced to 4/8/12/999.
+- id: F5
+  status: done
+  evidence: experience/design/master-design-system.yaml
+  note: elevation.raised applied to cards across all screens; overlay value defined
+    for future sheets.
+- id: F6
+  status: partial
+  evidence: experience/design/
+  note: client values diverge from platform tokens
+- id: F7
+  status: done
+  evidence: experience/design/
+  note: 0/768/1024/1440
+- id: F8
+  status: missing
+  evidence: null
+  note: undefined
+- id: F9
+  status: done
+  evidence: experience/design/master-design-system.yaml
+  note: 'z_index scale defined: base 0 / sticky 100 / nav 200 / sheet 300 / modal
+    400 / toast 500.'
+- id: F10
+  status: missing
+  evidence: null
+  note: undefined
+- id: P1
+  status: done
+  evidence: experience/design/
+  note: 65 Phosphor icons, all verified in OpenPencil
+- id: P2
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: action.button specified (4 variants x 3 sizes x 6 states) and mastered in
+    the document.
+- id: P3
+  status: partial
+  evidence: experience/design/
+  note: inputs drawn without the full field pattern
+- id: P4
+  status: done
+  evidence: experience/design/
+  note: header search on Home
+- id: P5
+  status: done
+  evidence: experience/design/
+  note: discount, stock, B2B, tier
+- id: P6
+  status: partial
+  evidence: experience/design/
+  note: placeholder blocks not semantically named
+- id: P7
+  status: partial
+  evidence: experience/design/
+  note: implied via strokes only
+- id: P8
+  status: partial
+  evidence: experience/design/
+  note: referenced, not built
+- id: P9
+  status: partial
+  evidence: experience/design/
+  note: referenced, not built
+- id: P10
+  status: done
+  evidence: experience/design/
+  note: Consumer / B2B Trade
+- id: P11
+  status: partial
+  evidence: experience/design/asset-plan.yaml
+  note: 'media.placeholder component built and renders correctly using INLINE SVG
+    (a clean image glyph on surface.interactive, aspect preserved). Real photography
+    BLOCKED: no Pexels/Unsplash provider. Note: the insert_icon tool renders ph:image
+    / ph:image-square as solid blocks, so inline SVG is the only usable route.'
+- id: P12
+  status: missing
+  evidence: null
+  note: none
+- id: P13
+  status: partial
+  evidence: experience/design/design-brief.yaml
+  note: Brand wordmark lockup built on canvas; final logo asset and mark still unconfirmed
+    (brand name is an open client question).
+- id: P14
+  status: missing
+  evidence: null
+  note: none
+- id: P15
+  status: missing
+  evidence: null
+  note: none
+- id: P16
+  status: missing
+  evidence: null
+  note: none
+- id: P17
+  status: missing
+  evidence: null
+  note: none
+- id: P18
+  status: missing
+  evidence: null
+  note: none
+- id: P19
+  status: missing
+  evidence: null
+  note: none
+- id: P20
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: Skeleton loading variants for product card and list row defined in the component
+    registry and built on canvas as feedback.skeleton-product-card.
+- id: C1
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: commerce.product-card specified for retail + b2b-trade with 6 states; master
+    created.
+- id: C2
+  status: missing
+  evidence: null
+  note: order history not built
+- id: C3
+  status: missing
+  evidence: null
+  note: credit dashboard not built
+- id: C4
+  status: done
+  evidence: experience/design/
+  note: light + dark header
+- id: C5
+  status: done
+  evidence: experience/design/
+  note: 5 tabs, selected state
+- id: C6
+  status: missing
+  evidence: null
+  note: none
+- id: C7
+  status: done
+  evidence: experience/design/
+  note: bold price, muted MRP
+- id: C8
+  status: partial
+  evidence: experience/design/
+  note: static MOQ row only
+- id: C9
+  status: missing
+  evidence: null
+  note: none
+- id: C10
+  status: partial
+  evidence: experience/design/component-contract-registry.yaml
+  note: input.text-field specified (phone/labelled/otp, 6 states); label + control
+    built, help and error states not yet visualised.
+- id: C11
+  status: done
+  evidence: experience/design/
+  note: seasonal hero
+- id: C12
+  status: done
+  evidence: experience/design/
+  note: 4 items on Home
+- id: C13
+  status: done
+  evidence: experience/design/
+  note: 4 categories
+- id: C14
+  status: missing
+  evidence: null
+  note: none
+- id: C15
+  status: missing
+  evidence: null
+  note: none
+- id: C16
+  status: missing
+  evidence: null
+  note: none
+- id: C17
+  status: missing
+  evidence: null
+  note: none
+- id: C18
+  status: done
+  evidence: experience/design/
+  note: Deals for you + See all
+- id: T1
+  status: done
+  evidence: experience/design/
+  note: 2-up deals grid
+- id: T2
+  status: partial
+  evidence: experience/design/
+  note: concept only
+- id: T3
+  status: missing
+  evidence: null
+  note: not built
+- id: T4
+  status: missing
+  evidence: null
+  note: not built
+- id: T5
+  status: missing
+  evidence: null
+  note: not built
+- id: T6
+  status: missing
+  evidence: null
+  note: not built
+- id: T7
+  status: missing
+  evidence: null
+  note: not built
+- id: T8
+  status: missing
+  evidence: null
+  note: not built
+- id: T9
+  status: missing
+  evidence: null
+  note: not built
+- id: T10
+  status: partial
+  evidence: experience/design/
+  note: 1 of 3 steps built
+- id: T11
+  status: partial
+  evidence: experience/design/
+  note: login built; OTP verify screen missing
+- id: T12
+  status: missing
+  evidence: null
+  note: not built
+- id: L1
+  status: done
+  evidence: experience/design/
+  note: 390x844, 16px margins
+- id: L2
+  status: done
+  evidence: experience/design/
+  note: B2C shell
+- id: L3
+  status: missing
+  evidence: null
+  note: not designed
+- id: L4
+  status: missing
+  evidence: null
+  note: not designed
+- id: L5
+  status: missing
+  evidence: null
+  note: declared in brief, not applied
+- id: L6
+  status: missing
+  evidence: null
+  note: undefined
+- id: L7
+  status: partial
+  evidence: experience/design/
+  note: status bar faked, not real insets
+- id: L8
+  status: partial
+  evidence: experience/design/
+  note: fixed frames, no scroll modelling
+- id: L9
+  status: missing
+  evidence: null
+  note: none defined
+- id: X1
+  status: done
+  evidence: experience/design/asset-plan.yaml
+  note: 3 watermarks defined (draft-not-approved, sample-imagery, seller-supplied)
+    with placement/opacity/token; watermark component built on canvas.
+- id: X2
+  status: partial
+  evidence: experience/design/
+  note: plain strokes only
+- id: X3
+  status: partial
+  evidence: experience/design/asset-plan.yaml
+  note: pattern_rules defined and the pattern component is built, but its inline SVG
+    renders undersized (OpenPencil sizes vector frames to the drawn content, not the
+    requested w/h) so it is NOT yet applied to the hero.
+- id: X4
+  status: missing
+  evidence: null
+  note: none
+- id: X5
+  status: missing
+  evidence: null
+  note: none
+- id: X6
+  status: missing
+  evidence: null
+  note: none
+- id: X7
+  status: done
+  evidence: experience/design/design-brief.yaml
+  note: 'Corner treatment consistent: 4 (badges) / 8 (controls) / 12 (cards, hero)
+    / 999 (pills).'
+- id: X8
+  status: missing
+  evidence: null
+  note: none
+- id: X9
+  status: missing
+  evidence: null
+  note: none
+- id: X10
+  status: missing
+  evidence: null
+  note: none
+- id: X11
+  status: missing
+  evidence: null
+  note: none
+- id: X12
+  status: done
+  evidence: experience/design/asset-plan.yaml
+  note: Crop/focal/aspect rules declared per media slot (product card 4:3, hero 16:6,
+    category 1:1, avatar top-third) plus overlay-text contrast check.
+- id: N1
+  status: missing
+  evidence: null
+  note: none
+- id: N2
+  status: partial
+  evidence: experience/design/
+  note: one bilingual chip; body copy English
+- id: N3
+  status: done
+  evidence: experience/design/
+  note: Rupee with Indian digit grouping
+- id: N4
+  status: done
+  evidence: experience/design/
+  note: from the governed journey guide
+- id: N5
+  status: missing
+  evidence: null
+  note: none
+- id: N6
+  status: partial
+  evidence: experience/design/
+  note: one line of legal copy
+- id: A1
+  status: done
+  evidence: experience/design/
+  note: all pairs verified
+- id: A2
+  status: done
+  evidence: experience/design/
+  note: border.control verified
+- id: A3
+  status: done
+  evidence: experience/design/design-brief.yaml
+  note: 'All interactive targets >=44: chips/search/hero-cta/add-to-cart 44, nav items
+    48, CTAs 48. Was 7 of 11 below 44.'
+- id: A4
+  status: missing
+  evidence: null
+  note: token exists, state not drawn
+- id: A5
+  status: missing
+  evidence: null
+  note: none
+- id: A6
+  status: missing
+  evidence: null
+  note: no motion defined
+- id: G1
+  status: done
+  evidence: experience/design/
+  note: design-brief.yaml + measured ratios
+- id: G2
+  status: done
+  evidence: experience/design/
+  note: 65 entries, schema-valid
+- id: G3
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 17 component contracts with variants, states, tokens, flutter/web bindings,
+    accessibility and QA; 8 masters exist in the OpenPencil document.
+- id: G4
+  status: done
+  evidence: experience/design/design-ir.yaml
+  note: design-ir.yaml links 2 journeys / 3 screen nodes to component and state refs.
+- id: G5
+  status: missing
+  evidence: null
+  note: none
+- id: G6
+  status: missing
+  evidence: null
+  note: none
+plan:
+- phase: 1
+  goal: Make the existing screens trustworthy
+  elements:
+  - A3
+  - F3
+  - F5
+  - F9
+  - X7
+  actions:
+  - Raise all interactive targets to >=44x44 (AddToCart 36, Nav 38, Segmented 38,
+    HeroCta 34)
+  - Snap 182 off-grid spacing values onto a 4/8 scale
+  - Introduce the elevation scale and apply it to cards and sheets
+  - Define the z-index scale for overlays, sticky bars and toasts
+  - Reduce the radius set to 4/8/12/999
+  status: complete
+  completed_on: '2026-10-02'
+- phase: 2
+  goal: Convert mockup into a system
+  elements:
+  - G3
+  - G4
+  - P2
+  - C1
+  - C10
+  - F2
+  actions:
+  - Extract the 20 analyzer clusters into component-contract-registry entries with
+    6 states
+  - Write design-ir.yaml linking every screen to journeys, components and states
+  - Collapse 23 type styles into an ~8-step scale
+  - Define the form-field pattern (label + control + help + error)
+  status: complete
+  completed_on: '2026-10-02'
+- phase: 3
+  goal: Close the decoration and media blind spot
+  elements:
+  - X1
+  - X3
+  - X12
+  - P11
+  - P13
+  - P20
+  actions:
+  - 'Define watermarks: draft/not-approved, seller, sample imagery'
+  - Define the campaign background pattern and merchandising framing
+  - Write asset-plan.yaml with crop/focal-point rules per image slot
+  - Replace placeholder blocks with governed imagery via asset-sources.yaml
+  - Add skeletons and spinners for loading states
+  status: complete
+  completed_on: '2026-10-02'
+- phase: 4
+  goal: Behaviour, states and motion
+  elements:
+  - C14
+  - C15
+  - C16
+  - C17
+  - X5
+  - X8
+  - X9
+  - X10
+  - F6
+  - A4
+  - A6
+  actions:
+  - Build empty, error, toast, modal and sheet components with chrome and scrim
+  - Write motion-registry.yaml for the ~15 real transitions
+  - Align client motion tokens to design-intelligence/motion-tokens.yaml
+  - Draw focus-visible states and define the reduced-motion variant
+- phase: 5
+  goal: Content, layout breadth and evidence
+  elements:
+  - N1
+  - N2
+  - N5
+  - T3
+  - T4
+  - T6
+  - L3
+  - L5
+  - L9
+  - G5
+  - G6
+  actions:
+  - 'Localisation strategy: full EN/HI copy decks and Devanagari-safe text stock'
+  - Microcopy, terminology and error-message catalogue
+  - Cart, checkout and search-result patterns
+  - Tablet/desktop composition and density modes per surface
+  - Capture visual baselines and stand up drift detection
+status: draft

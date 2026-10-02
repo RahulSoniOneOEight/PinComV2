@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:7e9db9bbcd363634c5c7695cb918e0ad23c763b6ddf18daeb25c50b95576c35d
+revision_ref: sha256:bb5d09ede585773a2061fec1d03f3651c0939ff3a0aac49fb28985f0c369674a
 components:
 - action.button
 - commerce.product-card
@@ -2113,6 +2113,22 @@ frames:
 - row1
 - row2
 - row3
+- "W2 \xC2\xB7 Seller portal \xC2\xB7 Orders to fulfil (web)"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiToFulfil
+- kpiReady
+- kpiLate
+- kpiReturns
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
 - zz-journey-boards
 - browse-to-buy
 - browse-to-buy_div
@@ -2188,19 +2204,19 @@ frames:
 - credit-order_dot4
 info:
   pages: 4
-  totalNodes: 4155
+  totalNodes: 4218
   types:
-    FRAME: 2111
+    FRAME: 2127
     VECTOR: 259
     COMPONENT: 45
-    TEXT: 1670
+    TEXT: 1717
     ELLIPSE: 70
   fonts:
   - Hind
   - Inter
   pageCounts:
     "00 \xC2\xB7 Foundations & Components": 544
-    "01 \xC2\xB7 Screens \xC2\xB7 All": 3466
+    "01 \xC2\xB7 Screens \xC2\xB7 All": 3529
     "03 \xC2\xB7 Empty \xC2\xB7 Reserved": 0
     "02 \xC2\xB7 Journey Boards": 145
 source: openpencil-cli

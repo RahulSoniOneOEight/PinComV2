@@ -248,3 +248,55 @@ fig_todo:
   (deferred: the page-scoping run holds the file).'
 - 'Specifically confirm the two linted nodes: S3 B2C Home / Body / Hero / HeroCopy
   / HeroKicker, and zz-components-2 / commerce.hero-banner / hbCopy / hbKicker.'
+long_scroll_screens:
+  requirement: B2C Home and B2B Home are LONG-SCROLL surfaces, not viewport mocks.
+    The client reference (BuildKart journeys/screens/components map, part 2.2 and
+    2.10) sizes B2C Home at 375x2014 and the working B2B Home at 390x2058.
+  current_gap: 'S3 · B2C Home, S3D · B2C Home (Dark) and S8 · B2B Home are 390x844
+    viewport artboards. They render roughly the first third of the intended scroll:
+    the header, search, hero, trust row, category rail and one product row. The carousels,
+    promotional bands, secondary banner, large feed and merchandising modules are
+    absent.'
+  plan:
+  - Keep S3, S3D and S8 as the above-the-fold view - they are correct as far as they
+    go.
+  - 'Add long-scroll artboards at 390 wide: S3L · B2C Home (long), S3DL · B2C Home
+    (Dark, long), S8L · B2B Home (long).'
+  - Height is content-driven, not a multiple of the viewport; expect roughly 2,050-2,150
+    for B2C and 2,050-2,150 for B2B.
+  - Mark the fold on the long artboards so the above-the-fold composition stays reviewable.
+  - Bottom navigation is sticky and therefore appears once at the fold, not repeated
+    down the scroll.
+  b2c_home_sections_in_order:
+  - header (location, notifications)
+  - search bar
+  - trust row
+  - hero carousel + dot indicator
+  - category navigation
+  - flash deals head + horizontal carousel
+  - best sellers head + horizontal carousel
+  - secondary banner
+  - large feed head
+  - large feed product grid
+  - sticky bottom navigation
+  b2b_home_sections_in_order:
+  - header
+  - quick order (procurement list filter bar, compact SKU cards, View More, Add to
+    Order)
+  - buy again cards
+  - 'merchandising: Trade Offers & Deals (tiles + buy-again cards)'
+  - category filter
+  - product grid (trade product cards, Load more)
+  - cart summary
+  - sticky bottom navigation
+  components_required_but_missing:
+  - carousel (product / banner / gallery) with dot indicator
+  - flash deals carousel
+  - secondary banner
+  - merchandising tile
+  - compact quick-order SKU card
+  - procurement list filter bar
+  - buy again card
+  blocked_by: The OpenPencil desktop app is not running and its automation server
+    is down, so no canvas work is possible. %LOCALAPPDATA%\OpenPencil\mcp.json is
+    absent. An app restart is required first.

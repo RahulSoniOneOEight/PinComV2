@@ -1,6 +1,6 @@
 # OpenPencil page scoping in v0.15.1
 
-Observed on 2026-10-02 against `client-projects/client102/experience/design/apnakart-app.fig` and the same document open in the desktop app as `tab-2`.
+Observed on 2026-10-02 against `client-projects/client102/experience/design/apnakart-design.fig` and the same document open in the desktop app as `tab-2`.
 
 ## Rule
 

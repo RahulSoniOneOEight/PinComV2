@@ -83,7 +83,7 @@ elements:
   note: placeholder blocks not semantically named
 - id: P7
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: explicit 1px divider rows used across order summaries, specification cards,
     return cards and pricing tables.
 - id: P8
@@ -102,7 +102,7 @@ elements:
   note: Consumer / B2B Trade
 - id: P11
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: real Pexels imagery applied directly through the API on S19/S20 (chrome faucet)
     and S32 (cement bags); the governed media.placeholder glyph remains for slots without
     a client photo. Still flagged sample-imagery until human review.
@@ -117,16 +117,16 @@ elements:
     (brand name is an open client question).
 - id: P14
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: text avatar built on S33 Account (RS initials on surface.accent).
 - id: P15
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: checkbox built on S23 Checkout Details (save-as-default, 20px control inside
     a 44px target row).
 - id: P16
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: radio group built on S25 Refund Reasons (5 options, selected state, 48px rows).
 - id: P17
   status: missing
@@ -184,7 +184,7 @@ elements:
     break (10+ bags: ₹372).'
 - id: C9
   status: partial
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: star rating display built on S19 Product Detail (score, rating count, units
     sold); no review-writing or rating-breakdown flow yet.
 - id: C10
@@ -270,7 +270,7 @@ elements:
     KPI tiles and Dashboard/Invoices/Pay/Limit tabs.'
 - id: T10
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: Seller onboarding screen now covers registration, KYC submission, document
     verification, correction recovery and approval progress in one verified operational
     flow; exported as seller-onboarding.png.
@@ -369,7 +369,7 @@ elements:
     nav.'
 - id: X11
   status: done
-  evidence: experience/design/apnakart-app.fig
+  evidence: experience/design/apnakart-design.fig
   note: sticky action bars built on S19/S20/S21/S23/S27/S31/S32 with 48px CTAs pinned
     above the safe area.
 - id: X12

@@ -29,7 +29,7 @@ All AI/engineering agents must:
 ## OpenPencil page targeting (v0.15.1)
 
 - MCP `find_nodes` is recursive and searches one page: the actual current page when `page_id` is omitted, or the explicitly targeted page when both `document_id` and `page_id` are supplied. Always pass both IDs for page-scoped MCP work; do not rely on `switch_page`, whose reported switch does not persist to the next MCP call in v0.15.1.
-- Reproduction on `apnakart-app.fig`: an untargeted MCP frame search returned 779; `switch_page` followed by the same search still returned 779 on every page; explicit MCP `page_id` searches returned 198 / 1432 / 0 / 73 after reorganisation (975 / 779 / 0 / 0 before it).
+- Reproduction on `apnakart-design.fig`: an untargeted MCP frame search returned 779; `switch_page` followed by the same search still returned 779 on every page; explicit MCP `page_id` searches returned 198 / 1432 / 0 / 73 after reorganisation (975 / 779 / 0 / 0 before it).
 - CLI file mode is authoritative for a saved revision: `openpencil find <file> --type FRAME --limit 10000 --json` searches all pages, while `--page "<page name>"` scopes it. Connected CLI `--page-id` is defective in v0.15.1 and returned the whole document for every page ID.
 - `export_image` still requires the node to be on the desktop app's actual active page; its `page_id` does not bypass the single-page raster check. Activate that page in the UI before raster verification. See `tooling/experience/openpencil-page-scoping.md` for evidence and safe workflow.
 

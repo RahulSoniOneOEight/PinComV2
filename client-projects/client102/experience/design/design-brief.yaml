@@ -133,7 +133,7 @@ open_items:
 - 'Stock photography is blocked: no Pexels/Unsplash provider configured, so all media
   slots use the governed generated placeholder.'
 - Brand mark is a text lockup only; no final logo asset exists.
-openpencil_document: client-projects/client102/experience/design/apnakart-app.fig
+openpencil_document: client-projects/client102/experience/design/apnakart-design.fig
 screen_map:
   b2c.onboarding: S1 · Onboarding
   b2c.login: S2 · Login
@@ -247,7 +247,7 @@ component_ref_enrichment:
   remaining_gap: the journey IR models no authentication journey, so auth screens
     are attributed by override rather than by the graph
 fig_todo:
-- 'Recolour #526D82 -> #456079 on every node using content.secondary in apnakart-app.fig
+- 'Recolour #526D82 -> #456079 on every node using content.secondary in apnakart-design.fig
   (deferred: the page-scoping run holds the file).'
 - 'Specifically confirm the two linted nodes: S3 B2C Home / Body / Hero / HeroCopy
   / HeroKicker, and zz-components-2 / commerce.hero-banner / hbCopy / hbKicker.'

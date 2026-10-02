@@ -178,7 +178,10 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
     blockers.extend(qa_blockers)
 
     checks = {
-        "surfaces": not any("surface" in x.lower() for x in blockers),
+        # Match the surface blockers specifically: a substring test on "surface" also
+        # matched the visual-qa messages ("...for required surface X"), wrongly failing
+        # this check whenever visual QA was outstanding.
+        "surfaces": not any(("surfaces differ" in x) or ("surfaces outside" in x) for x in blockers),
         "journeys": not any("journey" in x.lower() or "nodes differ" in x.lower() for x in blockers),
         "design_ir": mapped_nodes == required_nodes and required_nodes > 0 and not any("Design IR" in x for x in blockers),
         "design_source": not any(x.startswith("Design source") for x in blockers),

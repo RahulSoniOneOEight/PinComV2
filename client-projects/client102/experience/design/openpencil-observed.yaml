@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:b0534d629699e1e5e322e05349ec5a8522b6187c65abb16bf920daa7ae06d42c
+revision_ref: sha256:5fe9db2c67e875c2758722bcf8207b8aa948961efcb5f08184fc47375eaa4652
 components:
 - action.button
 - commerce.product-card
@@ -2145,6 +2145,53 @@ frames:
 - Checkbox
 - Actions
 - PrimaryCta
+- "S37 \xC2\xB7 Browse"
+- StatusBar
+- AppBar
+- Body
+- Search
+- GridRow1
+- Cat1
+- Cat1Circle
+- Cat2
+- Cat2Circle
+- Cat3
+- Cat3Circle
+- GridRow2
+- Cat4
+- Cat4Circle
+- Cat5
+- Cat5Circle
+- Cat6
+- Cat6Circle
+- GridRow3
+- Cat7
+- Cat7Circle
+- Cat8
+- Cat8Circle
+- Cat9
+- Cat9Circle
+- BottomNav
+- "S38 \xC2\xB7 Category results"
+- StatusBar
+- AppBar
+- Body
+- CountSort
+- GridRow1
+- Product1
+- P1Media
+- P1Body
+- Product2
+- P2Media
+- P2Body
+- GridRow2
+- Product3
+- P3Media
+- P3Body
+- Product4
+- P4Media
+- P4Body
+- BottomNav
 - zz-journey-boards
 - browse-to-buy
 - browse-to-buy_div
@@ -2220,19 +2267,19 @@ frames:
 - credit-order_dot4
 info:
   pages: 4
-  totalNodes: 4252
+  totalNodes: 4347
   types:
-    FRAME: 2143
+    FRAME: 2190
     VECTOR: 259
     COMPONENT: 45
-    TEXT: 1735
+    TEXT: 1783
     ELLIPSE: 70
   fonts:
   - Hind
   - Inter
   pageCounts:
     "00 \xC2\xB7 Foundations & Components": 544
-    "01 \xC2\xB7 Screens \xC2\xB7 All": 3563
+    "01 \xC2\xB7 Screens \xC2\xB7 All": 3658
     "03 \xC2\xB7 Empty \xC2\xB7 Reserved": 0
     "02 \xC2\xB7 Journey Boards": 145
 source: openpencil-cli

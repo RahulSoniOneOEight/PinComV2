@@ -129,6 +129,55 @@ screen_map:
   b2c.login: S2 · Login
   b2c.home: S3 · B2C Home
   b2c.home.dark: S3D · B2C Home (Dark)
+  b2c.product-detail: S19 · Product Detail
+  b2c.product-variant: S20 · Product Variant
+  b2c.confirm-order: S21 · Confirm Order
+  b2c.cart-empty: S22 · Cart Empty
+  b2c.checkout-details: S23 · Checkout Details
+  b2c.track-package: S24 · Track Package
+  b2c.track-package.delayed: S24b · Track Package (Delayed)
+  b2c.refund-reasons: S25 · Refund Reasons
+  b2c.orders-returned: S26 · Orders Returned
+  b2b.quotation-cart: S27 · Quotation Cart
+  b2b.quotes-received: S28 · Quotes Received
+  b2b.quote-compare: S29 · Quote Compare
+  b2b.order-history: S30 · B2B Order History
+  b2b.reorder: S31 · B2B Reorder
+  b2b.trade-price-pdp: S32 · Trade Price PDP
+  b2c.account: S33 · Account
+  b2c.wishlist: S34 · Wishlist
+  b2b.schemes-offers: S35 · Schemes & Offers
+journey_node_map:
+  browse-to-buy.1: S3 · B2C Home
+  browse-to-buy.2: S19 · Product Detail
+  browse-to-buy.3: S20 · Product Variant
+  browse-to-buy.4: S23 · Checkout Details
+  browse-to-buy.5: S23 · Checkout Details
+  browse-to-buy.6: S21 · Confirm Order
+  search-to-buy.1: S6 · Search results
+  search-to-buy.2: S19 · Product Detail
+  search-to-buy.3: S20 · Product Variant
+  search-to-buy.4: S23 · Checkout Details
+  search-to-buy.5: S21 · Confirm Order
+  order-tracking.1: S7 · Orders
+  order-tracking.2: S24 · Track Package
+  return-refund.1: S7 · Orders
+  return-refund.2: S25 · Refund Reasons
+  return-refund.3: S26 · Orders Returned
+  return-refund.4: S26 · Orders Returned
+  quote-to-order.1: S9 · RFQ
+  quote-to-order.2: S28 · Quotes Received
+  quote-to-order.3: S29 · Quote Compare
+  quote-to-order.4: S27 · Quotation Cart
+  quote-to-order.5: S21 · Confirm Order
+  repeat-order.1: S30 · B2B Order History
+  repeat-order.2: S31 · B2B Reorder
+  repeat-order.3: S27 · Quotation Cart
+screen_state_notes:
+  b2c.cart-empty: S22 · Cart Empty closes the add-cart empty state
+  b2c.track-package.delayed: S24b closes the track-shipment-error state
+  b2c.product-detail: no PDP existed before; browse-to-buy and search-to-buy both run through it
+  auth-chain: Cover/Splash/Mobile/OTP/Terms are represented by S1 Onboarding + S2 Login; not built as separate screens
 component_registry_ref: experience/design/component-contract-registry.yaml
 design_ir_ref: experience/design/design-ir.yaml
 asset_plan_ref: experience/design/asset-plan.yaml

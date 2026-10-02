@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-app.fig
-revision_ref: sha256:7f75e567386c13fc606579585b542234fb07daaf03f6e52501e44447b0af07d1
+revision_ref: sha256:a8f219e64e1c78d50cb56eaf1c2abc44e8914a2126e946dc095582e9d00804a4
 components:
 - action.button
 - commerce.product-card
@@ -32,6 +32,13 @@ components:
 - feedback.status-pill
 - input.text-field
 - commerce.section-header
+- QuantityStepper
+- FilterChip
+- TradeInfoTile
+- TradePriceSummary
+- VolumePricingTable
+- SchemeCard
+- ProcurementListCard
 journey_screens:
 - browse-to-buy
 - search-to-buy
@@ -1038,20 +1045,803 @@ frames:
 - Frame
 - Frame
 - Frame
+- ZZ icontest2
+- Icon / custom
+- Icon / custom
+- "S19 \xC2\xB7 Product Detail"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- Icon / heart
+- Icon / custom
+- Icon / cart
+- Icon / custom
+- Body
+- Media
+- Info
+- BadgeRow
+- Offer
+- Stock
+- PriceRow
+- RatingRow
+- Icon / custom
+- Seller
+- SellerIcon
+- Icon / custom
+- SellerInfo
+- Visit
+- Specs
+- Sp1
+- Sp2
+- Sp3
+- Related
+- RelatedHead
+- RelatedRow
+- Mini
+- Media
+- Icon / custom
+- Mini
+- Media
+- Icon / custom
+- Mini
+- Media
+- Icon / custom
+- StickyBar
+- AddToCart
+- BuyNow
+- S20t
+- FinishChips
+- Chip
+- Chip
+- Chip
+- QuantityStepper
+- StepMinus
+- Icon / custom
+- StepValue
+- StepPlus
+- Icon / custom
+- "S20 \xC2\xB7 Product Variant"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- Icon / heart
+- Icon / custom
+- Icon / cart
+- Icon / custom
+- Body
+- Media
+- Info
+- PriceRow
+- Offer
+- FinishBlock
+- FinishChips
+- Chip
+- Chip
+- Chip
+- SizeBlock
+- SizeChips
+- Chip
+- Chip
+- Chip
+- QtyBlock
+- QtyCopy
+- QuantityStepper
+- StepMinus
+- Icon / custom
+- StepValue
+- StepPlus
+- Icon / custom
+- StockNote
+- StickyBar
+- AddToCart
+- "S21 \xC2\xB7 Confirm Order"
+- StatusBar
+- Body
+- SuccessBadge
+- Icon / custom
+- Hero
+- OrderNo
+- Summary
+- Row
+- Row
+- SumDiv
+- Row
+- DeliveryInfo
+- Icon / custom
+- DiCopy
+- StickyBar
+- Track
+- Continue
+- "S22 \xC2\xB7 Cart Empty"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- EmptyArt
+- Icon / custom
+- StartShopping
+- BottomNav
+- Nav-Home
+- NavIcon
+- Icon / custom
+- Nav-Browse
+- NavIcon
+- Icon / custom
+- Nav-Orders
+- NavIcon
+- Icon / custom
+- Nav-Cart
+- NavIcon
+- Icon / custom
+- Nav-Account
+- NavIcon
+- Icon / custom
+- "S23 \xC2\xB7 Checkout Details"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- StepNote
+- Field
+- Input
+- Field
+- Input
+- Field
+- Input
+- Row
+- Field
+- Input
+- Field
+- Input
+- SaveDefault
+- Check
+- Icon / custom
+- StickyBar
+- SaveContinue
+- "S24 \xC2\xB7 Track Package"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- OrderHead
+- OhRow
+- Status
+- Timeline
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Inner
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Copy
+- Address
+- MapIcon
+- Icon / custom
+- AdCopy
+- StickyBar
+- Help
+- Call
+- "S24b \xC2\xB7 Track Package (Delayed)"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- OrderHead
+- OhRow
+- Status
+- Exception
+- Icon / custom
+- ExCopy
+- Timeline
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Icon / custom
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Line
+- Copy
+- Step
+- Rail
+- Dot
+- Copy
+- StickyBar
+- Help
+- Call
+- "S25 \xC2\xB7 Refund Reasons"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- OrderSummary
+- Thumb
+- OsCopy
+- Reasons
+- Reason
+- rdoWrap
+- Rdo
+- Dot
+- Div
+- Reason
+- rdoWrap
+- Rdo
+- Div
+- Reason
+- rdoWrap
+- Rdo
+- Div
+- Reason
+- rdoWrap
+- Rdo
+- Div
+- Reason
+- rdoWrap
+- Rdo
+- NoteField
+- Input
+- StickyBar
+- Submit
+- "S26 \xC2\xB7 Orders Returned"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- Tabs
+- Tab
+- Tab
+- Tab
+- ReturnCard
+- Head
+- Badge
+- Item
+- Thumb
+- Copy
+- Div
+- Foot
+- ReturnCard
+- Head
+- Badge
+- Item
+- Thumb
+- Copy
+- Div
+- Foot
+- ReturnCard
+- Head
+- Badge
+- Item
+- Thumb
+- Copy
+- Div
+- Foot
+- BottomNav
+- Nav-Home
+- NavIcon
+- Icon / custom
+- Nav-Browse
+- NavIcon
+- Icon / custom
+- Nav-Orders
+- NavIcon
+- Icon / custom
+- Nav-Cart
+- NavIcon
+- Icon / custom
+- Nav-Account
+- NavIcon
+- Icon / custom
+- "S27 \xC2\xB7 Quotation Cart"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- B2BChip
+- Body
+- TradeNote
+- QLine
+- Thumb
+- Info
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- PriceCol
+- QLine
+- Thumb
+- Info
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- PriceCol
+- QLine
+- Thumb
+- Info
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- PriceCol
+- Summary
+- SRow
+- SRow
+- Div
+- TotalRow
+- StickyBar
+- Checkout
+- "S28 \xC2\xB7 Quotes Received"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- RfqChip
+- Body
+- RfqMeta
+- QuoteCard
+- Head
+- SCopy
+- Best
+- PriceRow
+- Tot
+- Actions
+- Btn
+- Btn
+- QuoteCard
+- Head
+- SCopy
+- Val
+- PriceRow
+- Tot
+- Actions
+- Btn
+- Btn
+- QuoteCard
+- Head
+- SCopy
+- Val
+- PriceRow
+- Tot
+- Actions
+- Btn
+- Btn
+- "S29 \xC2\xB7 Quote Compare"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- RfqChip
+- Body
+- Table
+- THead
+- LC
+- H1
+- Best
+- H2
+- H3
+- Div
+- TRow
+- LC
+- V1
+- V2
+- V3
+- TRow
+- LC
+- V1
+- V2
+- V3
+- TRow
+- LC
+- V1
+- V2
+- V3
+- TRow
+- LC
+- V1
+- V2
+- V3
+- Div2
+- TRow
+- LC
+- V1
+- V2
+- V3
+- BestCard
+- BcCopy
+- PrivacyNote
+- StickyBar
+- Accept
+- "S30 \xC2\xB7 B2B Order History"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- B2BChip
+- Body
+- Tabs
+- T1
+- T2
+- T3
+- POCard
+- Head
+- Badge
+- Item
+- Thumb
+- Copy
+- Div
+- Foot
+- Actions
+- BtnSm
+- BtnSm
+- POCard
+- Head
+- Badge
+- Item
+- Thumb
+- Copy
+- Div
+- Foot
+- Actions
+- BtnSm
+- BtnSm
+- POCard
+- Head
+- Badge
+- Item
+- Thumb
+- Copy
+- Div
+- Foot
+- Actions
+- BtnSm
+- BtnSm
+- BottomNav
+- Nav-Trade
+- NavIcon
+- Icon / custom
+- Nav-Credit
+- NavIcon
+- Icon / custom
+- Nav-Orders
+- NavIcon
+- Icon / custom
+- Nav-Account
+- NavIcon
+- Icon / custom
+- "S31 \xC2\xB7 B2B Reorder"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- Body
+- ReorderNote
+- QLine
+- Thumb
+- Info
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- PriceCol
+- QLine
+- Thumb
+- Info
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- PriceCol
+- QLine
+- Thumb
+- Info
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- PriceCol
+- Estimate
+- StickyBar
+- AddAll
+- Minus
+- Icon / custom
+- Value
+- Plus
+- Icon / custom
+- Row
+- Icon / custom
+- PriceRow
+- Div
+- R1
+- R2
+- R3
+- Save
+- VRow
+- VRow
+- VRow
+- VRow
+- Icon
+- Icon / custom
+- Copy
+- State
+- Head
+- Chip
+- Foot
+- AddAll
+- "S32 \xC2\xB7 Trade Price PDP"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- B2BChip
+- Body
+- Media
+- TitleBlock
+- Tiles
+- TradeInfoTile
+- TradeInfoTile
+- TradeInfoTile
+- TradePriceSummary
+- PR
+- PCol
+- Save
+- Meta
+- QtyRow
+- Stepper
+- Minus
+- Icon / custom
+- Val
+- Plus
+- Icon / custom
+- VolumePricingTable
+- VRow
+- VRow
+- VRow
+- VRow
+- StickyBar
+- Rfq
+- Add
+- "S33 \xC2\xB7 Account"
+- StatusBar
+- AppBar
+- spacer
+- Icon / gear
+- Icon / custom
+- Body
+- Profile
+- Avatar
+- PInfo
+- Menu
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- ARow
+- Ico
+- Icon / custom
+- spacer
+- Caret
+- Icon / custom
+- BottomNav
+- Nav-Home
+- NavIcon
+- Icon / custom
+- Nav-Browse
+- NavIcon
+- Icon / custom
+- Nav-Orders
+- NavIcon
+- Icon / custom
+- Nav-Cart
+- NavIcon
+- Icon / custom
+- Nav-Account
+- NavIcon
+- Icon / custom
+- "S34 \xC2\xB7 Wishlist"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- Body
+- Row1
+- WCard
+- Media
+- Icon / custom
+- Info
+- PriceRow
+- Add
+- WCard
+- Media
+- Icon / custom
+- Info
+- PriceRow
+- Add
+- Row2
+- WCard
+- Media
+- Icon / custom
+- Info
+- PriceRow
+- Add
+- WCard
+- Media
+- Icon / custom
+- Info
+- PriceRow
+- Add
+- BottomNav
+- Nav-Home
+- NavIcon
+- Icon / custom
+- Nav-Browse
+- NavIcon
+- Icon / custom
+- Nav-Orders
+- NavIcon
+- Icon / custom
+- Nav-Cart
+- NavIcon
+- Icon / custom
+- Nav-Account
+- NavIcon
+- Icon / custom
+- "S35 \xC2\xB7 Schemes & Offers"
+- StatusBar
+- AppBar
+- Icon / back
+- Icon / custom
+- spacer
+- B2BChip
+- Body
+- SchemeCard
+- Icon
+- Icon / custom
+- Copy
+- State
+- SchemeCard
+- Icon
+- Icon / custom
+- Copy
+- State
+- SchemeCard
+- Icon
+- Icon / custom
+- Copy
+- State
+- SchemeCard
+- Icon
+- Icon / custom
+- Copy
+- State
+- BottomNav
+- Nav-Trade
+- NavIcon
+- Icon / custom
+- Nav-Credit
+- NavIcon
+- Icon / custom
+- Nav-Orders
+- NavIcon
+- Icon / custom
+- Nav-Account
+- NavIcon
+- Icon / custom
 info:
-  pages: 3
-  totalNodes: 1901
+  pages: 4
+  totalNodes: 3277
   types:
-    FRAME: 977
-    VECTOR: 104
-    TEXT: 789
-    COMPONENT: 31
+    FRAME: 1759
+    VECTOR: 217
+    TEXT: 1263
+    COMPONENT: 38
   fonts:
   - Hind
   - Inter
   pageCounts:
-    "ApnaKart \xC2\xB7 Design": 1901
-    "00 \xC2\xB7 Foundations": 0
+    "ApnaKart \xC2\xB7 Design": 1907
+    "00 \xC2\xB7 Foundations": 1370
     "01 \xC2\xB7 Screens \xC2\xB7 B2C": 0
+    "02 \xC2\xB7 Screens \xC2\xB7 Journeys": 0
 source: openpencil-cli
 status: observed

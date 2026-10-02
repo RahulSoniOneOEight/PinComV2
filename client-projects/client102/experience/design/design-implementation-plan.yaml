@@ -1,0 +1,211 @@
+plan_id: DIP-client102-v1
+client_id: client102
+selection_ref: experience/design/design-ir.yaml
+platforms:
+  flutter:
+    app: apps/prototype_app
+    binding: packages/agency_flutter_ui
+    surfaces:
+    - customer-app
+    - b2b
+  web:
+    apps:
+    - apps/storefront
+    - apps/commerce_admin
+    - apps/ops_console
+    - apps/analytics
+    binding: packages/agency_web_ui
+    surfaces:
+    - web-store
+    - seller-portal
+    - commerce-admin
+    - erp
+    - analytics
+    - ops-console
+patterns:
+- id: action.button
+  semantic_role: Primary action control
+  targets:
+    flutter: packages/agency_flutter_ui/AppButton
+    web: packages/agency_web_ui/Button
+  lifecycle: candidate
+- id: commerce.product-card
+  semantic_role: Product summary and add-to-cart entry
+  targets:
+    flutter: packages/agency_flutter_ui/ProductCard
+    web: packages/agency_web_ui/ProductCard
+  lifecycle: candidate
+- id: commerce.price-block
+  semantic_role: Selling price against MRP
+  targets:
+    flutter: packages/agency_flutter_ui/PriceBlock
+    web: packages/agency_web_ui/PriceBlock
+  lifecycle: prototype
+- id: commerce.offer-badge
+  semantic_role: Promotional discount indicator
+  targets:
+    flutter: packages/agency_flutter_ui/OfferBadge
+    web: packages/agency_web_ui/OfferBadge
+  lifecycle: prototype
+- id: commerce.stock-badge
+  semantic_role: Availability indicator
+  targets:
+    flutter: packages/agency_flutter_ui/StockBadge
+    web: packages/agency_web_ui/StockBadge
+  lifecycle: prototype
+- id: commerce.b2b-trade-block
+  semantic_role: Trade price, MOQ and tier entry
+  targets:
+    flutter: packages/agency_flutter_ui/B2BTradeBlock
+    web: packages/agency_web_ui/B2BTradeBlock
+  lifecycle: prototype
+- id: commerce.search-bar
+  semantic_role: Persistent catalogue search entry
+  targets:
+    flutter: packages/agency_flutter_ui/SearchBar
+    web: packages/agency_web_ui/SearchBar
+  lifecycle: candidate
+- id: commerce.hero-banner
+  semantic_role: Campaign or seasonal promotion
+  targets:
+    flutter: packages/agency_flutter_ui/HeroBanner
+    web: packages/agency_web_ui/HeroBanner
+  lifecycle: prototype
+- id: commerce.section-header
+  semantic_role: Section title with optional action
+  targets:
+    flutter: packages/agency_flutter_ui/SectionHeader
+    web: packages/agency_web_ui/SectionHeader
+  lifecycle: prototype
+- id: commerce.trust-row-item
+  semantic_role: Reassurance cue
+  targets:
+    flutter: packages/agency_flutter_ui/TrustItem
+    web: packages/agency_web_ui/TrustItem
+  lifecycle: prototype
+- id: navigation.app-bar
+  semantic_role: Top navigation and context
+  targets:
+    flutter: packages/agency_flutter_ui/AppBar
+    web: packages/agency_web_ui/AppBar
+  lifecycle: prototype
+- id: navigation.bottom-nav-item
+  semantic_role: Persistent primary navigation destination
+  targets:
+    flutter: packages/agency_flutter_ui/BottomNavItem
+    web: packages/agency_web_ui/BottomNavItem
+  lifecycle: candidate
+- id: navigation.category-item
+  semantic_role: Category entry in a rail or grid
+  targets:
+    flutter: packages/agency_flutter_ui/CategoryItem
+    web: packages/agency_web_ui/CategoryItem
+  lifecycle: prototype
+- id: control.segmented
+  semantic_role: Mutually exclusive mode selector
+  targets:
+    flutter: packages/agency_flutter_ui/SegmentedControl
+    web: packages/agency_web_ui/SegmentedControl
+  lifecycle: prototype
+- id: input.text-field
+  semantic_role: Labelled single-line input
+  targets:
+    flutter: packages/agency_flutter_ui/AppTextField
+    web: packages/agency_web_ui/TextField
+  lifecycle: candidate
+- id: feedback.status-pill
+  semantic_role: Compact status or filter chip
+  targets:
+    flutter: packages/agency_flutter_ui/StatusPill
+    web: packages/agency_web_ui/StatusPill
+  lifecycle: prototype
+- id: layout.screen-shell
+  semantic_role: Shared surface shell with persistent navigation
+  targets:
+    flutter: packages/agency_flutter_ui/SurfaceShell
+    web: packages/agency_web_ui/SurfaceShell
+  lifecycle: prototype
+- id: feedback.empty-state
+  semantic_role: No-data presentation with a recovery action
+  targets:
+    flutter: packages/agency_flutter_ui/EmptyState
+    web: packages/agency_web_ui/EmptyState
+  lifecycle: prototype
+- id: feedback.error-state
+  semantic_role: Failure presentation with retry
+  targets:
+    flutter: packages/agency_flutter_ui/ErrorState
+    web: packages/agency_web_ui/ErrorState
+  lifecycle: prototype
+- id: feedback.toast
+  semantic_role: Transient feedback above the bottom nav
+  targets:
+    flutter: packages/agency_flutter_ui/AppToast
+    web: packages/agency_web_ui/Toast
+  lifecycle: prototype
+- id: overlay.scrim
+  semantic_role: Dimming layer behind modals and sheets
+  targets:
+    flutter: packages/agency_flutter_ui/Scrim
+    web: packages/agency_web_ui/Scrim
+  lifecycle: prototype
+- id: overlay.modal
+  semantic_role: Focused blocking task
+  targets:
+    flutter: packages/agency_flutter_ui/AppDialog
+    web: packages/agency_web_ui/Dialog
+  lifecycle: prototype
+- id: overlay.bottom-sheet
+  semantic_role: Focused task anchored to the bottom edge
+  targets:
+    flutter: packages/agency_flutter_ui/BottomSheet
+    web: packages/agency_web_ui/BottomSheet
+  lifecycle: prototype
+- id: feedback.loading-overlay
+  semantic_role: Blocking progress for a foreground operation
+  targets:
+    flutter: packages/agency_flutter_ui/LoadingOverlay
+    web: packages/agency_web_ui/LoadingOverlay
+  lifecycle: prototype
+- id: feedback.skeleton-row
+  semantic_role: List-row loading placeholder
+  targets:
+    flutter: packages/agency_flutter_ui/SkeletonRow
+    web: packages/agency_web_ui/SkeletonRow
+  lifecycle: prototype
+- id: commerce.order-card
+  semantic_role: Order or record row with status and post-order actions
+  targets:
+    flutter: packages/agency_flutter_ui/OrderCard
+    web: packages/agency_web_ui/OrderCard
+  lifecycle: candidate
+gates:
+- design_gate
+- visual_qa
+- experience_approval
+- visual_baselines
+gate_status:
+  design_gate: blocked
+  design_gate_blockers: 10
+  design_gate_checks:
+    surfaces: false
+    journeys: false
+    design_ir: false
+    design_source: true
+    visual_qa: false
+  visual_qa: not-run
+  experience_approval: absent
+  visual_baselines: recorded
+gate_note: Implementation must not start until the hard design gate is clean. AGENTS.md
+  rule 22 forbids exporting design directly into production code (Design IR plus the
+  semantic registries mediate it), and rule 24 makes drift from the approved revision
+  blocking. The ui-builder contract requires design_gate to pass before client-facing
+  code is generated.
+preconditions:
+- 'hard design gate clean: immutable experience approval plus a review package whose
+  manifest and observed revisions match'
+- design IR covering every journey in the journey graph
+- visual QA records passing for all 8 required surfaces
+- ui implementation registry mapping every semantic component to a Flutter and web
+  component
+status: blocked

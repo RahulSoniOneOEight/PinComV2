@@ -176,8 +176,10 @@ journey_node_map:
 screen_state_notes:
   b2c.cart-empty: S22 · Cart Empty closes the add-cart empty state
   b2c.track-package.delayed: S24b closes the track-shipment-error state
-  b2c.product-detail: no PDP existed before; browse-to-buy and search-to-buy both run through it
-  auth-chain: Cover/Splash/Mobile/OTP/Terms are represented by S1 Onboarding + S2 Login; not built as separate screens
+  b2c.product-detail: no PDP existed before; browse-to-buy and search-to-buy both
+    run through it
+  auth-chain: Cover/Splash/Mobile/OTP/Terms are represented by S1 Onboarding + S2
+    Login; not built as separate screens
 component_registry_ref: experience/design/component-contract-registry.yaml
 design_ir_ref: experience/design/design-ir.yaml
 asset_plan_ref: experience/design/asset-plan.yaml
@@ -217,3 +219,17 @@ interaction_rules:
     error and success before approval'
   - 'R-scrim-contrast: scrims use opacity.scrim over content.primary so modal content
     keeps 4.5:1 against the scrim edge'
+component_ref_enrichment:
+  why: Platform attribution is derived from the design IR. Thin component_refs on
+    the customer-app and b2b nodes had wrongly marked shared components (bottom nav,
+    toast, segmented control) as web-only.
+  method: node action/capability matched against explicit rules; app bar added to
+    every phone node
+  overrides:
+    control.segmented: used on S2 · Login (Consumer/B2B segmented control); the journey
+      IR has no auth journey
+    input.text-field: used on S1 Onboarding and S2 Login, which the journey IR does
+      not model
+    action.button: primary CTAs on every Flutter screen
+  remaining_gap: the journey IR models no authentication journey, so auth screens
+    are attributed by override rather than by the graph

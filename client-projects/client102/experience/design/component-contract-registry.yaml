@@ -53,6 +53,7 @@ components:
     - customer-app
     - erp
     - seller-portal
+  platform_override_basis: primary CTA on every Flutter screen
 - id: commerce.product-card
   semantic_role: Product summary and add-to-cart entry
   variants:
@@ -242,7 +243,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.search-bar
   semantic_role: Persistent catalogue search entry
   variants:
@@ -317,7 +317,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.section-header
   semantic_role: Section title with optional action
   variants:
@@ -377,7 +376,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: navigation.app-bar
   semantic_role: Top navigation and context
   variants:
@@ -437,6 +435,7 @@ components:
   - border.focus
   implementation:
     web: packages/agency_web_ui/BottomNavItem
+    flutter: packages/agency_flutter_ui/BottomNavItem
   accessibility:
   - icon-plus-label
   - selected-not-colour-alone
@@ -454,10 +453,13 @@ components:
     - state-completeness
     - accessibility
   platforms:
+  - flutter
   - web
   platform_basis:
     surfaces:
+    - b2b
     - commerce-admin
+    - customer-app
     - erp
     - seller-portal
 - id: navigation.category-item
@@ -510,6 +512,7 @@ components:
   - border.focus
   implementation:
     web: packages/agency_web_ui/SegmentedControl
+    flutter: packages/agency_flutter_ui/Segmented
   accessibility:
   - radiogroup-semantics
   - keyboard-arrow-navigation
@@ -526,10 +529,12 @@ components:
     - state-completeness
     - accessibility
   platforms:
+  - flutter
   - web
   platform_basis:
     surfaces:
     - seller-portal
+  platform_override_basis: used on S2 · Login; the journey IR has no auth journey
 - id: input.text-field
   semantic_role: Labelled single-line input
   variants:
@@ -580,6 +585,7 @@ components:
     - customer-app
     - erp
     - seller-portal
+  platform_override_basis: used on S1 Onboarding and S2 Login, unmodelled by the IR
 - id: feedback.status-pill
   semantic_role: Compact status or filter chip
   variants:
@@ -663,7 +669,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: feedback.empty-state
   semantic_role: No-data presentation with a recovery action
   variants:
@@ -778,9 +783,12 @@ components:
     - state-completeness
     - accessibility
   platforms:
+  - flutter
   - web
   platform_basis:
     surfaces:
+    - b2b
+    - customer-app
     - erp
     - seller-portal
 - id: overlay.scrim
@@ -815,7 +823,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: overlay.modal
   semantic_role: Focused blocking task
   variants:
@@ -855,7 +862,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: overlay.bottom-sheet
   semantic_role: Focused task anchored to the bottom edge
   variants:
@@ -894,7 +900,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: feedback.loading-overlay
   semantic_role: Blocking progress for a foreground operation
   variants:
@@ -1051,7 +1056,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: control.filter-chip
   semantic_role: Toggleable filter or option chip
   master_frame: FilterChip
@@ -1092,7 +1096,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.trade-info-tile
   semantic_role: Compact trade fact (MOQ, pack size, stock, sellers)
   master_frame: TradeInfoTile
@@ -1130,7 +1133,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.trade-price-summary
   semantic_role: Trade unit price against MRP with GST and savings
   master_frame: TradePriceSummary
@@ -1170,7 +1172,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.volume-pricing-table
   semantic_role: Quantity-break trade pricing with the active band highlighted
   master_frame: VolumePricingTable
@@ -1209,7 +1210,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.scheme-card
   semantic_role: Trade scheme or offer with validity and state
   master_frame: SchemeCard
@@ -1247,7 +1247,6 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 - id: commerce.procurement-list-card
   semantic_role: Saved procurement list summary with a bulk add action
   master_frame: ProcurementListCard
@@ -1288,5 +1287,4 @@ components:
   - web
   platform_basis:
     surfaces: []
-    note: not referenced by the design IR
 status: review-ready

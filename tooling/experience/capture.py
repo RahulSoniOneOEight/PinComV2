@@ -54,6 +54,12 @@ MIN_SCREEN_HEIGHT = 800
 DEFAULT_BIN = os.getenv("OPENPENCIL_BIN", "openpencil")
 FIND_LIMIT = os.getenv("OPENPENCIL_FIND_LIMIT", "10000")
 
+#: Capture format. SVG is the default because the CLI's PNG rasteriser is broken in
+#: 0.15.1 on Windows (CanvasKit path corruption, see the module docstring). SVG needs no
+#: CanvasKit, works per-node, and is resolution-independent, which suits drift detection.
+#: Set OPENPENCIL_CAPTURE_FORMAT=png on a platform where raster export works.
+CAPTURE_FORMAT = os.getenv("OPENPENCIL_CAPTURE_FORMAT", "svg").lower()
+
 #: Screen-name fragments mapped to the surface they belong to. First match wins.
 SURFACE_HINTS = (
     ("seller", "seller-portal"),
@@ -142,7 +148,7 @@ def plan_captures(client_id: str, root: Path = ROOT) -> tuple[str, str, list[dic
     for frame in screen_frames(document):
         name = str(frame.get("name") or frame.get("id"))
         surface = surface_for(name)
-        output = (ARTIFACTS / capture_id / surface / VIEWPORT / f"{slug(name)}.png").as_posix()
+        output = (ARTIFACTS / capture_id / surface / VIEWPORT / f"{slug(name)}.{CAPTURE_FORMAT}").as_posix()
         targets.append({
             "surface": surface,
             "runtime": "external",
@@ -165,7 +171,7 @@ def run_captures(client_id: str, root: Path = ROOT, binary: str = DEFAULT_BIN) -
         out.parent.mkdir(parents=True, exist_ok=True)
         proc = subprocess.run(
             _platform_command([binary, "export", str(document), "--node",
-                               str(candidate["node_id"]), "-f", "png", "-s", "1", "-o", str(out)]),
+                               str(candidate["node_id"]), "-f", CAPTURE_FORMAT, "-s", "1", "-o", str(out)]),
             capture_output=True, text=True)
         if proc.returncode != 0 or not out.exists():
             candidate["status"] = "failed"

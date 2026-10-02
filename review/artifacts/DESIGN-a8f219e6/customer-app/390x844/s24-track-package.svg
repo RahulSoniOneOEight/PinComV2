@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+    <filter id="fx1">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+    <filter id="fx2">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(334, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G   100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="52" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 14)">
+        <path d="M15 18L9 12L15 6" fill="none" stroke="#384959" stroke-width="2"/>
+      </g>
+      <g transform="translate(48, 13)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Track Package</text>
+      </g>
+    </g>
+    <g transform="translate(0, 86)">
+      <g transform="translate(16, 16)" filter="url(#fx0)">
+        <rect width="358" height="77" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g transform="translate(0, 2)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Order #BK-10294</text>
+          </g>
+          <g transform="translate(247, 0)">
+            <rect width="87" height="26" rx="4" ry="4" fill="#E7F1FF"/>
+            <g transform="translate(4, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#175CD3">Out for delivery</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 46)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#526D82">Arriving today by 7:00 PM · AWB 4021-889-013</text>
+        </g>
+      </g>
+      <g transform="translate(16, 109)" filter="url(#fx1)">
+        <rect width="358" height="334" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 16)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Shipment progress</text>
+        </g>
+        <g transform="translate(16, 50)">
+          <g>
+            <g>
+              <rect width="20" height="20" rx="999" ry="999" fill="#E5F5ED"/>
+              <g transform="translate(4, 4)">
+                <path d="M2.5 6L4.25 7.75L7.5 3.5" fill="none" stroke="#067647" stroke-width="1.2"/>
+              </g>
+            </g>
+            <g transform="translate(9, 24)">
+              <rect width="2" height="20" fill="#067647"/>
+            </g>
+          </g>
+          <g transform="translate(32, 0)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Order placed</text>
+            </g>
+            <g transform="translate(0, 26)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">2 Oct, 10:12 AM · Payment confirmed</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 106)">
+          <g>
+            <g>
+              <rect width="20" height="20" rx="999" ry="999" fill="#E5F5ED"/>
+              <g transform="translate(4, 4)">
+                <path d="M2.5 6L4.25 7.75L7.5 3.5" fill="none" stroke="#067647" stroke-width="1.2"/>
+              </g>
+            </g>
+            <g transform="translate(9, 24)">
+              <rect width="2" height="20" fill="#067647"/>
+            </g>
+          </g>
+          <g transform="translate(32, 0)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Packed</text>
+            </g>
+            <g transform="translate(0, 26)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">2 Oct, 6:40 PM · Jaquar Official Store</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 162)">
+          <g>
+            <g>
+              <rect width="20" height="20" rx="999" ry="999" fill="#E5F5ED"/>
+              <g transform="translate(4, 4)">
+                <path d="M2.5 6L4.25 7.75L7.5 3.5" fill="none" stroke="#067647" stroke-width="1.2"/>
+              </g>
+            </g>
+            <g transform="translate(9, 24)">
+              <rect width="2" height="20" fill="#067647"/>
+            </g>
+          </g>
+          <g transform="translate(32, 0)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Shipped</text>
+            </g>
+            <g transform="translate(0, 26)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">3 Oct, 9:05 AM · Left Mumbai hub</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 218)">
+          <g>
+            <g>
+              <rect width="20" height="20" rx="999" ry="999" fill="#88BDF2"/>
+              <g transform="translate(6, 6)">
+                <rect width="8" height="8" rx="999" ry="999" fill="#384959"/>
+              </g>
+            </g>
+            <g transform="translate(9, 24)">
+              <rect width="2" height="20" fill="#88BDF2"/>
+            </g>
+          </g>
+          <g transform="translate(32, 0)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Out for delivery</text>
+            </g>
+            <g transform="translate(0, 26)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">5 Oct, 7:30 AM · With delivery agent</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 274)">
+          <rect width="20" height="20" rx="999" ry="999" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(32, 0)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#55708A">Delivered</text>
+            </g>
+            <g transform="translate(0, 26)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">Expected Tue, 6 Oct</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 459)" filter="url(#fx2)">
+        <rect width="358" height="65" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12.5)">
+          <rect width="40" height="40" rx="999" ry="999" fill="#EAF3FE"/>
+          <g transform="translate(9, 9)">
+            <path d="M11 19.25C11 19.25 4.58 13.38 4.58 9.17C4.58 5.62 7.45 2.75 11 2.75C14.55 2.75 17.42 5.62 17.42 9.17C17.42 13.39 11 19.25 11 19.25" fill="none" stroke="#384959" stroke-width="1.83"/>
+          </g>
+        </g>
+        <g transform="translate(64, 12)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Delivering to Rahul Sharma</text>
+          </g>
+          <g transform="translate(0, 23)">
+            <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">12, MG Road, Andheri East, Mumbai 400001</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 764)">
+      <rect width="390" height="80" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(16, 16)">
+        <rect width="173" height="48" rx="8" ry="8" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(55, 11)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Get help</text>
+        </g>
+      </g>
+      <g transform="translate(201, 16)">
+        <rect width="173" height="48" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(45.5, 11)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">Call courier</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

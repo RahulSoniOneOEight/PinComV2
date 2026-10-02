@@ -166,7 +166,7 @@ resolved_semantic_roles:
   surface.interactive: '#EAF3FE'
   surface.accent: '#BDDCFC'
   content.primary: '#384959'
-  content.secondary: '#526D82'
+  content.secondary: '#456079'
   content.muted: '#55708A'
   content.inverse: '#FFFFFF'
   content.on-selected: '#384959'
@@ -185,3 +185,6 @@ resolved_semantic_roles:
   feedback.warning: '#9A610A'
   feedback.error: '#B42318'
   feedback.info: '#175CD3'
+contrast_notes:
+  content.secondary: 'darkened #526D82 -> #456079: #526D82 measured 3.83 on surface.accent,
+    failing WCAG AA 4.5; #456079 measures 4.62'

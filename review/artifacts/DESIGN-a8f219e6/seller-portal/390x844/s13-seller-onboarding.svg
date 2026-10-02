@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+    <filter id="fx1">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(16, 5)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(329, 5)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 28)">
+      <rect width="390" height="68" fill="#384959"/>
+      <g transform="translate(16, 7)">
+        <g>
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#BDDCFC">SELLER SETUP</text>
+        </g>
+        <g transform="translate(0, 22)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#FFFFFF">Business verification</text>
+        </g>
+      </g>
+      <g transform="translate(330, 12)">
+        <rect width="44" height="44" rx="8" ry="8" fill="#273746"/>
+        <g transform="translate(18, 9)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">?</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 96)">
+      <g transform="translate(16, 16)" filter="url(#fx0)">
+        <rect width="358" height="88" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g transform="translate(0, 2)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Application AK-S-2048</text>
+          </g>
+          <g transform="translate(239, 0)">
+            <rect width="95" height="26" rx="999" ry="999" fill="#FFF1D8"/>
+            <g transform="translate(8, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#9A610A">UNDER REVIEW</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 46)">
+          <rect width="80.5" height="4" rx="4" ry="4" fill="#384959"/>
+          <g transform="translate(84.5, 0)">
+            <rect width="80.5" height="4" rx="4" ry="4" fill="#384959"/>
+          </g>
+          <g transform="translate(169, 0)">
+            <rect width="80.5" height="4" rx="4" ry="4" fill="#88BDF2"/>
+          </g>
+          <g transform="translate(253.5, 0)">
+            <rect width="80.5" height="4" rx="4" ry="4" fill="#DFE7F0"/>
+          </g>
+        </g>
+        <g transform="translate(12, 58)">
+          <g>
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">Register</text>
+          </g>
+          <g transform="translate(75.33, 0)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">KYC</text>
+          </g>
+          <g transform="translate(131.67, 0)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#175CD3">Verify</text>
+          </g>
+          <g transform="translate(196, 0)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Approve</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 116)" filter="url(#fx1)">
+        <rect width="358" height="100" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#526D82">REGISTERED BUSINESS</text>
+        </g>
+        <g transform="translate(12, 39)">
+          <g>
+            <g>
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Shree Buildmart</text>
+            </g>
+            <g transform="translate(0, 30)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#526D82">GSTIN · 27AABCS1429B1ZV</text>
+            </g>
+          </g>
+          <g transform="translate(272, 0)">
+            <rect width="62" height="26" rx="999" ry="999" fill="#E5F5ED"/>
+            <g transform="translate(8, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#067647">VERIFIED</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 228)">
+        <g>
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Document review</text>
+          </g>
+          <g transform="translate(287, 1.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#526D82">2 of 3 cleared</text>
+          </g>
+        </g>
+        <g transform="translate(0, 30)">
+          <rect width="358" height="56" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 12)">
+            <rect width="32" height="32" rx="8" ry="8" fill="#E5F5ED"/>
+            <g transform="translate(9.5, 7.5)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#067647">✓</text>
+            </g>
+          </g>
+          <g transform="translate(56, 8)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">GST certificate</text>
+            </g>
+            <g transform="translate(0, 22)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">Matched with government record</text>
+            </g>
+          </g>
+          <g transform="translate(228, 19)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#067647">DONE</text>
+          </g>
+        </g>
+        <g transform="translate(0, 94)">
+          <rect width="358" height="56" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(12, 12)">
+            <rect width="32" height="32" rx="8" ry="8" fill="#E5F5ED"/>
+            <g transform="translate(9.5, 7.5)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#067647">✓</text>
+            </g>
+          </g>
+          <g transform="translate(56, 8)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Bank proof</text>
+            </g>
+            <g transform="translate(0, 22)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#526D82">Account ending 4821</text>
+            </g>
+          </g>
+          <g transform="translate(167, 19)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#067647">DONE</text>
+          </g>
+        </g>
+        <g transform="translate(0, 158)">
+          <rect width="358" height="64" rx="8" ry="8" fill="#FDECEB" stroke="#B42318" stroke-width="1"/>
+          <g transform="translate(12, 16)">
+            <rect width="32" height="32" rx="8" ry="8" fill="#FFFFFF"/>
+            <g transform="translate(13.5, 7.5)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#B42318">!</text>
+            </g>
+          </g>
+          <g transform="translate(56, 12)">
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">PAN card needs attention</text>
+            </g>
+            <g transform="translate(0, 22)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#B42318">Name differs from GST record</text>
+            </g>
+          </g>
+          <g transform="translate(282, 10)">
+            <rect width="64" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+            <g transform="translate(24, 12.5)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Fix</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 462)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#E7F1FF"/>
+        <g transform="translate(12, 14.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#175CD3">No optional documents requested</text>
+        </g>
+      </g>
+      <g transform="translate(16, 522)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#DFE7F0"/>
+        <g transform="translate(0, 13)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#55708A">Submit correction to continue</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(8, 8)">
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Dashboard</text>
+        </g>
+      </g>
+      <g transform="translate(103.5, 8)">
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(199, 8)">
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Catalogue</text>
+        </g>
+      </g>
+      <g transform="translate(294.5, 8)">
+        <rect width="87.5" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(0, 15)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

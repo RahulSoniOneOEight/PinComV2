@@ -108,6 +108,16 @@ rules:
 - id: RULE-contrast-gate
   statement: Any new colour pair is added only after theme_compiler contrast checks
     pass at 4.5:1 text / 3:1 non-text.
+- id: RULE-secondary-token-surfaces
+  statement: 'content.secondary must not be used on surface.accent. The original #526D82
+    measured 3.83:1 there, failing WCAG AA; it is now #456079 (4.62:1). Every text
+    token must be validated against every surface it is used on, not only the neutral
+    ones.'
+  measured:
+    old_on_accent: 3.83
+    new_on_accent: 4.62
+    new_on_interactive: 5.86
+    new_on_page: 5.42
 surface_density:
   customer-app: comfortable
   web-store: comfortable
@@ -233,3 +243,8 @@ component_ref_enrichment:
     action.button: primary CTAs on every Flutter screen
   remaining_gap: the journey IR models no authentication journey, so auth screens
     are attributed by override rather than by the graph
+fig_todo:
+- 'Recolour #526D82 -> #456079 on every node using content.secondary in apnakart-app.fig
+  (deferred: the page-scoping run holds the file).'
+- 'Specifically confirm the two linted nodes: S3 B2C Home / Body / Hero / HeroCopy
+  / HeroKicker, and zz-components-2 / commerce.hero-banner / hbCopy / hbKicker.'

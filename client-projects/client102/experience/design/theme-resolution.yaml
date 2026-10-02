@@ -2,61 +2,49 @@ theme_id: THEME-client102
 client_id: client102
 preset: compact-commerce
 palette_name: stormy-morning
-# Accessibility note: every foreground/background pair below was measured with
-# tooling.experience.theme_compiler.contrast() against WCAG 2.1 AA (4.5:1 text,
-# 3:1 non-text). Three values in the supplied palette needed adjustment; each is
-# marked and justified inline.
 semantic_roles:
-  # --- Stormy Morning base palette ---
   surface.page: '#F7FAFE'
   surface.raised: '#FFFFFF'
   surface.interactive: '#EAF3FE'
-  surface.accent: '#BDDCFC'          # Powder Blue - soft accent fills only
-
-  content.primary: '#384959'         # Storm Navy   8.85:1 on page
-  content.secondary: '#526D82'       # Slate Blue   5.19:1 on page
-  content.muted: '#55708A'           # ADJUSTED (was #6A89A7 = 3.49:1, fails AA text). Now 4.93:1.
+  surface.accent: '#BDDCFC'
+  content.primary: '#384959'
+  content.secondary: '#456079'
+  content.muted: '#55708A'
   content.inverse: '#FFFFFF'
-  content.on-selected: '#384959'     # text on action.selected: 4.68:1
-
-  action.primary: '#384959'          # Storm Navy CTA (white text 9.27:1)
-  action.hover: '#273746'            # (white text 12.2:1)
-  action.secondary: '#BDDCFC'        # (Storm Navy text 6.54:1)
-  action.selected: '#88BDF2'         # Sky Blue - selected surface. Use content.on-selected for text, never white.
-  action.disabled: '#DFE7F0'         # inactive controls are exempt from contrast requirements
-  action.destructive: '#B42318'      # (white text 6.57:1)
-
-  border.default: '#DCE6F0'          # decorative divider (not a control boundary)
-  border.strong: '#9CB2CA'           # decorative divider
-  border.control: '#748EAA'          # ADDED: 3.24:1 page / 3.39:1 raised / 3.03:1 interactive - WCAG 1.4.11
-  border.focus: '#6A89A7'            # focus ring 3.49:1
-
-  nav.active: '#384959'              # selected bottom-nav item
-
+  content.on-selected: '#384959'
+  action.primary: '#384959'
+  action.hover: '#273746'
+  action.secondary: '#BDDCFC'
+  action.selected: '#88BDF2'
+  action.disabled: '#DFE7F0'
+  action.destructive: '#B42318'
+  border.default: '#DCE6F0'
+  border.strong: '#9CB2CA'
+  border.control: '#748EAA'
+  border.focus: '#6A89A7'
+  nav.active: '#384959'
   feedback.success: '#067647'
   feedback.warning: '#9A610A'
   feedback.error: '#B42318'
   feedback.info: '#175CD3'
-
-  # --- Commerce / merchandising semantic pairs (fg on bg, all >= 4.5:1) ---
   commerce.discount.bg: '#FFF0E8'
-  commerce.discount.fg: '#AD4E20'        # 4.86:1
+  commerce.discount.fg: '#AD4E20'
   commerce.bestseller.bg: '#EAF3FE'
-  commerce.bestseller.fg: '#384959'      # 8.28:1
+  commerce.bestseller.fg: '#384959'
   commerce.deal.bg: '#BDDCFC'
-  commerce.deal.fg: '#384959'            # 6.54:1
+  commerce.deal.fg: '#384959'
   commerce.in-stock.bg: '#E5F5ED'
-  commerce.in-stock.fg: '#067647'        # 5.04:1
+  commerce.in-stock.fg: '#067647'
   commerce.low-stock.bg: '#FFF1D8'
-  commerce.low-stock.fg: '#9A610A'       # 4.60:1
+  commerce.low-stock.fg: '#9A610A'
   commerce.unavailable.bg: '#FDECEB'
-  commerce.unavailable.fg: '#B42318'     # 5.75:1
+  commerce.unavailable.fg: '#B42318'
   commerce.info.bg: '#E7F1FF'
-  commerce.info.fg: '#175CD3'            # 5.25:1
+  commerce.info.fg: '#175CD3'
   commerce.b2b.bg: '#EAF3FE'
-  commerce.b2b.fg: '#384959'             # 8.28:1
+  commerce.b2b.fg: '#384959'
   commerce.tier.selected.bg: '#384959'
-  commerce.tier.selected.fg: '#FFFFFF'   # 9.27:1
+  commerce.tier.selected.fg: '#FFFFFF'
 overrides:
   brand_raw_colors: {}
   fonts: []
@@ -64,3 +52,6 @@ overrides:
   image_direction: []
   motion_preference: balanced
 status: resolved
+contrast_notes:
+  content.secondary: 'darkened #526D82 -> #456079: #526D82 measured 3.83 on surface.accent,
+    failing WCAG AA 4.5; #456079 measures 4.62'

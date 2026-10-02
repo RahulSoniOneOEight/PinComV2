@@ -1,0 +1,43 @@
+client_id: client102
+source: BuildKart B2C/B2B journey guide + client-input required_capabilities
+journeys:
+- id: browse-to-buy
+  actor: customer
+  objective: consumer discovers products and completes a purchase
+- id: search-to-buy
+  actor: customer
+  objective: high-intent consumer searches and purchases
+- id: order-tracking
+  actor: customer
+  objective: consumer follows a shipment to delivery
+- id: return-refund
+  actor: customer
+  objective: consumer requests a return and tracks the refund
+- id: quote-to-order
+  actor: b2b-buyer
+  objective: buyer requests quotes, compares and converts to an order
+- id: repeat-order
+  actor: b2b-buyer
+  objective: buyer rebuilds an order from history or a saved list
+- id: credit-order
+  actor: b2b-buyer
+  objective: buyer places an order on credit with approval
+- id: seller-onboarding
+  actor: seller
+  objective: seller registers and passes KYC
+- id: seller-catalogue
+  actor: seller
+  objective: seller publishes products, pricing and stock
+- id: marketplace-order
+  actor: operator
+  objective: platform receives and allocates a marketplace order
+- id: seller-fulfilment
+  actor: seller
+  objective: seller picks, packs and dispatches
+- id: seller-return
+  actor: seller
+  objective: seller receives and settles a returned item
+- id: seller-settlement
+  actor: finance
+  objective: seller settlement is calculated, posted and reconciled
+status: generated

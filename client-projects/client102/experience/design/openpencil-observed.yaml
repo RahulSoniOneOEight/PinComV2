@@ -1,0 +1,145 @@
+project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-app.fig
+revision_ref: sha256:cd914a9637e10ed9cd617a9e5d3369634eca833199e338b3976af7b732e649b5
+components:
+- action.button
+- commerce.product-card
+- commerce.search-bar
+- navigation.bottom-nav-item
+- navigation.category-item
+- commerce.trust-row-item
+- commerce.offer-badge
+- control.segmented
+- feedback.watermark
+- pattern.campaign-background
+- media.placeholder
+- feedback.skeleton-product-card
+- brand.wordmark
+- feedback.empty-state
+- feedback.error-state
+- feedback.toast
+- overlay.modal
+- overlay.bottom-sheet
+- feedback.loading-overlay
+- feedback.skeleton-row
+- state.focus-visible
+- commerce.order-card
+journey_screens: []
+matched_frames: {}
+frames:
+- Icon / ph:house
+- Icon / ph:squares-four
+- Icon / ph:package
+- Icon / ph:shopping-cart
+- Icon / ph:user
+- Icon / ph:magnifying-glass
+- Icon / ph:arrow-left
+- Icon / ph:truck
+- Icon / ph:arrow-u-up-left
+- Icon / ph:map-pin
+- Icon / ph:bell
+- Icon / ph:tag
+- Icon / ph:seal-percent
+- Icon / ph:heart
+- Icon / ph:star
+- Icon / ph:storefront
+- Icon / ph:credit-card
+- Icon / ph:receipt
+- Icon / ph:barcode
+- Icon / ph:lightning
+- Icon / ph:arrows-clockwise
+- Icon / ph:file-text
+- Icon / ph:scales
+- Icon / ph:shield-check
+- Icon / ph:handshake
+- Icon / ph:wallet
+- Icon / ph:seal-check
+- Icon / ph:folder-open
+- Icon / ph:clipboard-text
+- Icon / ph:upload-simple
+- Icon / ph:bookmark-simple
+- Icon / ph:users-three
+- Icon / ph:chat-circle-text
+- Icon / ph:file-arrow-up
+- Icon / ph:warehouse
+- Icon / ph:sliders-horizontal
+- Icon / ph:sort-ascending
+- Icon / ph:x
+- Icon / ph:list
+- Icon / ph:trash
+- Icon / ph:pencil-simple
+- Icon / ph:share-network
+- Icon / ph:caret-right
+- Icon / ph:caret-down
+- Icon / ph:plus
+- Icon / ph:minus
+- Icon / ph:check
+- Icon / ph:download-simple
+- Icon / ph:scan
+- Icon / ph:camera
+- Icon / ph:dots-three-vertical
+- Icon / ph:arrow-square-out
+- Icon / ph:sign-out
+- Icon / ph:gear-six
+- Icon / ph:question
+- Icon / ph:translate
+- Icon / ph:info
+- Icon / ph:warning
+- Icon / ph:check-circle
+- Icon / ph:x-circle
+- Icon / ph:clock
+- Icon / ph:image
+- Icon / ph:image-square
+- "S3 \xC2\xB7 B2C Home"
+- StatusBar
+- Header
+- HeaderTop
+- DeliveryChip
+- SearchBar
+- Body
+- Hero
+- HeroCopy
+- HeroCta
+- CategoryRail
+- Cat1
+- CatCircle
+- Cat2
+- CatCircle
+- Cat3
+- CatCircle
+- Cat4
+- CatCircle
+- SectionHead
+- Grid
+- ProductCard-1
+- Media
+- Info
+- BadgeRow
+- Offer
+- Stock
+- PriceRow
+- AddToCart
+- ProductCard-2
+- Media
+- Info
+- BadgeRow
+- Offer
+- Stock
+- PriceRow
+- B2BRow
+info:
+  pages: 3
+  totalNodes: 1190
+  types:
+    FRAME: 609
+    VECTOR: 103
+    TEXT: 456
+    COMPONENT: 22
+  fonts:
+  - Hind
+  - Inter
+  pageCounts:
+    "ApnaKart \xC2\xB7 Design": 1190
+    "00 \xC2\xB7 Foundations": 0
+    "01 \xC2\xB7 Screens \xC2\xB7 B2C": 0
+source: openpencil-cli
+status: observed

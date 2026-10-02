@@ -1,0 +1,59 @@
+client_id: client102
+project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-app.fig
+revision_ref: sha256:cd914a9637e10ed9cd617a9e5d3369634eca833199e338b3976af7b732e649b5
+source: openpencil-cli
+input_hashes:
+  design_ir: sha256:bc5850523979ed14a4fe41cee30013060132cae5ed8acd26ed0da59f8402a782
+  components: sha256:551ed77efe61d567a8477d971abea2f11976e47190fc104f4f40ee98dd91e0ea
+  theme: sha256:dbf5d1b51f56a23fad1c6d83112f96c0831dabb9ee1a686d74def0897eee3fd4
+  journeys: sha256:e1bd3899cbf48b2aa0d2678ffd1cdca8606edcb020211153669ea8f3908f3394
+required_surfaces:
+- customer-app
+- web-store
+- b2b
+- seller-portal
+- commerce-admin
+- erp
+- analytics
+- ops-console
+required_journeys:
+- browse-to-buy
+- search-to-buy
+- order-tracking
+- return-refund
+- quote-to-order
+- repeat-order
+- credit-order
+required_components:
+- action.button
+- commerce.product-card
+- commerce.price-block
+- commerce.offer-badge
+- commerce.stock-badge
+- commerce.b2b-trade-block
+- commerce.search-bar
+- commerce.hero-banner
+- commerce.section-header
+- commerce.trust-row-item
+- navigation.app-bar
+- navigation.bottom-nav-item
+- navigation.category-item
+- control.segmented
+- input.text-field
+- feedback.status-pill
+- layout.screen-shell
+requirements:
+  components_editable: true
+  responsive_variants:
+  - mobile
+  - tablet
+  - desktop
+  states:
+  - default
+  - loading
+  - empty
+  - error
+  - success
+  - disabled
+  journey_screens: true
+status: external-design-required

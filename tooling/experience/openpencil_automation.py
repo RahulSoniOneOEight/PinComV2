@@ -23,6 +23,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 from pathlib import Path
 from typing import Any, Callable
@@ -65,8 +66,25 @@ def _normalise(value: str) -> str:
     return re.sub(r"[^a-z0-9]", "", str(value).lower())
 
 
+def _platform_command(args: list[str]) -> list[str]:
+    """Make a command runnable on the host.
+
+    On Windows an npm-installed CLI is a ``.cmd``/``.ps1`` shim, which
+    ``CreateProcess`` cannot execute directly — it has to go through ``cmd.exe``.
+    On other platforms the command is returned unchanged.
+    """
+    if os.name != "nt":
+        return args
+    resolved = shutil.which(args[0])
+    if resolved and resolved.lower().endswith((".cmd", ".bat")):
+        return ["cmd", "/c", resolved, *args[1:]]
+    if resolved:
+        return [resolved, *args[1:]]
+    return args
+
+
 def _default_runner(args: list[str]) -> Any:
-    proc = subprocess.run(args, capture_output=True, text=True)
+    proc = subprocess.run(_platform_command(args), capture_output=True, text=True)
     if proc.returncode != 0:
         detail = (proc.stderr or proc.stdout or "").strip()[:400]
         raise OpenPencilAutomationError(f"openpencil {' '.join(args[1:3])} failed: {detail}")
@@ -82,11 +100,14 @@ def _names(records: Any) -> list[str]:
     return [str(r.get("name")) for r in records if isinstance(r, dict) and r.get("name")]
 
 
-def _resolve_design_file(design_file: str | Path, root: Path) -> Path:
+def _resolve_design_file(design_file: str | Path, root: Path, client_id: str | None = None) -> Path:
     candidate = Path(design_file)
-    if not candidate.is_absolute():
-        candidate = root / candidate
-    return candidate
+    if candidate.is_absolute():
+        return candidate
+    from_root = root / candidate
+    if from_root.exists() or client_id is None:
+        return from_root
+    return root / "client-projects" / client_id / candidate
 
 
 def build_operations(client_id: str, root: Path = ROOT) -> dict[str, Any]:
@@ -150,7 +171,7 @@ def observe(
     if manifest.get("source") != PROVIDER_OPENPENCIL:
         raise OpenPencilAutomationError("observe() requires an OpenPencil design_file")
 
-    design_path = _resolve_design_file(design_file, root)
+    design_path = _resolve_design_file(design_file, root, client_id)
     run = runner or _default_runner
 
     component_records = run([binary, "find", str(design_path), "--type", "COMPONENT", "--json"])

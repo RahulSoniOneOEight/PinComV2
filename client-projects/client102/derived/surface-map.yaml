@@ -1,0 +1,12 @@
+client_id: client102
+required:
+- customer-app
+- web-store
+- b2b
+- seller-portal
+- commerce-admin
+- erp
+- analytics
+- ops-console
+status: generated
+source: input/client-input.yaml#required_surfaces

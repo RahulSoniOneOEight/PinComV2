@@ -83,11 +83,19 @@ def resolve_design_ref(document: dict[str, Any]) -> str | None:
     return None
 
 
-def _resolve_design_file(design_file: str | Path, root: Path) -> Path:
+def _resolve_design_file(design_file: str | Path, root: Path, client_id: str | None = None) -> Path:
+    """Resolve a design file: absolute, repo-relative, or client-project-relative.
+
+    The design file normally lives inside the client project
+    (``experience/design/<name>.fig``), so a client-relative path is tried last.
+    """
     candidate = Path(design_file)
-    if not candidate.is_absolute():
-        candidate = root / candidate
-    return candidate
+    if candidate.is_absolute():
+        return candidate
+    from_root = root / candidate
+    if from_root.exists() or client_id is None:
+        return from_root
+    return root / "client-projects" / client_id / candidate
 
 
 def build_manifest(
@@ -106,7 +114,7 @@ def build_manifest(
     back to an external ``project_ref`` (legacy behaviour, e.g. Penpot) so
     previously onboarded clients keep producing manifests.
     """
-    design_path = _resolve_design_file(design_file, root) if design_file else None
+    design_path = _resolve_design_file(design_file, root, client_id) if design_file else None
     if design_path is not None:
         if not design_path.exists():
             raise OpenPencilBridgeError(f"Missing OpenPencil design file: {design_path}")

@@ -183,6 +183,8 @@ screen_map:
   # 1440 wide, left rail + top bar, compact density, per layout-spec.yaml.
   commerce.order-queue.web: W1 · Commerce admin · Order queue (web)
   seller.orders-to-fulfil.web: W2 · Seller portal · Orders to fulfil (web)
+  # App screens (Flutter marketplace), app-build-plan.md Wave 1.
+  b2c.sign-up: S36 · Sign Up
   # S20t is a 390x200 technical fragment, not a screen. Deliberately not mapped.
 journey_node_map:
   browse-to-buy.1: S3 · B2C Home

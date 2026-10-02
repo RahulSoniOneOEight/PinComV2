@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:bb5d09ede585773a2061fec1d03f3651c0939ff3a0aac49fb28985f0c369674a
+revision_ref: sha256:b0534d629699e1e5e322e05349ec5a8522b6187c65abb16bf920daa7ae06d42c
 components:
 - action.button
 - commerce.product-card
@@ -2129,6 +2129,22 @@ frames:
 - row1
 - row2
 - row3
+- "S36 \xC2\xB7 Sign Up"
+- StatusBar
+- Top
+- Titles
+- FieldName
+- NameInput
+- FieldPhone
+- PhoneInput
+- FieldEmail
+- EmailInput
+- FieldPassword
+- PasswordInput
+- TermsRow
+- Checkbox
+- Actions
+- PrimaryCta
 - zz-journey-boards
 - browse-to-buy
 - browse-to-buy_div
@@ -2204,19 +2220,19 @@ frames:
 - credit-order_dot4
 info:
   pages: 4
-  totalNodes: 4218
+  totalNodes: 4252
   types:
-    FRAME: 2127
+    FRAME: 2143
     VECTOR: 259
     COMPONENT: 45
-    TEXT: 1717
+    TEXT: 1735
     ELLIPSE: 70
   fonts:
   - Hind
   - Inter
   pageCounts:
     "00 \xC2\xB7 Foundations & Components": 544
-    "01 \xC2\xB7 Screens \xC2\xB7 All": 3529
+    "01 \xC2\xB7 Screens \xC2\xB7 All": 3563
     "03 \xC2\xB7 Empty \xC2\xB7 Reserved": 0
     "02 \xC2\xB7 Journey Boards": 145
 source: openpencil-cli

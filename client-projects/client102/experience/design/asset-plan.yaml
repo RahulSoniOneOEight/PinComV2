@@ -76,9 +76,19 @@ requests:
     subject: product on neutral background
     orientation: landscape
     per: sku
+    used: chrome plumbing faucet tap
   crop: product-card-media
-  selected_asset: null
-  status: blocked
+  selected_asset:
+    provider: pexels
+    provider_asset_id: '34295404'
+    photographer: Zulfugar Karimov
+    source_page_url: https://www.pexels.com/photo/34295404/
+    alt: Close-up of a chrome faucet with a marble background
+    query: chrome plumbing faucet tap
+    orientation: landscape
+    selected_for: media.product-card
+    visual_qa_status: pending-human-review
+  status: selected
   blocker: No stock photo provider configured (Pexels/Unsplash API key required in
     OpenPencil AI chat settings)
 - id: media.hero-seasonal
@@ -120,4 +130,25 @@ requests:
   status: planned
   note: client-input lists brand name confirmation as an open question; ApnaKart treated
     as the working resolution
+- id: media.cart.ceiling-fan
+  purpose: ceiling fan thumbnail in the cart line
+  provider_policy: client-media-first
+  query:
+    subject: ceiling fan
+    used: ceiling fan blades white ceiling
+  selected_asset: null
+  status: blocked
+  blocker: keyword search returns rooms rather than the product; the first pick was
+    rejected on subject-relevance. Needs a client product photo.
 status: ready
+provider_status:
+  pexels_api: reachable with the supplied key (direct API, 200 OK)
+  openpencil_stock_photo_tool: still reports no provider configured; the key must
+    be added in the app's AI chat settings
+  means: images were selected and attached directly through the Pexels API rather
+    than the built-in tool
+selection_rules_applied:
+- 'candidate_count_min/max could not be met: one candidate per slot was fetched'
+- subject-relevance evaluated by reading the returned alt text, and two first picks
+  were rejected and refetched
+- crop-compatibility, palette-compatibility and brand-tone evaluation remain outstanding

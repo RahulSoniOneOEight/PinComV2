@@ -43,6 +43,16 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - commerce-admin
+    - customer-app
+    - erp
+    - seller-portal
 - id: commerce.product-card
   semantic_role: Product summary and add-to-cart entry
   variants:
@@ -81,6 +91,14 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - customer-app
+    - seller-portal
 - id: commerce.price-block
   semantic_role: Selling price against MRP
   variants:
@@ -110,6 +128,15 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - customer-app
+    - erp
+    - seller-portal
 - id: commerce.offer-badge
   semantic_role: Promotional discount indicator
   variants:
@@ -138,6 +165,11 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  platform_basis:
+    surfaces:
+    - customer-app
 - id: commerce.stock-badge
   semantic_role: Availability indicator
   variants:
@@ -169,6 +201,13 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - customer-app
+    - seller-portal
 - id: commerce.b2b-trade-block
   semantic_role: Trade price, MOQ and tier entry
   variants:
@@ -198,6 +237,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: commerce.search-bar
   semantic_role: Persistent catalogue search entry
   variants:
@@ -233,6 +278,11 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  platform_basis:
+    surfaces:
+    - customer-app
 - id: commerce.hero-banner
   semantic_role: Campaign or seasonal promotion
   variants:
@@ -262,6 +312,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: commerce.section-header
   semantic_role: Section title with optional action
   variants:
@@ -287,6 +343,11 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  platform_basis:
+    surfaces:
+    - customer-app
 - id: commerce.trust-row-item
   semantic_role: Reassurance cue
   variants:
@@ -311,6 +372,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: navigation.app-bar
   semantic_role: Top navigation and context
   variants:
@@ -342,6 +409,16 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - commerce-admin
+    - customer-app
+    - erp
+    - seller-portal
 - id: navigation.bottom-nav-item
   semantic_role: Persistent primary navigation destination
   variants:
@@ -359,7 +436,6 @@ components:
   - content.muted
   - border.focus
   implementation:
-    flutter: packages/agency_flutter_ui/BottomNavItem
     web: packages/agency_web_ui/BottomNavItem
   accessibility:
   - icon-plus-label
@@ -377,6 +453,13 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - web
+  platform_basis:
+    surfaces:
+    - commerce-admin
+    - erp
+    - seller-portal
 - id: navigation.category-item
   semantic_role: Category entry in a rail or grid
   variants:
@@ -403,6 +486,11 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  platform_basis:
+    surfaces:
+    - customer-app
 - id: control.segmented
   semantic_role: Mutually exclusive mode selector
   variants:
@@ -421,7 +509,6 @@ components:
   - content.inverse
   - border.focus
   implementation:
-    flutter: packages/agency_flutter_ui/SegmentedControl
     web: packages/agency_web_ui/SegmentedControl
   accessibility:
   - radiogroup-semantics
@@ -438,6 +525,11 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - web
+  platform_basis:
+    surfaces:
+    - seller-portal
 - id: input.text-field
   semantic_role: Labelled single-line input
   variants:
@@ -478,6 +570,16 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - commerce-admin
+    - customer-app
+    - erp
+    - seller-portal
 - id: feedback.status-pill
   semantic_role: Compact status or filter chip
   variants:
@@ -514,6 +616,16 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - commerce-admin
+    - customer-app
+    - erp
+    - seller-portal
 - id: layout.screen-shell
   semantic_role: Shared surface shell with persistent navigation
   variants:
@@ -546,6 +658,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: feedback.empty-state
   semantic_role: No-data presentation with a recovery action
   variants:
@@ -578,6 +696,15 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - commerce-admin
+    - customer-app
+    - erp
+    - seller-portal
 - id: feedback.error-state
   semantic_role: Failure presentation with retry
   variants:
@@ -594,7 +721,6 @@ components:
   - content.primary
   - action.primary
   implementation:
-    flutter: packages/agency_flutter_ui/ErrorState
     web: packages/agency_web_ui/ErrorState
   accessibility:
   - error-announced
@@ -610,6 +736,13 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - web
+  platform_basis:
+    surfaces:
+    - commerce-admin
+    - erp
+    - seller-portal
 - id: feedback.toast
   semantic_role: Transient feedback above the bottom nav
   variants:
@@ -628,7 +761,6 @@ components:
   - feedback.error
   - border.default
   implementation:
-    flutter: packages/agency_flutter_ui/AppToast
     web: packages/agency_web_ui/Toast
   accessibility:
   - polite-live-region
@@ -645,6 +777,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - web
+  platform_basis:
+    surfaces:
+    - erp
+    - seller-portal
 - id: overlay.scrim
   semantic_role: Dimming layer behind modals and sheets
   variants:
@@ -672,6 +810,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: overlay.modal
   semantic_role: Focused blocking task
   variants:
@@ -706,6 +850,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: overlay.bottom-sheet
   semantic_role: Focused task anchored to the bottom edge
   variants:
@@ -739,6 +889,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 - id: feedback.loading-overlay
   semantic_role: Blocking progress for a foreground operation
   variants:
@@ -752,7 +908,6 @@ components:
   - opacity.scrim
   - surface.raised
   implementation:
-    flutter: packages/agency_flutter_ui/LoadingOverlay
     web: packages/agency_web_ui/LoadingOverlay
   accessibility:
   - status-announced
@@ -767,6 +922,11 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - web
+  platform_basis:
+    surfaces:
+    - commerce-admin
 - id: feedback.skeleton-row
   semantic_role: List-row loading placeholder
   variants:
@@ -779,7 +939,6 @@ components:
   - surface.interactive
   - border.default
   implementation:
-    flutter: packages/agency_flutter_ui/SkeletonRow
     web: packages/agency_web_ui/SkeletonRow
   accessibility:
   - aria-busy-on-container
@@ -794,6 +953,12 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
+  platforms:
+  - web
+  platform_basis:
+    surfaces:
+    - erp
+    - seller-portal
 - id: commerce.order-card
   semantic_role: Order or record row with status and post-order actions
   variants:
@@ -836,240 +1001,292 @@ components:
     - functional-evidence
     - state-completeness
     - accessibility
-- id: commerce.quantity-stepper
-  semantic_role: Editable quantity control with discrete decrement/increment
-  master_frame: QuantityStepper
-  variants:
-  - default
-  - compact
-  states:
-  - default
-  - focus
-  - disabled
-  - min
-  - max
-  tokens:
-  - surface.raised
-  - border.control
-  - border.focus
-  - content.primary
-  - action.disabled
-  implementation:
-    flutter: packages/agency_flutter_ui/QuantityStepper
-    web: packages/agency_web_ui/QuantityStepper
-  accessibility:
-  - accessible-name
-  - min-target-44
-  - value-announced
-  qa:
-  - target-size-check
-  - contrast-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
-- id: control.filter-chip
-  semantic_role: Toggleable filter or option chip
-  master_frame: FilterChip
-  variants:
-  - unselected
-  - selected
-  states:
-  - default
-  - selected
-  - focus
-  - disabled
-  - loading
-  tokens:
-  - surface.raised
-  - border.control
-  - action.selected
-  - content.on-selected
-  - border.focus
-  implementation:
-    flutter: packages/agency_flutter_ui/FilterChip
-    web: packages/agency_web_ui/FilterChip
-  accessibility:
-  - selected-not-colour-alone
-  - min-target-44
-  - selected-state-announced
-  qa:
-  - contrast-check
-  - target-size-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
-- id: commerce.trade-info-tile
-  semantic_role: Compact trade fact (MOQ, pack size, stock, sellers)
-  master_frame: TradeInfoTile
-  variants:
-  - moq
-  - pack-size
-  - stock
-  - sellers
-  states:
-  - default
-  - loading
-  - restricted
-  tokens:
-  - commerce.b2b.bg
-  - commerce.b2b.fg
-  - content.primary
-  - content.secondary
-  implementation:
-    flutter: packages/agency_flutter_ui/TradeInfoTile
-    web: packages/agency_web_ui/TradeInfoTile
-  accessibility:
-  - label-value-pair
-  - contrast-4.5
-  qa:
-  - contrast-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
-- id: commerce.trade-price-summary
-  semantic_role: Trade unit price against MRP with GST and savings
-  master_frame: TradePriceSummary
-  variants:
-  - compact
-  - expanded
-  states:
-  - default
-  - unavailable
-  - restricted
-  tokens:
-  - surface.raised
-  - border.default
-  - content.primary
-  - content.secondary
-  - commerce.discount.bg
-  - commerce.discount.fg
-  implementation:
-    flutter: packages/agency_flutter_ui/TradePriceSummary
-    web: packages/agency_web_ui/TradePriceSummary
-  accessibility:
-  - price-labelled-with-unit
-  - gst-stated-not-implied
-  - contrast-4.5
-  qa:
-  - contrast-check
-  - format-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
-- id: commerce.volume-pricing-table
-  semantic_role: Quantity-break trade pricing with the active band highlighted
-  master_frame: VolumePricingTable
-  variants:
-  - default
-  states:
-  - default
-  - selected
-  - loading
-  tokens:
-  - surface.raised
-  - border.default
-  - content.primary
-  - content.secondary
-  - action.primary
-  - content.inverse
-  implementation:
-    flutter: packages/agency_flutter_ui/VolumePricingTable
-    web: packages/agency_web_ui/VolumePricingTable
-  accessibility:
-  - table-semantics
-  - selected-not-colour-alone
-  - min-target-44
-  qa:
-  - contrast-check
-  - target-size-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
-- id: commerce.scheme-card
-  semantic_role: Trade scheme or offer with validity and state
-  master_frame: SchemeCard
-  variants:
-  - active
-  - upcoming
-  - expired
-  states:
-  - default
-  - loading
-  tokens:
-  - surface.raised
-  - border.default
-  - content.primary
-  - content.secondary
-  - surface.accent
-  - feedback.success
-  implementation:
-    flutter: packages/agency_flutter_ui/SchemeCard
-    web: packages/agency_web_ui/SchemeCard
-  accessibility:
-  - state-word-plus-colour
-  - contrast-4.5
-  qa:
-  - contrast-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
-- id: commerce.procurement-list-card
-  semantic_role: Saved procurement list summary with a bulk add action
-  master_frame: ProcurementListCard
-  variants:
-  - default
-  - selected
-  states:
-  - default
-  - selected
-  - loading
-  - empty
-  tokens:
-  - surface.raised
-  - border.default
-  - content.primary
-  - content.secondary
-  - commerce.b2b.bg
-  - action.primary
-  implementation:
-    flutter: packages/agency_flutter_ui/ProcurementListCard
-    web: packages/agency_web_ui/ProcurementListCard
-  accessibility:
-  - accessible-action-name
-  - min-target-44
-  - contrast-4.5
-  qa:
-  - target-size-check
-  - contrast-check
-  lifecycle:
-    state: prototype
-    version: 0.1.0
-    promotion_requires:
-    - functional-evidence
-    - state-completeness
-    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces:
+    - b2b
+    - commerce-admin
+    - customer-app
+    - erp
+    - seller-portal
+- id: commerce.quantity-stepper
+  semantic_role: Editable quantity control with discrete decrement/increment
+  master_frame: QuantityStepper
+  variants:
+  - default
+  - compact
+  states:
+  - default
+  - focus
+  - disabled
+  - min
+  - max
+  tokens:
+  - surface.raised
+  - border.control
+  - border.focus
+  - content.primary
+  - action.disabled
+  implementation:
+    flutter: packages/agency_flutter_ui/QuantityStepper
+    web: packages/agency_web_ui/QuantityStepper
+  accessibility:
+  - accessible-name
+  - min-target-44
+  - value-announced
+  qa:
+  - target-size-check
+  - contrast-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
+- id: control.filter-chip
+  semantic_role: Toggleable filter or option chip
+  master_frame: FilterChip
+  variants:
+  - unselected
+  - selected
+  states:
+  - default
+  - selected
+  - focus
+  - disabled
+  - loading
+  tokens:
+  - surface.raised
+  - border.control
+  - action.selected
+  - content.on-selected
+  - border.focus
+  implementation:
+    flutter: packages/agency_flutter_ui/FilterChip
+    web: packages/agency_web_ui/FilterChip
+  accessibility:
+  - selected-not-colour-alone
+  - min-target-44
+  - selected-state-announced
+  qa:
+  - contrast-check
+  - target-size-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
+- id: commerce.trade-info-tile
+  semantic_role: Compact trade fact (MOQ, pack size, stock, sellers)
+  master_frame: TradeInfoTile
+  variants:
+  - moq
+  - pack-size
+  - stock
+  - sellers
+  states:
+  - default
+  - loading
+  - restricted
+  tokens:
+  - commerce.b2b.bg
+  - commerce.b2b.fg
+  - content.primary
+  - content.secondary
+  implementation:
+    flutter: packages/agency_flutter_ui/TradeInfoTile
+    web: packages/agency_web_ui/TradeInfoTile
+  accessibility:
+  - label-value-pair
+  - contrast-4.5
+  qa:
+  - contrast-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
+- id: commerce.trade-price-summary
+  semantic_role: Trade unit price against MRP with GST and savings
+  master_frame: TradePriceSummary
+  variants:
+  - compact
+  - expanded
+  states:
+  - default
+  - unavailable
+  - restricted
+  tokens:
+  - surface.raised
+  - border.default
+  - content.primary
+  - content.secondary
+  - commerce.discount.bg
+  - commerce.discount.fg
+  implementation:
+    flutter: packages/agency_flutter_ui/TradePriceSummary
+    web: packages/agency_web_ui/TradePriceSummary
+  accessibility:
+  - price-labelled-with-unit
+  - gst-stated-not-implied
+  - contrast-4.5
+  qa:
+  - contrast-check
+  - format-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
+- id: commerce.volume-pricing-table
+  semantic_role: Quantity-break trade pricing with the active band highlighted
+  master_frame: VolumePricingTable
+  variants:
+  - default
+  states:
+  - default
+  - selected
+  - loading
+  tokens:
+  - surface.raised
+  - border.default
+  - content.primary
+  - content.secondary
+  - action.primary
+  - content.inverse
+  implementation:
+    flutter: packages/agency_flutter_ui/VolumePricingTable
+    web: packages/agency_web_ui/VolumePricingTable
+  accessibility:
+  - table-semantics
+  - selected-not-colour-alone
+  - min-target-44
+  qa:
+  - contrast-check
+  - target-size-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
+- id: commerce.scheme-card
+  semantic_role: Trade scheme or offer with validity and state
+  master_frame: SchemeCard
+  variants:
+  - active
+  - upcoming
+  - expired
+  states:
+  - default
+  - loading
+  tokens:
+  - surface.raised
+  - border.default
+  - content.primary
+  - content.secondary
+  - surface.accent
+  - feedback.success
+  implementation:
+    flutter: packages/agency_flutter_ui/SchemeCard
+    web: packages/agency_web_ui/SchemeCard
+  accessibility:
+  - state-word-plus-colour
+  - contrast-4.5
+  qa:
+  - contrast-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
+- id: commerce.procurement-list-card
+  semantic_role: Saved procurement list summary with a bulk add action
+  master_frame: ProcurementListCard
+  variants:
+  - default
+  - selected
+  states:
+  - default
+  - selected
+  - loading
+  - empty
+  tokens:
+  - surface.raised
+  - border.default
+  - content.primary
+  - content.secondary
+  - commerce.b2b.bg
+  - action.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/ProcurementListCard
+    web: packages/agency_web_ui/ProcurementListCard
+  accessibility:
+  - accessible-action-name
+  - min-target-44
+  - contrast-4.5
+  qa:
+  - target-size-check
+  - contrast-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+  platforms:
+  - flutter
+  - web
+  platform_basis:
+    surfaces: []
+    note: not referenced by the design IR
 status: review-ready

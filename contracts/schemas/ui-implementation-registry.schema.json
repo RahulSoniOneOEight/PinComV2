@@ -24,21 +24,7 @@
         "type": "object",
         "required": [
           "semantic_id",
-          "flutter",
-          "web",
           "qa"
-        ],
-        "anyOf": [
-          {
-            "required": [
-              "openpencil"
-            ]
-          },
-          {
-            "required": [
-              "penpot"
-            ]
-          }
         ],
         "properties": {
           "semantic_id": {
@@ -69,7 +55,37 @@
             "type": "object"
           }
         },
-        "additionalProperties": true
+        "additionalProperties": true,
+        "allOf": [
+          {
+            "anyOf": [
+              {
+                "required": [
+                  "openpencil"
+                ]
+              },
+              {
+                "required": [
+                  "penpot"
+                ]
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "required": [
+                  "flutter"
+                ]
+              },
+              {
+                "required": [
+                  "web"
+                ]
+              }
+            ]
+          }
+        ]
       }
     },
     "specialists": {

@@ -1,0 +1,55 @@
+direction_id: DIR-CLIENT102-A
+client_id: client102
+strategy: india-first-compact-commerce
+surfaces:
+- customer-app
+- web-store
+- b2b
+- seller-portal
+- commerce-admin
+- erp
+- analytics
+- ops-console
+journey_emphasis:
+- browse-to-buy
+- search-to-buy
+- order-tracking
+- return-refund
+- quote-to-order
+- repeat-order
+- credit-order
+- seller-onboarding
+- seller-catalogue
+- marketplace-order
+- seller-fulfilment
+- seller-return
+- seller-settlement
+design_intent:
+  palette: stormy-morning
+  typography: Hind only; sizes 11/12/14/16/20/24; weights 400/600/700
+  density:
+    customer-app: comfortable
+    web-store: comfortable
+    b2b: compact 40px rows
+    seller-portal: compact 40px rows
+    commerce-admin: compact 36-40px rows
+    erp: compact 36-40px rows
+    analytics: compact dense dashboard
+    ops-console: compact 36-40px rows
+  theme_refs:
+  - experience/design/theme-resolution.yaml
+  - experience/design/master-design-system.yaml
+  decision_gate: step-19 human direction selection is outstanding; this direction
+    is review-ready, not selected
+differentiators:
+- Stormy Morning low-glare commerce palette
+- comfortable consumer buying paired with compact operations density
+- India-first rupee, UPI and seller/credit workflows
+- semantic parity across Flutter and web surfaces
+fixture_set: client102-apnakart-commerce
+visual_preset: stormy-morning-compact-commerce
+design_selection_ref: experience/design/selection.yaml
+theme_resolution_ref: experience/design/theme-resolution.yaml
+asset_plan_ref: experience/design/asset-plan.yaml
+motion_policy_ref: experience/design/motion-registry.yaml
+status: review-ready

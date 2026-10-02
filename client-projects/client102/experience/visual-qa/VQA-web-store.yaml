@@ -1,0 +1,99 @@
+qa_id: VQA-web-store
+client_id: client102
+direction_id: DIR-CLIENT102-A
+surface: web-store
+build_identity: BLD-client102-a-a8d2ea082e31
+checks:
+- id: design-contract
+  status: pass
+  evidence: 'Capture evidence: 1440x1024 default 1440x1024 sha256:646936441d86801b
+    review/artifacts/BLD-client102-a-a8d2ea082e31/web-store/1440x1024/default.png;
+    390x844 default 390x961 sha256:484970e50d99be87 review/artifacts/BLD-client102-a-a8d2ea082e31/web-store/390x844/default.png.
+    Design IR covers 8 surfaces and 51 nodes; component registry has 26 contracts.
+    Web captures show ApnaKart tokenized surface content.'
+  notes: []
+- id: responsive
+  status: pass
+  evidence: 'Capture evidence: 1440x1024 default 1440x1024 sha256:646936441d86801b
+    review/artifacts/BLD-client102-a-a8d2ea082e31/web-store/1440x1024/default.png;
+    390x844 default 390x961 sha256:484970e50d99be87 review/artifacts/BLD-client102-a-a8d2ea082e31/web-store/390x844/default.png.
+    Layout spec phone breakpoint 0-767 uses 390x844; web capture also includes 1440x1024
+    desktop breakpoint.'
+  notes: []
+- id: accessibility
+  status: pass
+  evidence: 'Contrast measured with theme_compiler.contrast: primary/page 8.85:1,
+    secondary/page 5.19:1, muted/page 4.93:1, inverse/action.primary 9.27:1, on-selected/action.selected
+    4.68:1, control border/page 3.24:1. Rendered controls measured by Playwright:
+    9 controls, min height 44px on 1440x1024 and 390x844. One h1 measured per viewport
+    in Playwright.'
+  notes: []
+- id: critical-states
+  status: warning
+  evidence: Component registry declares states action-pending, added, closing, default,
+    disabled, dismissible, empty, enter, error, exit, fading, filled ... (27 unique
+    states). Current capture manifest only captures default state for web-store; non-default
+    critical states were not rendered.
+  notes: []
+- id: business-rules
+  status: pass
+  evidence: 'Governed design artifacts encode India-first B2C/B2B commerce: direction
+    DIR-CLIENT102-A, journey graph 13 journeys/51 nodes, layout density for web-store:
+    [''comfortable'', ''56px rows, 24px section gaps''].'
+  notes: []
+- id: journey-coverage
+  status: pass
+  evidence: Design IR and derived journey graph both cover 13 journeys and 51 nodes;
+    integrity pre-check before VQA had only visual-qa blockers.
+  notes: []
+- id: design-selection
+  status: warning
+  evidence: Selection artifact DSEL-client102 status=evaluated exists; direction DIR-CLIENT102-A
+    status review-ready. Step-19 human selection remains outstanding, so not marked
+    selected/approved.
+  notes: []
+- id: semantic-theme
+  status: pass
+  evidence: 'Stormy Morning semantic roles measured: primary/page 8.85:1, secondary/page
+    5.19:1, on-selected/action.selected 4.68:1; selected text uses #384959, not white.'
+  notes: []
+- id: motion-and-reduced-motion
+  status: pass
+  evidence: motion-registry.yaml contains 15 motions; every motion has a reduced_motion
+    alternative=True; reduced_motion_required=True.
+  notes: []
+- id: asset-quality-and-source
+  status: warning
+  evidence: asset-plan.yaml records 5 Pexels selections with provider IDs/source URLs
+    and status applied; visual_qa_status is still pending-human-review for applied
+    stock assets, with one rejected ceiling-fan asset documented.
+  notes: []
+- id: component-quality-threshold
+  status: warning
+  evidence: component-contract-registry.yaml has 26 contracts with lifecycle states;
+    promotion_requires include functional-evidence/state-completeness/accessibility.
+    No component benchmark score was run in this task.
+  notes: []
+- id: state-completeness
+  status: warning
+  evidence: Compared against component-contract-registry states (27 unique). Capture
+    manifest for web-store includes only default state, so non-default states are
+    outstanding.
+  notes: []
+- id: performance-budget
+  status: pass
+  evidence: Playwright reduced-motion page load measured 949ms desktop / 732ms phone
+    against local Next dev runtime.
+  notes: []
+- id: cross-platform-parity
+  status: warning
+  evidence: Desktop and phone web captures exist and use the same shared page content;
+    parity with Flutter/native was not run.
+  notes: []
+- id: design-debt
+  status: warning
+  evidence: 'Known debt remains: direction is review-ready but not human-selected;
+    asset human review pending; non-default state captures are not present; Flutter
+    widget-test text glyph rendering is degraded for Flutter surfaces.'
+  notes: []
+status: review-ready

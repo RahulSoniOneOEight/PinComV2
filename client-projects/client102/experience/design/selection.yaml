@@ -1,0 +1,96 @@
+selection_id: DSEL-client102
+client_id: client102
+experience_type:
+- d2c-customer
+- b2b-ordering
+- marketplace
+- seller-operations
+- admin-operations
+- analytics-operations
+preset: compact-commerce
+platforms:
+  flutter:
+    core:
+    - agency_flutter_ui
+    icons:
+    - material fallback via agency semantic icons
+    motion:
+    - AgencyMotion reduced-motion aware
+  web:
+    core:
+    - agency_web_ui
+    - Next.js
+    icons:
+    - agency semantic SVG icons
+    motion:
+    - CSS transitions with prefers-reduced-motion override
+patterns:
+- pattern: product-card
+  surface_role: visual-commerce-card
+  selected:
+    flutter:
+    - agency_flutter_ui.ProductCard
+    web:
+    - agency_web_ui.ProductCard
+  candidates:
+  - agency_flutter_ui
+  - agency_web_ui
+  reason:
+  - existing shared primitive reused
+  - token alignment updated to Stormy Morning
+  - captures exercise default and discounted states
+- pattern: category-rail
+  surface_role: visual-merchandising
+  selected:
+    flutter:
+    - agency_flutter_ui.CategoryRail
+    web:
+    - agency_web_ui.CategoryRail
+  candidates:
+  - agency_flutter_ui
+  - agency_web_ui
+  reason:
+  - existing shared primitive reused
+  - comfortable customer density
+- pattern: b2b-quick-order
+  surface_role: dense-transactional-table
+  selected:
+    flutter:
+    - agency_flutter_ui.B2BQuickOrder
+    web:
+    - agency_web_ui.B2BQuickOrder
+  candidates:
+  - agency_flutter_ui
+  - agency_web_ui
+  reason:
+  - 40px compact table density
+  - touch targets remain >=44 through IconButton/button controls
+- pattern: dashboard-kpi
+  surface_role: analytical-tile
+  selected:
+    flutter:
+    - agency_flutter_ui.DashboardKpi
+    web:
+    - agency_web_ui.DashboardKpi
+  candidates:
+  - agency_flutter_ui
+  - agency_web_ui
+  reason:
+  - compact metrics at 24px max type size
+  - semantic card role
+- pattern: exception-table
+  surface_role: ops-dense-table
+  selected:
+    web:
+    - agency_web_ui.ExceptionTable
+  candidates:
+  - agency_web_ui
+  reason:
+  - compact operations surfaces share table primitive
+  - status labels are textual, not colour-only
+quality_policy:
+  minimum_score: 80
+  rule: rendered captures plus deterministic checks; human step-19 selection remains
+    outstanding
+  human_gate_status: outstanding-not-selected
+status: evaluated

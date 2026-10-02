@@ -1,0 +1,19 @@
+build_id: BLD-client102-a-a8d2ea082e31
+client_id: client102
+direction_id: DIR-CLIENT102-A
+source_revision: a8d2ea082e31
+environment: prototype
+surfaces:
+- customer-app
+- web-store
+- b2b
+- seller-portal
+- commerce-admin
+- erp
+- analytics
+- ops-console
+created_by: opencode-subagent
+immutable: true
+notes:
+- source revision is the HEAD at build identity creation; working tree contains local
+  prototype changes for this capture run

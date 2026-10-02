@@ -1,0 +1,76 @@
+capture_id: CAP-BLD-client102-a-a8d2ea082e31
+client_id: client102
+build_id: BLD-client102-a-a8d2ea082e31
+direction_id: DIR-CLIENT102-A
+targets:
+- surface: customer-app
+  runtime: flutter
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/customer-app/390x844/default.png
+- surface: web-store
+  runtime: web
+  viewport: 1440x1024
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/web-store/1440x1024/default.png
+- surface: web-store
+  runtime: web
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/web-store/390x844/default.png
+- surface: b2b
+  runtime: flutter
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/b2b/390x844/default.png
+- surface: seller-portal
+  runtime: web
+  viewport: 1440x1024
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/seller-portal/1440x1024/default.png
+- surface: seller-portal
+  runtime: web
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/seller-portal/390x844/default.png
+- surface: commerce-admin
+  runtime: web
+  viewport: 1440x1024
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/commerce-admin/1440x1024/default.png
+- surface: commerce-admin
+  runtime: web
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/commerce-admin/390x844/default.png
+- surface: erp
+  runtime: web
+  viewport: 1440x1024
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/erp/1440x1024/default.png
+- surface: erp
+  runtime: web
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/erp/390x844/default.png
+- surface: analytics
+  runtime: web
+  viewport: 1440x1024
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/analytics/1440x1024/default.png
+- surface: analytics
+  runtime: web
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/analytics/390x844/default.png
+- surface: ops-console
+  runtime: web
+  viewport: 1440x1024
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/ops-console/1440x1024/default.png
+- surface: ops-console
+  runtime: web
+  viewport: 390x844
+  state: default
+  output: review/artifacts/BLD-client102-a-a8d2ea082e31/ops-console/390x844/default.png
+status: captured

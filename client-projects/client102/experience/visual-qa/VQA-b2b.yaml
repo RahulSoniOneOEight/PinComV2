@@ -1,95 +1,71 @@
-qa_id: VQA-b2b
+qa_id: VQA-DESIGN-a8f219e6-b2b
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: b2b
-build_identity: BLD-client102-a-a8d2ea082e31
+build_identity: DESIGN-a8f219e6
+capture_id: DESIGN-a8f219e6
+basis: Design captures exported from the committed OpenPencil document, plus governed
+  artifacts. This is design evidence, not build evidence.
+screens_captured:
+- s10-procurement-list
+- s11-credit
+- s27-quotation-cart
+- s30-b2b-order-history
+- s31-b2b-reorder
+- s32-trade-price-pdp
+- s8-b2b-home
+- s9-rfq
 checks:
 - id: design-contract
-  status: warning
-  evidence: 'Capture evidence: 390x844 default 1170x2532 sha256:98fcbce0d2229eb1 review/artifacts/BLD-client102-a-a8d2ea082e31/b2b/390x844/default.png.
-    Design IR covers 8 surfaces and 51 nodes; component registry has 26 contracts.
-    Flutter screenshot is real but visually degraded by missing text glyph rendering
-    in test output.'
-  notes: []
+  status: pass
+  evidence: 10/10 key design artifacts present
 - id: responsive
   status: warning
-  evidence: 'Capture evidence: 390x844 default 1170x2532 sha256:98fcbce0d2229eb1 review/artifacts/BLD-client102-a-a8d2ea082e31/b2b/390x844/default.png.
-    Layout spec phone breakpoint 0-767 uses 390x844; Flutter capture covers required
-    phone viewport only; tablet/desktop not applicable to this surface capture.'
-  notes: []
+  evidence: 4 breakpoints specified in layout-spec; captures exist only at the 390x844
+    phone viewport, so tablet/desktop composition is specified but not evidenced
 - id: accessibility
-  status: warning
-  evidence: 'Contrast measured with theme_compiler.contrast: primary/page 8.85:1,
-    secondary/page 5.19:1, muted/page 4.93:1, inverse/action.primary 9.27:1, on-selected/action.selected
-    4.68:1, control border/page 3.24:1. Flutter widget-test capture rendered text
-    as block glyphs in the PNG, so semantic accessibility from artifacts is not fully
-    verified.'
-  notes: []
+  status: pass
+  evidence: min text contrast 4.62 across 6 pairs (content.primary/surface.page=8.85,
+    content.secondary/surface.page=6.26, content.secondary/surface.accent=4.62…)
 - id: critical-states
   status: warning
-  evidence: Component registry declares states action-pending, added, closing, default,
-    disabled, dismissible, empty, enter, error, exit, fading, filled ... (27 unique
-    states). Current capture manifest only captures default state for b2b; non-default
-    critical states were not rendered.
-  notes: []
+  evidence: only the default state is captured for this surface
 - id: business-rules
   status: pass
-  evidence: 'Governed design artifacts encode India-first B2C/B2B commerce: direction
-    DIR-CLIENT102-A, journey graph 13 journeys/51 nodes, layout density for b2b: [''compact'',
-    ''40px rows, 12px section gaps''].'
-  notes: []
+  evidence: 9 governed rules recorded in design-brief
 - id: journey-coverage
   status: pass
-  evidence: Design IR and derived journey graph both cover 13 journeys and 51 nodes;
-    integrity pre-check before VQA had only visual-qa blockers.
-  notes: []
+  evidence: 13/13 journeys, 51/51 nodes, ids match=True
 - id: design-selection
   status: warning
-  evidence: Selection artifact DSEL-client102 status=evaluated exists; direction DIR-CLIENT102-A
-    status review-ready. Step-19 human selection remains outstanding, so not marked
-    selected/approved.
-  notes: []
+  evidence: selection present but status is 'evaluated' — the direction gate is a
+    human decision
 - id: semantic-theme
   status: pass
-  evidence: 'Stormy Morning semantic roles measured: primary/page 8.85:1, secondary/page
-    5.19:1, on-selected/action.selected 4.68:1; selected text uses #384959, not white.'
-  notes: []
+  evidence: 42 semantic roles resolve to concrete values
 - id: motion-and-reduced-motion
   status: pass
-  evidence: motion-registry.yaml contains 15 motions; every motion has a reduced_motion
-    alternative=True; reduced_motion_required=True.
-  notes: []
+  evidence: 15 motions, 15 declare a reduced-motion alternative
 - id: asset-quality-and-source
   status: warning
-  evidence: asset-plan.yaml records 5 Pexels selections with provider IDs/source URLs
-    and status applied; visual_qa_status is still pending-human-review for applied
-    stock assets, with one rejected ceiling-fan asset documented.
-  notes: []
+  evidence: 5/5 selections carry provider, id and photographer; 1 rejected on subject-relevance;
+    human review still pending
 - id: component-quality-threshold
   status: warning
-  evidence: component-contract-registry.yaml has 26 contracts with lifecycle states;
-    promotion_requires include functional-evidence/state-completeness/accessibility.
-    No component benchmark score was run in this task.
-  notes: []
+  evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: Compared against component-contract-registry states (27 unique). Capture
-    manifest for b2b includes only default state, so non-default states are outstanding.
-  notes: []
+  evidence: 8 screens captured for this surface; components declare more states than
+    are evidenced
 - id: performance-budget
   status: not-run
-  evidence: No real Flutter runtime frame/build performance measurement was run; only
-    widget-test screenshot capture exists.
-  notes: []
+  evidence: no running application was measured; a design export cannot evidence runtime
+    cost
 - id: cross-platform-parity
   status: not-run
-  evidence: Cross-platform parity was not run for Flutter against web; only surface-specific
-    capture exists.
-  notes: []
+  evidence: requires the same screen rendered on Flutter and web; only design captures
+    exist
 - id: design-debt
-  status: warning
-  evidence: 'Known debt remains: direction is review-ready but not human-selected;
-    asset human review pending; non-default state captures are not present; Flutter
-    widget-test text glyph rendering is degraded for Flutter surfaces.'
-  notes: []
+  status: not-run
+  evidence: run with --lint to evaluate design debt from the CLI linter
 status: review-ready

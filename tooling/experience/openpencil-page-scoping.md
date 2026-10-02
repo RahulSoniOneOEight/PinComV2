@@ -23,7 +23,7 @@ Before the ApnaKart reorganisation, the desktop tab's actual page was `0:24`:
 
 `switch_page` reported the requested ID each time, but `get_current_page({document_id:"tab-2"})` remained `0:24`. By contrast, `get_current_page({document_id:"tab-2", page_id:"0:4"})` returned `0:4`, confirming that explicit targeting works for the operation without changing desktop state.
 
-The saved desktop file contained 1,754 frames (`975 + 779`), while the stale repo copy contained 1,759. Thus the apparent 779-versus-1,759 contradiction combined three facts: MCP was searching one page, CLI file mode was searching all pages, and the two files were different revisions. `save_file({document_id:"tab-2"})` did flush the live graph: the saved file then reported the same 1,703-frame total as the explicit MCP page counts (`198 + 1432 + 0 + 73`).
+The saved desktop file contained 1,754 frames (`975 + 779`), while the stale repo copy contained 1,759. A multiset diff located the five repo-only frames inside the taller repo version of `zz-p3-decoration`: `skBody`, `skLine1`, `skLine2`, `skLine3`, and `skBtn`. Thus the apparent 779-versus-1,759 contradiction combined three facts: MCP was searching one page, CLI file mode was searching all pages, and the two files were different revisions. `save_file({document_id:"tab-2"})` did flush the live graph: the saved file then reported the same 1,703-frame total as the explicit MCP page counts (`198 + 1432 + 0 + 73`).
 
 ## Safe per-page workflow
 

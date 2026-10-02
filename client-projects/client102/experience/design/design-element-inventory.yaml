@@ -5,9 +5,9 @@ taxonomy_ref: design-contract/design-element-inventory.yaml
 evaluated_on: '2026-10-02'
 summary:
   total: 99
-  done: 65
-  partial: 15
-  missing: 19
+  done: 74
+  partial: 12
+  missing: 13
 elements:
 - id: F1
   status: done
@@ -86,9 +86,10 @@ elements:
   evidence: experience/design/
   note: implied via strokes only
 - id: P8
-  status: partial
-  evidence: experience/design/
-  note: referenced, not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: Quantity stepper built at 44px per control in the Cart, and quantity is editable
+    inline on the RFQ and procurement list rows.
 - id: P9
   status: partial
   evidence: experience/design/
@@ -154,9 +155,9 @@ elements:
     5 states) and mastered; rendered in context on the Orders screen with status,
     total, Track and Reorder.
 - id: C3
-  status: missing
-  evidence: null
-  note: credit dashboard not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: KPI/metric card built on the Credit screen (due in, overdue, pending approvals).
 - id: C4
   status: done
   evidence: experience/design/
@@ -166,17 +167,19 @@ elements:
   evidence: experience/design/
   note: 5 tabs, selected state
 - id: C6
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: Tabs built on the Credit screen (Dashboard, Invoices, Pay, Limit) with a selected
+    state.
 - id: C7
   status: done
   evidence: experience/design/
   note: bold price, muted MRP
 - id: C8
-  status: partial
-  evidence: experience/design/
-  note: static MOQ row only
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Quantity tier selector surfaced on TradeProductCard: MOQ plus the tier price
+    break (10+ bags: ₹372).'
 - id: C9
   status: missing
   evidence: null
@@ -224,9 +227,10 @@ elements:
   evidence: experience/design/
   note: 2-up deals grid
 - id: T2
-  status: partial
-  evidence: experience/design/
-  note: concept only
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: Merchandising swimlane built on B2B Home (Buy again / Seasonal / Best deals
+    tiles).
 - id: T3
   status: done
   evidence: experience/design/component-contract-registry.yaml
@@ -247,17 +251,20 @@ elements:
   note: 'Search results screen built: query bar, Sort/Filter/Price controls, result
     count, product grid and list-row variant, plus bottom navigation.'
 - id: T7
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'RFQ screen built: item list with quantity and target price, site selection,
+    seller notes and a send-to-sellers action.'
 - id: T8
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Procurement list screen built: source metadata, selectable rows with checkboxes,
+    selection summary and Add selected / Add all actions.'
 - id: T9
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Credit dashboard built: available-credit hero with utilisation bar, three
+    KPI tiles and Dashboard/Invoices/Pay/Limit tabs.'
 - id: T10
   status: partial
   evidence: experience/design/
@@ -267,9 +274,10 @@ elements:
   evidence: experience/design/
   note: login built; OTP verify screen missing
 - id: T12
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Approval workflow surfaced on the Credit screen: pending approval rows with
+    requester, amount, status and a review action.'
 - id: L1
   status: done
   evidence: experience/design/

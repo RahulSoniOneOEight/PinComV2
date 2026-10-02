@@ -25,6 +25,8 @@ screens_captured:
 - s34-wishlist
 - s35-schemes-offers
 - s3d-b2c-home-dark
+- s3dl-b2c-home-dark-long
+- s3l-b2c-home-long
 - s4-cart
 - s5-checkout
 - s6-search-results
@@ -71,7 +73,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 23 screens captured for this surface; components declare more states than
+  evidence: 25 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run

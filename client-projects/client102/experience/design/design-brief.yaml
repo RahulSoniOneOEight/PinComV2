@@ -139,6 +139,8 @@ screen_map:
   b2c.login: S2 · Login
   b2c.home: S3 · B2C Home
   b2c.home.dark: S3D · B2C Home (Dark)
+  b2c.home.long: S3L · B2C Home (long)
+  b2c.home.dark.long: S3DL · B2C Home (Dark, long)
   b2c.product-detail: S19 · Product Detail
   b2c.product-variant: S20 · Product Variant
   b2c.confirm-order: S21 · Confirm Order
@@ -148,6 +150,7 @@ screen_map:
   b2c.track-package.delayed: S24b · Track Package (Delayed)
   b2c.refund-reasons: S25 · Refund Reasons
   b2c.orders-returned: S26 · Orders Returned
+  b2b.home.long: S8L · B2B Home (long)
   b2b.quotation-cart: S27 · Quotation Cart
   b2b.quotes-received: S28 · Quotes Received
   b2b.quote-compare: S29 · Quote Compare

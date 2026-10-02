@@ -14,6 +14,7 @@ screens_captured:
 - s31-b2b-reorder
 - s32-trade-price-pdp
 - s8-b2b-home
+- s8l-b2b-home-long
 - s9-rfq
 checks:
 - id: design-contract
@@ -55,7 +56,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 8 screens captured for this surface; components declare more states than
+  evidence: 9 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run

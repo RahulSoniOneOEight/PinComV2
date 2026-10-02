@@ -8,5 +8,6 @@ required:
 - erp
 - analytics
 - ops-console
+- superadmin
 status: generated
 source: input/client-input.yaml#required_surfaces

@@ -8,6 +8,7 @@ surfaces:
 - erp
 - analytics
 - ops-console
+- superadmin
 journeys:
 - id: browse-to-buy
   nodes:

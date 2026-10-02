@@ -3,7 +3,7 @@ project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-de
 revision_ref: sha256:33466c9e99a05db80041b7150c9b81756dbcb805e45cf891c4da516c0f0c6efd
 source: openpencil-cli
 input_hashes:
-  design_ir: sha256:8b01e8b660a359904f877d86b6a044f60922951e9abd1439179e0150d7e1d1fa
+  design_ir: sha256:a00502a6fec6a84a722367d0b5fd432f62a41f4d21d60dde6b75339991a5d02a
   components: sha256:eab647171d2eb7eed6b3822158714dc7d7e7bf6ccecb733527bfde37d2fd9477
   theme: sha256:bc3b865a9adcb0037f792e71b07b89e2c0ee4eab51717c4d6b51f147f81cb476
   journeys: sha256:e1bd3899cbf48b2aa0d2678ffd1cdca8606edcb020211153669ea8f3908f3394
@@ -16,6 +16,7 @@ required_surfaces:
 - erp
 - analytics
 - ops-console
+- superadmin
 required_journeys:
 - browse-to-buy
 - search-to-buy

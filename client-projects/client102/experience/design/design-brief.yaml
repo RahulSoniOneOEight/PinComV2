@@ -127,6 +127,9 @@ surface_density:
   erp: compact
   analytics: compact
   ops-console: compact
+  # superadmin added 2026-10-03: the client confirmed it is a WEB surface, but it was
+  # absent from every surface list (gap analysis cf11cf0).
+  superadmin: compact
 open_items:
 - Dark theme is defined for the token set; only the light screens are drawn in dark.
 - Typography families/scale are decided (Hind, 8 roles); brand font licensing is unconfirmed.
@@ -160,6 +163,23 @@ screen_map:
   b2c.account: S33 · Account
   b2c.wishlist: S34 · Wishlist
   b2b.schemes-offers: S35 · Schemes & Offers
+  # Added 2026-10-03: these 14 frames existed in the .fig but were absent from
+  # screen_map, so 15 of 40 artboards were ungoverned (gap analysis cf11cf0).
+  b2c.cart: S4 · Cart
+  b2c.checkout: S5 · Checkout
+  b2c.search-results: S6 · Search results
+  b2c.orders: S7 · Orders
+  b2b.home: S8 · B2B Home
+  b2b.rfq: S9 · RFQ
+  b2b.procurement-list: S10 · Procurement list
+  b2b.credit: S11 · Credit
+  seller.onboarding: S13 · Seller onboarding
+  seller.catalogue: S14 · Seller catalogue
+  seller.fulfilment: S15 · Seller fulfilment
+  seller.return: S16 · Seller return
+  seller.settlement: S17 · Seller settlement
+  commerce.marketplace-order: S18 · Marketplace order
+  # S20t is a 390x200 technical fragment, not a screen. Deliberately not mapped.
 journey_node_map:
   browse-to-buy.1: S3 · B2C Home
   browse-to-buy.2: S19 · Product Detail
@@ -186,6 +206,37 @@ journey_node_map:
   repeat-order.1: S30 · B2B Order History
   repeat-order.2: S31 · B2B Reorder
   repeat-order.3: S27 · Quotation Cart
+  # Added 2026-10-03 (gap analysis cf11cf0). The 7 families below previously had ZERO
+  # node-to-screen mappings, so 26 of 51 nodes had no design-realization trace.
+  # NOTE: several nodes collapse onto one condensed screen. That satisfies traceability
+  # but is NOT proof the flow is complete - expanding these families is tracked in
+  # derived/journey-flow-gaps.md (P1) and the web-surface desktop rebuild.
+  credit-order.1: S11 · Credit
+  credit-order.2: S11 · Credit
+  credit-order.3: S27 · Quotation Cart
+  credit-order.4: S21 · Confirm Order
+  seller-onboarding.1: S13 · Seller onboarding
+  seller-onboarding.2: S13 · Seller onboarding
+  seller-onboarding.3: S13 · Seller onboarding
+  seller-onboarding.4: S13 · Seller onboarding
+  seller-catalogue.1: S14 · Seller catalogue
+  seller-catalogue.2: S14 · Seller catalogue
+  seller-catalogue.3: S14 · Seller catalogue
+  seller-catalogue.4: S14 · Seller catalogue
+  marketplace-order.1: S18 · Marketplace order
+  marketplace-order.2: S18 · Marketplace order
+  marketplace-order.3: S18 · Marketplace order
+  seller-fulfilment.1: S15 · Seller fulfilment
+  seller-fulfilment.2: S15 · Seller fulfilment
+  seller-fulfilment.3: S15 · Seller fulfilment
+  seller-fulfilment.4: S15 · Seller fulfilment
+  seller-return.1: S16 · Seller return
+  seller-return.2: S16 · Seller return
+  seller-return.3: S16 · Seller return
+  seller-settlement.1: S17 · Seller settlement
+  seller-settlement.2: S17 · Seller settlement
+  seller-settlement.3: S17 · Seller settlement
+  seller-settlement.4: S17 · Seller settlement
 screen_state_notes:
   b2c.cart-empty: S22 · Cart Empty closes the add-cart empty state
   b2c.track-package.delayed: S24b closes the track-shipment-error state
@@ -247,10 +298,18 @@ component_ref_enrichment:
   remaining_gap: the journey IR models no authentication journey, so auth screens
     are attributed by override rather than by the graph
 fig_todo:
-- 'Recolour #526D82 -> #456079 on every node using content.secondary in apnakart-design.fig
-  (deferred: the page-scoping run holds the file).'
-- 'Specifically confirm the two linted nodes: S3 B2C Home / Body / Hero / HeroCopy
-  / HeroKicker, and zz-components-2 / commerce.hero-banner / hbCopy / hbKicker.'
+# Both original items are now closed; kept as a record instead of deleted.
+- >-
+  DONE (2026-10-02): recolour #526D82 -> #456079 on every node using
+  content.secondary. Verified on 2026-10-03: the token and the fills agree and
+  contrast_audit reports 0 violations.
+- >-
+  RESOLVED (2026-10-03): the two linted nodes. They were the disabled-control pair
+  (content.muted on action.disabled, 4.13:1), which WCAG 1.4.3 exempts for inactive
+  components and which contrast_audit.py already encodes. openpencil lint cannot know
+  intent, so it still reports them. The genuine defect found instead was the two
+  fold-marker labels using border.focus as a text colour (3.49:1); fixed to
+  content.muted (4.93:1). Lint error count 5 -> 3.
 long_scroll_screens:
   requirement: B2C Home and B2B Home are LONG-SCROLL surfaces, not viewport mocks.
     The client reference (BuildKart journeys/screens/components map, part 2.2 and
@@ -300,6 +359,8 @@ long_scroll_screens:
   - compact quick-order SKU card
   - procurement list filter bar
   - buy again card
-  blocked_by: The OpenPencil desktop app is not running and its automation server
-    is down, so no canvas work is possible. %LOCALAPPDATA%\OpenPencil\mcp.json is
-    absent. An app restart is required first.
+  status: >-
+    DONE (2026-10-02, commit 0db3c19). S3L, S3DL and S8L exist at 390x2133 /
+    390x2133 / 390x2148 with a dashed FOLD marker at y=844 and the sticky nav drawn
+    once at the fold. Replaces the earlier blocked_by note: the OpenPencil automation
+    server is running again (mcp.json present, port 7600 healthy).

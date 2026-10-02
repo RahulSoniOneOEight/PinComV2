@@ -109,6 +109,10 @@ required_surfaces:
   - erp
   - analytics
   - ops-console
+  # Added 2026-10-03: the client confirmed the app superadmin is a WEB surface. It was
+  # absent from every surface list (gap analysis cf11cf0). Declaring it is truthful and
+  # adds one real blocker - it has no screens or visual QA yet.
+  - superadmin
 experience_requirements:
   - requirement_id: REQ-cart-merchandising
     statement: Show related/complementary products based on products already in the cart before checkout completion, with quick-add where appropriate.

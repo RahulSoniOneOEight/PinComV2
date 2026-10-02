@@ -7,6 +7,7 @@ import hashlib
 import yaml
 
 from tooling.experience.openpencil_bridge import design_evidence_paths, verify_manifest
+from tooling.experience.contrast_audit import audit as audit_contrast, ContrastAuditError
 from tooling.review.visual_qa import REQUIRED_CHECKS
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -177,6 +178,20 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
     qa_blockers, qa_summary = _visual_qa(project, required_surfaces)
     blockers.extend(qa_blockers)
 
+    # Contrast is audited systematically rather than by hand: hand-picked pairs let two
+    # real failures ship (content.muted 3.49, content.secondary 3.83 on surface.accent).
+    try:
+        contrast = audit_contrast(client_id, root)
+        for v in contrast["violations"]:
+            blockers.append(
+                f"contrast: {v['text']} {v['text_value']} on {v['on']} {v['surface_value']} "
+                f"= {v['ratio']} (below 4.5)"
+            )
+        contrast_ok = contrast["status"] == "passed"
+    except ContrastAuditError as exc:
+        blockers.append(f"contrast audit could not run: {exc}")
+        contrast_ok = False
+
     checks = {
         # Match the surface blockers specifically: a substring test on "surface" also
         # matched the visual-qa messages ("...for required surface X"), wrongly failing
@@ -185,6 +200,7 @@ def evaluate(client_id: str, root: Path = ROOT) -> dict[str, Any]:
         "journeys": not any("journey" in x.lower() or "nodes differ" in x.lower() for x in blockers),
         "design_ir": mapped_nodes == required_nodes and required_nodes > 0 and not any("Design IR" in x for x in blockers),
         "design_source": not any(x.startswith("Design source") for x in blockers),
+        "contrast": contrast_ok,
         "visual_qa": not qa_blockers,
     }
 

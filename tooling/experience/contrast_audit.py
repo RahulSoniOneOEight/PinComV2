@@ -68,7 +68,7 @@ ELIGIBLE: dict[str, tuple[str, ...]] = {
     "surface.page": ("content.primary", "content.secondary", "content.muted"),
     "surface.raised": ("content.primary", "content.secondary", "content.muted"),
     "surface.interactive": ("content.primary", "content.secondary", "content.muted"),
-    "surface.accent": ("content.primary", "content.muted"),
+    "surface.accent": ("content.primary",),
     "action.primary": ("content.inverse", "content.on-selected"),
     "action.hover": ("content.inverse",),
     "action.secondary": ("content.primary",),
@@ -134,10 +134,14 @@ def audit_theme(roles: dict[str, str]) -> dict[str, Any]:
     }
 
 
+class ContrastAuditError(RuntimeError):
+    pass
+
+
 def audit(client_id: str, root: Path = ROOT) -> dict[str, Any]:
     path = root / "client-projects" / client_id / "experience" / "design" / "theme-resolution.yaml"
     if not path.exists():
-        raise SystemExit(f"missing theme: {path}")
+        raise ContrastAuditError(f"missing theme: {path}")
     theme = yaml.safe_load(path.read_text(encoding="utf-8"))
     roles = theme.get("semantic_roles") or {}
     result = audit_theme(roles)

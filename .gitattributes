@@ -1,0 +1,5 @@
+# OpenPencil documents are ZIP + Zstd + Kiwi binary. Git auto-detects them as binary
+# today, but that is fragile: a future text-ish heuristic could apply line-ending
+# conversion and silently corrupt a design file. Declare it.
+*.fig binary
+*.pen binary

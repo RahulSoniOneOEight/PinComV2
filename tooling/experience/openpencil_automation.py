@@ -42,6 +42,10 @@ ROOT = Path(__file__).resolve().parents[2]
 #: Executable used to talk to OpenPencil. Override with OPENPENCIL_BIN.
 DEFAULT_BIN = os.getenv("OPENPENCIL_BIN", "openpencil")
 
+#: ``openpencil find`` truncates results silently (100 by default), which would hide
+#: journey screens and components in any real document. Always pass an explicit limit.
+FIND_LIMIT = os.getenv("OPENPENCIL_FIND_LIMIT", "10000")
+
 Runner = Callable[[list[str]], Any]
 
 
@@ -174,8 +178,8 @@ def observe(
     design_path = _resolve_design_file(design_file, root, client_id)
     run = runner or _default_runner
 
-    component_records = run([binary, "find", str(design_path), "--type", "COMPONENT", "--json"])
-    frame_records = run([binary, "find", str(design_path), "--type", "FRAME", "--json"])
+    component_records = run([binary, "find", str(design_path), "--type", "COMPONENT", "--limit", FIND_LIMIT, "--json"])
+    frame_records = run([binary, "find", str(design_path), "--type", "FRAME", "--limit", FIND_LIMIT, "--json"])
     info = run([binary, "info", str(design_path), "--json"])
 
     components = _names(component_records)

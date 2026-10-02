@@ -1,0 +1,273 @@
+client_id: client102
+languages:
+  primary: en
+  secondary: hi
+tone:
+  principles:
+  - plain, everyday language a first-time buyer understands
+  - say what happened and what to do next; never blame the user
+  - numbers and money always shown in Indian grouping with the rupee sign
+  - no exclamation marks in errors; no jargon in B2B copy for tier-2 buyers
+  address:
+    en: second person, informal
+    hi: आप (respectful)
+formatting:
+  currency: ₹1,120 — Indian digit grouping, symbol before amount, no decimals on whole
+    rupees
+  quantity: 1 pc / 10 pcs
+  date: DD MMM YYYY
+  numbering: Western Arabic numerals in both languages
+  minimum_text_size: 11px
+strings:
+- key: brand.name
+  en: ApnaKart
+  hi: ApnaKart
+  group: brand
+- key: nav.home
+  en: Home
+  hi: होम
+  group: navigation
+- key: nav.browse
+  en: Browse
+  hi: ब्राउज़
+  group: navigation
+- key: nav.orders
+  en: Orders
+  hi: ऑर्डर
+  group: navigation
+- key: nav.cart
+  en: Cart
+  hi: कार्ट
+  group: navigation
+- key: nav.account
+  en: Account
+  hi: खाता
+  group: navigation
+- key: home.deliverTo
+  en: Deliver to
+  hi: डिलीवरी
+  group: home
+- key: home.searchPlaceholder
+  en: Search products, brands or SKU…
+  hi: उत्पाद, ब्रांड या SKU खोजें…
+  group: home
+- key: home.heroKicker
+  en: SEASONAL COLLECTION
+  hi: मौसमी संग्रह
+  group: home
+- key: home.heroTitle
+  en: Electricals Week
+  hi: इलेक्ट्रिकल्स सप्ताह
+  group: home
+- key: home.heroBody
+  en: Explore switches, tools and lighting.
+  hi: स्विच, औजार और लाइटिंग देखें।
+  group: home
+- key: home.heroCta
+  en: Explore
+  hi: देखें
+  group: home
+- key: home.sectionDeals
+  en: Deals for you
+  hi: आपके लिए डील
+  group: home
+- key: home.seeAll
+  en: See all
+  hi: सभी देखें
+  group: home
+- key: commerce.offBadge
+  en: '{n}% OFF'
+  hi: '{n}% छूट'
+  group: commerce
+- key: commerce.inStock
+  en: In Stock
+  hi: स्टॉक में
+  group: commerce
+- key: commerce.lowStock
+  en: Only {n} left
+  hi: केवल {n} बचे
+  group: commerce
+- key: commerce.outOfStock
+  en: Out of stock
+  hi: स्टॉक में नहीं
+  group: commerce
+- key: commerce.addToCart
+  en: Add to Cart
+  hi: कार्ट में डालें
+  group: commerce
+- key: commerce.added
+  en: Added to cart
+  hi: कार्ट में जोड़ा गया
+  group: commerce
+- key: commerce.mrp
+  en: MRP
+  hi: एमआरपी
+  group: commerce
+- key: b2b.trade
+  en: B2B TRADE
+  hi: B2B ट्रेड
+  group: b2b
+- key: b2b.dealerPrice
+  en: Dealer Price
+  hi: डीलर मूल्य
+  group: b2b
+- key: b2b.moq
+  en: MOQ {n}
+  hi: न्यूनतम {n}
+  group: b2b
+- key: auth.welcomeBack
+  en: Welcome back
+  hi: वापसी पर स्वागत है
+  group: auth
+- key: auth.subtitle
+  en: Sign in to continue shopping or manage trade orders.
+  hi: खरीदारी जारी रखने या ट्रेड ऑर्डर प्रबंधित करने के लिए साइन इन करें।
+  group: auth
+- key: auth.consumer
+  en: Consumer
+  hi: उपभोक्ता
+  group: auth
+- key: auth.trade
+  en: B2B Trade
+  hi: B2B व्यापार
+  group: auth
+- key: auth.mobile
+  en: Mobile number
+  hi: मोबाइल नंबर
+  group: auth
+- key: auth.otp
+  en: OTP or password
+  hi: OTP या पासवर्ड
+  group: auth
+- key: auth.remember
+  en: Remember me
+  hi: मुझे याद रखें
+  group: auth
+- key: auth.forgot
+  en: Forgot password?
+  hi: पासवर्ड भूल गए?
+  group: auth
+- key: auth.continue
+  en: Continue
+  hi: जारी रखें
+  group: auth
+- key: auth.newHere
+  en: New to ApnaKart?
+  hi: ApnaKart पर नए हैं?
+  group: auth
+- key: auth.createAccount
+  en: Create account
+  hi: खाता बनाएं
+  group: auth
+- key: onboard.title
+  en: Everything you need, delivered to your site.
+  hi: आपकी हर ज़रूरत, आपकी साइट पर।
+  group: onboarding
+- key: onboard.body
+  en: Shop retail or buy in bulk at trade prices — one app for homes and businesses.
+  hi: खुदरा खरीदें या थोक भाव पर बड़ी मात्रा में — घर और व्यापार के लिए एक ऐप।
+  group: onboarding
+- key: onboard.getStarted
+  en: Get started
+  hi: शुरू करें
+  group: onboarding
+- key: onboard.haveAccount
+  en: I already have an account
+  hi: मेरा खाता पहले से है
+  group: onboarding
+- key: onboard.legal
+  en: By continuing you agree to our Terms and Privacy Policy.
+  hi: जारी रखने पर आप हमारी शर्तों और गोपनीयता नीति से सहमत हैं।
+  group: onboarding
+- key: state.emptyFilters
+  en: Nothing matches this filter. Try clearing it.
+  hi: इस फ़िल्टर से कुछ मेल नहीं खाता। इसे हटाकर देखें।
+  group: state
+- key: state.clearFilters
+  en: Clear filters
+  hi: फ़िल्टर हटाएं
+  group: state
+- key: state.errorLoad
+  en: Could not load
+  hi: लोड नहीं हो सका
+  group: state
+- key: state.errorCheck
+  en: Check your connection and try again.
+  hi: कनेक्शन जाँचें और फिर कोशिश करें।
+  group: state
+- key: state.retry
+  en: Retry
+  hi: फिर कोशिश करें
+  group: state
+error_catalogue:
+- id: ERR-network-001
+  cause: network-unreachable
+  message_en: Check your connection and try again.
+  recovery_action: Retry
+  class: transient
+- id: ERR-payment-002
+  cause: payment-declined
+  message_en: Your payment was declined. Try another method.
+  recovery_action: Change payment method
+  class: blocking
+- id: ERR-payment-003
+  cause: payment-timeout
+  message_en: The payment did not confirm. No money was deducted.
+  recovery_action: Check order status
+  class: blocking
+- id: ERR-otp-004
+  cause: otp-invalid
+  message_en: That OTP is not correct. {n} attempts left.
+  recovery_action: Re-enter OTP
+  class: recoverable
+- id: ERR-otp-005
+  cause: otp-expired
+  message_en: The OTP expired. Request a new one.
+  recovery_action: Resend OTP
+  class: recoverable
+- id: ERR-cart-006
+  cause: item-unavailable
+  message_en: An item in your cart is no longer available.
+  recovery_action: Review cart
+  class: recoverable
+- id: ERR-cart-007
+  cause: price-changed
+  message_en: The price of an item changed since you added it.
+  recovery_action: Review cart
+  class: recoverable
+- id: ERR-stock-008
+  cause: insufficient-stock
+  message_en: Only {n} units are available.
+  recovery_action: Reduce quantity
+  class: recoverable
+- id: ERR-auth-009
+  cause: session-expired
+  message_en: Your session expired. Please sign in again.
+  recovery_action: Sign in
+  class: blocking
+- id: ERR-trade-010
+  cause: credit-limit-exceeded
+  message_en: This order exceeds the available credit limit.
+  recovery_action: Request approval
+  class: blocking
+- id: ERR-trade-011
+  cause: moq-not-met
+  message_en: Minimum order quantity for this item is {n}.
+  recovery_action: Adjust quantity
+  class: recoverable
+- id: ERR-trade-012
+  cause: approval-pending
+  message_en: This order needs approval before it is placed.
+  recovery_action: Track approval
+  class: pending
+- id: ERR-upload-013
+  cause: list-upload-failed
+  message_en: We could not read that file. Use the template.
+  recovery_action: Download template
+  class: recoverable
+- id: ERR-generic-999
+  cause: unexpected
+  message_en: Something went wrong on our side.
+  recovery_action: Try again
+  class: transient
+status: review-ready

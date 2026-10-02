@@ -1,0 +1,23 @@
+client_id: client102
+mode: recorded-render
+authority: design-intelligence/approved-visual-baselines.yaml
+note: Recorded renders of the current design revision. Drift detection compares future
+  exports against these hashes.
+baselines:
+- id: baseline.p2-final
+  file: C:\Users\LENOVO\Documents\OpenPencil\export\p2-final.png
+  sha256: eca6f953b6524455d93cb30b5dd771ab5a539a8696c0d14c9d18838d1d19863b
+  bytes: 151500
+- id: baseline.p3-decoration
+  file: C:\Users\LENOVO\Documents\OpenPencil\export\p3-decoration.png
+  sha256: b6324dcb410c0657fb5c74118d421c15daaa4b2d1f7eee85c422ddaf6faa808f
+  bytes: 31785
+- id: baseline.p4-states
+  file: C:\Users\LENOVO\Documents\OpenPencil\export\p4-states.png
+  sha256: a4e2f1412959c6c413a6485273d7591d13c1a65d0065daa44ed96a1b3e7ec16a
+  bytes: 36997
+- id: baseline.p2-screens
+  file: C:\Users\LENOVO\Documents\OpenPencil\export\p2-screens.png
+  sha256: 91ec5dffd133c88bb838df45ace90e0456a6a22db6fe713434f084b038a62ae3
+  bytes: 147340
+status: review-ready

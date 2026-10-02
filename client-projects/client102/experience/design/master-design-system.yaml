@@ -97,9 +97,27 @@ tokens:
       raised: '0 1 3 #38495914 (light) / 0 1 3 #00000066 (dark)'
       overlay: '0 8 24 #38495929 (light) / 0 8 24 #00000099 (dark)'
   motion:
-    fast: 120
-    standard: 200
-    deliberate: 320
+    instant:
+      duration_ms: 80
+      curve: standard
+    fast:
+      duration_ms: 140
+      curve: standard
+    standard:
+      duration_ms: 220
+      curve: emphasized
+    slow:
+      duration_ms: 320
+      curve: emphasized
+    page:
+      duration_ms: 380
+      curve: emphasized
+    reduced_motion:
+      duration_ms: 0
+      preserve:
+      - focus-visibility
+      - state-change-clarity
+    note: aligned to design-intelligence/motion-tokens.yaml
   z_index:
     base: 0
     sticky: 100

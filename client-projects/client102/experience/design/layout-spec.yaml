@@ -1,0 +1,137 @@
+client_id: client102
+breakpoints_ref: experience/design/master-design-system.yaml#tokens.breakpoints
+responsive:
+  phone:
+    range: 0-767
+    columns: 2
+    margin: 16
+    gutter: 12
+    product_grid: 2-up
+    nav: bottom
+  tablet:
+    range: 768-1023
+    columns: 3
+    margin: 24
+    gutter: 16
+    product_grid: 3-up
+    nav: bottom
+    notes: cart and checkout become two-column (summary sticky right)
+  desktop:
+    range: 1024-1439
+    columns: 4
+    margin: 32
+    gutter: 20
+    product_grid: 4-up
+    nav: left rail + top bar
+    notes: B2B surfaces default to dense tables
+  wide:
+    range: 1440+
+    columns: 4
+    margin: auto 48
+    gutter: 24
+    product_grid: 4-up
+    nav: left rail + top bar
+    notes: content max-width 1440, admin uses full width
+density:
+  customer-app:
+  - comfortable
+  - 48px rows, 16px section gaps
+  web-store:
+  - comfortable
+  - 56px rows, 24px section gaps
+  b2b:
+  - compact
+  - 40px rows, 12px section gaps
+  seller-portal:
+  - compact
+  - 40px rows
+  commerce-admin:
+  - compact
+  - 36px table rows
+  erp:
+  - compact
+  - 36px table rows, monospaced figures
+  analytics:
+  - compact
+  - dashboard cards, dense charts
+  ops-console:
+  - compact
+  - 36px rows, high information density
+templates:
+- id: template.list
+  use: orders, search results, procurement lists
+  regions:
+  - app-bar
+  - filter-bar
+  - scroll-list
+  - bottom-nav
+  states:
+  - loading
+  - empty
+  - error
+  - list
+- id: template.detail
+  use: product detail, order detail
+  regions:
+  - app-bar
+  - media
+  - content-scroll
+  - sticky-action-bar
+  states:
+  - loading
+  - available
+  - unavailable
+- id: template.form
+  use: checkout, RFQ, address
+  regions:
+  - app-bar
+  - form-scroll
+  - sticky-submit
+  states:
+  - default
+  - validation-error
+  - submitting
+  - success
+- id: template.dashboard
+  use: credit, seller analytics
+  regions:
+  - app-bar
+  - kpi-row
+  - chart-area
+  - tab-nav
+  states:
+  - loading
+  - partial
+  - error
+- id: template.hub
+  use: home, account, quick order
+  regions:
+  - header
+  - search
+  - module-stack
+  - bottom-nav
+  states:
+  - loading
+  - content
+  - error
+- id: template.auth
+  use: login, OTP, sign up
+  regions:
+  - brand-bar
+  - title-block
+  - form
+  - primary-action
+  states:
+  - default
+  - validation-error
+  - submitting
+  - success
+safe_area:
+  top: status bar 34px on phone
+  bottom: home indicator 34px; bottom nav sits above it
+scroll:
+  pattern: single scroll region between fixed header and fixed bottom nav
+  sticky:
+  - filter bar
+  - sticky action bar on detail and form templates
+status: review-ready

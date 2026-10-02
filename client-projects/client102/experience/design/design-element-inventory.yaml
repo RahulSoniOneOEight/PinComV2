@@ -5,9 +5,9 @@ taxonomy_ref: design-contract/design-element-inventory.yaml
 evaluated_on: '2026-10-02'
 summary:
   total: 99
-  done: 36
-  partial: 19
-  missing: 44
+  done: 62
+  partial: 15
+  missing: 22
 elements:
 - id: F1
   status: done
@@ -33,9 +33,11 @@ elements:
   note: elevation.raised applied to cards across all screens; overlay value defined
     for future sheets.
 - id: F6
-  status: partial
-  evidence: experience/design/
-  note: client values diverge from platform tokens
+  status: done
+  evidence: experience/design/motion-registry.yaml
+  note: Motion tokens aligned to design-intelligence/motion-tokens.yaml (instant 80
+    / fast 140 / standard 220 / slow 320 / page 380) plus a 15-motion registry, each
+    with a reduced-motion alternative.
 - id: F7
   status: done
   evidence: experience/design/
@@ -194,21 +196,22 @@ elements:
   evidence: experience/design/
   note: 4 categories
 - id: C14
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'feedback.empty-state built: illustration, title, body, recovery action.'
 - id: C15
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'feedback.error-state built: error glyph, message, retry action.'
 - id: C16
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: feedback.toast built with success, error and undo variants.
 - id: C17
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: overlay.modal and overlay.bottom-sheet built with scrim stage, chrome and
+    actions.
 - id: C18
   status: done
   evidence: experience/design/
@@ -222,21 +225,24 @@ elements:
   evidence: experience/design/
   note: concept only
 - id: T3
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Cart screen built: line items with 44px quantity steppers, remove action,
+    coupon entry and a totalled summary behind a sticky checkout bar.'
 - id: T4
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Checkout screen built: delivery address, payment method selection (UPI/card/COD),
+    GST-aware order summary and a sticky place-order bar with legal note.'
 - id: T5
   status: missing
   evidence: null
   note: not built
 - id: T6
-  status: missing
-  evidence: null
-  note: not built
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Search results screen built: query bar, Sort/Filter/Price controls, result
+    count, product grid and list-row variant, plus bottom navigation.'
 - id: T7
   status: missing
   evidence: null
@@ -270,33 +276,36 @@ elements:
   evidence: experience/design/
   note: B2C shell
 - id: L3
-  status: missing
-  evidence: null
-  note: not designed
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: Tablet composition defined (3 columns, 24px margins, two-column cart/checkout).
 - id: L4
-  status: missing
-  evidence: null
-  note: not designed
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: Desktop and wide composition defined (4 columns, left rail nav, 1440 max width).
 - id: L5
-  status: missing
-  evidence: null
-  note: declared in brief, not applied
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: 'Density defined per surface: comfortable for customer app/web store, compact
+    for B2B, seller, admin, ERP, analytics, ops.'
 - id: L6
-  status: missing
-  evidence: null
-  note: undefined
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: Column, margin and gutter system defined per breakpoint.
 - id: L7
-  status: partial
-  evidence: experience/design/
-  note: status bar faked, not real insets
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: 'Safe areas specified: 34px status bar top, bottom nav above the home indicator.'
 - id: L8
-  status: partial
-  evidence: experience/design/
-  note: fixed frames, no scroll modelling
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: 'Scroll pattern defined: single scroll region between fixed header and bottom
+    nav, with sticky filter and action bars.'
 - id: L9
-  status: missing
-  evidence: null
-  note: none defined
+  status: done
+  evidence: experience/design/layout-spec.yaml
+  note: Six screen templates defined (list, detail, form, dashboard, hub, auth) with
+    regions and states.
 - id: X1
   status: done
   evidence: experience/design/asset-plan.yaml
@@ -317,9 +326,9 @@ elements:
   evidence: null
   note: none
 - id: X5
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: overlay.scrim defined and demonstrated behind modal, sheet and loading overlay.
 - id: X6
   status: missing
   evidence: null
@@ -330,17 +339,18 @@ elements:
   note: 'Corner treatment consistent: 4 (badges) / 8 (controls) / 12 (cards, hero)
     / 999 (pills).'
 - id: X8
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: feedback.loading-overlay built (spinner + status label over scrim).
 - id: X9
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Modal and sheet chrome built: title, body, actions, drag handle.'
 - id: X10
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: 'Toast chrome built: icon, message, inline action, placement above bottom
+    nav.'
 - id: X11
   status: missing
   evidence: null
@@ -351,29 +361,34 @@ elements:
   note: Crop/focal/aspect rules declared per media slot (product card 4:3, hero 16:6,
     category 1:1, avatar top-third) plus overlay-text contrast check.
 - id: N1
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/copy-deck.yaml
+  note: Copy deck defines tone principles, address form per language and formatting
+    rules.
 - id: N2
-  status: partial
-  evidence: experience/design/
-  note: one bilingual chip; body copy English
+  status: done
+  evidence: experience/design/copy-deck.yaml
+  note: 45 bilingual string pairs (EN/HI) covering navigation, home, commerce, B2B,
+    auth, onboarding and states.
 - id: N3
   status: done
-  evidence: experience/design/
-  note: Rupee with Indian digit grouping
+  evidence: experience/design/copy-deck.yaml
+  note: Currency, quantity, date and numeral formatting rules recorded alongside the
+    strings.
 - id: N4
   status: done
-  evidence: experience/design/
-  note: from the governed journey guide
+  evidence: experience/design/copy-deck.yaml
+  note: Terminology follows the governed journey guide (Cart, Quotation Cart, GST
+    invoice).
 - id: N5
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/copy-deck.yaml
+  note: 14-entry error catalogue with cause, user message, recovery action and class.
 - id: N6
   status: partial
-  evidence: experience/design/
-  note: one line of legal copy
+  evidence: experience/design/copy-deck.yaml
+  note: Terms and privacy copy exists (one line on onboarding); full legal text is
+    a client deliverable.
 - id: A1
   status: done
   evidence: experience/design/
@@ -388,17 +403,19 @@ elements:
   note: 'All interactive targets >=44: chips/search/hero-cta/add-to-cart 44, nav items
     48, CTAs 48. Was 7 of 11 below 44.'
 - id: A4
-  status: missing
-  evidence: null
-  note: token exists, state not drawn
+  status: done
+  evidence: experience/design/design-brief.yaml
+  note: state.focus-visible component built (border.focus ring on button and input)
+    with R-focus-visible, R-focus-order and R-focus-trap rules.
 - id: A5
   status: missing
   evidence: null
   note: none
 - id: A6
-  status: missing
-  evidence: null
-  note: no motion defined
+  status: done
+  evidence: experience/design/motion-registry.yaml
+  note: Every motion in the registry declares a reduced-motion alternative; durations
+    collapse to 0ms while preserving focus visibility and state clarity.
 - id: G1
   status: done
   evidence: experience/design/
@@ -417,13 +434,13 @@ elements:
   evidence: experience/design/design-ir.yaml
   note: design-ir.yaml links 2 journeys / 3 screen nodes to component and state refs.
 - id: G5
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/visual-baselines.yaml
+  note: Four recorded renders captured with sha256 hashes as drift baselines.
 - id: G6
-  status: missing
-  evidence: null
-  note: none
+  status: done
+  evidence: experience/design/component-contract-registry.yaml
+  note: Every component carries lifecycle state and version; five promoted to candidate.
 plan:
 - phase: 1
   goal: Make the existing screens trustworthy
@@ -495,6 +512,8 @@ plan:
   - Write motion-registry.yaml for the ~15 real transitions
   - Align client motion tokens to design-intelligence/motion-tokens.yaml
   - Draw focus-visible states and define the reduced-motion variant
+  status: complete
+  completed_on: '2026-10-02'
 - phase: 5
   goal: Content, layout breadth and evidence
   elements:
@@ -515,4 +534,6 @@ plan:
   - Cart, checkout and search-result patterns
   - Tablet/desktop composition and density modes per surface
   - Capture visual baselines and stand up drift detection
+  status: complete
+  completed_on: '2026-10-02'
 status: draft

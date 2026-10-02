@@ -36,6 +36,13 @@ components:
   - contrast-check
   - focus-visible-check
   - target-size-check
+  lifecycle:
+    state: candidate
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.product-card
   semantic_role: Product summary and add-to-cart entry
   variants:
@@ -67,6 +74,13 @@ components:
   - visual-baseline
   - state-coverage
   - contrast-check
+  lifecycle:
+    state: candidate
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.price-block
   semantic_role: Selling price against MRP
   variants:
@@ -89,6 +103,13 @@ components:
   qa:
   - contrast-check
   - format-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.offer-badge
   semantic_role: Promotional discount indicator
   variants:
@@ -110,6 +131,13 @@ components:
   - contrast-4.5
   qa:
   - contrast-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.stock-badge
   semantic_role: Availability indicator
   variants:
@@ -134,6 +162,13 @@ components:
   qa:
   - contrast-check
   - state-coverage
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.b2b-trade-block
   semantic_role: Trade price, MOQ and tier entry
   variants:
@@ -156,6 +191,13 @@ components:
   qa:
   - contrast-check
   - role-visibility-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.search-bar
   semantic_role: Persistent catalogue search entry
   variants:
@@ -184,6 +226,13 @@ components:
   qa:
   - visual-baseline
   - focus-visible-check
+  lifecycle:
+    state: candidate
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.hero-banner
   semantic_role: Campaign or seasonal promotion
   variants:
@@ -206,6 +255,13 @@ components:
   qa:
   - overlay-contrast-check
   - visual-baseline
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.section-header
   semantic_role: Section title with optional action
   variants:
@@ -224,6 +280,13 @@ components:
   - link-accessible-name
   qa:
   - semantic-heading-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: commerce.trust-row-item
   semantic_role: Reassurance cue
   variants:
@@ -241,6 +304,13 @@ components:
   - contrast-4.5
   qa:
   - contrast-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: navigation.app-bar
   semantic_role: Top navigation and context
   variants:
@@ -265,6 +335,13 @@ components:
   qa:
   - visual-baseline
   - target-size-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: navigation.bottom-nav-item
   semantic_role: Persistent primary navigation destination
   variants:
@@ -293,6 +370,13 @@ components:
   - contrast-check
   - target-size-check
   - state-coverage
+  lifecycle:
+    state: candidate
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: navigation.category-item
   semantic_role: Category entry in a rail or grid
   variants:
@@ -312,6 +396,13 @@ components:
   - min-target-44
   qa:
   - target-size-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: control.segmented
   semantic_role: Mutually exclusive mode selector
   variants:
@@ -340,6 +431,13 @@ components:
   qa:
   - focus-visible-check
   - target-size-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: input.text-field
   semantic_role: Labelled single-line input
   variants:
@@ -373,6 +471,13 @@ components:
   - focus-visible-check
   - label-association-check
   - target-size-check
+  lifecycle:
+    state: candidate
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: feedback.status-pill
   semantic_role: Compact status or filter chip
   variants:
@@ -402,6 +507,13 @@ components:
   qa:
   - contrast-check
   - target-size-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 - id: layout.screen-shell
   semantic_role: Shared surface shell with persistent navigation
   variants:
@@ -427,4 +539,259 @@ components:
   qa:
   - focus-order-check
   - landmark-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: feedback.empty-state
+  semantic_role: No-data presentation with a recovery action
+  variants:
+  - no-results
+  - empty-cart
+  - no-orders
+  - no-messages
+  states:
+  - default
+  - loading
+  tokens:
+  - surface.page
+  - content.primary
+  - content.secondary
+  - action.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/EmptyState
+    web: packages/agency_web_ui/EmptyState
+  accessibility:
+  - illustration-alt-text
+  - action-has-accessible-name
+  - not-colour-alone
+  qa:
+  - copy-review
+  - visual-baseline
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: feedback.error-state
+  semantic_role: Failure presentation with retry
+  variants:
+  - network
+  - payment-failed
+  - unavailable
+  - permission
+  states:
+  - default
+  - retrying
+  tokens:
+  - surface.page
+  - feedback.error
+  - content.primary
+  - action.primary
+  implementation:
+    flutter: packages/agency_flutter_ui/ErrorState
+    web: packages/agency_web_ui/ErrorState
+  accessibility:
+  - error-announced
+  - retry-accessible-name
+  - not-colour-alone
+  qa:
+  - copy-review
+  - retry-path-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: feedback.toast
+  semantic_role: Transient feedback above the bottom nav
+  variants:
+  - success
+  - error
+  - info
+  - undo
+  states:
+  - enter
+  - visible
+  - exit
+  tokens:
+  - surface.raised
+  - content.primary
+  - feedback.success
+  - feedback.error
+  - border.default
+  implementation:
+    flutter: packages/agency_flutter_ui/AppToast
+    web: packages/agency_web_ui/Toast
+  accessibility:
+  - polite-live-region
+  - dismiss-accessible-name
+  - not-colour-alone
+  - auto-dismiss-pausable
+  qa:
+  - motion-review
+  - screenreader-announce-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: overlay.scrim
+  semantic_role: Dimming layer behind modals and sheets
+  variants:
+  - modal
+  - sheet
+  states:
+  - visible
+  - fading
+  tokens:
+  - content.primary
+  - opacity.scrim
+  implementation:
+    flutter: packages/agency_flutter_ui/Scrim
+    web: packages/agency_web_ui/Scrim
+  accessibility:
+  - blocks-background-interaction
+  - dismissible-by-tap
+  - esc-dismisses
+  qa:
+  - focus-trap-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: overlay.modal
+  semantic_role: Focused blocking task
+  variants:
+  - confirm
+  - form
+  - alert
+  states:
+  - opening
+  - open
+  - closing
+  tokens:
+  - surface.raised
+  - content.primary
+  - border.default
+  - action.primary
+  - action.destructive
+  implementation:
+    flutter: packages/agency_flutter_ui/AppDialog
+    web: packages/agency_web_ui/Dialog
+  accessibility:
+  - focus-trapped
+  - labelled-title
+  - esc-dismisses
+  - return-focus-on-close
+  qa:
+  - focus-order-check
+  - esc-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: overlay.bottom-sheet
+  semantic_role: Focused task anchored to the bottom edge
+  variants:
+  - filter
+  - options
+  - confirm
+  states:
+  - opening
+  - open
+  - closing
+  tokens:
+  - surface.raised
+  - content.primary
+  - border.default
+  - content.muted
+  implementation:
+    flutter: packages/agency_flutter_ui/BottomSheet
+    web: packages/agency_web_ui/BottomSheet
+  accessibility:
+  - drag-handle-labelled
+  - focus-trapped
+  - dismissible-swipe-and-tap
+  - safe-area-bottom
+  qa:
+  - focus-order-check
+  - gesture-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: feedback.loading-overlay
+  semantic_role: Blocking progress for a foreground operation
+  variants:
+  - payment
+  - submit
+  - upload
+  states:
+  - visible
+  tokens:
+  - content.primary
+  - opacity.scrim
+  - surface.raised
+  implementation:
+    flutter: packages/agency_flutter_ui/LoadingOverlay
+    web: packages/agency_web_ui/LoadingOverlay
+  accessibility:
+  - status-announced
+  - cancellable-where-possible
+  - no-layout-shift
+  qa:
+  - announcement-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
+- id: feedback.skeleton-row
+  semantic_role: List-row loading placeholder
+  variants:
+  - order-row
+  - cart-row
+  - search-row
+  states:
+  - loading
+  tokens:
+  - surface.interactive
+  - border.default
+  implementation:
+    flutter: packages/agency_flutter_ui/SkeletonRow
+    web: packages/agency_web_ui/SkeletonRow
+  accessibility:
+  - aria-busy-on-container
+  - reduced-motion-static
+  qa:
+  - motion-review
+  - layout-shift-check
+  lifecycle:
+    state: prototype
+    version: 0.1.0
+    promotion_requires:
+    - functional-evidence
+    - state-completeness
+    - accessibility
 status: review-ready

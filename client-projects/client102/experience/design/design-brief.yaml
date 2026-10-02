@@ -149,3 +149,22 @@ decoration_rules:
     crop rules before build'
   - 'R-placeholder-honesty: a placeholder watermark may never reach a client review
     or production build'
+motion_registry_ref: experience/design/motion-registry.yaml
+interaction_rules:
+  focus:
+  - 'R-focus-visible: every interactive element shows border.focus (3.49:1) on keyboard
+    focus; never remove the outline without a replacement'
+  - 'R-focus-order: keyboard order matches visual order on every screen'
+  - 'R-focus-trap: modals and sheets trap focus and return it to the trigger on close'
+  reduced_motion:
+  - 'R-reduced-motion: every motion in the registry declares a reduced-motion alternative;
+    durations collapse to 0ms'
+  - 'R-motion-preserves: under reduced motion, focus visibility and state-change clarity
+    must still be conveyed'
+  - 'R-motion-purpose: motion must explain state or hierarchy; decoration-only motion
+    is forbidden on operational surfaces'
+  states:
+  - 'R-state-coverage: every data-backed component defines default, loading, empty,
+    error and success before approval'
+  - 'R-scrim-contrast: scrims use opacity.scrim over content.primary so modal content
+    keeps 4.5:1 against the scrim edge'

@@ -1,0 +1,125 @@
+motions:
+- semantic_id: motion.add-to-cart
+  trigger: tap-add-to-cart
+  effect: button scales to 0.97 then returns; label swaps to Added
+  duration_ms: 140
+  curve: standard
+  flutter: packages/agency_flutter_ui/pressScale
+  web: motion/pressScale
+  reduced_motion: opacity-only-swap
+- semantic_id: motion.nav-select
+  trigger: tap-bottom-nav
+  effect: icon swaps to fill weight and label weight increases
+  duration_ms: 120
+  curve: standard
+  flutter: packages/agency_flutter_ui/navSelect
+  web: motion/navSelect
+  reduced_motion: instant-swap
+- semantic_id: motion.segment-change
+  trigger: tap-segmented-option
+  effect: selection indicator slides to the new option
+  duration_ms: 180
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/segmentedSlide
+  web: motion/segmentedSlide
+  reduced_motion: instant-swap
+- semantic_id: motion.search-focus
+  trigger: focus-search-field
+  effect: border colour transitions to border.focus and caret appears
+  duration_ms: 120
+  curve: standard
+  flutter: packages/agency_flutter_ui/fieldFocus
+  web: motion/fieldFocus
+  reduced_motion: instant-colour
+- semantic_id: motion.card-press
+  trigger: press-product-card
+  effect: card scales to 0.98 and elevates on release
+  duration_ms: 100
+  curve: standard
+  flutter: packages/agency_flutter_ui/cardPress
+  web: motion/cardPress
+  reduced_motion: opacity-only
+- semantic_id: motion.sheet-open
+  trigger: open-bottom-sheet
+  effect: sheet slides up 320px while the scrim fades in
+  duration_ms: 260
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/sheetOpen
+  web: motion/sheetOpen
+  reduced_motion: fade-only-no-slide
+- semantic_id: motion.sheet-close
+  trigger: dismiss-bottom-sheet
+  effect: sheet slides down while the scrim fades out
+  duration_ms: 200
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/sheetClose
+  web: motion/sheetClose
+  reduced_motion: fade-only
+- semantic_id: motion.modal-open
+  trigger: open-modal
+  effect: scrim fades in, dialog fades and scales from 0.96 to 1
+  duration_ms: 220
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/modalOpen
+  web: motion/modalOpen
+  reduced_motion: fade-only
+- semantic_id: motion.toast-in
+  trigger: show-toast
+  effect: toast rises 24px and fades in above the bottom nav
+  duration_ms: 200
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/toastIn
+  web: motion/toastIn
+  reduced_motion: fade-only
+- semantic_id: motion.toast-out
+  trigger: auto-dismiss-toast
+  effect: toast fades and settles 12px downward
+  duration_ms: 160
+  curve: standard
+  flutter: packages/agency_flutter_ui/toastOut
+  web: motion/toastOut
+  reduced_motion: fade-only
+- semantic_id: motion.skeleton-shimmer
+  trigger: data-loading
+  effect: linear highlight translates across the skeleton block, looping
+  duration_ms: 1200
+  curve: linear
+  flutter: packages/agency_flutter_ui/shimmer
+  web: motion/shimmer
+  reduced_motion: static-placeholder
+- semantic_id: motion.empty-rise
+  trigger: empty-state-mounted
+  effect: illustration and copy fade in rising 8px
+  duration_ms: 280
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/emptyRise
+  web: motion/emptyRise
+  reduced_motion: fade-only
+- semantic_id: motion.error-shake
+  trigger: validation-failed
+  effect: field shakes horizontally through two cycles
+  duration_ms: 240
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/shake
+  web: motion/shake
+  reduced_motion: static-error-text-only
+- semantic_id: motion.page-push
+  trigger: route-push
+  effect: incoming screen slides in from the right, outgoing recedes 25%
+  duration_ms: 320
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/pagePush
+  web: motion/pagePush
+  reduced_motion: instant-swap
+- semantic_id: motion.list-stagger
+  trigger: list-mounted
+  effect: list items fade and rise, staggered 40ms apart
+  duration_ms: 240
+  curve: emphasized
+  flutter: packages/agency_flutter_ui/listStagger
+  web: motion/listStagger
+  reduced_motion: fade-only-first-item
+policy_ref: design-intelligence/motion-policy.yaml
+token_ref: design-intelligence/motion-tokens.yaml
+reduced_motion_required: true
+status: review-ready

@@ -1,12 +1,17 @@
-qa_id: VQA-DESIGN-33466c9e-customer-app
+qa_id: VQA-DESIGN-278e2053-customer-app
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: customer-app
-build_identity: DESIGN-33466c9e
-capture_id: DESIGN-33466c9e
+build_identity: DESIGN-278e2053
+capture_id: DESIGN-278e2053
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:
+- content
+- frame
+- home-content
+- main
+- rail
 - s1-onboarding
 - s19-product-detail
 - s2-login
@@ -24,12 +29,41 @@ screens_captured:
 - s33-account
 - s34-wishlist
 - s35-schemes-offers
+- s36-sign-up
+- s37-browse
+- s38-category-results
+- s39-filters
 - s3d-b2c-home-dark
 - s3dl-b2c-home-dark-long
 - s3l-b2c-home-long
 - s4-cart
+- s40-verify-otp
+- s41-saved-addresses
+- s42-payment-methods
+- s43-help
+- s44-gst-invoices-b2c
+- s45-settings
+- s46-request-return
+- s47-return-status
+- s48-refund-tracking
+- s49-wishlist-cart-confirm
 - s5-checkout
+- s50-order-detail
+- s51-business-checkout
+- s53-quick-order-search-results
+- s54-quick-order-centre
+- s56-catalogue
+- s57-accept-quote
+- s58-approvals
 - s6-search-results
+- s60-projects-sites
+- s61-project-detail
+- s62-material-list
+- s63-site-selector
+- s64-split-tracking
+- s66-business-account
+- s67-team-roles
+- s68-price-advantage
 - s7-orders
 - zz-journey-boards
 checks:
@@ -73,7 +107,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 25 screens captured for this surface; components declare more states than
+  evidence: 59 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run

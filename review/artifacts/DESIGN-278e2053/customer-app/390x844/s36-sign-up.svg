@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 9)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(337, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 30)">
+      <g transform="translate(16, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">ApnaKart</text>
+      </g>
+      <g transform="translate(16, 56)">
+        <g>
+          <text x="0" y="24" font-family="Hind" font-size="24" font-weight="700" fill="#384959">Create your account</text>
+        </g>
+        <g transform="translate(0, 37)">
+          <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Sign up with your mobile number to shop and track orders.</text>
+        </g>
+      </g>
+      <g transform="translate(16, 122)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Full name</text>
+        </g>
+        <g transform="translate(0, 23)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">e.g. Anjali Deshpande</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 209)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Mobile number</text>
+        </g>
+        <g transform="translate(0, 23)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 7)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">+91</text>
+          </g>
+          <g transform="translate(41, 6)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">98765 43210</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 296)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Email (optional)</text>
+        </g>
+        <g transform="translate(0, 25)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 6)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">you@example.com</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 385)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Password</text>
+        </g>
+        <g transform="translate(0, 23)">
+          <rect width="358" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 6)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">Min 8 characters</text>
+          </g>
+          <g transform="translate(112, 14.5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Show</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 472)">
+        <rect width="20" height="20" rx="4" ry="4" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(28, 0.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">I agree to the Terms of Use and Privacy Policy.</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 538)">
+      <g transform="translate(16, 213)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(0, 14.5)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">Create account</text>
+        </g>
+      </g>
+      <g transform="translate(16, 221)">
+        <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Already have an account? Sign in</text>
+      </g>
+    </g>
+  </g>
+</svg>

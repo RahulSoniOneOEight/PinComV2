@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="1320" viewBox="0 0 390 1320">
+  <defs>
+    <clipPath id="clip0">
+      <rect width="390" height="1320"/>
+    </clipPath>
+    <clipPath id="clip1">
+      <rect width="358" height="44"/>
+    </clipPath>
+  </defs>
+  <g>
+    <rect width="390" height="1320" fill="#F7FAFE"/>
+    <g clip-path="url(#clip0)">
+      <g>
+        <rect width="390" height="72" fill="#384959"/>
+        <g transform="translate(16, 14)">
+          <rect width="44" height="44" rx="8" ry="8" fill="#456079"/>
+          <g transform="translate(12, 10)">
+            <text x="0" y="20" font-family="Hind" font-size="20" fill="#FFFFFF">←</text>
+          </g>
+        </g>
+        <g transform="translate(72, 20)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#FFFFFF">Procurement Lists</text>
+        </g>
+      </g>
+      <g transform="translate(0, 72)">
+        <g transform="translate(16, 16)">
+          <rect width="358" height="52" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(16, 15)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">Search lists, SKU, name or brand</text>
+          </g>
+        </g>
+        <g transform="translate(16, 80)">
+          <g clip-path="url(#clip1)">
+            <g>
+              <rect width="108" height="44" rx="999" ry="999" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+              <g transform="translate(30, 11)">
+                <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">✓ Saved</text>
+              </g>
+            </g>
+            <g transform="translate(116, 0)">
+              <rect width="116" height="44" rx="999" ry="999" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+              <g transform="translate(30, 11)">
+                <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">✓ Saved</text>
+              </g>
+            </g>
+            <g transform="translate(240, 0)">
+              <rect width="104" height="44" rx="999" ry="999" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+              <g transform="translate(30, 11)">
+                <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">✓ Saved</text>
+              </g>
+            </g>
+            <g transform="translate(352, 0)">
+              <rect width="30" height="44" rx="999" ry="999" fill="#EAF3FE"/>
+              <g transform="translate(7, 12.5)">
+                <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">→</text>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 136)">
+          <g>
+            <rect width="83.5" height="44" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(11.25, 12.5)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#FFFFFF">Create List</text>
+            </g>
+          </g>
+          <g transform="translate(91.5, 0)">
+            <rect width="83.5" height="44" rx="8" ry="8" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+            <g transform="translate(16.25, 12.5)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Add SKU</text>
+            </g>
+          </g>
+          <g transform="translate(183, 0)">
+            <rect width="83.5" height="44" rx="8" ry="8" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+            <g transform="translate(21.75, 12.5)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Upload</text>
+            </g>
+          </g>
+          <g transform="translate(274.5, 0)">
+            <rect width="83.5" height="44" rx="8" ry="8" fill="#EAF3FE" stroke="#748EAA" stroke-width="1"/>
+            <g transform="translate(27.75, 12.5)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Scan</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 244)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Electrical Restock · 24 SKUs</text>
+        </g>
+        <g transform="translate(16, 282)">
+          <g>
+            <rect width="173" height="252" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+            <g transform="translate(6, 6)">
+              <rect width="152" height="80" rx="8" ry="8" fill="#EAF3FE"/>
+              <g transform="translate(0, 28)">
+                <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">MCB</text>
+              </g>
+            </g>
+            <g transform="translate(6, 92)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Havells DP MCB 32A</text>
+            </g>
+            <g transform="translate(6, 115)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">SKU EL-2048 · In stock</text>
+            </g>
+            <g transform="translate(6, 137)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹428</text>
+            </g>
+            <g transform="translate(6, 162)">
+              <g>
+                <rect width="104" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+                <g transform="translate(13, 13)">
+                  <path d="M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                </g>
+                <g transform="translate(32, 10)">
+                  <rect width="24" height="24" rx="999" ry="999" fill="#FFFFFF"/>
+                  <g transform="translate(9.5, 4.5)">
+                    <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">1</text>
+                  </g>
+                </g>
+                <g transform="translate(44, 0)">
+                  <g transform="translate(13, 13)">
+                    <path d="M9 4.5L9 13.5M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(92, 0)">
+                <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+                <g transform="translate(10, 10)">
+                  <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g transform="translate(185, 0)">
+            <rect width="173" height="252" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+            <g transform="translate(6, 6)">
+              <rect width="152" height="80" rx="8" ry="8" fill="#EAF3FE"/>
+              <g transform="translate(0, 28)">
+                <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">MCB</text>
+              </g>
+            </g>
+            <g transform="translate(6, 92)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Havells DP MCB 32A</text>
+            </g>
+            <g transform="translate(6, 115)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">SKU EL-2048 · In stock</text>
+            </g>
+            <g transform="translate(6, 137)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹428</text>
+            </g>
+            <g transform="translate(6, 162)">
+              <g>
+                <rect width="104" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+                <g transform="translate(13, 13)">
+                  <path d="M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                </g>
+                <g transform="translate(32, 10)">
+                  <rect width="24" height="24" rx="999" ry="999" fill="#FFFFFF"/>
+                  <g transform="translate(9.5, 4.5)">
+                    <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">1</text>
+                  </g>
+                </g>
+                <g transform="translate(44, 0)">
+                  <g transform="translate(13, 13)">
+                    <path d="M9 4.5L9 13.5M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(92, 0)">
+                <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+                <g transform="translate(10, 10)">
+                  <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 546)">
+          <g>
+            <rect width="173" height="252" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+            <g transform="translate(6, 6)">
+              <rect width="152" height="80" rx="8" ry="8" fill="#EAF3FE"/>
+              <g transform="translate(0, 28)">
+                <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">MCB</text>
+              </g>
+            </g>
+            <g transform="translate(6, 92)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Havells DP MCB 32A</text>
+            </g>
+            <g transform="translate(6, 115)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">SKU EL-2048 · In stock</text>
+            </g>
+            <g transform="translate(6, 137)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹428</text>
+            </g>
+            <g transform="translate(6, 162)">
+              <g>
+                <rect width="104" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+                <g transform="translate(13, 13)">
+                  <path d="M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                </g>
+                <g transform="translate(32, 10)">
+                  <rect width="24" height="24" rx="999" ry="999" fill="#FFFFFF"/>
+                  <g transform="translate(9.5, 4.5)">
+                    <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">1</text>
+                  </g>
+                </g>
+                <g transform="translate(44, 0)">
+                  <g transform="translate(13, 13)">
+                    <path d="M9 4.5L9 13.5M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(92, 0)">
+                <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+                <g transform="translate(10, 10)">
+                  <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g transform="translate(185, 0)">
+            <rect width="173" height="252" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+            <g transform="translate(6, 6)">
+              <rect width="152" height="80" rx="8" ry="8" fill="#EAF3FE"/>
+              <g transform="translate(0, 28)">
+                <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">MCB</text>
+              </g>
+            </g>
+            <g transform="translate(6, 92)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Havells DP MCB 32A</text>
+            </g>
+            <g transform="translate(6, 115)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">SKU EL-2048 · In stock</text>
+            </g>
+            <g transform="translate(6, 137)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹428</text>
+            </g>
+            <g transform="translate(6, 162)">
+              <g>
+                <rect width="104" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+                <g transform="translate(13, 13)">
+                  <path d="M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                </g>
+                <g transform="translate(32, 10)">
+                  <rect width="24" height="24" rx="999" ry="999" fill="#FFFFFF"/>
+                  <g transform="translate(9.5, 4.5)">
+                    <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">1</text>
+                  </g>
+                </g>
+                <g transform="translate(44, 0)">
+                  <g transform="translate(13, 13)">
+                    <path d="M9 4.5L9 13.5M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(92, 0)">
+                <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+                <g transform="translate(10, 10)">
+                  <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 810)">
+          <g>
+            <rect width="173" height="252" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+            <g transform="translate(6, 6)">
+              <rect width="152" height="80" rx="8" ry="8" fill="#EAF3FE"/>
+              <g transform="translate(0, 28)">
+                <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">MCB</text>
+              </g>
+            </g>
+            <g transform="translate(6, 92)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Havells DP MCB 32A</text>
+            </g>
+            <g transform="translate(6, 115)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">SKU EL-2048 · In stock</text>
+            </g>
+            <g transform="translate(6, 137)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹428</text>
+            </g>
+            <g transform="translate(6, 162)">
+              <g>
+                <rect width="104" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+                <g transform="translate(13, 13)">
+                  <path d="M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                </g>
+                <g transform="translate(32, 10)">
+                  <rect width="24" height="24" rx="999" ry="999" fill="#FFFFFF"/>
+                  <g transform="translate(9.5, 4.5)">
+                    <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">1</text>
+                  </g>
+                </g>
+                <g transform="translate(44, 0)">
+                  <g transform="translate(13, 13)">
+                    <path d="M9 4.5L9 13.5M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(92, 0)">
+                <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+                <g transform="translate(10, 10)">
+                  <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g transform="translate(185, 0)">
+            <rect width="173" height="252" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+            <g transform="translate(6, 6)">
+              <rect width="152" height="80" rx="8" ry="8" fill="#EAF3FE"/>
+              <g transform="translate(0, 28)">
+                <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">MCB</text>
+              </g>
+            </g>
+            <g transform="translate(6, 92)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Havells DP MCB 32A</text>
+            </g>
+            <g transform="translate(6, 115)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">SKU EL-2048 · In stock</text>
+            </g>
+            <g transform="translate(6, 137)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹428</text>
+            </g>
+            <g transform="translate(6, 162)">
+              <g>
+                <rect width="104" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+                <g transform="translate(13, 13)">
+                  <path d="M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                </g>
+                <g transform="translate(32, 10)">
+                  <rect width="24" height="24" rx="999" ry="999" fill="#FFFFFF"/>
+                  <g transform="translate(9.5, 4.5)">
+                    <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">1</text>
+                  </g>
+                </g>
+                <g transform="translate(44, 0)">
+                  <g transform="translate(13, 13)">
+                    <path d="M9 4.5L9 13.5M4.5 9L13.5 9" fill="none" stroke="#384959" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(92, 0)">
+                <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+                <g transform="translate(10, 10)">
+                  <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0, 1176)">
+        <g transform="translate(8, 8)">
+          <rect width="374" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+          <g transform="translate(16, 10.5)">
+            <g>
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">CART SUMMARY · 3 ITEMS</text>
+            </g>
+            <g transform="translate(0, 21)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹4,820 · Saved ₹410</text>
+            </g>
+          </g>
+          <g transform="translate(238, 10)">
+            <rect width="104" height="44" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(11.5, 11)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">View Cart →</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(0, 1256)">
+        <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(0, 22.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Trade</text>
+        </g>
+        <g transform="translate(97.5, 0)">
+          <g transform="translate(0, 22.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Credit</text>
+          </g>
+        </g>
+        <g transform="translate(195, 0)">
+          <g transform="translate(0, 22.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Orders</text>
+          </g>
+        </g>
+        <g transform="translate(292.5, 0)">
+          <g transform="translate(0, 22.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Account</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

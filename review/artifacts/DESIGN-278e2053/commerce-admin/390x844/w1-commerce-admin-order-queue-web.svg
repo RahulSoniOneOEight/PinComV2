@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900">
+  <g>
+    <rect width="1440" height="900" fill="#F7FAFE"/>
+    <g>
+      <rect width="240" height="900" fill="#FFFFFF"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">ApnaKart</text>
+      </g>
+      <g transform="translate(20, 56)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">Commerce admin</text>
+      </g>
+      <g transform="translate(20, 96)">
+        <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Orders</text>
+      </g>
+      <g transform="translate(20, 151)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Split allocation</text>
+      </g>
+      <g transform="translate(20, 209)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Exceptions</text>
+      </g>
+      <g transform="translate(20, 264)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Sellers</text>
+      </g>
+      <g transform="translate(20, 319)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Returns</text>
+      </g>
+      <g transform="translate(20, 374)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#456079">Settings</text>
+      </g>
+    </g>
+    <g transform="translate(240, 0)">
+      <rect width="1200" height="900" fill="#F7FAFE"/>
+      <g>
+        <rect width="1200" height="64" fill="#FFFFFF"/>
+        <g transform="translate(24, 2)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Order queue</text>
+        </g>
+        <g transform="translate(139, 14)">
+          <text x="111" y="12" font-family="Hind" font-size="12" fill="#55708A" text-anchor="end">12 awaiting allocation</text>
+        </g>
+      </g>
+      <g transform="translate(0, 64)">
+        <g transform="translate(24, 24)">
+          <g>
+            <rect width="276" height="88" rx="8" ry="8" fill="#FFFFFF"/>
+            <g transform="translate(16, 16)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">NEW</text>
+            </g>
+            <g transform="translate(16, 52)">
+              <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">42</text>
+            </g>
+          </g>
+          <g transform="translate(292, 0)">
+            <rect width="276" height="88" rx="8" ry="8" fill="#FFFFFF"/>
+            <g transform="translate(16, 16)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">AWAITING SPLIT</text>
+            </g>
+            <g transform="translate(16, 56)">
+              <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">12</text>
+            </g>
+          </g>
+          <g transform="translate(584, 0)">
+            <rect width="276" height="88" rx="8" ry="8" fill="#FFFFFF"/>
+            <g transform="translate(16, 16)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">EXCEPTIONS</text>
+            </g>
+            <g transform="translate(16, 54)">
+              <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#9A610A">3</text>
+            </g>
+          </g>
+          <g transform="translate(876, 0)">
+            <rect width="276" height="88" rx="8" ry="8" fill="#FFFFFF"/>
+            <g transform="translate(16, 16)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">RELEASED TODAY</text>
+            </g>
+            <g transform="translate(16, 54)">
+              <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#067647">128</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(24, 128)">
+          <rect width="1152" height="684" rx="8" ry="8" fill="#FFFFFF"/>
+          <g>
+            <rect width="1152" height="40" fill="#EAF3FE"/>
+            <g transform="translate(16, 12)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">ORDER</text>
+            </g>
+            <g transform="translate(172, 12)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">BUYER</text>
+            </g>
+            <g transform="translate(388, 12)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">SELLERS</text>
+            </g>
+            <g transform="translate(524, 12)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">VALUE</text>
+            </g>
+            <g transform="translate(660, 12)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">STATUS</text>
+            </g>
+          </g>
+          <g transform="translate(0, 40)">
+            <g transform="translate(16, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">AK-241883</text>
+            </g>
+            <g transform="translate(172, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Sharma Traders</text>
+            </g>
+            <g transform="translate(388, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">2</text>
+            </g>
+            <g transform="translate(524, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Rs 48,220</text>
+            </g>
+            <g transform="translate(660, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#9A610A">Awaiting split</text>
+            </g>
+          </g>
+          <g transform="translate(0, 76)">
+            <g transform="translate(16, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">AK-241882</text>
+            </g>
+            <g transform="translate(172, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Gupta Hardware</text>
+            </g>
+            <g transform="translate(388, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">1</text>
+            </g>
+            <g transform="translate(524, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Rs 12,940</text>
+            </g>
+            <g transform="translate(660, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#175CD3">Allocated</text>
+            </g>
+          </g>
+          <g transform="translate(0, 112)">
+            <g transform="translate(16, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">AK-241881</text>
+            </g>
+            <g transform="translate(172, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Bharat Electricals</text>
+            </g>
+            <g transform="translate(388, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">3</text>
+            </g>
+            <g transform="translate(524, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Rs 96,010</text>
+            </g>
+            <g transform="translate(660, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#B42318">Exception</text>
+            </g>
+          </g>
+          <g transform="translate(0, 148)">
+            <g transform="translate(16, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">AK-241880</text>
+            </g>
+            <g transform="translate(172, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Nakoda Steels</text>
+            </g>
+            <g transform="translate(388, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">1</text>
+            </g>
+            <g transform="translate(524, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Rs 7,450</text>
+            </g>
+            <g transform="translate(660, 9)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#067647">Released</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

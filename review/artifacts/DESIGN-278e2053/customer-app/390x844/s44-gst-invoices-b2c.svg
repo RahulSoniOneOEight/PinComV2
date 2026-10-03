@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(338, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <g transform="translate(16, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">GST &amp; invoices</text>
+      </g>
+      <g transform="translate(314, 26)">
+        <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">GST details</text>
+      </g>
+    </g>
+    <g transform="translate(0, 98)">
+      <g transform="translate(16, 16)">
+        <rect width="358" height="104" rx="12" ry="12" fill="#EAF3FE"/>
+        <g transform="translate(16, 16)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Billing GSTIN</text>
+        </g>
+        <g transform="translate(16, 56)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">27AAECD1234F1ZK</text>
+        </g>
+        <g transform="translate(16, 96)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Deshpande Home Works · Maharashtra</text>
+        </g>
+      </g>
+      <g transform="translate(16, 132)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Recent invoices</text>
+      </g>
+      <g transform="translate(16, 170)">
+        <rect width="358" height="77" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 16)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">INV-AK-10482</text>
+          </g>
+          <g transform="translate(0, 38)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">28 Sep 2026 · ₹4,268</text>
+          </g>
+        </g>
+        <g transform="translate(122, 35)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Download</text>
+        </g>
+      </g>
+      <g transform="translate(16, 259)">
+        <rect width="358" height="77" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 16)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">INV-AK-10311</text>
+          </g>
+          <g transform="translate(0, 38)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">14 Sep 2026 · ₹1,749</text>
+          </g>
+        </g>
+        <g transform="translate(116, 35)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Download</text>
+        </g>
+      </g>
+      <g transform="translate(16, 348)">
+        <rect width="358" height="77" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 16)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">INV-AK-09872</text>
+          </g>
+          <g transform="translate(0, 38)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">22 Aug 2026 · ₹8,090</text>
+          </g>
+        </g>
+        <g transform="translate(123, 35)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Download</text>
+        </g>
+      </g>
+      <g transform="translate(16, 437)">
+        <rect width="358" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(0, 14.5)">
+          <text x="179" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959" text-anchor="middle">Download all</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF"/>
+      <g transform="translate(0, 23)">
+        <g>
+          <text x="39" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Home</text>
+        </g>
+      </g>
+      <g transform="translate(78, 23)">
+        <g>
+          <text x="39" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Browse</text>
+        </g>
+      </g>
+      <g transform="translate(156, 23)">
+        <g>
+          <text x="39" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(234, 23)">
+        <g>
+          <text x="39" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Cart</text>
+        </g>
+      </g>
+      <g transform="translate(312, 23)">
+        <g>
+          <text x="39" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

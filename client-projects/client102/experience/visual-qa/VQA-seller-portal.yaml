@@ -1,9 +1,9 @@
-qa_id: VQA-DESIGN-33466c9e-seller-portal
+qa_id: VQA-DESIGN-278e2053-seller-portal
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: seller-portal
-build_identity: DESIGN-33466c9e
-capture_id: DESIGN-33466c9e
+build_identity: DESIGN-278e2053
+capture_id: DESIGN-278e2053
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:
@@ -12,6 +12,8 @@ screens_captured:
 - s15-seller-fulfilment
 - s16-seller-return
 - s17-seller-settlement
+- s65-buyer-seller-chat
+- w2-seller-portal-orders-to-fulfil-web
 checks:
 - id: design-contract
   status: pass
@@ -52,7 +54,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 5 screens captured for this surface; components declare more states than
+  evidence: 7 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run

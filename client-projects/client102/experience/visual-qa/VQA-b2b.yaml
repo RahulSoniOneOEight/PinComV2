@@ -1,21 +1,37 @@
-qa_id: VQA-DESIGN-33466c9e-b2b
+qa_id: VQA-DESIGN-278e2053-b2b
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: b2b
-build_identity: DESIGN-33466c9e
-capture_id: DESIGN-33466c9e
+build_identity: DESIGN-278e2053
+capture_id: DESIGN-278e2053
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:
+- procurementbody
 - s10-procurement-list
 - s11-credit
 - s27-quotation-cart
 - s30-b2b-order-history
 - s31-b2b-reorder
 - s32-trade-price-pdp
-- s8-b2b-home
-- s8l-b2b-home-long
+- s52-order-confirmed-b2b
+- s55-procurement-list-detail
+- s59-gst-invoices-b2b
+- s8c-b2b-home-rev3
 - s9-rfq
+- w-b2b-01-procurement-lists-rev2
+- w-b2b-01a-create-add-sku-to-list-rev2
+- w-b2b-02-trade-offers-deals-rev2
+- w-b2b-03-products-listing-rev2
+- w-b2b-04-product-detail-rev2
+- w-b2b-05-common-cart-journey-references-rev2
+- w-b2b-11-procurement-lists-rev3
+- w-b2b-12-buy-again-listing-rev3
+- w-b2b-13-all-offers-deals-rev3
+- w-b2b-14-product-listing-rev3
+- w-b2b-15-product-detail-rev3
+- w-b2b-16-search-results-rev3
+- w-b2b-17-cart-checkout-payment-rev3
 checks:
 - id: design-contract
   status: pass
@@ -30,7 +46,8 @@ checks:
     content.secondary/surface.page=6.26, content.secondary/surface.accent=4.62…)
 - id: critical-states
   status: warning
-  evidence: only the default state is captured for this surface
+  evidence: 'captured states for this surface: [''success'']; the remaining states
+    are designed but not captured'
 - id: business-rules
   status: pass
   evidence: 9 governed rules recorded in design-brief
@@ -56,7 +73,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 9 screens captured for this surface; components declare more states than
+  evidence: 25 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run

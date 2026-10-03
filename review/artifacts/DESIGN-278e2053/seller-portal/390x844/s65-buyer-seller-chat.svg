@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(338, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="67" fill="#FFFFFF"/>
+      <g transform="translate(12, 37.5)">
+        <text x="0" y="16" font-family="Hind" font-size="16" fill="#384959">‹</text>
+      </g>
+      <g transform="translate(31, 13.5)">
+        <rect width="40" height="40" rx="999" ry="999" fill="#BDDCFC"/>
+      </g>
+      <g transform="translate(83, 12)">
+        <g>
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Maharashtra Fasteners</text>
+        </g>
+        <g transform="translate(0, 41)">
+          <text x="0" y="11" font-family="Hind" font-size="11" fill="#067647">Online · Quote Q-20819</text>
+        </g>
+      </g>
+      <g transform="translate(239, 31.5)">
+        <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Details</text>
+      </g>
+    </g>
+    <g transform="translate(0, 101)">
+      <g transform="translate(16, 16)">
+        <text x="179" y="11" font-family="Hind" font-size="11" fill="#55708A" text-anchor="middle">TODAY</text>
+      </g>
+      <g transform="translate(16, 46)">
+        <g transform="translate(39, 0)">
+          <rect width="280" height="85" rx="12" ry="12" fill="#FFFFFF"/>
+          <g transform="translate(12, 12)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">We can dispatch 10 units today; 6 tomorrow.</text>
+          </g>
+          <g transform="translate(12, 58)">
+            <text x="256" y="11" font-family="Hind" font-size="11" fill="#55708A" text-anchor="end">10:18 AM</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 143)">
+        <g transform="translate(98, 0)">
+          <rect width="260" height="64" rx="12" ry="12" fill="#384959"/>
+          <g transform="translate(12, 12)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#FFFFFF">Will all items reach Site 03 by 8 Oct?</text>
+          </g>
+          <g transform="translate(12, 37)">
+            <text x="236" y="11" font-family="Hind" font-size="11" fill="#FFFFFF" text-anchor="end">10:22 AM</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 219)">
+        <g transform="translate(39, 0)">
+          <rect width="280" height="67" rx="12" ry="12" fill="#FFFFFF"/>
+          <g transform="translate(12, 12)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">Confirmed. The quote now shows 8 Oct.</text>
+          </g>
+          <g transform="translate(12, 37)">
+            <text x="256" y="11" font-family="Hind" font-size="11" fill="#55708A" text-anchor="end">10:24 AM</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 298)">
+        <rect width="358" height="38" rx="8" ry="8" fill="#E7F1FF"/>
+        <g transform="translate(10, 10)">
+          <text x="169" y="11" font-family="Hind" font-size="11" fill="#175CD3" text-anchor="middle">Keep payment and order changes inside ApnaKart.</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 776)">
+      <rect width="390" height="68" fill="#FFFFFF"/>
+      <g transform="translate(12, 12)">
+        <rect width="44" height="44" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(0, 10)">
+          <text x="22" y="20" font-family="Hind" font-size="20" fill="#384959" text-anchor="middle">+</text>
+        </g>
+      </g>
+      <g transform="translate(64, 12)">
+        <rect width="262" height="44" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">Type a message</text>
+        </g>
+      </g>
+      <g transform="translate(334, 12)">
+        <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(0, 12.5)">
+          <text x="22" y="14" font-family="Hind" font-size="14" fill="#FFFFFF" text-anchor="middle">Send</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

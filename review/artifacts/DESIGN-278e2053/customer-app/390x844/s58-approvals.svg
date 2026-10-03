@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(338, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <g transform="translate(16, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Approvals</text>
+      </g>
+      <g transform="translate(313, 17)">
+        <rect width="61" height="30" rx="999" ry="999" fill="#FFF1D8"/>
+        <g transform="translate(6, 6)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#9A610A">3 pending</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 98)">
+      <g transform="translate(16, 16)">
+        <rect width="58" height="35" rx="999" ry="999" fill="#384959"/>
+        <g transform="translate(8, 8)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#FFFFFF">Pending</text>
+        </g>
+      </g>
+      <g transform="translate(82, 16)">
+        <rect width="68" height="35" rx="999" ry="999" fill="#EAF3FE"/>
+        <g transform="translate(8, 8)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Approved</text>
+        </g>
+      </g>
+      <g transform="translate(158, 16)">
+        <rect width="30" height="35" rx="999" ry="999" fill="#EAF3FE"/>
+        <g transform="translate(8, 8)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">All</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 165)">
+      <g transform="translate(16, 16)">
+        <rect width="358" height="171" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Rohit Mehta</text>
+          </g>
+          <g transform="translate(271, 0)">
+            <rect width="59" height="28" rx="999" ry="999" fill="#FFF1D8"/>
+            <g transform="translate(5, 5)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#9A610A">Due today</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(14, 50)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Baner Tower · 12 items · Credit order</text>
+        </g>
+        <g transform="translate(14, 90)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">₹50,150</text>
+        </g>
+        <g transform="translate(14, 117)">
+          <g>
+            <rect width="160" height="40" rx="8" ry="8" fill="none" stroke="#B42318" stroke-width="1"/>
+            <g transform="translate(0, 11.5)">
+              <text x="80" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#B42318" text-anchor="middle">Reject</text>
+            </g>
+          </g>
+          <g transform="translate(170, 0)">
+            <rect width="160" height="40" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(0, 11.5)">
+              <text x="80" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Approve</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 199)">
+        <rect width="358" height="171" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Neha Kulkarni</text>
+          </g>
+          <g transform="translate(281, 0)">
+            <rect width="49" height="28" rx="999" ry="999" fill="#EAF3FE"/>
+            <g transform="translate(5, 5)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#175CD3">Pending</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(14, 60)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Wakad Warehouse · 12 items · Credit order</text>
+        </g>
+        <g transform="translate(14, 100)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">₹38,420</text>
+        </g>
+        <g transform="translate(14, 117)">
+          <g>
+            <rect width="160" height="40" rx="8" ry="8" fill="none" stroke="#B42318" stroke-width="1"/>
+            <g transform="translate(0, 11.5)">
+              <text x="80" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#B42318" text-anchor="middle">Reject</text>
+            </g>
+          </g>
+          <g transform="translate(170, 0)">
+            <rect width="160" height="40" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(0, 11.5)">
+              <text x="80" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Approve</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 382)">
+        <rect width="358" height="171" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Amit Shah</text>
+          </g>
+          <g transform="translate(281, 0)">
+            <rect width="49" height="28" rx="999" ry="999" fill="#EAF3FE"/>
+            <g transform="translate(5, 5)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#175CD3">Pending</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(14, 60)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Kharadi Office · 12 items · Credit order</text>
+        </g>
+        <g transform="translate(14, 100)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">₹22,780</text>
+        </g>
+        <g transform="translate(14, 117)">
+          <g>
+            <rect width="160" height="40" rx="8" ry="8" fill="none" stroke="#B42318" stroke-width="1"/>
+            <g transform="translate(0, 11.5)">
+              <text x="80" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#B42318" text-anchor="middle">Reject</text>
+            </g>
+          </g>
+          <g transform="translate(170, 0)">
+            <rect width="160" height="40" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(0, 11.5)">
+              <text x="80" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Approve</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF"/>
+      <g transform="translate(0, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Trade</text>
+        </g>
+      </g>
+      <g transform="translate(97.5, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Credit</text>
+        </g>
+      </g>
+      <g transform="translate(195, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(292.5, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

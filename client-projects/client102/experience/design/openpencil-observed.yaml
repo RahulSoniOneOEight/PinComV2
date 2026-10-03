@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:3bc0fbdea8de5d4070066aa0964b5f15fbd92ea50cd1c9f3ec8038f18a3fee13
+revision_ref: sha256:bc36d8105e064cf41a30f08ee121275a334b1470b347cb745aacee8f62d23979
 components:
 - action.button
 - commerce.product-card
@@ -47,6 +47,16 @@ components:
 - commerce.buy-again-card
 - Compact
 - Standard
+- CartPlusIconButton
+- MultiSelectListChip
+- CategoryFilterChip
+- CollectionSelector
+- CartSummary
+- CompactSKUCard
+- MerchandisingSKUCard
+- Size=Compact
+- Size=Standard
+- ProductSwimlane
 - commerce.order-card
 journey_screens:
 - browse-to-buy
@@ -252,7 +262,7 @@ frames:
 - shPlain
 - Minus
 - Icon / custom
-- Value
+- Quantity value overlay
 - Plus
 - Icon / custom
 - Row
@@ -326,6 +336,52 @@ frames:
 - Frame
 - Frame
 - CartPlus
+- B2B rev3 component architecture
+- B2B rev3 primitives
+- Icon / Cart plus glyph
+- Frame
+- View Cart
+- B2B rev3 commerce components
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
 - "S19 \xC2\xB7 Product Detail"
 - StatusBar
 - AppBar
@@ -3357,6 +3413,580 @@ frames:
 - Frame
 - Frame
 - Frame
+- "S8C \xC2\xB7 B2B Home (rev3)"
+- Header
+- Frame
+- Frame
+- Frame
+- Frame
+- Global Search
+- Home content
+- Quick Order
+- Frame
+- Frame
+- List chips rail
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- View More Quick Order
+- Buy Again
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Trade Offers and Deals
+- Frame
+- Frame
+- Collection rail
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Browse Categories
+- Category rail
+- Frame
+- Products
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Bottom navigation
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-11 \xC2\xB7 Procurement Lists (rev3)"
+- Frame
+- Frame
+- Frame
+- Search Lists or SKUs
+- Multi-select list rail
+- Frame
+- List actions
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-12 \xC2\xB7 Buy Again Listing (rev3)"
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-13 \xC2\xB7 All Offers & Deals (rev3)"
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-14 \xC2\xB7 Product Listing (rev3)"
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Category filters
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-15 \xC2\xB7 Product Detail (rev3)"
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Independent purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Prominent Add to Cart
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-16 \xC2\xB7 Search Results (rev3)"
+- Frame
+- Frame
+- Frame
+- Global Search
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- "W-B2B-17 \xC2\xB7 Cart Checkout Payment (rev3)"
+- Frame
+- Frame
+- Frame
+- Journey progress
+- Frame
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- Payment methods
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
+- View Cart
+- Frame
+- Frame
+- Frame
+- Frame
+- Frame
 - zz-journey-boards
 - browse-to-buy
 - browse-to-buy_div
@@ -3432,21 +4062,21 @@ frames:
 - credit-order_dot4
 info:
   pages: 4
-  totalNodes: 6787
+  totalNodes: 8194
   types:
-    FRAME: 3353
-    VECTOR: 259
-    COMPONENT: 47
-    TEXT: 3031
+    FRAME: 3973
+    VECTOR: 385
+    COMPONENT: 57
+    TEXT: 3511
     ELLIPSE: 70
-    COMPONENT_SET: 1
-    INSTANCE: 26
+    COMPONENT_SET: 2
+    INSTANCE: 196
   fonts:
   - Hind
   - Inter
   pageCounts:
-    "00 \xC2\xB7 Foundations & Components": 596
-    "01 \xC2\xB7 Screens \xC2\xB7 All": 6046
+    "00 \xC2\xB7 Foundations & Components": 714
+    "01 \xC2\xB7 Screens \xC2\xB7 All": 7335
     "03 \xC2\xB7 Empty \xC2\xB7 Reserved": 0
     "02 \xC2\xB7 Journey Boards": 145
 source: openpencil-cli

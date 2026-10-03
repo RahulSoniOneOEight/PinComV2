@@ -201,16 +201,16 @@ targets:
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s27-quotation-cart.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s28-quotes-received.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s28-quotes-received.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s29-quote-compare.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s29-quote-compare.svg
 - surface: customer-app
   runtime: external
   viewport: 390x844
@@ -241,11 +241,11 @@ targets:
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s34-wishlist.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s35-schemes-offers.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s35-schemes-offers.svg
 - surface: customer-app
   runtime: external
   viewport: 390x844
@@ -286,11 +286,11 @@ targets:
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s4-cart.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s40-verify-otp.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s40-verify-otp.svg
 - surface: customer-app
   runtime: external
   viewport: 390x844
@@ -346,46 +346,46 @@ targets:
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s50-order-detail.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s51-business-checkout.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s51-business-checkout.svg
 - surface: b2b
   runtime: external
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s52-order-confirmed-b2b.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s53-quick-order-search-results.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s53-quick-order-search-results.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s54-quick-order-centre.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s54-quick-order-centre.svg
 - surface: b2b
   runtime: external
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s55-procurement-list-detail.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s56-catalogue.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s56-catalogue.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s57-accept-quote.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s57-accept-quote.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s58-approvals.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s58-approvals.svg
 - surface: b2b
   runtime: external
   viewport: 390x844
@@ -396,56 +396,56 @@ targets:
   viewport: 390x844
   state: default
   output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s6-search-results.svg
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s60-projects-sites.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s60-projects-sites.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s61-project-detail.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s61-project-detail.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s62-material-list.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s62-material-list.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s63-site-selector.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s63-site-selector.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s64-split-tracking.svg
-- surface: seller-portal
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s64-split-tracking.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/seller-portal/390x844/s65-buyer-seller-chat.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s65-buyer-seller-chat.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s66-business-account.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s66-business-account.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s67-team-roles.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s67-team-roles.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s68-price-advantage.svg
-- surface: customer-app
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s68-price-advantage.svg
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s69-business-payment.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s69-business-payment.svg
 - surface: customer-app
   runtime: external
   viewport: 390x844
@@ -942,21 +942,21 @@ results:
   status: captured
   sha256: 3409d3c526fe56986043bca999da5069b1b18d6dcd7527b052fe6fd6f896f2af
   bytes: 10088
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s28-quotes-received.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s28-quotes-received.svg
   screen: S28 Â· Quotes Received
   node_id: 0:1325
   status: captured
   sha256: 9f1fb6fb41842def72725dfc5cd84d3e79f13b1ae2b831bcdd734f2f1f3cf15d
   bytes: 9068
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s29-quote-compare.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s29-quote-compare.svg
   screen: S29 Â· Quote Compare
   node_id: 0:1392
   status: captured
@@ -1022,11 +1022,11 @@ results:
   status: captured
   sha256: 1fc50289101ed126bfa61fee5a0e1235add9454ba6aea92577ca8ebd1ba08008
   bytes: 10401
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s35-schemes-offers.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s35-schemes-offers.svg
   screen: S35 Â· Schemes & Offers
   node_id: 0:1899
   status: captured
@@ -1112,11 +1112,11 @@ results:
   status: captured
   sha256: 5ddba0c2e4ad653d085c55a74085b04be44b7cea87ea6153e25aa872e6f4036b
   bytes: 327666
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s40-verify-otp.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s40-verify-otp.svg
   screen: S40 Â· Verify OTP
   node_id: 0:4009
   status: captured
@@ -1232,11 +1232,11 @@ results:
   status: captured
   sha256: b49bb4ed2d02bf781f116b99a518fed40bf4c1db8058d54846da0b5b0891b477
   bytes: 5464
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s51-business-checkout.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s51-business-checkout.svg
   screen: S51 Â· Business checkout
   node_id: 0:4462
   status: captured
@@ -1252,21 +1252,21 @@ results:
   status: captured
   sha256: edfe9efd8c404fa0b8c416270546d4df7a43b3e9569bcf5a54338ec75e8ba902
   bytes: 4698
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s53-quick-order-search-results.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s53-quick-order-search-results.svg
   screen: S53 Â· Quick order search results
   node_id: 0:4541
   status: captured
   sha256: 104ee36cedaf534e077fa539d46fe6bbe0c8ffe11dcb64c55f271b948cd5ac74
   bytes: 7218
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s54-quick-order-centre.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s54-quick-order-centre.svg
   screen: S54 Â· Quick order centre
   node_id: 0:4596
   status: captured
@@ -1282,31 +1282,31 @@ results:
   status: captured
   sha256: e0192855f9a9af6ac586eb938bd24494054111efea250a997f1c05191a130b13
   bytes: 7751
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s56-catalogue.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s56-catalogue.svg
   screen: S56 Â· Catalogue
   node_id: 0:4695
   status: captured
   sha256: 74a7bc218a8865ecb2ec82ad4f562e8657231fac9988d2ef81013f263d2c8223
   bytes: 7831
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s57-accept-quote.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s57-accept-quote.svg
   screen: S57 Â· Accept quote
   node_id: 0:4753
   status: captured
   sha256: 6f5e7fa70534aaac943db503ed11cff055358c16fb03b543dab859663d9b4508
   bytes: 6015
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s58-approvals.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s58-approvals.svg
   screen: S58 Â· Approvals
   node_id: 0:4800
   status: captured
@@ -1332,101 +1332,101 @@ results:
   status: captured
   sha256: 65a989a7e5b2e0cc5b2b782ee6bd8298bc67e3b9d607a8fafcf35e6e4095aa10
   bytes: 516339
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s60-projects-sites.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s60-projects-sites.svg
   screen: S60 Â· Projects & sites
   node_id: 0:4861
   status: captured
   sha256: 21c09be6ea4a6082bba76bd205260823addfb42a96bdf41afe4cbc1b546f1891
   bytes: 5960
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s61-project-detail.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s61-project-detail.svg
   screen: S61 Â· Project detail
   node_id: 0:4906
   status: captured
   sha256: ecae39ee239a04c96695ed11b4c40b5995f3a73489ca12083d0db934e110c516
   bytes: 5800
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s62-material-list.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s62-material-list.svg
   screen: S62 Â· Material list
   node_id: 0:4951
   status: captured
   sha256: 16d54caa5becd01487bd3d4eeb3c64a40653df26e8237cd3193982226dc6fed5
   bytes: 7785
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s63-site-selector.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s63-site-selector.svg
   screen: S63 Â· Site selector
   node_id: 0:5012
   status: captured
   sha256: def74e79ab885a25855b7d643a79e0be0f5be40909caa621bd6972ad0f09baef
   bytes: 4795
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s64-split-tracking.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s64-split-tracking.svg
   screen: S64 Â· Split tracking
   node_id: 0:5046
   status: captured
   sha256: 353f6d38ed5ab2fa5058f105d01efaba973e862fd538e19d3c17422363159959
   bytes: 6263
-- surface: seller-portal
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/seller-portal/390x844/s65-buyer-seller-chat.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s65-buyer-seller-chat.svg
   screen: S65 Â· Buyer-seller chat
   node_id: 0:5095
   status: captured
   sha256: 583f0fca533df51bf265571a12e65196b24e6813ce6e77cf30c790640a43d00d
   bytes: 4567
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s66-business-account.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s66-business-account.svg
   screen: S66 Â· Business account
   node_id: 0:5129
   status: captured
   sha256: 1d02b339543954fcad90af8519ca7856b1da804e8740c34987d86cf052d8a41d
   bytes: 6399
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s67-team-roles.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s67-team-roles.svg
   screen: S67 Â· Team & roles
   node_id: 0:5180
   status: captured
   sha256: 906fffe901b56d9136a9e32e5b65c52ef612ba725d48d41c752ff8e9e196802d
   bytes: 8756
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s68-price-advantage.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s68-price-advantage.svg
   screen: S68 Â· Price advantage
   node_id: 0:5247
   status: captured
   sha256: e27d935552962c3d732cdd88f16f1c65dd8fe61d1f4570a199f2be3aec7a604e
   bytes: 6331
-- surface: customer-app
+- surface: b2b
   runtime: external
   viewport: 390x844
   state: default
-  output: review/artifacts/DESIGN-bf8d70cd/customer-app/390x844/s69-business-payment.svg
+  output: review/artifacts/DESIGN-bf8d70cd/b2b/390x844/s69-business-payment.svg
   screen: S69 Â· Business payment
   node_id: 0:6129
   status: captured

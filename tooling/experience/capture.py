@@ -62,6 +62,10 @@ CAPTURE_FORMAT = os.getenv("OPENPENCIL_CAPTURE_FORMAT", "svg").lower()
 
 #: Screen-name fragments mapped to the surface they belong to. First match wins.
 SURFACE_HINTS = (
+    ("web store", "web-store"),
+    ("analytics", "analytics"),
+    ("ops console", "ops-console"),
+    ("superadmin", "superadmin"),
     ("seller", "seller-portal"),
     ("marketplace", "commerce-admin"),
     ("admin", "commerce-admin"),
@@ -73,6 +77,19 @@ SURFACE_HINTS = (
     ("credit", "b2b"),
     ("procurement", "b2b"),
 )
+
+# Screen-number ownership is part of the client contract.  Do not infer these from
+# title words: for example, S65 contains "seller" but is a B2B buyer screen.
+B2B_SCREEN_NUMBERS = {
+    9, 10, 11, *range(27, 33), 35, 40, *range(51, 70),
+}
+
+WEB_PREFIXES = {
+    "WEB": "web-store",
+    "AN": "analytics",
+    "OPS": "ops-console",
+    "SA": "superadmin",
+}
 
 
 class CaptureError(RuntimeError):
@@ -104,6 +121,29 @@ def slug(value: str) -> str:
 
 def surface_for(screen_name: str) -> str:
     lowered = screen_name.lower()
+
+    # Named desktop surfaces use stable prefixes in the design brief.
+    prefix = re.match(r"^([A-Za-z]+)-\d+\b", screen_name.strip())
+    if prefix and prefix.group(1).upper() in WEB_PREFIXES:
+        return WEB_PREFIXES[prefix.group(1).upper()]
+
+    # W-B2B-* must be resolved before the generic web-name hints.
+    if re.match(r"^W-B2B-", screen_name, re.IGNORECASE):
+        return "b2b"
+
+    # The two original web shells predate the prefixed naming convention.
+    if re.match(r"^W1\b", screen_name, re.IGNORECASE):
+        return "commerce-admin"
+    if re.match(r"^W2\b", screen_name, re.IGNORECASE):
+        return "seller-portal"
+
+    screen = re.match(r"^S(\d+)([A-Za-z]*)\b", screen_name.strip())
+    if screen:
+        number = int(screen.group(1))
+        suffix = screen.group(2).upper()
+        if (number == 8 and suffix.startswith("C")) or number in B2B_SCREEN_NUMBERS:
+            return "b2b"
+
     for fragment, surface in SURFACE_HINTS:
         if fragment in lowered:
             return surface
@@ -166,6 +206,11 @@ def plan_captures(client_id: str, root: Path = ROOT) -> tuple[str, str, list[dic
 def run_captures(client_id: str, root: Path = ROOT, binary: str = DEFAULT_BIN) -> dict[str, Any]:
     """Execute the planned exports and write the capture manifest."""
     capture_id, direction, targets, document = plan_captures(client_id, root)
+    # A revision can be recaptured after classification changes.  Start its generated
+    # artifact set clean so files cannot remain under a surface they no longer belong to.
+    capture_root = root / ARTIFACTS / capture_id
+    if capture_root.exists():
+        shutil.rmtree(capture_root)
     for candidate in targets:
         out = root / candidate["output"]
         out.parent.mkdir(parents=True, exist_ok=True)

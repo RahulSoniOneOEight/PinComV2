@@ -143,6 +143,11 @@ screen_map:
   b2c.home: S3 · B2C Home
   b2c.home.dark: S3D · B2C Home (Dark)
   b2c.home.long: S3L · B2C Home (long)
+  b2c.home.long.320: S3L-320 · B2C Home (responsive @320)
+  b2c.home.long.334: S3L-334 · B2C Home (responsive @334)
+  b2c.home.long.360: S3L-360 · B2C Home (responsive @360)
+  b2c.home.long.400: S3L-400 · B2C Home (responsive @400)
+  b2c.home.long.430: S3L-430 · B2C Home (responsive @430)
   b2c.home.dark.long: S3DL · B2C Home (Dark, long)
   b2c.product-detail: S19 · Product Detail
   b2c.product-variant: S20 · Product Variant
@@ -158,6 +163,9 @@ screen_map:
   # single B2B Home. Their screen_map keys (b2b.home, b2b.home.long, b2b.home.rev2) are gone.
   b2b.home.rev3: S8C · B2B Home (rev3)
   b2b.home.rev3.320: S8C-320 · B2B Home (rev3 @320)
+  b2b.home.rev3.334: S8C-334 · B2B Home (responsive @334)
+  b2b.home.rev3.360: S8C-360 · B2B Home (responsive @360)
+  b2b.home.rev3.400: S8C-400 · B2B Home (responsive @400)
   b2b.home.rev3.430: S8C-430 · B2B Home (rev3 @430)
   b2b.procurement-lists.rev3: W-B2B-11 · Procurement Lists (rev3)
   b2b.buy-again.rev3: W-B2B-12 · Buy Again Listing (rev3)

@@ -1,0 +1,115 @@
+capture_id: DESIGN-ae65feeb
+client_id: client102
+build_id: DESIGN-ae65feeb
+direction_id: DIR-CLIENT102-A
+source: design-export
+note: Design captures exported from the committed OpenPencil document. These prove
+  the design, not a running app; runtime checks still require a build capture.
+targets:
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s19-product-detail.svg
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s20-product-variant.svg
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s21-confirm-order.svg
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s22-cart-empty.svg
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s23-checkout-details.svg
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s24-track-package.svg
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s24b-track-package-delayed.svg
+results:
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s19-product-detail.svg
+  screen: S19 Â· Product Detail
+  node_id: 0:671
+  status: captured
+  sha256: 87207f93dba8413b43692cc2e3743f10506d5707f08caab5823874a2406f98ec
+  bytes: 55832
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s20-product-variant.svg
+  screen: S20 Â· Product Variant
+  node_id: 0:770
+  status: captured
+  sha256: 3b89bb8436cf9dfb1c0499968c06b91e545a1abf33eaf42a21175474004b5715
+  bytes: 53183
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s21-confirm-order.svg
+  screen: S21 Â· Confirm Order
+  node_id: 0:833
+  status: captured
+  sha256: 18c302876341a10cdf8cb4c89659b723a56df4ada7ad97005b088babc327446e
+  bytes: 5074
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s22-cart-empty.svg
+  screen: S22 Â· Cart Empty
+  node_id: 0:871
+  status: captured
+  sha256: f079e5eb6c88de054c234ae2598f92b749df44fbf0dc96742c321e582e294840
+  bytes: 4347
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s23-checkout-details.svg
+  screen: S23 Â· Checkout Details
+  node_id: 0:914
+  status: captured
+  sha256: 74048b80a067d4feddd1e8972694d748a20ec8d9ce701a9d563b8814aa7edc79
+  bytes: 5560
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s24-track-package.svg
+  screen: S24 Â· Track Package
+  node_id: 0:957
+  status: captured
+  sha256: 7e473ceda48e7565b814a175c68c4b988e1688726b11f55a81642320254e1c2d
+  bytes: 8500
+- surface: customer-app
+  runtime: external
+  viewport: 390x844
+  state: default
+  output: review/artifacts/DESIGN-ae65feeb/customer-app/390x844/s24b-track-package-delayed.svg
+  screen: S24b Â· Track Package (Delayed)
+  node_id: 0:1028
+  status: captured
+  sha256: cec9dbd1f409e778df3356b64a20b8b9ba28e1d7b141f6b310967506044eaec0
+  bytes: 8818
+status: captured

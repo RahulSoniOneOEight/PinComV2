@@ -1,6 +1,6 @@
 client_id: client102
-project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:bf8d70cd7135ec4d680fc49bbd0854b97d9fa9180d279510a18b8d1b25b1ba01
+project_ref: client-projects/client102/experience/design/apnakart-design.fig
+revision_ref: sha256:ae65feeba59aecd2b67d3d57abacdb725a3359ef0a2b329b74bf9ad6c4be0902
 source: openpencil-cli
 input_hashes:
   design_ir: sha256:e7f018999e5e26bae8146882c9b43e14a5fa16a3dbab315b6001d5cc0accc362

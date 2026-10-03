@@ -1,5 +1,5 @@
-project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:bf8d70cd7135ec4d680fc49bbd0854b97d9fa9180d279510a18b8d1b25b1ba01
+project_ref: client-projects/client102/experience/design/apnakart-design.fig
+revision_ref: sha256:ae65feeba59aecd2b67d3d57abacdb725a3359ef0a2b329b74bf9ad6c4be0902
 components:
 - action.button
 - commerce.product-card
@@ -45,8 +45,8 @@ components:
 - commerce.quick-order-sku-card
 - b2b.procurement-filter-bar
 - commerce.buy-again-card
-- Compact
-- Standard
+- Legacy/Size=Compact
+- Legacy/Size=Standard
 - CartPlusIconButton
 - MultiSelectListChip
 - CategoryFilterChip
@@ -54,8 +54,8 @@ components:
 - CartSummary
 - CompactSKUCard
 - MerchandisingSKUCard
-- Size=Compact
-- Size=Standard
+- TradeProductCard/Size=Compact
+- TradeProductCard/Size=Standard
 - ProductSwimlane
 - commerce.order-card
 journey_screens:
@@ -1757,10 +1757,13 @@ frames:
 - Frame
 - Frame
 - "S3L \xC2\xB7 B2C Home (long)"
+- "Section bg \xC2\xB7 Recommended"
 - StatusBar
+- "Section bg \xC2\xB7 Best Sellers"
 - Header
 - BellBtn
 - LocationChip
+- "Section bg \xC2\xB7 Flash Deals"
 - SearchBar
 - TrustRow
 - Trust-0
@@ -1838,12 +1841,7 @@ frames:
 - Offer
 - Stock
 - AddToCart
-- Feed-5
-- Media
-- phFrame
-- Offer
-- Stock
-- AddToCart
+- "Feed-5 \xC2\xB7 Split merchandising slot"
 - FoldLine-0
 - FoldLine-14
 - FoldLine-28
@@ -3660,6 +3658,1699 @@ frames:
 - Frame
 - Frame
 - Frame
+- "S69 \xC2\xB7 Business payment"
+- Status bar
+- App bar
+- Back
+- Title block
+- Payment content
+- Amount due
+- Amount label
+- Bank transfer selected
+- Selected radio
+- Bank text
+- UPI
+- Radio
+- UPI text
+- Card
+- Radio
+- Card text
+- Net banking
+- Radio
+- Net banking text
+- Credit option
+- Radio
+- Credit text
+- Security note
+- Frame
+- View Cart
+- Payment action
+- Pay button
+- "WEB-01 \xC2\xB7 Web store \xC2\xB7 Home"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-02 \xC2\xB7 Web store \xC2\xB7 Search results"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-03 \xC2\xB7 Web store \xC2\xB7 Product detail"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-04 \xC2\xB7 Web store \xC2\xB7 Cart"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-05 \xC2\xB7 Web store \xC2\xB7 Checkout"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-06 \xC2\xB7 Web store \xC2\xB7 Order confirmation"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-07 \xC2\xB7 Web store \xC2\xB7 Account / Orders"
+- Rail
+- nav1
+- nav2
+- nav3
+- nav4
+- Main
+- TopBar
+- search
+- account
+- Content
+- Hero
+- heroAction
+- shopNow
+- categories
+- category1
+- category2
+- category3
+- category4
+- ProductGrid
+- p1
+- p1Media
+- p1Badges
+- p1Stock
+- p1Saving
+- p1Add
+- p2
+- p2Media
+- p2Badges
+- p2Stock
+- p2Saving
+- p2Add
+- p3
+- p3Media
+- p3Badges
+- p3Stock
+- p3Saving
+- p3Add
+- p4
+- p4Media
+- p4Badges
+- p4Stock
+- p4Saving
+- p4Add
+- "WEB-A1 \xC2\xB7 Web store \xC2\xB7 Login"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "AN-01 \xC2\xB7 Analytics \xC2\xB7 Executive dashboard"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "AN-02 \xC2\xB7 Analytics \xC2\xB7 Conversion funnel"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "AN-03 \xC2\xB7 Analytics \xC2\xB7 Seller scorecard"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "AN-04 \xC2\xB7 Analytics \xC2\xB7 Fulfilment SLA"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "AN-05 \xC2\xB7 Analytics \xC2\xB7 Settlement / revenue report"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "OPS-01 \xC2\xB7 Ops console \xC2\xB7 Health dashboard"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "OPS-02 \xC2\xB7 Ops console \xC2\xB7 Incident queue"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "OPS-03 \xC2\xB7 Ops console \xC2\xB7 Incident detail"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "OPS-04 \xC2\xB7 Ops console \xC2\xB7 Retry / reassign action"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "OPS-05 \xC2\xB7 Ops console \xC2\xB7 Audit trail"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "SA-01 \xC2\xB7 Superadmin \xC2\xB7 Tenant list"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "SA-03 \xC2\xB7 Superadmin \xC2\xB7 Users & roles"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "SA-02 \xC2\xB7 Superadmin \xC2\xB7 Tenant detail"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "SA-04 \xC2\xB7 Superadmin \xC2\xB7 Capability / feature config"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "SA-05 \xC2\xB7 Superadmin \xC2\xB7 Environment & integrations"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "SA-06 \xC2\xB7 Superadmin \xC2\xB7 Audit log"
+- Rail
+- Main
+- TopBar
+- Content
+- KpiRow
+- kpiNew
+- kpiAlloc
+- kpiExcept
+- kpiReleased
+- Table
+- TableHead
+- row0
+- row1
+- row2
+- row3
+- "WEB-A2 \xC2\xB7 Web store \xC2\xB7 Access denied"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "WEB-A3 \xC2\xB7 Web store \xC2\xB7 Session expired"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "AN-A1 \xC2\xB7 Analytics \xC2\xB7 Login"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "AN-A2 \xC2\xB7 Analytics \xC2\xB7 Access denied"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "AN-A3 \xC2\xB7 Analytics \xC2\xB7 Session expired"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "OPS-A1 \xC2\xB7 Ops console \xC2\xB7 Login"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "OPS-A2 \xC2\xB7 Ops console \xC2\xB7 Access denied"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "OPS-A3 \xC2\xB7 Ops console \xC2\xB7 Session expired"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "SA-A1 \xC2\xB7 Superadmin \xC2\xB7 Login"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "SA-A2 \xC2\xB7 Superadmin \xC2\xB7 Access denied"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "SA-A3 \xC2\xB7 Superadmin \xC2\xB7 Session expired"
+- Rail
+- Main
+- TopBar
+- AuthContent
+- AuthCard
+- email
+- password
+- authAction
+- "S8C-334 \xC2\xB7 B2B Home (responsive @334)"
+- Header
+- Frame
+- Frame
+- Frame
+- Frame
+- Global Search
+- Home content
+- Quick Order
+- Frame
+- Frame
+- List chips rail
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- View More Quick Order
+- Buy Again
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Trade Offers and Deals
+- Frame
+- Frame
+- Collection rail
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Browse Categories
+- Category rail
+- Frame
+- Products
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Bottom navigation
+- Frame
+- Frame
+- Frame
+- Frame
+- "S8C-360 \xC2\xB7 B2B Home (responsive @360)"
+- Header
+- Frame
+- Frame
+- Frame
+- Frame
+- Global Search
+- Home content
+- Quick Order
+- Frame
+- Frame
+- List chips rail
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- View More Quick Order
+- Buy Again
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Trade Offers and Deals
+- Frame
+- Frame
+- Collection rail
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Browse Categories
+- Category rail
+- Frame
+- Products
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Bottom navigation
+- Frame
+- Frame
+- Frame
+- Frame
+- "S8C-400 \xC2\xB7 B2B Home (responsive @400)"
+- Header
+- Frame
+- Frame
+- Frame
+- Frame
+- Global Search
+- Home content
+- Quick Order
+- Frame
+- Frame
+- List chips rail
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- View More Quick Order
+- Buy Again
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Trade Offers and Deals
+- Frame
+- Frame
+- Collection rail
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Browse Categories
+- Category rail
+- Frame
+- Products
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Bottom navigation
+- Frame
+- Frame
+- Frame
+- Frame
+- "S3L-320 \xC2\xB7 B2C Home (responsive @320)"
+- "Section bg \xC2\xB7 Recommended"
+- "Section bg \xC2\xB7 Best Sellers"
+- "Section bg \xC2\xB7 Flash Deals"
+- StatusBar
+- Header
+- BellBtn
+- LocationChip
+- SearchBar
+- TrustRow
+- Trust-0
+- Trust-1
+- Trust-2
+- Trust-3
+- HeroCarousel
+- Cta
+- HeroDots
+- d0
+- CategoryRail
+- Cat-0
+- Cat-1
+- Cat-2
+- Cat-3
+- Cat-4
+- Cat-5
+- Cat-6
+- Cat-7
+- FlashViewport
+- f0
+- Media
+- phFrame
+- Offer
+- f1
+- Media
+- phFrame
+- Offer
+- f2
+- Media
+- phFrame
+- Offer
+- BestViewport
+- b0
+- Media
+- phFrame
+- Offer
+- b1
+- Media
+- phFrame
+- Offer
+- b2
+- Media
+- phFrame
+- Offer
+- SecondaryBanner
+- Cta
+- Feed-0
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-1
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-2
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-3
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-4
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- "Feed-5 \xC2\xB7 Split merchandising slot"
+- FoldLine-0
+- FoldLine-14
+- FoldLine-28
+- FoldLine-42
+- FoldLine-56
+- FoldLine-70
+- FoldLine-84
+- FoldLine-98
+- FoldLine-112
+- FoldLine-126
+- FoldLine-140
+- FoldLine-154
+- FoldLine-168
+- FoldLine-182
+- FoldLine-196
+- FoldLine-210
+- FoldLine-224
+- FoldLine-238
+- FoldLine-252
+- FoldLine-266
+- FoldLine-280
+- FoldLine-294
+- FoldLine-308
+- FoldLine-322
+- FoldLine-336
+- FoldLine-350
+- FoldLine-364
+- FoldLine-378
+- BottomNav
+- Nav-0
+- Nav-1
+- Nav-2
+- Nav-3
+- Nav-4
+- "S3L-334 \xC2\xB7 B2C Home (responsive @334)"
+- "Section bg \xC2\xB7 Recommended"
+- "Section bg \xC2\xB7 Best Sellers"
+- "Section bg \xC2\xB7 Flash Deals"
+- StatusBar
+- Header
+- BellBtn
+- LocationChip
+- SearchBar
+- TrustRow
+- Trust-0
+- Trust-1
+- Trust-2
+- Trust-3
+- HeroCarousel
+- Cta
+- HeroDots
+- d0
+- CategoryRail
+- Cat-0
+- Cat-1
+- Cat-2
+- Cat-3
+- Cat-4
+- Cat-5
+- Cat-6
+- Cat-7
+- FlashViewport
+- f0
+- Media
+- phFrame
+- Offer
+- f1
+- Media
+- phFrame
+- Offer
+- f2
+- Media
+- phFrame
+- Offer
+- BestViewport
+- b0
+- Media
+- phFrame
+- Offer
+- b1
+- Media
+- phFrame
+- Offer
+- b2
+- Media
+- phFrame
+- Offer
+- SecondaryBanner
+- Cta
+- Feed-0
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-1
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-2
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-3
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-4
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- "Feed-5 \xC2\xB7 Split merchandising slot"
+- FoldLine-0
+- FoldLine-14
+- FoldLine-28
+- FoldLine-42
+- FoldLine-56
+- FoldLine-70
+- FoldLine-84
+- FoldLine-98
+- FoldLine-112
+- FoldLine-126
+- FoldLine-140
+- FoldLine-154
+- FoldLine-168
+- FoldLine-182
+- FoldLine-196
+- FoldLine-210
+- FoldLine-224
+- FoldLine-238
+- FoldLine-252
+- FoldLine-266
+- FoldLine-280
+- FoldLine-294
+- FoldLine-308
+- FoldLine-322
+- FoldLine-336
+- FoldLine-350
+- FoldLine-364
+- FoldLine-378
+- BottomNav
+- Nav-0
+- Nav-1
+- Nav-2
+- Nav-3
+- Nav-4
+- "S3L-360 \xC2\xB7 B2C Home (responsive @360)"
+- "Section bg \xC2\xB7 Recommended"
+- "Section bg \xC2\xB7 Best Sellers"
+- "Section bg \xC2\xB7 Flash Deals"
+- StatusBar
+- Header
+- BellBtn
+- LocationChip
+- SearchBar
+- TrustRow
+- Trust-0
+- Trust-1
+- Trust-2
+- Trust-3
+- HeroCarousel
+- Cta
+- HeroDots
+- d0
+- CategoryRail
+- Cat-0
+- Cat-1
+- Cat-2
+- Cat-3
+- Cat-4
+- Cat-5
+- Cat-6
+- Cat-7
+- FlashViewport
+- f0
+- Media
+- phFrame
+- Offer
+- f1
+- Media
+- phFrame
+- Offer
+- f2
+- Media
+- phFrame
+- Offer
+- BestViewport
+- b0
+- Media
+- phFrame
+- Offer
+- b1
+- Media
+- phFrame
+- Offer
+- b2
+- Media
+- phFrame
+- Offer
+- SecondaryBanner
+- Cta
+- Feed-0
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-1
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-2
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-3
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-4
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- "Feed-5 \xC2\xB7 Split merchandising slot"
+- FoldLine-0
+- FoldLine-14
+- FoldLine-28
+- FoldLine-42
+- FoldLine-56
+- FoldLine-70
+- FoldLine-84
+- FoldLine-98
+- FoldLine-112
+- FoldLine-126
+- FoldLine-140
+- FoldLine-154
+- FoldLine-168
+- FoldLine-182
+- FoldLine-196
+- FoldLine-210
+- FoldLine-224
+- FoldLine-238
+- FoldLine-252
+- FoldLine-266
+- FoldLine-280
+- FoldLine-294
+- FoldLine-308
+- FoldLine-322
+- FoldLine-336
+- FoldLine-350
+- FoldLine-364
+- FoldLine-378
+- BottomNav
+- Nav-0
+- Nav-1
+- Nav-2
+- Nav-3
+- Nav-4
+- "S3L-400 \xC2\xB7 B2C Home (responsive @400)"
+- "Section bg \xC2\xB7 Recommended"
+- "Section bg \xC2\xB7 Best Sellers"
+- "Section bg \xC2\xB7 Flash Deals"
+- StatusBar
+- Header
+- BellBtn
+- LocationChip
+- SearchBar
+- TrustRow
+- Trust-0
+- Trust-1
+- Trust-2
+- Trust-3
+- HeroCarousel
+- Cta
+- HeroDots
+- d0
+- CategoryRail
+- Cat-0
+- Cat-1
+- Cat-2
+- Cat-3
+- Cat-4
+- Cat-5
+- Cat-6
+- Cat-7
+- FlashViewport
+- f0
+- Media
+- phFrame
+- Offer
+- f1
+- Media
+- phFrame
+- Offer
+- f2
+- Media
+- phFrame
+- Offer
+- BestViewport
+- b0
+- Media
+- phFrame
+- Offer
+- b1
+- Media
+- phFrame
+- Offer
+- b2
+- Media
+- phFrame
+- Offer
+- SecondaryBanner
+- Cta
+- Feed-0
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-1
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-2
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-3
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-4
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- "Feed-5 \xC2\xB7 Split merchandising slot"
+- FoldLine-0
+- FoldLine-14
+- FoldLine-28
+- FoldLine-42
+- FoldLine-56
+- FoldLine-70
+- FoldLine-84
+- FoldLine-98
+- FoldLine-112
+- FoldLine-126
+- FoldLine-140
+- FoldLine-154
+- FoldLine-168
+- FoldLine-182
+- FoldLine-196
+- FoldLine-210
+- FoldLine-224
+- FoldLine-238
+- FoldLine-252
+- FoldLine-266
+- FoldLine-280
+- FoldLine-294
+- FoldLine-308
+- FoldLine-322
+- FoldLine-336
+- FoldLine-350
+- FoldLine-364
+- FoldLine-378
+- BottomNav
+- Nav-0
+- Nav-1
+- Nav-2
+- Nav-3
+- Nav-4
+- "S3L-430 \xC2\xB7 B2C Home (responsive @430)"
+- "Section bg \xC2\xB7 Recommended"
+- "Section bg \xC2\xB7 Best Sellers"
+- "Section bg \xC2\xB7 Flash Deals"
+- StatusBar
+- Header
+- BellBtn
+- LocationChip
+- SearchBar
+- TrustRow
+- Trust-0
+- Trust-1
+- Trust-2
+- Trust-3
+- HeroCarousel
+- Cta
+- HeroDots
+- d0
+- CategoryRail
+- Cat-0
+- Cat-1
+- Cat-2
+- Cat-3
+- Cat-4
+- Cat-5
+- Cat-6
+- Cat-7
+- FlashViewport
+- f0
+- Media
+- phFrame
+- Offer
+- f1
+- Media
+- phFrame
+- Offer
+- f2
+- Media
+- phFrame
+- Offer
+- BestViewport
+- b0
+- Media
+- phFrame
+- Offer
+- b1
+- Media
+- phFrame
+- Offer
+- b2
+- Media
+- phFrame
+- Offer
+- SecondaryBanner
+- Cta
+- Feed-0
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-1
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-2
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-3
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- Feed-4
+- Media
+- phFrame
+- Offer
+- Stock
+- AddToCart
+- "Feed-5 \xC2\xB7 Split merchandising slot"
+- FoldLine-0
+- FoldLine-14
+- FoldLine-28
+- FoldLine-42
+- FoldLine-56
+- FoldLine-70
+- FoldLine-84
+- FoldLine-98
+- FoldLine-112
+- FoldLine-126
+- FoldLine-140
+- FoldLine-154
+- FoldLine-168
+- FoldLine-182
+- FoldLine-196
+- FoldLine-210
+- FoldLine-224
+- FoldLine-238
+- FoldLine-252
+- FoldLine-266
+- FoldLine-280
+- FoldLine-294
+- FoldLine-308
+- FoldLine-322
+- FoldLine-336
+- FoldLine-350
+- FoldLine-364
+- FoldLine-378
+- BottomNav
+- Nav-0
+- Nav-1
+- Nav-2
+- Nav-3
+- Nav-4
 - "S8C-320 \xC2\xB7 B2B Home (rev3 @320)"
 - Header
 - Frame
@@ -3922,34 +5613,6 @@ frames:
 - Frame
 - Frame
 - Frame
-- "S69 \xC2\xB7 Business payment"
-- Status bar
-- App bar
-- Back
-- Title block
-- Payment content
-- Amount due
-- Amount label
-- Bank transfer selected
-- Selected radio
-- Bank text
-- UPI
-- Radio
-- UPI text
-- Card
-- Radio
-- Card text
-- Net banking
-- Radio
-- Net banking text
-- Credit option
-- Radio
-- Credit text
-- Security note
-- Frame
-- View Cart
-- Payment action
-- Pay button
 - zz-journey-boards
 - browse-to-buy
 - browse-to-buy_div
@@ -4025,21 +5688,21 @@ frames:
 - credit-order_dot4
 info:
   pages: 4
-  totalNodes: 8197
+  totalNodes: 12291
   types:
-    FRAME: 3936
-    VECTOR: 434
+    FRAME: 5599
+    VECTOR: 618
     COMPONENT: 57
-    TEXT: 3428
-    ELLIPSE: 61
+    TEXT: 5411
+    ELLIPSE: 190
     COMPONENT_SET: 2
-    INSTANCE: 279
+    INSTANCE: 414
   fonts:
   - Hind
   - Inter
   pageCounts:
     "00 \xC2\xB7 Foundations & Components": 714
-    "01 \xC2\xB7 Screens \xC2\xB7 All": 7338
+    "01 \xC2\xB7 Screens \xC2\xB7 All": 11432
     "03 \xC2\xB7 Empty \xC2\xB7 Reserved": 0
     "02 \xC2\xB7 Journey Boards": 145
 source: openpencil-cli

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="1080" viewBox="0 0 390 1080">
+  <g>
+    <g transform="translate(16, 16)">
+      <g>
+        <rect width="116.67" height="56" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(39.33, 18.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#FFFFFF">1 · Cart</text>
+        </g>
+      </g>
+      <g transform="translate(120.67, 0)">
+        <rect width="116.67" height="56" rx="8" ry="8" fill="#BDDCFC"/>
+        <g transform="translate(22.33, 18.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">2 · Checkout</text>
+        </g>
+      </g>
+      <g transform="translate(241.33, 0)">
+        <rect width="116.67" height="56" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(25.83, 18.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">3 · Payment</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(16, 84)">
+      <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Cart · 3 items</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <g>
+        <rect width="173" height="184" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(8, 8)">
+          <rect width="134" height="72" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(0, 24)">
+            <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">WIRE</text>
+          </g>
+        </g>
+        <g transform="translate(8, 86)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Polycab 90m coil</text>
+        </g>
+        <g transform="translate(8, 111)">
+          <g transform="translate(0, 13.5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹1,240</text>
+          </g>
+          <g transform="translate(44, 0)">
+            <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(10, 10)">
+              <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(185, 0)">
+        <rect width="173" height="184" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(8, 8)">
+          <rect width="134" height="72" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(0, 24)">
+            <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#55708A">WIRE</text>
+          </g>
+        </g>
+        <g transform="translate(8, 86)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Polycab 90m coil</text>
+        </g>
+        <g transform="translate(8, 111)">
+          <g transform="translate(0, 13.5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹1,240</text>
+          </g>
+          <g transform="translate(44, 0)">
+            <rect width="44" height="44" rx="8" ry="8" fill="#384959"/>
+            <g transform="translate(10, 10)">
+              <path d="M3 4L5 4L7 15L18 15L20 8L6 8M9 19C8.97 18.18 8.29 17.54 7.48 17.55C6.66 17.56 6 18.23 6 19.05C6 19.87 6.66 20.54 7.48 20.55C8.29 20.56 8.97 19.92 9 19.1M17 19C16.97 18.18 16.29 17.54 15.48 17.55C14.66 17.56 14 18.23 14 19.05C14 19.87 14.66 20.54 15.48 20.55C16.29 20.56 16.97 19.92 17 19.1M16 3L16 7M14 5L18 5" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(16, 318)">
+      <rect width="358" height="92" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 12)">
+        <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Deliver to · Sharma Electricals</text>
+      </g>
+      <g transform="translate(12, 38)">
+        <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Warehouse 2, Industrial Area, Jaipur · GSTIN verified</text>
+      </g>
+      <g transform="translate(12, 61)">
+        <g transform="translate(0, 12.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Change address →</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(16, 422)">
+      <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Checkout summary</text>
+    </g>
+    <g transform="translate(16, 460)">
+      <rect width="358" height="156" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(12, 12)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Items subtotal</text>
+        </g>
+        <g transform="translate(76, 0)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹4,980</text>
+        </g>
+      </g>
+      <g transform="translate(12, 46.5)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Trade discount</text>
+        </g>
+        <g transform="translate(79, 0)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#067647">− ₹410</text>
+        </g>
+      </g>
+      <g transform="translate(12, 81)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">GST</text>
+        </g>
+        <g transform="translate(23, 0)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹823</text>
+        </g>
+      </g>
+      <g transform="translate(12, 115.5)">
+        <g>
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Payable</text>
+        </g>
+        <g transform="translate(50, 0)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">₹5,393</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(16, 628)">
+      <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Payment method</text>
+    </g>
+    <g transform="translate(16, 666)">
+      <g>
+        <rect width="269" height="68" rx="8" ry="8" fill="#BDDCFC" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(12, 23)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">● Business credit · ₹42,000 available</text>
+        </g>
+      </g>
+      <g transform="translate(0, 76)">
+        <rect width="159" height="68" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(12, 23)">
+          <text x="0" y="14" font-family="Hind" font-size="14" fill="#384959">○ UPI / Bank transfer</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(16, 822)">
+      <rect width="358" height="52" rx="8" ry="8" fill="#384959"/>
+      <g transform="translate(0, 13)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">Place Order · ₹5,393</text>
+      </g>
+    </g>
+    <g transform="translate(16, 886)">
+      <rect width="358" height="64" rx="8" ry="8" fill="#EAF3FE"/>
+      <g transform="translate(10, 10)">
+        <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Common purchase journey</text>
+      </g>
+      <g transform="translate(10, 31)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Quick Order, Buy Again, Offers, Listings and Product Detail feed this cart.</text>
+      </g>
+    </g>
+    <g transform="translate(16, 962)">
+      <rect width="358" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(16, 10.5)">
+        <g>
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">CART SUMMARY · 3 ITEMS</text>
+        </g>
+        <g transform="translate(0, 21)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹4,820 · Saved ₹410</text>
+        </g>
+      </g>
+      <g transform="translate(238, 10)">
+        <rect width="104" height="44" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(11.5, 11)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">View Cart →</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

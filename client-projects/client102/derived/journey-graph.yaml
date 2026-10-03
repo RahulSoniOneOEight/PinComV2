@@ -564,33 +564,89 @@ journeys:
       to: null
   - id: quote-to-order.3
     actor: b2b-buyer
-    action: buyer-accept
+    action: compare-quotes
     surface: b2b
-    screen: buyer_accept
+    screen: compare_quotes
     capability: quote-rfq
     data:
     - quote-rfq.read
     - quote-rfq.write
     permission: b2b-buyer
-    backend_operation: quote-rfq.buyer-accept
-    event: quote-to-order.buyer-accept.completed
-    success_state: buyer-accept-success
-    error_state: buyer-accept-error
-    empty_state: buyer-accept-empty
-    loading_state: buyer-accept-loading
+    backend_operation: quote-rfq.compare-quotes
+    event: quote-to-order.compare-quotes.completed
+    success_state: compare-quotes-success
+    error_state: compare-quotes-error
+    empty_state: compare-quotes-empty
+    loading_state: compare-quotes-loading
     next: &id020
     - quote-to-order.4
     branches:
     - when: success
       next: *id020
     - when: error
-      state: buyer-accept-error
+      state: compare-quotes-error
       recover: quote-to-order.3
     handoff:
       required: false
       from: null
       to: null
   - id: quote-to-order.4
+    actor: b2b-buyer
+    action: accept-quote
+    surface: b2b
+    screen: accept_quote
+    capability: quote-rfq
+    data:
+    - quote-rfq.read
+    - quote-rfq.write
+    permission: b2b-buyer
+    backend_operation: quote-rfq.accept-quote
+    event: quote-to-order.accept-quote.completed
+    success_state: accept-quote-success
+    error_state: accept-quote-error
+    empty_state: accept-quote-empty
+    loading_state: accept-quote-loading
+    next: &id021
+    - quote-to-order.5
+    branches:
+    - when: success
+      next: *id021
+    - when: error
+      state: accept-quote-error
+      recover: quote-to-order.4
+    handoff:
+      required: false
+      from: null
+      to: null
+  - id: quote-to-order.5
+    actor: b2b-buyer
+    action: quotation-cart
+    surface: b2b
+    screen: quotation_cart
+    capability: cart
+    data:
+    - cart.read
+    - cart.write
+    permission: b2b-buyer
+    backend_operation: cart.quotation-cart
+    event: quote-to-order.quotation-cart.completed
+    success_state: quotation-cart-success
+    error_state: quotation-cart-error
+    empty_state: quotation-cart-empty
+    loading_state: quotation-cart-loading
+    next: &id022
+    - quote-to-order.6
+    branches:
+    - when: success
+      next: *id022
+    - when: error
+      state: quotation-cart-error
+      recover: quote-to-order.5
+    handoff:
+      required: false
+      from: null
+      to: null
+  - id: quote-to-order.6
     actor: b2b-buyer
     action: checkout
     surface: b2b
@@ -606,19 +662,47 @@ journeys:
     error_state: checkout-error
     empty_state: checkout-empty
     loading_state: checkout-loading
-    next: &id021
-    - quote-to-order.5
+    next: &id023
+    - quote-to-order.7
     branches:
     - when: success
-      next: *id021
+      next: *id023
     - when: error
       state: checkout-error
-      recover: quote-to-order.4
+      recover: quote-to-order.6
     handoff:
       required: false
       from: null
       to: null
-  - id: quote-to-order.5
+  - id: quote-to-order.7
+    actor: b2b-buyer
+    action: payment
+    surface: b2b
+    screen: payment
+    capability: checkout
+    data:
+    - checkout.read
+    - checkout.write
+    permission: b2b-buyer
+    backend_operation: checkout.payment
+    event: quote-to-order.payment.completed
+    success_state: payment-success
+    error_state: payment-error
+    empty_state: payment-empty
+    loading_state: payment-loading
+    next: &id024
+    - quote-to-order.8
+    branches:
+    - when: success
+      next: *id024
+    - when: error
+      state: payment-error
+      recover: quote-to-order.7
+    handoff:
+      required: false
+      from: null
+      to: null
+  - id: quote-to-order.8
     actor: b2b-buyer
     action: confirm-order
     surface: b2b
@@ -634,13 +718,13 @@ journeys:
     error_state: confirm-order-error
     empty_state: confirm-order-empty
     loading_state: confirm-order-loading
-    next: &id022 []
+    next: &id025 []
     branches:
     - when: success
-      next: *id022
+      next: *id025
     - when: error
       state: confirm-order-error
-      recover: quote-to-order.5
+      recover: quote-to-order.8
     handoff:
       required: false
       from: null
@@ -668,11 +752,11 @@ journeys:
     error_state: order-history-error
     empty_state: order-history-empty
     loading_state: order-history-loading
-    next: &id023
+    next: &id026
     - repeat-order.2
     branches:
     - when: success
-      next: *id023
+      next: *id026
     - when: error
       state: order-history-error
       recover: repeat-order.1
@@ -696,11 +780,11 @@ journeys:
     error_state: reorder-error
     empty_state: reorder-empty
     loading_state: reorder-loading
-    next: &id024
+    next: &id027
     - repeat-order.3
     branches:
     - when: success
-      next: *id024
+      next: *id027
     - when: error
       state: reorder-error
       recover: repeat-order.2
@@ -709,6 +793,34 @@ journeys:
       from: null
       to: null
   - id: repeat-order.3
+    actor: b2b-buyer
+    action: quotation-cart
+    surface: b2b
+    screen: quotation_cart
+    capability: cart
+    data:
+    - cart.read
+    - cart.write
+    permission: b2b-buyer
+    backend_operation: cart.quotation-cart
+    event: repeat-order.quotation-cart.completed
+    success_state: quotation-cart-success
+    error_state: quotation-cart-error
+    empty_state: quotation-cart-empty
+    loading_state: quotation-cart-loading
+    next: &id028
+    - repeat-order.4
+    branches:
+    - when: success
+      next: *id028
+    - when: error
+      state: quotation-cart-error
+      recover: repeat-order.3
+    handoff:
+      required: false
+      from: null
+      to: null
+  - id: repeat-order.4
     actor: b2b-buyer
     action: checkout
     surface: b2b
@@ -724,18 +836,74 @@ journeys:
     error_state: checkout-error
     empty_state: checkout-empty
     loading_state: checkout-loading
-    next: &id025 []
+    next: &id029
+    - repeat-order.5
     branches:
     - when: success
-      next: *id025
+      next: *id029
     - when: error
       state: checkout-error
-      recover: repeat-order.3
+      recover: repeat-order.4
     handoff:
       required: false
       from: null
       to: null
-  completion: checkout-success
+  - id: repeat-order.5
+    actor: b2b-buyer
+    action: payment
+    surface: b2b
+    screen: payment
+    capability: checkout
+    data:
+    - checkout.read
+    - checkout.write
+    permission: b2b-buyer
+    backend_operation: checkout.payment
+    event: repeat-order.payment.completed
+    success_state: payment-success
+    error_state: payment-error
+    empty_state: payment-empty
+    loading_state: payment-loading
+    next: &id030
+    - repeat-order.6
+    branches:
+    - when: success
+      next: *id030
+    - when: error
+      state: payment-error
+      recover: repeat-order.5
+    handoff:
+      required: false
+      from: null
+      to: null
+  - id: repeat-order.6
+    actor: b2b-buyer
+    action: confirm-order
+    surface: b2b
+    screen: confirm_order
+    capability: orders
+    data:
+    - orders.read
+    - orders.write
+    permission: b2b-buyer
+    backend_operation: orders.confirm-order
+    event: repeat-order.confirm-order.completed
+    success_state: confirm-order-success
+    error_state: confirm-order-error
+    empty_state: confirm-order-empty
+    loading_state: confirm-order-loading
+    next: &id031 []
+    branches:
+    - when: success
+      next: *id031
+    - when: error
+      state: confirm-order-error
+      recover: repeat-order.6
+    handoff:
+      required: false
+      from: null
+      to: null
+  completion: confirm-order-success
 - id: credit-order
   actor: b2b-buyer
   objective: buyer places an order on credit with approval
@@ -758,11 +926,11 @@ journeys:
     error_state: choose-credit-error
     empty_state: choose-credit-empty
     loading_state: choose-credit-loading
-    next: &id026
+    next: &id032
     - credit-order.2
     branches:
     - when: success
-      next: *id026
+      next: *id032
     - when: error
       state: choose-credit-error
       recover: credit-order.1
@@ -786,11 +954,11 @@ journeys:
     error_state: approval-error
     empty_state: approval-empty
     loading_state: approval-loading
-    next: &id027
+    next: &id033
     - credit-order.3
     branches:
     - when: success
-      next: *id027
+      next: *id033
     - when: error
       state: approval-error
       recover: credit-order.2
@@ -814,11 +982,11 @@ journeys:
     error_state: checkout-error
     empty_state: checkout-empty
     loading_state: checkout-loading
-    next: &id028
+    next: &id034
     - credit-order.4
     branches:
     - when: success
-      next: *id028
+      next: *id034
     - when: error
       state: checkout-error
       recover: credit-order.3
@@ -842,10 +1010,10 @@ journeys:
     error_state: confirm-order-error
     empty_state: confirm-order-empty
     loading_state: confirm-order-loading
-    next: &id029 []
+    next: &id035 []
     branches:
     - when: success
-      next: *id029
+      next: *id035
     - when: error
       state: confirm-order-error
       recover: credit-order.4
@@ -876,11 +1044,11 @@ journeys:
     error_state: register-business-error
     empty_state: register-business-empty
     loading_state: register-business-loading
-    next: &id030
+    next: &id036
     - seller-onboarding.2
     branches:
     - when: success
-      next: *id030
+      next: *id036
     - when: error
       state: register-business-error
       recover: seller-onboarding.1
@@ -904,11 +1072,11 @@ journeys:
     error_state: submit-kyc-error
     empty_state: submit-kyc-empty
     loading_state: submit-kyc-loading
-    next: &id031
+    next: &id037
     - seller-onboarding.3
     branches:
     - when: success
-      next: *id031
+      next: *id037
     - when: error
       state: submit-kyc-error
       recover: seller-onboarding.2
@@ -932,11 +1100,11 @@ journeys:
     error_state: verify-documents-error
     empty_state: verify-documents-empty
     loading_state: verify-documents-loading
-    next: &id032
+    next: &id038
     - seller-onboarding.4
     branches:
     - when: success
-      next: *id032
+      next: *id038
     - when: error
       state: verify-documents-error
       recover: seller-onboarding.3
@@ -960,10 +1128,10 @@ journeys:
     error_state: approve-seller-error
     empty_state: approve-seller-empty
     loading_state: approve-seller-loading
-    next: &id033 []
+    next: &id039 []
     branches:
     - when: success
-      next: *id033
+      next: *id039
     - when: error
       state: approve-seller-error
       recover: seller-onboarding.4
@@ -994,11 +1162,11 @@ journeys:
     error_state: add-product-error
     empty_state: add-product-empty
     loading_state: add-product-loading
-    next: &id034
+    next: &id040
     - seller-catalogue.2
     branches:
     - when: success
-      next: *id034
+      next: *id040
     - when: error
       state: add-product-error
       recover: seller-catalogue.1
@@ -1022,11 +1190,11 @@ journeys:
     error_state: set-pricing-error
     empty_state: set-pricing-empty
     loading_state: set-pricing-loading
-    next: &id035
+    next: &id041
     - seller-catalogue.3
     branches:
     - when: success
-      next: *id035
+      next: *id041
     - when: error
       state: set-pricing-error
       recover: seller-catalogue.2
@@ -1050,11 +1218,11 @@ journeys:
     error_state: set-stock-error
     empty_state: set-stock-empty
     loading_state: set-stock-loading
-    next: &id036
+    next: &id042
     - seller-catalogue.4
     branches:
     - when: success
-      next: *id036
+      next: *id042
     - when: error
       state: set-stock-error
       recover: seller-catalogue.3
@@ -1078,10 +1246,10 @@ journeys:
     error_state: publish-offer-error
     empty_state: publish-offer-empty
     loading_state: publish-offer-loading
-    next: &id037 []
+    next: &id043 []
     branches:
     - when: success
-      next: *id037
+      next: *id043
     - when: error
       state: publish-offer-error
       recover: seller-catalogue.4
@@ -1112,11 +1280,11 @@ journeys:
     error_state: receive-order-error
     empty_state: receive-order-empty
     loading_state: receive-order-loading
-    next: &id038
+    next: &id044
     - marketplace-order.2
     branches:
     - when: success
-      next: *id038
+      next: *id044
     - when: error
       state: receive-order-error
       recover: marketplace-order.1
@@ -1140,11 +1308,11 @@ journeys:
     error_state: split-allocate-error
     empty_state: split-allocate-empty
     loading_state: split-allocate-loading
-    next: &id039
+    next: &id045
     - marketplace-order.3
     branches:
     - when: success
-      next: *id039
+      next: *id045
     - when: error
       state: split-allocate-error
       recover: marketplace-order.2
@@ -1168,10 +1336,10 @@ journeys:
     error_state: release-to-seller-error
     empty_state: release-to-seller-empty
     loading_state: release-to-seller-loading
-    next: &id040 []
+    next: &id046 []
     branches:
     - when: success
-      next: *id040
+      next: *id046
     - when: error
       state: release-to-seller-error
       recover: marketplace-order.3
@@ -1202,11 +1370,11 @@ journeys:
     error_state: pick-items-error
     empty_state: pick-items-empty
     loading_state: pick-items-loading
-    next: &id041
+    next: &id047
     - seller-fulfilment.2
     branches:
     - when: success
-      next: *id041
+      next: *id047
     - when: error
       state: pick-items-error
       recover: seller-fulfilment.1
@@ -1230,11 +1398,11 @@ journeys:
     error_state: pack-error
     empty_state: pack-empty
     loading_state: pack-loading
-    next: &id042
+    next: &id048
     - seller-fulfilment.3
     branches:
     - when: success
-      next: *id042
+      next: *id048
     - when: error
       state: pack-error
       recover: seller-fulfilment.2
@@ -1258,11 +1426,11 @@ journeys:
     error_state: dispatch-error
     empty_state: dispatch-empty
     loading_state: dispatch-loading
-    next: &id043
+    next: &id049
     - seller-fulfilment.4
     branches:
     - when: success
-      next: *id043
+      next: *id049
     - when: error
       state: dispatch-error
       recover: seller-fulfilment.3
@@ -1286,10 +1454,10 @@ journeys:
     error_state: mark-delivered-error
     empty_state: mark-delivered-empty
     loading_state: mark-delivered-loading
-    next: &id044 []
+    next: &id050 []
     branches:
     - when: success
-      next: *id044
+      next: *id050
     - when: error
       state: mark-delivered-error
       recover: seller-fulfilment.4
@@ -1320,11 +1488,11 @@ journeys:
     error_state: receive-return-error
     empty_state: receive-return-empty
     loading_state: receive-return-loading
-    next: &id045
+    next: &id051
     - seller-return.2
     branches:
     - when: success
-      next: *id045
+      next: *id051
     - when: error
       state: receive-return-error
       recover: seller-return.1
@@ -1348,11 +1516,11 @@ journeys:
     error_state: inspect-error
     empty_state: inspect-empty
     loading_state: inspect-loading
-    next: &id046
+    next: &id052
     - seller-return.3
     branches:
     - when: success
-      next: *id046
+      next: *id052
     - when: error
       state: inspect-error
       recover: seller-return.2
@@ -1376,10 +1544,10 @@ journeys:
     error_state: refund-adjust-error
     empty_state: refund-adjust-empty
     loading_state: refund-adjust-loading
-    next: &id047 []
+    next: &id053 []
     branches:
     - when: success
-      next: *id047
+      next: *id053
     - when: error
       state: refund-adjust-error
       recover: seller-return.3
@@ -1410,11 +1578,11 @@ journeys:
     error_state: review-orders-error
     empty_state: review-orders-empty
     loading_state: review-orders-loading
-    next: &id048
+    next: &id054
     - seller-settlement.2
     branches:
     - when: success
-      next: *id048
+      next: *id054
     - when: error
       state: review-orders-error
       recover: seller-settlement.1
@@ -1438,11 +1606,11 @@ journeys:
     error_state: calculate-settlement-error
     empty_state: calculate-settlement-empty
     loading_state: calculate-settlement-loading
-    next: &id049
+    next: &id055
     - seller-settlement.3
     branches:
     - when: success
-      next: *id049
+      next: *id055
     - when: error
       state: calculate-settlement-error
       recover: seller-settlement.2
@@ -1466,11 +1634,11 @@ journeys:
     error_state: post-accounting-error
     empty_state: post-accounting-empty
     loading_state: post-accounting-loading
-    next: &id050
+    next: &id056
     - seller-settlement.4
     branches:
     - when: success
-      next: *id050
+      next: *id056
     - when: error
       state: post-accounting-error
       recover: seller-settlement.3
@@ -1494,10 +1662,10 @@ journeys:
     error_state: reconcile-payout-error
     empty_state: reconcile-payout-empty
     loading_state: reconcile-payout-loading
-    next: &id051 []
+    next: &id057 []
     branches:
     - when: success
-      next: *id051
+      next: *id057
     - when: error
       state: reconcile-payout-error
       recover: seller-settlement.4

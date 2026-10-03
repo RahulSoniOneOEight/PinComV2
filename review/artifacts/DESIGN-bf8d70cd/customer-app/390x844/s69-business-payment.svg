@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(16, 7.5)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(324, 5)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 28)">
+      <rect width="390" height="64" fill="#FFFFFF"/>
+      <g transform="translate(16, 10)">
+        <g transform="translate(18, 10)">
+          <text x="0" y="20" font-family="Hind" font-size="20" fill="#384959">‹</text>
+        </g>
+      </g>
+      <g transform="translate(72, 6.5)">
+        <g>
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Payment</text>
+        </g>
+        <g transform="translate(0, 32)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Final step · secure checkout</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 92)">
+      <g transform="translate(16, 16)">
+        <rect width="358" height="64" rx="12" ry="12" fill="#EAF3FE"/>
+        <g transform="translate(14, 15)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">AMOUNT DUE</text>
+          </g>
+          <g transform="translate(0, 19)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">PO-BNR-1026</text>
+          </g>
+        </g>
+        <g transform="translate(96, 17.5)">
+          <text x="0" y="24" font-family="Hind" font-size="24" font-weight="700" fill="#384959">₹50,150</text>
+        </g>
+      </g>
+      <g transform="translate(16, 92)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Choose payment method</text>
+      </g>
+      <g transform="translate(16, 130)">
+        <rect width="358" height="72" rx="12" ry="12" fill="#FFFFFF" stroke="#6A89A7" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <rect width="44" height="44" rx="999" ry="999" fill="#384959"/>
+          <g transform="translate(14.5, 12.5)">
+            <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">✓</text>
+          </g>
+        </g>
+        <g transform="translate(70, 15.5)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Bank transfer</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">NEFT / RTGS · recommended for business</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 214)">
+        <rect width="358" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(10, 10)">
+          <rect width="44" height="44" rx="999" ry="999" fill="none" stroke="#748EAA" stroke-width="1"/>
+        </g>
+        <g transform="translate(66, 11.5)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">UPI</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Pay from any UPI app</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 290)">
+        <rect width="358" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(10, 10)">
+          <rect width="44" height="44" rx="999" ry="999" fill="none" stroke="#748EAA" stroke-width="1"/>
+        </g>
+        <g transform="translate(66, 11.5)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Debit or credit card</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Corporate cards supported</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 366)">
+        <rect width="358" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(10, 10)">
+          <rect width="44" height="44" rx="999" ry="999" fill="none" stroke="#748EAA" stroke-width="1"/>
+        </g>
+        <g transform="translate(66, 11.5)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Net banking</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">All major business banks</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 442)">
+        <rect width="358" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(10, 10)">
+          <rect width="44" height="44" rx="999" ry="999" fill="none" stroke="#748EAA" stroke-width="1"/>
+        </g>
+        <g transform="translate(66, 11.5)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">30-day business credit</text>
+          </g>
+          <g transform="translate(0, 22)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Approval required above ₹50,000</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 518)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(12, 14.5)">
+          <text x="0" y="16" font-family="Hind" font-size="16" fill="#175CD3">●</text>
+        </g>
+        <g transform="translate(35, 14.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Payments are encrypted and securely processed.</text>
+        </g>
+      </g>
+      <g transform="translate(16, 578)">
+        <rect width="358" height="64" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 10.5)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">CART SUMMARY · 3 ITEMS</text>
+          </g>
+          <g transform="translate(0, 21)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">₹4,820 · Saved ₹410</text>
+          </g>
+        </g>
+        <g transform="translate(238, 10)">
+          <rect width="104" height="44" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(11.5, 11)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">View Cart →</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 764)">
+      <rect width="390" height="80" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(16, 16)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(0, 13)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">Pay ₹50,150</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -186,128 +186,103 @@ journeys:
   nodes:
   - id: quote-to-order.1
     surface: b2b
-    component_refs:
-    - input.text-field
+    component_refs: &id002
+    - navigation.app-bar
     - action.button
+    - commerce.order-card
     - commerce.price-block
     - feedback.status-pill
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    - CartSummary
+    state_refs: &id003
+    - default
+    - loading
+    - empty
+    - error
+    - success
   - id: quote-to-order.2
     surface: b2b
-    component_refs:
-    - input.text-field
-    - action.button
-    - commerce.price-block
-    - feedback.status-pill
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    component_refs: *id002
+    state_refs: *id003
   - id: quote-to-order.3
     surface: b2b
-    component_refs:
-    - input.text-field
-    - action.button
-    - commerce.price-block
-    - feedback.status-pill
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    component_refs: *id002
+    state_refs: *id003
   - id: quote-to-order.4
     surface: b2b
-    component_refs:
-    - action.button
-    - input.text-field
-    - feedback.status-pill
-    - commerce.price-block
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    component_refs: *id002
+    state_refs: *id003
   - id: quote-to-order.5
     surface: b2b
-    component_refs:
-    - commerce.order-card
-    - navigation.app-bar
-    - feedback.status-pill
-    - navigation.bottom-nav-item
-    - feedback.toast
-    state_refs: *id001
+    component_refs: *id002
+    state_refs: *id003
+  - id: quote-to-order.6
+    surface: b2b
+    component_refs: *id002
+    state_refs: *id003
+  - id: quote-to-order.7
+    surface: b2b
+    component_refs: *id002
+    state_refs: *id003
+  - id: quote-to-order.8
+    surface: b2b
+    component_refs: *id002
+    state_refs: *id003
 - id: repeat-order
   nodes:
   - id: repeat-order.1
     surface: b2b
-    component_refs:
-    - commerce.order-card
+    component_refs: &id004
     - navigation.app-bar
-    - feedback.status-pill
-    - navigation.bottom-nav-item
-    state_refs: *id001
-  - id: repeat-order.2
-    surface: b2b
-    component_refs:
+    - action.button
     - commerce.order-card
     - commerce.product-card
-    - action.button
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    state_refs: *id001
+    - feedback.status-pill
+    - CartSummary
+    state_refs: *id003
+  - id: repeat-order.2
+    surface: b2b
+    component_refs: *id004
+    state_refs: *id003
   - id: repeat-order.3
     surface: b2b
-    component_refs:
-    - action.button
-    - input.text-field
-    - feedback.status-pill
-    - commerce.price-block
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    component_refs: *id004
+    state_refs: *id003
+  - id: repeat-order.4
+    surface: b2b
+    component_refs: *id004
+    state_refs: *id003
+  - id: repeat-order.5
+    surface: b2b
+    component_refs: *id004
+    state_refs: *id003
+  - id: repeat-order.6
+    surface: b2b
+    component_refs: *id004
+    state_refs: *id003
 - id: credit-order
   nodes:
   - id: credit-order.1
     surface: b2b
-    component_refs:
+    component_refs: &id005
+    - navigation.app-bar
+    - action.button
+    - commerce.order-card
     - commerce.price-block
     - feedback.status-pill
-    - action.button
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    - CartSummary
+    state_refs: *id003
   - id: credit-order.2
     surface: b2b
-    component_refs:
-    - feedback.status-pill
-    - action.button
-    - commerce.order-card
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    state_refs: *id001
+    component_refs: *id005
+    state_refs: *id003
   - id: credit-order.3
     surface: b2b
-    component_refs:
-    - action.button
-    - input.text-field
-    - feedback.status-pill
-    - commerce.price-block
-    - navigation.app-bar
-    - navigation.bottom-nav-item
-    - commerce.order-card
-    state_refs: *id001
+    component_refs: *id005
+    state_refs: *id003
   - id: credit-order.4
     surface: b2b
-    component_refs:
-    - commerce.order-card
-    - navigation.app-bar
-    - feedback.status-pill
-    - navigation.bottom-nav-item
-    - feedback.toast
-    state_refs: *id001
+    component_refs: *id005
+    state_refs: *id003
 - id: seller-onboarding
   nodes:
   - id: seller-onboarding.1

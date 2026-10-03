@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(338, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <g transform="translate(16, 31.5)">
+        <text x="0" y="16" font-family="Hind" font-size="16" fill="#384959">‹</text>
+      </g>
+      <g transform="translate(35, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Order AK-482019</text>
+      </g>
+    </g>
+    <g transform="translate(0, 98)">
+      <g transform="translate(16, 16)">
+        <rect width="358" height="46" rx="8" ry="8" fill="#E5F5ED"/>
+        <g transform="translate(12, 12)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#067647">Out for delivery</text>
+        </g>
+        <g transform="translate(113, 15)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#067647">Today by 8 PM</text>
+        </g>
+      </g>
+      <g transform="translate(16, 74)">
+        <rect width="358" height="96" rx="12" ry="12" fill="#FFFFFF"/>
+        <g transform="translate(12, 12)">
+          <rect width="72" height="72" rx="8" ry="8" fill="#EAF3FE"/>
+        </g>
+        <g transform="translate(96, 12)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Bosch GSB 500 RE Drill</text>
+          </g>
+          <g transform="translate(0, 42)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Qty 1 · Seller: ToolMart</text>
+          </g>
+          <g transform="translate(0, 80)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">₹2,899</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 182)">
+        <rect width="358" height="170" rx="12" ry="12" fill="#FFFFFF"/>
+        <g transform="translate(16, 16)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Payment summary</text>
+        </g>
+        <g transform="translate(16, 48)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Item total</text>
+          </g>
+          <g transform="translate(87, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">₹3,199</text>
+          </g>
+        </g>
+        <g transform="translate(16, 77)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Discount</text>
+          </g>
+          <g transform="translate(81, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">− ₹400</text>
+          </g>
+        </g>
+        <g transform="translate(16, 106)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Delivery</text>
+          </g>
+          <g transform="translate(94, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">₹100</text>
+          </g>
+        </g>
+        <g transform="translate(16, 135)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Paid</text>
+          </g>
+          <g transform="translate(82, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹2,899</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 364)">
+        <rect width="358" height="79" rx="12" ry="12" fill="#FFFFFF"/>
+        <g transform="translate(16, 16)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Delivery address</text>
+        </g>
+        <g transform="translate(16, 60)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Flat 12B, Baner Road, Pune 411045</text>
+        </g>
+      </g>
+      <g transform="translate(16, 455)">
+        <g>
+          <rect width="173" height="44" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(0, 13.5)">
+            <text x="86.5" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959" text-anchor="middle">Invoice</text>
+          </g>
+        </g>
+        <g transform="translate(185, 0)">
+          <rect width="173" height="44" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(0, 13.5)">
+            <text x="86.5" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959" text-anchor="middle">Return item</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 764)">
+      <rect width="390" height="80" fill="#FFFFFF"/>
+      <g transform="translate(16, 16)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#384959"/>
+        <g transform="translate(0, 14.5)">
+          <text x="179" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Track package</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

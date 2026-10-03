@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 9)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(337, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 30)">
+      <g transform="translate(16, 16)">
+        <text x="0" y="16" font-family="Hind" font-size="16" fill="#384959">Back</text>
+      </g>
+      <g transform="translate(136, 34.5)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Power tools</text>
+      </g>
+      <g transform="translate(336, 37.5)">
+        <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Filters</text>
+      </g>
+    </g>
+    <g transform="translate(0, 140)">
+      <g transform="translate(16, 16)">
+        <g transform="translate(0, 8.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">142 products</text>
+        </g>
+        <g transform="translate(288, 0)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Sort: Relevance</text>
+        </g>
+      </g>
+      <g transform="translate(16, 58)">
+        <g>
+          <rect width="173" height="243" rx="12" ry="12" fill="#FFFFFF"/>
+          <rect width="173" height="140" rx="12" ry="12" fill="#EAF3FE"/>
+          <g transform="translate(0, 140)">
+            <g transform="translate(12, 12)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Bosch</text>
+            </g>
+            <g transform="translate(12, 32)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Impact Drill 13mm</text>
+            </g>
+            <g transform="translate(12, 57)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Rs 4,290</text>
+            </g>
+            <g transform="translate(12, 84)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">MRP Rs 5,100</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(185, 0)">
+          <rect width="173" height="243" rx="12" ry="12" fill="#FFFFFF"/>
+          <rect width="173" height="140" rx="12" ry="12" fill="#EAF3FE"/>
+          <g transform="translate(0, 140)">
+            <g transform="translate(12, 12)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Makita</text>
+            </g>
+            <g transform="translate(12, 32)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Angle Grinder 4in</text>
+            </g>
+            <g transform="translate(12, 57)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Rs 3,650</text>
+            </g>
+            <g transform="translate(12, 84)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">MRP Rs 4,200</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 313)">
+        <g>
+          <rect width="173" height="243" rx="12" ry="12" fill="#FFFFFF"/>
+          <rect width="173" height="140" rx="12" ry="12" fill="#EAF3FE"/>
+          <g transform="translate(0, 140)">
+            <g transform="translate(12, 12)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">DeWalt</text>
+            </g>
+            <g transform="translate(12, 32)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Cordless Driver 18V</text>
+            </g>
+            <g transform="translate(12, 57)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Rs 8,940</text>
+            </g>
+            <g transform="translate(12, 84)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">MRP Rs 10,500</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(185, 0)">
+          <rect width="173" height="243" rx="12" ry="12" fill="#FFFFFF"/>
+          <rect width="173" height="140" rx="12" ry="12" fill="#EAF3FE"/>
+          <g transform="translate(0, 140)">
+            <g transform="translate(12, 12)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Stanley</text>
+            </g>
+            <g transform="translate(12, 32)">
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Demolition Hammer</text>
+            </g>
+            <g transform="translate(12, 57)">
+              <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Rs 12,300</text>
+            </g>
+            <g transform="translate(12, 84)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">MRP Rs 14,000</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF"/>
+      <g transform="translate(16, 24)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Home</text>
+      </g>
+      <g transform="translate(54, 24)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Browse</text>
+      </g>
+      <g transform="translate(96, 24)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Orders</text>
+      </g>
+      <g transform="translate(138, 24)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Cart</text>
+      </g>
+      <g transform="translate(164, 24)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Account</text>
+      </g>
+    </g>
+  </g>
+</svg>

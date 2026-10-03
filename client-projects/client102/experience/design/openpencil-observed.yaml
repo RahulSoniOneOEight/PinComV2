@@ -1,5 +1,5 @@
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:278e205364c1eb358ca2f8de0d06c8eb18f561bd45701ef90da1b6c8a9703519
+revision_ref: sha256:bf8d70cd7135ec4d680fc49bbd0854b97d9fa9180d279510a18b8d1b25b1ba01
 components:
 - action.button
 - commerce.product-card
@@ -3660,6 +3660,296 @@ frames:
 - Frame
 - Frame
 - Frame
+- "S8C-320 \xC2\xB7 B2B Home (rev3 @320)"
+- Header
+- Frame
+- Frame
+- Frame
+- Frame
+- Global Search
+- Home content
+- Quick Order
+- Frame
+- Frame
+- List chips rail
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- View More Quick Order
+- Buy Again
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Trade Offers and Deals
+- Frame
+- Frame
+- Collection rail
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Browse Categories
+- Category rail
+- Frame
+- Products
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Bottom navigation
+- Frame
+- Frame
+- Frame
+- Frame
+- "S8C-430 \xC2\xB7 B2B Home (rev3 @430)"
+- Header
+- Frame
+- Frame
+- Frame
+- Frame
+- Global Search
+- Home content
+- Quick Order
+- Frame
+- Frame
+- List chips rail
+- Frame
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Purchase controls
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- View More Quick Order
+- Buy Again
+- Frame
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Trade Offers and Deals
+- Frame
+- Frame
+- Collection rail
+- Frame
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Icon / Cart plus glyph
+- Overflow cue
+- Browse Categories
+- Category rail
+- Frame
+- Products
+- Frame
+- Frame
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Product image
+- Frame
+- Frame
+- Frame
+- Frame
+- Minus
+- Icon / custom
+- Quantity value overlay
+- Plus
+- Icon / custom
+- Icon / Cart plus glyph
+- Frame
+- Frame
+- Frame
+- View Cart
+- Bottom navigation
+- Frame
+- Frame
+- Frame
+- Frame
+- "S69 \xC2\xB7 Business payment"
+- Status bar
+- App bar
+- Back
+- Title block
+- Payment content
+- Amount due
+- Amount label
+- Bank transfer selected
+- Selected radio
+- Bank text
+- UPI
+- Radio
+- UPI text
+- Card
+- Radio
+- Card text
+- Net banking
+- Radio
+- Net banking text
+- Credit option
+- Radio
+- Credit text
+- Security note
+- Frame
+- View Cart
+- Payment action
+- Pay button
 - zz-journey-boards
 - browse-to-buy
 - browse-to-buy_div
@@ -3735,21 +4025,21 @@ frames:
 - credit-order_dot4
 info:
   pages: 4
-  totalNodes: 7530
+  totalNodes: 8197
   types:
-    FRAME: 3646
-    VECTOR: 378
+    FRAME: 3936
+    VECTOR: 434
     COMPONENT: 57
-    TEXT: 3198
+    TEXT: 3428
     ELLIPSE: 61
     COMPONENT_SET: 2
-    INSTANCE: 188
+    INSTANCE: 279
   fonts:
   - Hind
   - Inter
   pageCounts:
     "00 \xC2\xB7 Foundations & Components": 714
-    "01 \xC2\xB7 Screens \xC2\xB7 All": 6671
+    "01 \xC2\xB7 Screens \xC2\xB7 All": 7338
     "03 \xC2\xB7 Empty \xC2\xB7 Reserved": 0
     "02 \xC2\xB7 Journey Boards": 145
 source: openpencil-cli

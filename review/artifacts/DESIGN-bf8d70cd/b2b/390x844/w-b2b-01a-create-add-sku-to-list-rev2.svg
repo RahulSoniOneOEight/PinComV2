@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(341, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G 100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <rect width="390" height="56" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(16, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">‹</text>
+      </g>
+      <g transform="translate(36, 5)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Create / Add SKU to List</text>
+      </g>
+    </g>
+    <g transform="translate(0, 90)">
+      <g transform="translate(16, 16)">
+        <rect width="358" height="193" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 16)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Create New List</text>
+        </g>
+        <g transform="translate(16, 62)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">List name</text>
+        </g>
+        <g transform="translate(16, 73)">
+          <rect width="326" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 12)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">e.g. Site B plumbing</text>
+          </g>
+        </g>
+        <g transform="translate(16, 129)">
+          <rect width="326" height="48" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(0, 5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">Create List</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 225)">
+        <rect width="358" height="266" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(16, 16)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Add SKU to Existing List</text>
+        </g>
+        <g transform="translate(16, 46)">
+          <rect width="326" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 12)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">Search product name or SKU</text>
+          </g>
+        </g>
+        <g transform="translate(16, 118)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Choose list</text>
+        </g>
+        <g transform="translate(16, 129)">
+          <g>
+            <rect width="51" height="39" rx="999" ry="999" fill="#384959"/>
+            <g transform="translate(10, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#FFFFFF">Site A</text>
+            </g>
+          </g>
+          <g transform="translate(59, 0)">
+            <rect width="67" height="39" rx="999" ry="999" fill="#EAF3FE"/>
+            <g transform="translate(10, 10)">
+              <text x="0" y="12" font-family="Hind" font-size="12" fill="#384959">Electrical</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(16, 176)">
+          <rect width="326" height="48" rx="8" ry="8" fill="#BDDCFC"/>
+          <g transform="translate(0, 6)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Add SKU to Site A</text>
+          </g>
+        </g>
+        <g transform="translate(16, 263)">
+          <text x="0" y="11" font-family="Hind" font-size="11" fill="#55708A">This does not add the SKU to Cart.</text>
+        </g>
+      </g>
+      <g transform="translate(16, 507)">
+        <g>
+          <rect width="175" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(57.5, 7)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Upload List</text>
+          </g>
+        </g>
+        <g transform="translate(183, 0)">
+          <rect width="175" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(51.5, 7)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Scan Barcode</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

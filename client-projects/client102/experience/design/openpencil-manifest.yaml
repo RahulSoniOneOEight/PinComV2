@@ -1,12 +1,12 @@
 client_id: client102
 project_ref: D:/PinComV2/client-projects/client102/experience/design/apnakart-design.fig
-revision_ref: sha256:278e205364c1eb358ca2f8de0d06c8eb18f561bd45701ef90da1b6c8a9703519
+revision_ref: sha256:bf8d70cd7135ec4d680fc49bbd0854b97d9fa9180d279510a18b8d1b25b1ba01
 source: openpencil-cli
 input_hashes:
-  design_ir: sha256:a00502a6fec6a84a722367d0b5fd432f62a41f4d21d60dde6b75339991a5d02a
+  design_ir: sha256:e7f018999e5e26bae8146882c9b43e14a5fa16a3dbab315b6001d5cc0accc362
   components: sha256:eab647171d2eb7eed6b3822158714dc7d7e7bf6ccecb733527bfde37d2fd9477
   theme: sha256:bc3b865a9adcb0037f792e71b07b89e2c0ee4eab51717c4d6b51f147f81cb476
-  journeys: sha256:e1bd3899cbf48b2aa0d2678ffd1cdca8606edcb020211153669ea8f3908f3394
+  journeys: sha256:3d4ae03c0c5599fd7645f52b689bf727d8360a1f87ca829f6901f29dbb8988e0
 required_surfaces:
 - customer-app
 - web-store

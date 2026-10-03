@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <filter id="fx0">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#384959" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(16, 7)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(329, 7)">
+        <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 28)">
+      <rect width="390" height="68" fill="#384959"/>
+      <g transform="translate(16, 7)">
+        <g>
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#BDDCFC">COMMERCE ADMIN</text>
+        </g>
+        <g transform="translate(0, 18)">
+          <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#FFFFFF">Order allocation</text>
+        </g>
+      </g>
+      <g transform="translate(330, 12)">
+        <rect width="44" height="44" rx="8" ry="8" fill="#273746"/>
+        <g transform="translate(14, 12)">
+          <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#FFFFFF">↻</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 96)">
+      <g transform="translate(16, 16)">
+        <g>
+          <rect width="278" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 14.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#55708A">Search marketplace order</text>
+          </g>
+        </g>
+        <g transform="translate(286, 0)">
+          <rect width="72" height="44" rx="8" ry="8" fill="#EAF3FE"/>
+          <g transform="translate(25.5, 14.5)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">SLA</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 68)" filter="url(#fx0)">
+        <rect width="358" height="98" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g>
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">AK-MP-992184</text>
+            </g>
+            <g transform="translate(0, 17)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Received 10:24 AM · 3 line items</text>
+            </g>
+          </g>
+          <g transform="translate(263, 0)">
+            <rect width="71" height="26" rx="999" ry="999" fill="#FFF1D8"/>
+            <g transform="translate(8, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#9A610A">12 MIN SLA</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 60)">
+          <g>
+            <rect width="108.67" height="4" rx="4" ry="4" fill="#384959"/>
+            <g transform="translate(0, 8)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Received</text>
+            </g>
+          </g>
+          <g transform="translate(112.67, 0)">
+            <rect width="108.67" height="4" rx="4" ry="4" fill="#88BDF2"/>
+            <g transform="translate(0, 8)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#175CD3">Split</text>
+            </g>
+          </g>
+          <g transform="translate(225.33, 0)">
+            <rect width="108.67" height="4" rx="4" ry="4" fill="#DFE7F0"/>
+            <g transform="translate(0, 8)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Release</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 174)">
+        <g>
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Seller allocation</text>
+        </g>
+        <g transform="translate(266, 1)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">2 sellers · ₹18,420</text>
+        </g>
+      </g>
+      <g transform="translate(16, 204)">
+        <rect width="358" height="118" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g>
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Shree Buildmart</text>
+            </g>
+            <g transform="translate(0, 17)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Mumbai · Seller score 94</text>
+            </g>
+          </g>
+          <g transform="translate(283, 0)">
+            <rect width="51" height="26" rx="999" ry="999" fill="#E5F5ED"/>
+            <g transform="translate(8, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#067647">READY</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 60)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">ACC Cement 50 kg × 20</text>
+          </g>
+          <g transform="translate(130, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹7,900</text>
+          </g>
+        </g>
+        <g transform="translate(12, 87)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">TMT Bar 12 mm × 80 kg</text>
+          </g>
+          <g transform="translate(132, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹5,120</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 330)">
+        <rect width="358" height="143" rx="12" ry="12" fill="#FDECEB" stroke="#B42318" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g>
+            <g>
+              <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Metro Pipes</text>
+            </g>
+            <g transform="translate(0, 17)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#456079">Thane · Seller score 88</text>
+            </g>
+          </g>
+          <g transform="translate(258, 0)">
+            <rect width="76" height="26" rx="999" ry="999" fill="#FFFFFF"/>
+            <g transform="translate(8, 4)">
+              <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#B42318">STOCK RISK</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(12, 60)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">PVC Pipe 2 inch × 10</text>
+          </g>
+          <g transform="translate(297, 0)">
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">₹5,400</text>
+          </g>
+        </g>
+        <g transform="translate(12, 87)">
+          <g transform="translate(0, 14)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#B42318">Only 8 confirmed; reallocate 2</text>
+          </g>
+          <g transform="translate(254, 0)">
+            <rect width="80" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+            <g transform="translate(16, 14.5)">
+              <text x="0" y="12" font-family="Hind" font-size="12" font-weight="700" fill="#384959">Reassign</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 481)">
+        <rect width="358" height="52" rx="8" ry="8" fill="#E7F1FF"/>
+        <g transform="translate(12, 12)">
+          <rect width="28" height="28" rx="999" ry="999" fill="#DFE7F0"/>
+        </g>
+        <g transform="translate(48, 18.5)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#175CD3">Checking alternate sellers…</text>
+        </g>
+      </g>
+      <g transform="translate(16, 541)">
+        <rect width="358" height="69" rx="8" ry="8" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <g>
+            <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#456079">Ready to release</text>
+          </g>
+          <g transform="translate(0, 15)">
+            <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">1 of 2 allocations</text>
+          </g>
+        </g>
+        <g transform="translate(275, 21.5)">
+          <rect width="71" height="26" rx="999" ry="999" fill="#EAF3FE"/>
+          <g transform="translate(8, 4)">
+            <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">1 BLOCKED</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(16, 618)">
+        <g>
+          <rect width="175" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(57, 15.5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Save split</text>
+          </g>
+        </g>
+        <g transform="translate(183, 0)">
+          <rect width="175" height="48" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(43.5, 15.5)">
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF">Release ready</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+      <g transform="translate(8, 8)">
+        <rect width="87.5" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(0, 17)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="700" fill="#384959">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(103.5, 8)">
+        <g transform="translate(0, 17)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Sellers</text>
+        </g>
+      </g>
+      <g transform="translate(199, 8)">
+        <g transform="translate(0, 17)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Finance</text>
+        </g>
+      </g>
+      <g transform="translate(294.5, 8)">
+        <g transform="translate(0, 17)">
+          <text x="0" y="11" font-family="Hind" font-size="11" font-weight="600" fill="#55708A">Settings</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

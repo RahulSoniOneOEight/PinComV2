@@ -1,9 +1,9 @@
-qa_id: VQA-DESIGN-278e2053-commerce-admin
+qa_id: VQA-DESIGN-bf8d70cd-commerce-admin
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: commerce-admin
-build_identity: DESIGN-278e2053
-capture_id: DESIGN-278e2053
+build_identity: DESIGN-bf8d70cd
+capture_id: DESIGN-bf8d70cd
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:
@@ -28,8 +28,8 @@ checks:
   status: pass
   evidence: 9 governed rules recorded in design-brief
 - id: journey-coverage
-  status: pass
-  evidence: 13/13 journeys, 51/51 nodes, ids match=True
+  status: fail
+  evidence: 13/13 journeys, 51/57 nodes, ids match=False
 - id: design-selection
   status: warning
   evidence: selection present but status is 'evaluated' — the direction gate is a
@@ -62,4 +62,4 @@ checks:
 - id: design-debt
   status: not-run
   evidence: run with --lint to evaluate design debt from the CLI linter
-status: review-ready
+status: failed

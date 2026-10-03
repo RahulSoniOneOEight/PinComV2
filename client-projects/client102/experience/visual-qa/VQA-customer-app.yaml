@@ -1,9 +1,9 @@
-qa_id: VQA-DESIGN-278e2053-customer-app
+qa_id: VQA-DESIGN-bf8d70cd-customer-app
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: customer-app
-build_identity: DESIGN-278e2053
-capture_id: DESIGN-278e2053
+build_identity: DESIGN-bf8d70cd
+capture_id: DESIGN-bf8d70cd
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:
@@ -64,6 +64,7 @@ screens_captured:
 - s66-business-account
 - s67-team-roles
 - s68-price-advantage
+- s69-business-payment
 - s7-orders
 - zz-journey-boards
 checks:
@@ -86,8 +87,8 @@ checks:
   status: pass
   evidence: 9 governed rules recorded in design-brief
 - id: journey-coverage
-  status: pass
-  evidence: 13/13 journeys, 51/51 nodes, ids match=True
+  status: fail
+  evidence: 13/13 journeys, 51/57 nodes, ids match=False
 - id: design-selection
   status: warning
   evidence: selection present but status is 'evaluated' — the direction gate is a
@@ -107,7 +108,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 59 screens captured for this surface; components declare more states than
+  evidence: 60 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run
@@ -120,4 +121,4 @@ checks:
 - id: design-debt
   status: not-run
   evidence: run with --lint to evaluate design debt from the CLI linter
-status: review-ready
+status: failed

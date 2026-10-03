@@ -153,11 +153,12 @@ screen_map:
   b2c.track-package.delayed: S24b · Track Package (Delayed)
   b2c.refund-reasons: S25 · Refund Reasons
   b2c.orders-returned: S26 · Orders Returned
-  b2b.home.rev3: S8C · B2B Home (rev3)
   # Retired 2026-10-03: S8 · B2B Home, S8L · B2B Home (long) and S8B · B2B Home (rev2)
   # were removed from the canvas. S8C (rev3, built on the real component set) is now the
   # single B2B Home. Their screen_map keys (b2b.home, b2b.home.long, b2b.home.rev2) are gone.
   b2b.home.rev3: S8C · B2B Home (rev3)
+  b2b.home.rev3.320: S8C-320 · B2B Home (rev3 @320)
+  b2b.home.rev3.430: S8C-430 · B2B Home (rev3 @430)
   b2b.procurement-lists.rev3: W-B2B-11 · Procurement Lists (rev3)
   b2b.buy-again.rev3: W-B2B-12 · Buy Again Listing (rev3)
   b2b.trade-offers.rev3: W-B2B-13 · All Offers & Deals (rev3)
@@ -234,6 +235,7 @@ screen_map:
   b2b.business-account: S66 · Business account
   b2b.team-roles: S67 · Team & roles
   b2b.price-advantage: S68 · Price advantage
+  b2b.business-payment: S69 · Business payment
   # S20t is a 390x200 technical fragment, not a screen. Deliberately not mapped.
 journey_node_map:
   browse-to-buy.1: S3 · B2C Home
@@ -250,26 +252,32 @@ journey_node_map:
   order-tracking.1: S7 · Orders
   order-tracking.2: S24 · Track Package
   return-refund.1: S7 · Orders
-  return-refund.2: S25 · Refund Reasons
-  return-refund.3: S26 · Orders Returned
-  return-refund.4: S26 · Orders Returned
+  return-refund.2: S46 · Request return
+  return-refund.3: S47 · Return status
+  return-refund.4: S48 · Refund tracking
   quote-to-order.1: S9 · RFQ
   quote-to-order.2: S28 · Quotes Received
   quote-to-order.3: S29 · Quote Compare
-  quote-to-order.4: S27 · Quotation Cart
-  quote-to-order.5: S21 · Confirm Order
+  quote-to-order.4: S57 · Accept quote
+  quote-to-order.5: S27 · Quotation Cart
+  quote-to-order.6: S51 · Business checkout
+  quote-to-order.7: S69 · Business payment
+  quote-to-order.8: S52 · Order confirmed (B2B)
   repeat-order.1: S30 · B2B Order History
   repeat-order.2: S31 · B2B Reorder
   repeat-order.3: S27 · Quotation Cart
+  repeat-order.4: S51 · Business checkout
+  repeat-order.5: S69 · Business payment
+  repeat-order.6: S52 · Order confirmed (B2B)
   # Added 2026-10-03 (gap analysis cf11cf0). The 7 families below previously had ZERO
   # node-to-screen mappings, so 26 of 51 nodes had no design-realization trace.
   # NOTE: several nodes collapse onto one condensed screen. That satisfies traceability
   # but is NOT proof the flow is complete - expanding these families is tracked in
   # derived/journey-flow-gaps.md (P1) and the web-surface desktop rebuild.
   credit-order.1: S11 · Credit
-  credit-order.2: S11 · Credit
-  credit-order.3: S27 · Quotation Cart
-  credit-order.4: S21 · Confirm Order
+  credit-order.2: S58 · Approvals
+  credit-order.3: S51 · Business checkout
+  credit-order.4: S52 · Order confirmed (B2B)
   seller-onboarding.1: S13 · Seller onboarding
   seller-onboarding.2: S13 · Seller onboarding
   seller-onboarding.3: S13 · Seller onboarding
@@ -292,6 +300,107 @@ journey_node_map:
   seller-settlement.2: S17 · Seller settlement
   seller-settlement.3: S17 · Seller settlement
   seller-settlement.4: S17 · Seller settlement
+b2b_flow_map:
+  trade-authentication:
+  - S2 · Login
+  - S40 · Verify OTP
+  - S8C · B2B Home (rev3)
+  home-shared-commerce:
+  - S8C · B2B Home (rev3)
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  home-buy-again:
+  - S8C · B2B Home (rev3)
+  - W-B2B-12 · Buy Again Listing (rev3)
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  home-trade-offers:
+  - S8C · B2B Home (rev3)
+  - W-B2B-13 · All Offers & Deals (rev3)
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  home-products:
+  - S8C · B2B Home (rev3)
+  - W-B2B-14 · Product Listing (rev3)
+  - W-B2B-15 · Product Detail (rev3)
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  quick-order:
+  - S8C · B2B Home (rev3)
+  - S54 · Quick order centre
+  - S53 · Quick order search results
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  procurement-lists:
+  - S8C · B2B Home (rev3)
+  - W-B2B-11 · Procurement Lists (rev3)
+  - W-B2B-01A · Create / Add SKU to List (rev2)
+  - S55 · Procurement list detail
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  catalogue-merchandising:
+  - S8C · B2B Home (rev3)
+  - W-B2B-14 · Product Listing (rev3)
+  - W-B2B-15 · Product Detail (rev3)
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  quote-to-order:
+  - S9 · RFQ
+  - S28 · Quotes Received
+  - S29 · Quote Compare
+  - S57 · Accept quote
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  repeat-order:
+  - S30 · B2B Order History
+  - S31 · B2B Reorder
+  - S27 · Quotation Cart
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  credit-order:
+  - S11 · Credit
+  - S58 · Approvals
+  - S51 · Business checkout
+  - S52 · Order confirmed (B2B)
+  - S59 · GST invoices (B2B)
+  projects-sites:
+  - S60 · Projects & sites
+  - S61 · Project detail
+  - S62 · Material list
+  - S27 · Quotation Cart
+  - S63 · Site selector
+  - S51 · Business checkout
+  - S69 · Business payment
+  - S52 · Order confirmed (B2B)
+  post-order:
+  - S30 · B2B Order History
+  - S64 · Split tracking
+  - S59 · GST invoices (B2B)
+  - S65 · Buyer-seller chat
+  business-administration:
+  - S66 · Business account
+  - S67 · Team & roles
+  - S58 · Approvals
+  - S60 · Projects & sites
+  - S59 · GST invoices (B2B)
+  - S11 · Credit
 screen_state_notes:
   b2c.cart-empty: S22 · Cart Empty closes the add-cart empty state
   b2c.track-package.delayed: S24b closes the track-shipment-error state

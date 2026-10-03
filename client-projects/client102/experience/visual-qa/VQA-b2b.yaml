@@ -1,9 +1,9 @@
-qa_id: VQA-DESIGN-278e2053-b2b
+qa_id: VQA-DESIGN-bf8d70cd-b2b
 client_id: client102
 direction_id: DIR-CLIENT102-A
 surface: b2b
-build_identity: DESIGN-278e2053
-capture_id: DESIGN-278e2053
+build_identity: DESIGN-bf8d70cd
+capture_id: DESIGN-bf8d70cd
 basis: Design captures exported from the committed OpenPencil document, plus governed
   artifacts. This is design evidence, not build evidence.
 screens_captured:
@@ -17,6 +17,8 @@ screens_captured:
 - s52-order-confirmed-b2b
 - s55-procurement-list-detail
 - s59-gst-invoices-b2b
+- s8c-320-b2b-home-rev3-320
+- s8c-430-b2b-home-rev3-430
 - s8c-b2b-home-rev3
 - s9-rfq
 - w-b2b-01-procurement-lists-rev2
@@ -52,8 +54,8 @@ checks:
   status: pass
   evidence: 9 governed rules recorded in design-brief
 - id: journey-coverage
-  status: pass
-  evidence: 13/13 journeys, 51/51 nodes, ids match=True
+  status: fail
+  evidence: 13/13 journeys, 51/57 nodes, ids match=False
 - id: design-selection
   status: warning
   evidence: selection present but status is 'evaluated' — the direction gate is a
@@ -73,7 +75,7 @@ checks:
   evidence: 10/33 components declare 4+ states; 6 promoted to candidate
 - id: state-completeness
   status: warning
-  evidence: 25 screens captured for this surface; components declare more states than
+  evidence: 27 screens captured for this surface; components declare more states than
     are evidenced
 - id: performance-budget
   status: not-run
@@ -86,4 +88,4 @@ checks:
 - id: design-debt
   status: not-run
   evidence: run with --lint to evaluate design debt from the CLI linter
-status: review-ready
+status: failed

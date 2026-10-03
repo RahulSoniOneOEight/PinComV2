@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(338, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <g transform="translate(16, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Projects &amp; sites</text>
+      </g>
+      <g transform="translate(339, 27)">
+        <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">+ New</text>
+      </g>
+    </g>
+    <g transform="translate(0, 98)">
+      <rect width="390" height="44" rx="8" ry="8" fill="#FFFFFF" stroke="#748EAA" stroke-width="1"/>
+      <g transform="translate(12, 12)">
+        <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">Search project, site or city</text>
+      </g>
+    </g>
+    <g transform="translate(0, 142)">
+      <g transform="translate(16, 16)">
+        <rect width="358" height="137" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Baner Tower</text>
+          </g>
+          <g transform="translate(289, 0)">
+            <rect width="41" height="28" rx="999" ry="999" fill="#E5F5ED"/>
+            <g transform="translate(5, 5)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#067647">Active</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(14, 60)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Baner, Pune</text>
+        </g>
+        <g transform="translate(14, 102)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">3 sites · 4 active orders</text>
+        </g>
+        <g transform="translate(14, 142)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Open project ›</text>
+        </g>
+      </g>
+      <g transform="translate(16, 165)">
+        <rect width="358" height="137" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Wakad Warehouse</text>
+          </g>
+          <g transform="translate(289, 0)">
+            <rect width="41" height="28" rx="999" ry="999" fill="#E5F5ED"/>
+            <g transform="translate(5, 5)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#067647">Active</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(14, 60)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Wakad, Pune</text>
+        </g>
+        <g transform="translate(14, 102)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">1 site · 2 material lists</text>
+        </g>
+        <g transform="translate(14, 144)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Open project ›</text>
+        </g>
+      </g>
+      <g transform="translate(16, 314)">
+        <rect width="358" height="137" rx="12" ry="12" fill="#FFFFFF" stroke="#DCE6F0" stroke-width="1"/>
+        <g transform="translate(14, 14)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Kharadi Office Fitout</text>
+          </g>
+          <g transform="translate(279, 0)">
+            <rect width="51" height="28" rx="999" ry="999" fill="#E5F5ED"/>
+            <g transform="translate(5, 5)">
+              <text x="0" y="11" font-family="Hind" font-size="11" fill="#067647">Planning</text>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(14, 60)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">Kharadi, Pune</text>
+        </g>
+        <g transform="translate(14, 102)">
+          <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">2 sites · No active RFQs</text>
+        </g>
+        <g transform="translate(14, 144)">
+          <text x="0" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#384959">Open project ›</text>
+        </g>
+      </g>
+      <g transform="translate(16, 463)">
+        <rect width="358" height="48" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+        <g transform="translate(0, 14.5)">
+          <text x="179" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959" text-anchor="middle">Create new project</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF"/>
+      <g transform="translate(0, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Trade</text>
+        </g>
+      </g>
+      <g transform="translate(97.5, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Credit</text>
+        </g>
+      </g>
+      <g transform="translate(195, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(292.5, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

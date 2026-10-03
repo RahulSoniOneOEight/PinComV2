@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+  <g>
+    <rect width="390" height="844" fill="#F7FAFE"/>
+    <g>
+      <g transform="translate(8, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">9:41</text>
+      </g>
+      <g transform="translate(338, 8)">
+        <text x="0" y="11" font-family="Hind" font-size="11" fill="#384959">5G  100%</text>
+      </g>
+    </g>
+    <g transform="translate(0, 34)">
+      <g transform="translate(16, 16)">
+        <text x="0" y="20" font-family="Hind" font-size="20" font-weight="700" fill="#384959">Quick order centre</text>
+      </g>
+      <g transform="translate(16, 60)">
+        <rect width="358" height="48" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(4, 4)">
+          <rect width="173" height="40" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(0, 11.5)">
+            <text x="86.5" y="12" font-family="Hind" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Manual</text>
+          </g>
+        </g>
+        <g transform="translate(181, 4)">
+          <g transform="translate(0, 11.5)">
+            <text x="86.5" y="12" font-family="Hind" font-size="12" fill="#384959" text-anchor="middle">Upload CSV</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 158)">
+      <g transform="translate(12, 12)">
+        <rect width="366" height="150" rx="12" ry="12" fill="#FFFFFF" stroke="#9CB2CA" stroke-width="1"/>
+        <g transform="translate(12, 12)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Add by SKU</text>
+        </g>
+        <g transform="translate(12, 42)">
+          <rect width="342" height="44" rx="8" ry="8" fill="none" stroke="#748EAA" stroke-width="1"/>
+          <g transform="translate(12, 12)">
+            <text x="0" y="14" font-family="Hind" font-size="14" fill="#55708A">Enter SKU or product name</text>
+          </g>
+        </g>
+        <g transform="translate(12, 94)">
+          <rect width="342" height="44" rx="8" ry="8" fill="#384959"/>
+          <g transform="translate(0, 12.5)">
+            <text x="171" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Search catalogue</text>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(12, 170)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Saved procurement lists</text>
+      </g>
+      <g transform="translate(12, 204)">
+        <rect width="366" height="64" rx="8" ry="8" fill="#FFFFFF"/>
+        <g transform="translate(10, 10)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Baner Tower · Electrical</text>
+          </g>
+          <g transform="translate(0, 41)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">18 items · Updated today</text>
+          </g>
+        </g>
+        <g transform="translate(158, 29.5)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Open ›</text>
+        </g>
+      </g>
+      <g transform="translate(12, 276)">
+        <rect width="366" height="64" rx="8" ry="8" fill="#FFFFFF"/>
+        <g transform="translate(10, 10)">
+          <g>
+            <text x="0" y="14" font-family="Hind" font-size="14" font-weight="700" fill="#384959">Warehouse replenishment</text>
+          </g>
+          <g transform="translate(0, 41)">
+            <text x="0" y="12" font-family="Hind" font-size="12" fill="#456079">32 items · Updated today</text>
+          </g>
+        </g>
+        <g transform="translate(177, 29.5)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">Open ›</text>
+        </g>
+      </g>
+      <g transform="translate(12, 368)">
+        <text x="0" y="16" font-family="Hind" font-size="16" font-weight="700" fill="#384959">Suggested reorder</text>
+      </g>
+      <g transform="translate(12, 382)">
+        <rect width="366" height="50" rx="8" ry="8" fill="#EAF3FE"/>
+        <g transform="translate(14, 14)">
+          <text x="0" y="14" font-family="Hind" font-size="14" font-weight="600" fill="#384959">12 frequently ordered SKUs ready</text>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0, 780)">
+      <rect width="390" height="64" fill="#FFFFFF"/>
+      <g transform="translate(0, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Trade</text>
+        </g>
+      </g>
+      <g transform="translate(97.5, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Credit</text>
+        </g>
+      </g>
+      <g transform="translate(195, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Orders</text>
+        </g>
+      </g>
+      <g transform="translate(292.5, 23)">
+        <g>
+          <text x="48.75" y="11" font-family="Hind" font-size="11" fill="#456079" text-anchor="middle">Account</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -153,8 +153,10 @@ screen_map:
   b2c.track-package.delayed: S24b · Track Package (Delayed)
   b2c.refund-reasons: S25 · Refund Reasons
   b2c.orders-returned: S26 · Orders Returned
-  b2b.home.long: S8L · B2B Home (long)
-  b2b.home.rev2: S8B · B2B Home (rev2)
+  b2b.home.rev3: S8C · B2B Home (rev3)
+  # Retired 2026-10-03: S8 · B2B Home, S8L · B2B Home (long) and S8B · B2B Home (rev2)
+  # were removed from the canvas. S8C (rev3, built on the real component set) is now the
+  # single B2B Home. Their screen_map keys (b2b.home, b2b.home.long, b2b.home.rev2) are gone.
   b2b.home.rev3: S8C · B2B Home (rev3)
   b2b.procurement-lists.rev3: W-B2B-11 · Procurement Lists (rev3)
   b2b.buy-again.rev3: W-B2B-12 · Buy Again Listing (rev3)
@@ -184,7 +186,7 @@ screen_map:
   b2c.checkout: S5 · Checkout
   b2c.search-results: S6 · Search results
   b2c.orders: S7 · Orders
-  b2b.home: S8 · B2B Home
+  # b2b.home: S8 · B2B Home — retired 2026-10-03, S8 removed; see b2b.home.rev3.
   b2b.rfq: S9 · RFQ
   b2b.procurement-list: S10 · Procurement list
   b2b.credit: S11 · Credit
